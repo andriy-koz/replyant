@@ -1,0 +1,34 @@
+baseURL = "https://replyant.com/"
+languageCode = "en-us"
+title = "Replyant"
+theme = "replyant"
+
+[params]
+  description = "AI Agent Development, Business Automation & Strategic Consulting"
+  tagline = "Build Smarter. Grow Faster."
+  formspreeID = "YOUR_FORMSPREE_ID"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]
+
+[pagination]
+  pagerSize = 10

@@ -1,0 +1,6 @@
+name = "Replyant"
+license = "MIT"
+description = "Custom theme for Replyant"
+
+[author]
+  name = "Replyant"
