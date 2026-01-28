@@ -1,6 +1,6 @@
 ---
 title: "AI Agents Are Not Chatbots — Here's the Difference"
-date: 2026-01-29
+date: 2026-01-28
 tags: ["AI Agents", "Automation", "Engineering"]
 description: "Chatbots answer questions. AI agents take action. Understanding the difference is the first step toward building systems that actually move your business forward."
 ---

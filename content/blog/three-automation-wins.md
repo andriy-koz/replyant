@@ -1,6 +1,6 @@
 ---
 title: "3 Automation Wins Every Small Business Should Implement This Quarter"
-date: 2026-01-30
+date: 2026-01-28
 tags: ["Automation", "Business Growth", "Strategy"]
 description: "You don't need a massive budget or a dedicated engineering team to start automating. These three wins are high-impact, low-effort, and applicable to almost any business."
 ---
