@@ -1,0 +1,25 @@
+# Replyant
+
+> AI Agent Development, Business Automation & Strategic Consulting
+
+Replyant helps businesses build custom AI agents, automate workflows, and develop strategies that deliver measurable ROI. We follow a process-first approach — spending 80% of effort on workflow design and 20% on technology — so AI initiatives actually move the needle.
+
+## Services
+
+- **AI Agent Development**: Custom AI agents tailored to your business processes — customer support, data analysis, lead qualification, and more.
+- **Business Automation**: Automation pipelines that streamline repetitive tasks, connect your tools, and reduce human error.
+- **Strategic Consulting**: AI adoption strategy and growth consulting. We identify where AI fits in your business and build a roadmap to get there.
+
+## Key Pages
+
+- [Home](https://replyant.com/)
+- [Blog](https://replyant.com/blog/)
+- [Contact](https://replyant.com/#contact)
+
+## Blog Posts
+
+- [Why Most Businesses Fail at AI Agents (And the 80/20 Rule That Actually Works)](https://replyant.com/blog/why-businesses-fail-at-ai-agents/)
+
+## Contact
+
+Ready to integrate AI into your business? Reach out at [replyant.com/#contact](https://replyant.com/#contact).
