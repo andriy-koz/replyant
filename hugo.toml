@@ -6,7 +6,7 @@ theme = "replyant"
 [params]
   description = "AI Agent Development, Business Automation & Strategic Consulting"
   tagline = "Build Smarter. Grow Faster."
-  formspreeID = "YOUR_FORMSPREE_ID"
+  formspreeID = "mzdaberd"
 
 [menu]
   [[menu.main]]
