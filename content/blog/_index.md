@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Daily insights on AI engineering, agent development, and business growth."
+description: "Insights on AI agents, business automation, and the strategies that actually deliver ROI."
 ---
