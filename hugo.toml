@@ -28,7 +28,7 @@ theme = "replyant"
       unsafe = true
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "sitemap"]
 
 [pagination]
   pagerSize = 10
