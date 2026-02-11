@@ -115,7 +115,7 @@ AI agents aren't magic. They're tools — and like any tool, they're only as goo
 
 The businesses winning with AI in 2026 aren't the ones with the biggest budgets or the most advanced technology. They're the ones asking better questions: *What process should we fix first? How do we redesign the work? What does success actually look like?*
 
-The technology has caught up. The gap now is in strategy and execution.
+The technology has caught up. The gap now is in strategy and execution. If you're not sure whether your organization is ready, start with our [7-point AI readiness checklist](/blog/ai-readiness-checklist/).
 
 ---
 
