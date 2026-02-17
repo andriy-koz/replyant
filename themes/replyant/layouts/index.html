@@ -67,6 +67,32 @@
 </section>
 {{ end }}
 
+<!-- Featured Lab Posts -->
+{{ $labPosts := first 3 (where .Site.RegularPages "Section" "lab") }}
+{{ if $labPosts }}
+<section class="featured-posts">
+  <div class="container">
+    <div class="section-header">
+      <h2>From the Lab</h2>
+      <a href="/lab/">View all &rarr;</a>
+    </div>
+    <div class="featured-grid">
+      {{ range $labPosts }}
+      <article class="post-card">
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          <span class="tag tag-lab">Technical</span>
+        </div>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <!-- Lead Magnet CTA -->
 <section class="lead-magnet" id="lead-magnet">
   <div class="container">

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="blog-list">
+  <div class="container">
+    <div class="section-label">Technical</div>
+    <h1>Lab</h1>
+    <p class="blog-intro">Technical deep dives into AI engineering, agent architectures, and the systems behind what we build.</p>
+    <div class="posts">
+      {{ range .Pages }}
+      <article class="post-card">
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{ with .Params.tags }}
+            {{ range first 2 . }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="read-more">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+{{ end }}
