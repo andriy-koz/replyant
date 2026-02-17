@@ -1,6 +1,6 @@
 ---
 title: "How to Calculate ROI on AI Agents: A Practical Framework for 2026"
-date: 2026-02-21
+date: 2026-02-16
 tags: ["AI Agents", "Business Strategy", "Automation", "ROI"]
 description: "Most AI ROI calculations miss the full picture. Here's a five-number framework that gives you an honest answer — before you spend a dollar."
 ---
