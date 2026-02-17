@@ -11,7 +11,7 @@ MIT's research found that 95% of generative AI pilots fail to deliver meaningful
 
 The answer, for most, is no. Not because they lack budget or technical talent — but because the operational foundation isn't there.
 
-We've seen it repeatedly. A company invests five or six figures in an AI agent, launches it into production, and watches it underperform. Not because the technology was wrong, but because the business it was built on top of wasn't ready for it.
+We've seen it repeatedly. A company invests five or six figures in an AI agent, launches it into production, and watches it underperform. Not because the technology was wrong, but because the business it was built on top of wasn't ready for it. (If you're still figuring out what the right investment level looks like, our [AI chatbot pricing breakdown](/blog/how-much-does-ai-chatbot-cost/) covers what things actually cost — and where most budgets go wrong.)
 
 Readiness isn't a technology problem. It's an operations problem. And it's fixable — if you know what to look for.
 
@@ -124,7 +124,7 @@ Most aren't. Not because anything is fundamentally wrong, but because the ground
 
 The good news? Every item on this checklist is fixable. And fixing them doesn't just prepare you for AI — it makes your business run better regardless. Cleaner processes, better data, clearer ownership, and defined metrics improve operations even without a single line of automation.
 
-That's the hidden benefit of the process-first approach: the preparation itself is valuable.
+That's the hidden benefit of the process-first approach: the preparation itself is valuable. And once you're ready, the investment doesn't have to be as daunting as you think — here's [what AI chatbots actually cost in 2026](/blog/how-much-does-ai-chatbot-cost/) and how to budget for them the right way.
 
 ---
 

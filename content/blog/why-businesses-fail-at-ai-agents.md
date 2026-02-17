@@ -25,7 +25,7 @@ This is the most common — and most expensive — mistake. A founder reads abou
 
 The result is a shiny agent that automates something nobody needed automated, while the actual bottleneck in the business — the one costing real money — goes untouched.
 
-AI agents are incredibly powerful when pointed at the right target. Pointed at the wrong one, they're an expensive distraction.
+AI agents are incredibly powerful when pointed at the right target. Pointed at the wrong one, they're an expensive distraction. (And the cost difference between getting it right and getting it wrong is bigger than most people realize — we break down the [real numbers in our pricing guide](/blog/how-much-does-ai-chatbot-cost/).)
 
 ### 2. Treating It as a Tech Project, Not a Business Transformation
 
@@ -105,7 +105,7 @@ Now, build an AI agent specifically designed to execute those 12 resolution path
 
 The result: the agent handles 65% of incoming tickets autonomously with a 90%+ satisfaction rate. The human team focuses exclusively on complex issues — the work that actually benefits from empathy and judgment. Overall support costs drop by 40%.
 
-That's not hypothetical. That's the kind of outcome process-first AI implementation delivers.
+That's not hypothetical. That's the kind of outcome process-first AI implementation delivers. (Want to see what this kind of implementation actually costs — and how it compares to cheaper alternatives? Read our [full pricing breakdown](/blog/how-much-does-ai-chatbot-cost/).)
 
 ---
 
