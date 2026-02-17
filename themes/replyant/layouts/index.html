@@ -4,13 +4,31 @@
 <section class="hero">
   <div class="container">
     <h1>AI-Powered Growth<br>for Your Business</h1>
-    <p class="hero-sub">With 50+ AI agents deployed across industries, we build custom automation, streamline workflows, and craft strategies that help your business scale — intelligently.</p>
+    <p class="hero-sub">We build custom automation, streamline workflows, and craft strategies that help your business scale — intelligently.</p>
     <div class="hero-cta">
       <a href="#lead-magnet" class="btn btn-primary">Get Started</a>
       <a href="/blog/" class="btn btn-outline">Read the Blog</a>
     </div>
   </div>
 </section>
+
+<!-- Social Proof Stat Bar -->
+<div class="stat-bar">
+  <div class="stat-item">
+    <span class="stat-number">50+</span>
+    <span class="stat-label">Agents Deployed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">12+</span>
+    <span class="stat-label">Industries Served</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Custom-Built</span>
+  </div>
+</div>
+
+<div class="section-divider" aria-hidden="true"></div>
 
 <!-- Services -->
 <section class="services" id="services">
@@ -41,6 +59,8 @@
     </div>
   </div>
 </section>
+
+<div class="section-divider" aria-hidden="true"></div>
 
 <!-- Featured Blog Posts -->
 {{ $posts := first 3 (where (where .Site.RegularPages "Section" "blog") ".File.LogicalName" "!=" "ai-readiness-checklist.md") }}
@@ -92,6 +112,8 @@
   </div>
 </section>
 {{ end }}
+
+<div class="section-divider" aria-hidden="true"></div>
 
 <!-- Lead Magnet CTA -->
 <section class="lead-magnet" id="lead-magnet">
