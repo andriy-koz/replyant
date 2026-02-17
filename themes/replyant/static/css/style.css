@@ -272,81 +272,6 @@ img {
   line-height: 1.6;
 }
 
-/* === Contact === */
-.contact {
-  padding: 80px 0 100px;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.contact-sub {
-  text-align: center;
-  color: var(--text-muted);
-  margin-bottom: 48px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: var(--text-muted);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  font-family: inherit;
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #52525b;
-}
-
-.contact-form .btn {
-  width: 100%;
-  padding: 14px;
-  font-size: 1rem;
-}
-
 /* === Blog List === */
 .blog-list {
   padding: 120px 0 80px;
@@ -575,39 +500,6 @@ img {
   border-color: var(--accent);
 }
 
-/* === Social Proof Strip === */
-.proof {
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.proof-grid {
-  display: flex;
-  justify-content: center;
-  gap: 64px;
-}
-
-.proof-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.proof-number {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: -0.02em;
-}
-
-.proof-label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
 /* === Featured Blog Posts === */
 .featured-posts {
   padding: 80px 0;
@@ -727,24 +619,8 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
   .hero {
     padding: 120px 0 60px;
-  }
-
-  .proof-grid {
-    gap: 32px;
-  }
-
-  .proof-number {
-    font-size: 1.35rem;
-  }
-
-  .proof-label {
-    font-size: 0.8rem;
   }
 
   .section-header {

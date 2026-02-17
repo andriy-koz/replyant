@@ -179,7 +179,7 @@ Year 1 net cost after savings: **$28,000** for Approach C vs. **$5,600** for App
 
 By Year 2, the custom agent costs drop to maintenance only ($18,000/year) while saving $45,000+ annually. The ROI compounds. The off-the-shelf platform? You're still paying the subscription *and* the full support team.
 
-The cheapest option is rarely the most cost-effective. And the most expensive option is only worth it if the process work has been done first.
+The cheapest option is rarely the most cost-effective. And the most expensive option is only worth it if the process work has been done first. (Want a more rigorous way to run these numbers for your own business? Our [five-number ROI framework](/blog/ai-roi-calculator/) gives you a step-by-step calculation method.)
 
 ---
 
@@ -216,6 +216,6 @@ If you're trying to figure out what the right investment looks like for your spe
 
 ---
 
-*Wondering what the right AI approach looks like for your business — and what it should realistically cost? At Replyant, we start with a free strategy call to understand your workflow, your goals, and your current state. No pitch deck, no pressure — just an honest assessment of what makes sense.*
+*Wondering what the right AI approach looks like for your business — and what it should realistically cost? Start with our free AI Readiness Checklist to evaluate where AI fits in your workflow and what to prioritize first.*
 
-*[Book your free strategy call](https://replyant.com/#contact) and let's figure out the right path forward.*
+*[Get the free checklist](/#lead-magnet) and start building your business case today.*

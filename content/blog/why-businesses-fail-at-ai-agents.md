@@ -83,7 +83,7 @@ The technology becomes almost simple at this point. The intelligence is in the p
 
 ### Step 4: Measure, Monitor, Iterate
 
-Set concrete metrics before you launch. Not vanity metrics like "number of conversations handled" — business metrics like resolution time, cost per interaction, customer satisfaction, or revenue influenced.
+Set concrete metrics before you launch. Not vanity metrics like "number of conversations handled" — business metrics like resolution time, cost per interaction, customer satisfaction, or revenue influenced. (Need help building the actual business case? Our [AI ROI framework](/blog/ai-roi-calculator/) walks through the five numbers that matter.)
 
 Monitor continuously. Agents aren't set-and-forget. They need oversight, tuning, and occasional course correction, especially in the first 30 to 90 days.
 
@@ -119,6 +119,6 @@ The technology has caught up. The gap now is in strategy and execution. If you'r
 
 ---
 
-*Not sure where AI agents fit in your business — or worried your current approach isn't delivering? That's exactly the kind of problem we solve. At Replyant, we help businesses identify their highest-impact opportunities, redesign workflows for AI, and build custom agents that actually move the needle.*
+*Not sure where AI agents fit in your business — or worried your current approach isn't delivering? Start with our free AI Readiness Checklist to pinpoint what to fix first and where AI can make the biggest impact.*
 
-*[Book a free strategy call](https://replyant.com/#contact) and let's figure out your 80/20 together.*
+*[Get the free checklist](/#lead-magnet) and find your 80/20 starting point.*

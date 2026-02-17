@@ -17,10 +17,6 @@ theme = "replyant"
     name = "Blog"
     url = "/blog/"
     weight = 2
-  [[menu.main]]
-    name = "Contact"
-    url = "/#contact"
-    weight = 3
 
 [markup]
   [markup.goldmark]

@@ -55,7 +55,7 @@ Audit your data before you build. It's cheaper to clean a database than to debug
 
 Before you build anything, define what success looks like in concrete, measurable terms. Tie it to a business outcome: cost reduction, revenue increase, time saved, error rate decreased, customer satisfaction improved.
 
-This does two things. First, it forces you to think about whether the investment is actually worth it. Second, it gives you an honest yardstick once the agent is live. Without it, you'll never know if your AI initiative is working — or just *feeling* like it's working.
+This does two things. First, it forces you to think about whether the investment is actually worth it — our [AI ROI framework](/blog/ai-roi-calculator/) shows exactly how to build that business case. Second, it gives you an honest yardstick once the agent is live. Without it, you'll never know if your AI initiative is working — or just *feeling* like it's working.
 
 The MIT study that found 95% of AI pilots fail? A significant factor was that companies couldn't measure success because they never defined it in the first place.
 
@@ -128,6 +128,6 @@ That's the hidden benefit of the process-first approach: the preparation itself 
 
 ---
 
-*Not sure where you stand on readiness — or what to fix first? That's exactly what we help with. At Replyant, we start every engagement with a readiness assessment: mapping your processes, evaluating your data, and identifying the highest-ROI opportunity for automation.*
+*Not sure where you stand on readiness — or what to fix first? Download our free AI Readiness Checklist — a practical guide to evaluate where AI fits in your business and what to prioritize before you invest.*
 
-*[Let's assess your readiness together.](https://replyant.com/#contact)*
+*[Get the free checklist](/#lead-magnet) and start your assessment today.*

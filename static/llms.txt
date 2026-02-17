@@ -14,12 +14,15 @@ Replyant helps businesses build custom AI agents, automate workflows, and develo
 
 - [Home](https://replyant.com/)
 - [Blog](https://replyant.com/blog/)
-- [Contact](https://replyant.com/#contact)
+- [Get the Free AI Readiness Checklist](https://replyant.com/#lead-magnet)
 
 ## Blog Posts
 
+- [How to Calculate ROI on AI Agents: A Practical Framework for 2026](https://replyant.com/blog/ai-roi-calculator/)
+- [How Much Does a Custom AI Chatbot Actually Cost? A 2026 Pricing Breakdown](https://replyant.com/blog/how-much-does-ai-chatbot-cost/)
+- [Is Your Business Actually Ready for AI? The 7-Point Readiness Checklist](https://replyant.com/blog/ai-readiness-checklist/)
 - [Why Most Businesses Fail at AI Agents (And the 80/20 Rule That Actually Works)](https://replyant.com/blog/why-businesses-fail-at-ai-agents/)
 
-## Contact
+## Get Started
 
-Ready to integrate AI into your business? Reach out at [replyant.com/#contact](https://replyant.com/#contact).
+Want to evaluate where AI fits in your business? Get the free AI Readiness Checklist at [replyant.com/#lead-magnet](https://replyant.com/#lead-magnet).
