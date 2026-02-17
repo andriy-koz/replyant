@@ -12,6 +12,26 @@
   </div>
 </section>
 
+<!-- Social Proof -->
+<section class="proof">
+  <div class="container">
+    <div class="proof-grid">
+      <div class="proof-item">
+        <span class="proof-number">50+</span>
+        <span class="proof-label">AI Agents Deployed</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">3x</span>
+        <span class="proof-label">Average ROI</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">24hr</span>
+        <span class="proof-label">Response Time</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Services -->
 <section class="services" id="services">
   <div class="container">
@@ -39,6 +59,44 @@
         <p>AI adoption strategy and growth consulting. We help you identify where AI fits in your business and build a roadmap to get there.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Featured Blog Posts -->
+{{ $posts := first 3 (where .Site.RegularPages "Section" "blog") }}
+{{ if $posts }}
+<section class="featured-posts">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Insights</h2>
+      <a href="/blog/">View all &rarr;</a>
+    </div>
+    <div class="featured-grid">
+      {{ range $posts }}
+      <article class="post-card">
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Lead Magnet CTA -->
+<section class="lead-magnet">
+  <div class="container">
+    <h2>Get the Free AI Readiness Checklist</h2>
+    <p class="lead-sub">A practical guide to evaluate where AI fits in your business — and what to do first.</p>
+    <form action="https://formspree.io/f/{{ .Site.Params.formspreeID }}" method="POST" class="lead-form">
+      <input type="hidden" name="_subject" value="Lead Magnet: AI Readiness Checklist">
+      <input type="email" name="email" required placeholder="you@company.com">
+      <button type="submit" class="btn btn-primary">Send It to Me</button>
+    </form>
   </div>
 </section>
 
