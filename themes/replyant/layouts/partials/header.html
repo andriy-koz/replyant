@@ -3,8 +3,9 @@
     <a href="{{ "/" | relURL }}" class="logo">Replyant</a>
     <ul class="nav-links">
       {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}" {{ if eq .Name "Contact" }}class="btn btn-sm"{{ end }}>{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+      <li><a href="/#lead-magnet" class="btn btn-sm">Get Started</a></li>
     </ul>
     <button class="mobile-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
