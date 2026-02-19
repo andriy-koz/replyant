@@ -104,7 +104,17 @@ img {
   left: 0;
   right: 0;
   z-index: 100;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+}
+
+.site-header.scrolled,
+.site-header.menu-open {
   background: rgba(10, 10, 11, 0.85);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -174,7 +184,7 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 160px 0 100px;
+  padding: 200px 0 140px;
   text-align: center;
 }
 
@@ -195,7 +205,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
   -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 70%);
   mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 70%);
@@ -209,12 +219,12 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--text) 40%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -223,8 +233,8 @@ img {
 .hero-sub {
   font-size: 1.2rem;
   color: var(--text-muted);
-  max-width: 560px;
-  margin: 0 auto 40px;
+  max-width: 520px;
+  margin: 0 auto 48px;
   line-height: 1.6;
 }
 
@@ -241,7 +251,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 0;
-  padding: 32px 24px;
+  padding: 48px 24px;
 }
 
 .stat-item {
@@ -284,7 +294,7 @@ img {
 
 /* === Services === */
 .services {
-  padding: 80px 0;
+  padding: 140px 0;
 }
 
 .services h2 {
@@ -298,7 +308,7 @@ img {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
 .service-card {
@@ -307,7 +317,7 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 40px 36px;
   transition: border-color 0.2s, transform 0.2s;
 }
 
@@ -627,7 +637,7 @@ img {
 
 /* === Featured Blog Posts === */
 .featured-posts {
-  padding: 80px 0;
+  padding: 120px 0;
 }
 
 .section-header {
@@ -651,7 +661,7 @@ img {
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
 .featured-grid .post-card {
@@ -665,10 +675,8 @@ img {
 
 /* === Lead Magnet CTA === */
 .lead-magnet {
-  padding: 80px 0;
+  padding: 120px 0;
   background: var(--bg-elevated);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
   text-align: center;
 }
 
@@ -717,6 +725,51 @@ img {
   color: #52525b;
 }
 
+/* === Reveal Animations === */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered cards */
+.services-grid .reveal:nth-child(2) { transition-delay: 100ms; }
+.services-grid .reveal:nth-child(3) { transition-delay: 200ms; }
+.featured-grid .reveal:nth-child(2) { transition-delay: 100ms; }
+.featured-grid .reveal:nth-child(3) { transition-delay: 200ms; }
+
+/* Hero entrance — CSS only */
+.hero .container > * {
+  opacity: 0;
+  animation: heroEntrance 0.8s ease-out both;
+}
+.hero .container > *:nth-child(1) { animation-delay: 0.2s; }
+.hero .container > *:nth-child(2) { animation-delay: 0.35s; }
+.hero .container > *:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes heroEntrance {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero .container > * {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
   .mobile-toggle {
@@ -760,7 +813,7 @@ img {
   }
 
   .hero {
-    padding: 120px 0 60px;
+    padding: 140px 0 80px;
   }
 
   .section-header {

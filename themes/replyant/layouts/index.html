@@ -13,7 +13,7 @@
 </section>
 
 <!-- Social Proof Stat Bar -->
-<div class="stat-bar">
+<div class="stat-bar reveal">
   <div class="stat-item">
     <span class="stat-number">50+</span>
     <span class="stat-label">Agents Deployed</span>
@@ -28,28 +28,26 @@
   </div>
 </div>
 
-<div class="section-divider" aria-hidden="true"></div>
-
 <!-- Services -->
 <section class="services" id="services">
   <div class="container">
-    <h2>What We Do</h2>
+    <h2 class="reveal">What We Do</h2>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M8 6a4 4 0 0 1 8 0"/><path d="M17 12.5c1.77.77 3 2.53 3 4.5a5 5 0 0 1-10 0"/><path d="M4.5 17a5 5 0 0 1 6.5-4.5"/></svg>
         </div>
         <h3>AI Agent Development</h3>
         <p>Custom AI agents tailored to your business processes. From customer support to data analysis, we build agents that work around the clock.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m9 10 3 3 3-3"/><path d="M12 13V7"/><path d="M6 17h12"/></svg>
         </div>
         <h3>Business Automation</h3>
         <p>Streamline repetitive tasks and connect your tools. We design automation pipelines that save time and reduce human error.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h5"/><path d="M17 12h5"/><path d="m7 7 10 10"/><path d="m17 7-10 10"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
@@ -60,20 +58,18 @@
   </div>
 </section>
 
-<div class="section-divider" aria-hidden="true"></div>
-
 <!-- Featured Blog Posts -->
 {{ $posts := first 3 (where (where .Site.RegularPages "Section" "blog") ".File.LogicalName" "!=" "ai-readiness-checklist.md") }}
 {{ if $posts }}
 <section class="featured-posts">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Latest Insights</h2>
       <a href="/blog/">View all &rarr;</a>
     </div>
     <div class="featured-grid">
       {{ range $posts }}
-      <article class="post-card">
+      <article class="post-card reveal">
         <div class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         </div>
@@ -92,13 +88,13 @@
 {{ if $labPosts }}
 <section class="featured-posts">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>From the Lab</h2>
       <a href="/lab/">View all &rarr;</a>
     </div>
     <div class="featured-grid">
       {{ range $labPosts }}
-      <article class="post-card">
+      <article class="post-card reveal">
         <div class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
           <span class="tag tag-lab">Technical</span>
@@ -113,11 +109,9 @@
 </section>
 {{ end }}
 
-<div class="section-divider" aria-hidden="true"></div>
-
 <!-- Lead Magnet CTA -->
 <section class="lead-magnet" id="lead-magnet">
-  <div class="container">
+  <div class="container reveal">
     <h2>Get the Free AI Readiness Checklist</h2>
     <p class="lead-sub">A practical guide to evaluate where AI fits in your business — and what to do first.</p>
     <form action="https://formspree.io/f/{{ .Site.Params.formspreeID }}" method="POST" class="lead-form">

@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
 </head>
 <body>
   {{ partial "header.html" . }}
@@ -17,6 +20,10 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
-  {{ if .IsHome }}<script src="{{ "js/glow.js" | relURL }}" defer></script>{{ end }}
+  <script src="{{ "js/nav.js" | relURL }}" defer></script>
+  {{ if .IsHome }}
+  <script src="{{ "js/glow.js" | relURL }}" defer></script>
+  <script src="{{ "js/homepage.js" | relURL }}" defer></script>
+  {{ end }}
 </body>
 </html>
