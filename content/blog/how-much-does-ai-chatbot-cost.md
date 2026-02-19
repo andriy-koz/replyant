@@ -82,7 +82,7 @@ This is the middle ground — tools like Voiceflow, Botpress, Stack AI, or Make.
 This is what we do at Replyant, and it's what makes sense when the other two options can't deliver the outcome you need. A custom AI agent is built specifically for your business — your workflows, your data, your systems, your edge cases.
 
 **What you get:**
-- An agent designed around your actual process (not a template)
+- An agent designed around your actual process (not a template) — built with [the same rigor that goes into production agent design](/blog/anatomy-of-an-ai-agent-system-prompt/)
 - Deep integration with your existing tools and databases
 - Custom decision logic for your specific use cases
 - Full ownership of the solution

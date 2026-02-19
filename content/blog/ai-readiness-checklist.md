@@ -25,7 +25,7 @@ Here are the seven things to get right before you automate anything.
 
 This is the most basic prerequisite — and the one most companies fail. If you ask three people on your team how a workflow runs and you get three different answers, you're not ready to automate it.
 
-AI agents execute processes. If the process isn't defined, the agent has nothing to execute. And "it's in people's heads" doesn't count.
+AI agents execute processes. If the process isn't defined, the agent has nothing to execute. And "it's in people's heads" doesn't count. (Even the AI itself needs rigorous documentation — we [analyzed the 4,000-word system prompt](/blog/anatomy-of-an-ai-agent-system-prompt/) that governs Anthropic's coding agent, and every line exists because of a specific failure mode.)
 
 You don't need enterprise-grade process documentation. You need a clear, written answer to: *what are the steps, who owns each step, what triggers the next one, and what happens when something goes wrong?*
 

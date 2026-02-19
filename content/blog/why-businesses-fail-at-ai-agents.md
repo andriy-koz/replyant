@@ -47,7 +47,7 @@ The better approach? One workflow. One agent. One measurable outcome. Prove it w
 
 Here's a number that should concern every business leader: only one in five companies has a mature governance model for their AI agents. Meanwhile, half of all deployed agents operate in isolated silos — disconnected from other systems, producing inconsistent results, and creating shadow workflows that nobody fully understands.
 
-Without clear oversight — who monitors the agent, how decisions are audited, what happens when something goes wrong — you're building on sand. Governance isn't bureaucracy. It's the foundation that lets you scale with confidence.
+Without clear oversight — who monitors the agent, how decisions are audited, what happens when something goes wrong — you're building on sand. Governance isn't bureaucracy. It's the foundation that lets you scale with confidence. (Want to see what production-grade agent governance actually looks like in practice? We [dissected the system prompt powering Anthropic's own coding agent](/blog/anatomy-of-an-ai-agent-system-prompt/) — the guardrails are more sophisticated than you'd expect.)
 
 ---
 
