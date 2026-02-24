@@ -47,7 +47,7 @@ The better approach? One workflow. One agent. One measurable outcome. Prove it w
 
 Here's a number that should concern every business leader: only one in five companies has a mature governance model for their AI agents. Meanwhile, half of all deployed agents operate in isolated silos — disconnected from other systems, producing inconsistent results, and creating shadow workflows that nobody fully understands.
 
-Without clear oversight — who monitors the agent, how decisions are audited, what happens when something goes wrong — you're building on sand. Governance isn't bureaucracy. It's the foundation that lets you scale with confidence. (Want to see what production-grade agent governance actually looks like in practice? We [dissected the system prompt powering Anthropic's own coding agent](/blog/anatomy-of-an-ai-agent-system-prompt/) — the guardrails are more sophisticated than you'd expect.)
+Without clear oversight — who monitors the agent, how decisions are audited, what happens when something goes wrong — you're building on sand. Governance isn't bureaucracy. It's the foundation that lets you scale with confidence. (Want to see what production-grade agent governance actually looks like in practice? We [dissected the system prompt powering Anthropic's own coding agent](/lab/anatomy-of-an-ai-agent-system-prompt/) — the guardrails are more sophisticated than you'd expect.)
 
 ---
 
@@ -61,7 +61,7 @@ Here's what that looks like in practice:
 
 ### Step 1: Identify Your Highest-ROI Workflow
 
-Look for the intersection of three things: high volume (it happens many times per day or week), high cost (it eats up significant time or money), and high repeatability (the steps are largely predictable).
+Look for the intersection of three things: high volume (it happens many times per day or week), high cost (it eats up significant time or money), and high repeatability (the steps are largely predictable). Our [hire-vs-automate decision framework](/blog/hire-vs-automate/) digs deeper into how to evaluate each task against these dimensions.
 
 Common examples: customer inquiry triage, lead qualification, invoice processing, appointment scheduling, data entry and validation, internal knowledge retrieval.
 

@@ -25,7 +25,7 @@ Here are the seven things to get right before you automate anything.
 
 This is the most basic prerequisite — and the one most companies fail. If you ask three people on your team how a workflow runs and you get three different answers, you're not ready to automate it.
 
-AI agents execute processes. If the process isn't defined, the agent has nothing to execute. And "it's in people's heads" doesn't count. (Even the AI itself needs rigorous documentation — we [analyzed the 4,000-word system prompt](/blog/anatomy-of-an-ai-agent-system-prompt/) that governs Anthropic's coding agent, and every line exists because of a specific failure mode.)
+AI agents execute processes. If the process isn't defined, the agent has nothing to execute. And "it's in people's heads" doesn't count. (Even the AI itself needs rigorous documentation — we [analyzed the 4,000-word system prompt](/lab/anatomy-of-an-ai-agent-system-prompt/) that governs Anthropic's coding agent, and every line exists because of a specific failure mode.)
 
 You don't need enterprise-grade process documentation. You need a clear, written answer to: *what are the steps, who owns each step, what triggers the next one, and what happens when something goes wrong?*
 
@@ -65,7 +65,7 @@ The biggest readiness trap is ambition. Leadership gets excited, a vendor shows 
 
 That's not a plan. That's a fantasy.
 
-The companies seeing real ROI start with one workflow — the one with the highest volume, highest cost, and highest repeatability. They prove value there, build internal expertise and confidence, and then expand methodically.
+The companies seeing real ROI start with one workflow — the one with the highest volume, highest cost, and highest repeatability. And within that workflow, understanding [which tasks should stay with humans versus move to an agent](/blog/hire-vs-automate/) makes the difference between a well-designed implementation and an expensive misstep. They prove value there, build internal expertise and confidence, and then expand methodically.
 
 We covered this in depth in our [guide to the 80/20 framework](/blog/why-businesses-fail-at-ai-agents/): pick one, go deep, prove it works. Trying to automate five workflows simultaneously is a guaranteed way to deliver zero results on all five.
 

@@ -82,7 +82,7 @@ This is the middle ground — tools like Voiceflow, Botpress, Stack AI, or Make.
 This is what we do at Replyant, and it's what makes sense when the other two options can't deliver the outcome you need. A custom AI agent is built specifically for your business — your workflows, your data, your systems, your edge cases.
 
 **What you get:**
-- An agent designed around your actual process (not a template) — built with [the same rigor that goes into production agent design](/blog/anatomy-of-an-ai-agent-system-prompt/)
+- An agent designed around your actual process (not a template) — built with [the same rigor that goes into production agent design](/lab/anatomy-of-an-ai-agent-system-prompt/)
 - Deep integration with your existing tools and databases
 - Custom decision logic for your specific use cases
 - Full ownership of the solution
@@ -200,7 +200,7 @@ If the answer is "just our FAQ page," a platform might work. If it's "our CRM, o
 200 conversations a day is very different from 20. And if you're growing, today's volume is the wrong number to plan for. Price for where you'll be in 12 months.
 
 **5. What's the cost of *not* automating?**
-This is the number most businesses forget to calculate. Three support agents spending 60% of their time on repetitive inquiries is $81,000/year in wasted capacity. That's not a technology cost — it's an operational cost you're already paying.
+This is the number most businesses forget to calculate. Three support agents spending 60% of their time on repetitive inquiries is $81,000/year in wasted capacity. That's not a technology cost — it's an operational cost you're already paying. The [hire-vs-automate framework](/blog/hire-vs-automate/) helps you compare the real costs of both paths — including the hidden costs of hiring for work that a machine should be doing.
 
 ---
 

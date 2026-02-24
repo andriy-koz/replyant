@@ -334,7 +334,7 @@ Whether you're building a customer support agent, a data pipeline orchestrator, 
 
 4. **Constrain tool selection.** If your agent has access to powerful general-purpose tools (APIs, databases, shell access), explicitly tell it when to use — and not use — each one.
 
-5. **Describe the operating environment.** Tell the agent how its output reaches users, what systems it connects to, and what could go wrong in the data it processes.
+5. **Describe the operating environment.** Tell the agent how its output reaches users, [what systems it connects to](/lab/anatomy-of-ai-agent-mcp/), and what could go wrong in the data it processes.
 
 6. **Invest in anti-patterns over best practices.** Your agent already wants to be helpful. What it needs is guardrails on the specific ways that helpfulness goes wrong in your domain.
 

@@ -73,7 +73,7 @@ What percentage of the workflow will the agent realistically handle?
 
 This is where honesty matters most. Vendors will tell you 80-90%. Reality for most implementations is 50-70% in the first year, with the remainder still requiring human involvement.
 
-**How to estimate it:** Map every task type in the workflow. Categorize each as fully automatable, partially automatable, or requires human judgment. Weight by volume. The result is your realistic automation rate — and it should be the number you use, not the vendor's optimistic projection.
+**How to estimate it:** Map every task type in the workflow. Categorize each as fully automatable, partially automatable, or requires human judgment. Weight by volume. The result is your realistic automation rate — and it should be the number you use, not the vendor's optimistic projection. (Our [hire-vs-automate decision framework](/blog/hire-vs-automate/) provides a four-factor matrix for making this call.)
 
 If you haven't done this mapping yet, our [readiness checklist](/blog/ai-readiness-checklist/) walks through the prerequisites, including process documentation and success metrics.
 
