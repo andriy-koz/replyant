@@ -214,8 +214,3 @@ The companies that get the best ROI aren't the ones that spend the most. They're
 
 If you're trying to figure out what the right investment looks like for your specific situation, that's a conversation worth having — before you commit to any platform, vendor, or build.
 
----
-
-*Wondering what the right AI approach looks like for your business — and what it should realistically cost? Start with our free AI Readiness Checklist to evaluate where AI fits in your workflow and what to prioritize first.*
-
-*[Get the free checklist](/#lead-magnet) and start building your business case today.*

@@ -350,8 +350,3 @@ The gap between a demo-ready agent and a production-ready agent isn't model capa
 
 If you're building AI agents and they're not behaving the way you want, the answer is almost never "use a better model." It's "write a better prompt." And the blueprint for what "better" looks like is right here.
 
----
-
-*Building AI agents for your business and want them to actually work in production? We design agent systems with the same rigor Anthropic puts into their own tools — because the difference between an agent that demos well and one that delivers ROI is in the details nobody sees.*
-
-*[Talk to us about your AI agent project](/#lead-magnet) — we'll show you what production-grade agent design looks like.*

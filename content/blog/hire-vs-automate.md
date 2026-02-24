@@ -211,8 +211,3 @@ The framework is simple: evaluate repeatability, judgment complexity, data depen
 
 If you're not sure whether your workflows are ready for this kind of redesign, that's the first thing to figure out — before you post a job listing or sign a vendor contract.
 
----
-
-*Not sure which parts of your operation should be automated and which need human hands? Start with our free AI Readiness Checklist — it walks through the operational prerequisites that determine whether automation will actually deliver results for your business.*
-
-*[Get the free checklist](/#lead-magnet) and make your next "hire" the right one.*

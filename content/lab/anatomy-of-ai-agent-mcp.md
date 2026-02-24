@@ -401,8 +401,3 @@ For teams building agents today, the practical advice is straightforward:
 
 MCP doesn't change the fundamental equation: the technology is only as good as the process and governance around it. But it does change the plumbing — dramatically. And for teams that have been stuck in integration hell, that's enough to unlock the kind of agent workflows that actually deliver [measurable ROI](/blog/ai-roi-calculator/).
 
----
-
-*Building AI agents that need to connect to your business systems? We design MCP-based agent architectures with the same production rigor we apply to every component — because an agent that can't reliably talk to your CRM, your order system, and your data isn't an agent. It's a chatbot.*
-
-*[Talk to us about your AI agent project](/#lead-magnet) — we'll show you how to build integrations that actually work.*

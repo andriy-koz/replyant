@@ -126,8 +126,3 @@ The good news? Every item on this checklist is fixable. And fixing them doesn't 
 
 That's the hidden benefit of the process-first approach: the preparation itself is valuable. And once you're ready, the investment doesn't have to be as daunting as you think — here's [what AI chatbots actually cost in 2026](/blog/how-much-does-ai-chatbot-cost/) and how to budget for them the right way.
 
----
-
-*Not sure where you stand on readiness — or what to fix first? Download our free AI Readiness Checklist — a practical guide to evaluate where AI fits in your business and what to prioritize before you invest.*
-
-*[Get the free checklist](/#lead-magnet) and start your assessment today.*

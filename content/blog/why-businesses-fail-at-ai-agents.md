@@ -117,8 +117,3 @@ The businesses winning with AI in 2026 aren't the ones with the biggest budgets 
 
 The technology has caught up. The gap now is in strategy and execution. If you're not sure whether your organization is ready, start with our [7-point AI readiness checklist](/blog/ai-readiness-checklist/).
 
----
-
-*Not sure where AI agents fit in your business — or worried your current approach isn't delivering? Start with our free AI Readiness Checklist to pinpoint what to fix first and where AI can make the biggest impact.*
-
-*[Get the free checklist](/#lead-magnet) and find your 80/20 starting point.*

@@ -176,8 +176,3 @@ If the numbers work, invest with confidence. If they don't, either the workflow 
 
 The companies seeing real returns from AI agents aren't the ones making the biggest bets. They're the ones making the most informed bets.
 
----
-
-*Want to run the five-number framework on your own workflows? Our free AI Readiness Checklist walks you through the operational prerequisites — process documentation, data quality, success metrics — that feed directly into this calculation.*
-
-*[Get the free checklist](/blog/ai-readiness-checklist/) and start building your business case with real numbers.*
