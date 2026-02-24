@@ -390,15 +390,25 @@ img {
 }
 
 .post-card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 32px;
   transition: border-color 0.2s;
+  cursor: pointer;
 }
 
 .post-card:hover {
   border-color: var(--accent);
+}
+
+/* Stretched link — makes the entire card clickable */
+.post-card h2 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .post-meta {
@@ -442,12 +452,6 @@ img {
   font-size: 0.95rem;
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
 
 /* === Blog Post === */
 .blog-post {

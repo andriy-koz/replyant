@@ -75,7 +75,6 @@
         </div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
-        <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
       </article>
       {{ end }}
     </div>
@@ -100,7 +99,6 @@
         </div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
-        <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
       </article>
       {{ end }}
     </div>
