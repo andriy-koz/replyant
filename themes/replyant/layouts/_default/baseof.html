@@ -33,9 +33,9 @@
   </main>
   {{ partial "footer.html" . }}
   <script src="{{ "js/nav.js" | relURL }}" defer></script>
+  <script src="{{ "js/homepage.js" | relURL }}" defer></script>
   {{ if .IsHome }}
   <script src="{{ "js/glow.js" | relURL }}" defer></script>
-  <script src="{{ "js/homepage.js" | relURL }}" defer></script>
   {{ end }}
 </body>
 </html>
