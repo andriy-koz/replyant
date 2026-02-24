@@ -97,7 +97,6 @@
       <article class="post-card reveal">
         <div class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-          <span class="tag tag-lab">Technical</span>
         </div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
