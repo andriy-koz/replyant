@@ -1,14 +1,14 @@
 (function() {
   var header = document.querySelector('.site-header');
   if (!header) return;
-  var scrolled = false;
-  function onScroll() {
-    var shouldBeScrolled = window.scrollY > 50;
-    if (shouldBeScrolled !== scrolled) {
-      scrolled = shouldBeScrolled;
-      header.classList.toggle('scrolled', scrolled);
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+
+  var sentinel = document.createElement('div');
+  sentinel.setAttribute('aria-hidden', 'true');
+  sentinel.style.cssText = 'position:absolute;top:50px;height:1px;pointer-events:none';
+  document.body.prepend(sentinel);
+
+  var observer = new IntersectionObserver(function(entries) {
+    header.classList.toggle('scrolled', !entries[0].isIntersecting);
+  });
+  observer.observe(sentinel);
 })();
