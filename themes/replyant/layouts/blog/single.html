@@ -15,10 +15,12 @@
     <div class="post-content">
       {{ .Content }}
     </div>
-    <footer class="post-footer">
-      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
-    </footer>
   </div>
   {{ partial "lead-magnet.html" . }}
+  <footer class="post-footer">
+    <div class="container container-narrow">
+      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+    </div>
+  </footer>
 </article>
 {{ end }}
