@@ -858,4 +858,23 @@ img {
   .lead-form {
     flex-direction: column;
   }
+
+  .post-card {
+    padding: 20px;
+  }
+
+  .post-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .post-meta time {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .post-meta .tag {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
 }
