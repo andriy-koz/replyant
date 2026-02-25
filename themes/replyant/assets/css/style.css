@@ -560,31 +560,9 @@ img {
   font-size: 0.95rem;
 }
 
-/* === Lab Section Label === */
-.section-label {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-  margin-bottom: 12px;
-}
-
-.tag-lab {
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-}
-
 /* Lead magnet inside blog/lab posts */
 .blog-post .lead-magnet {
-  padding: 48px 32px;
   margin-top: 48px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
 }
 
 /* === Section Divider === */
