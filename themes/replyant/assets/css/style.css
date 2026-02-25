@@ -285,6 +285,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 8px;
   flex: 1;
   padding: 0 16px;
@@ -310,16 +311,15 @@ img {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  background: linear-gradient(180deg, #c7d2fe 0%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #f1f1f4;
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
   font-variant-numeric: tabular-nums;
-  transition: filter 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .stat-item:hover .stat-number {
-  filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.45));
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.35);
 }
 
 .stat-label {
