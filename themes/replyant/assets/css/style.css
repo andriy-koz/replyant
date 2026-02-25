@@ -836,8 +836,22 @@ img {
 
 /* === Responsive === */
 @media (max-width: 768px) {
+  .site-header {
+    background: rgba(10, 10, 11, 0.95);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
   .mobile-toggle {
     display: flex;
+    padding: 8px;
+  }
+
+  .mobile-toggle span {
+    width: 22px;
+    height: 2.5px;
+    border-radius: 2px;
   }
 
   .nav-links {
@@ -846,7 +860,9 @@ img {
     top: 64px;
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: rgba(10, 10, 11, 0.98);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     padding: 24px;
