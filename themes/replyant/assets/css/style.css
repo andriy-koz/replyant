@@ -315,6 +315,11 @@ img {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-variant-numeric: tabular-nums;
+  transition: filter 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.45));
 }
 
 .stat-label {
