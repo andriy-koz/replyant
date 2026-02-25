@@ -6,7 +6,7 @@ theme = "replyant"
 [params]
   description = "AI Agent Development, Business Automation & Strategic Consulting"
   tagline = "Build Smarter. Grow Faster."
-  formspreeID = "mzdaberd"
+  leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
 
 [menu]
   [[menu.main]]

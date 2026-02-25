@@ -117,7 +117,7 @@ GitHub Actions builds with `hugo --gc --minify` and deploys to GitHub Pages. Tha
 | Theme | `replyant` (custom, in `themes/replyant/`) |
 | Markdown | Goldmark with `unsafe = true` (raw HTML allowed) |
 | Pagination | 10 posts per page |
-| Forms | Formspree (`mzdaberd`) for lead magnet |
+| Forms | Self-hosted API (`leadsAPI` param in hugo.toml) |
 | Font | Inter (self-hosted woff2) |
 | Color scheme | Dark mode — `#0a0a0b` bg, `#6366f1` accent |
 

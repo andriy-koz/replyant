@@ -695,13 +695,23 @@ img {
 
 .lead-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   max-width: 480px;
   margin: 0 auto;
 }
 
-.lead-form input[type="email"] {
+.lead-form input[type="text"] {
+  width: 100%;
+}
+
+.lead-form button {
+  flex-shrink: 0;
+}
+
+.lead-form input[type="email"],
+.lead-form input[type="text"] {
   flex: 1;
   padding: 12px 16px;
   background: var(--bg-card);
@@ -713,13 +723,36 @@ img {
   transition: border-color 0.2s;
 }
 
-.lead-form input[type="email"]:focus {
+.lead-form input[type="email"]:focus,
+.lead-form input[type="text"]:focus {
   outline: none;
   border-color: var(--accent);
 }
 
-.lead-form input[type="email"]::placeholder {
+.lead-form input[type="email"]::placeholder,
+.lead-form input[type="text"]::placeholder {
   color: #52525b;
+}
+
+.lead-hp {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.lead-msg {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.lead-msg--success {
+  color: #22c55e;
+}
+
+.lead-msg--error {
+  color: #ef4444;
 }
 
 /* === Reveal Animations === */

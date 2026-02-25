@@ -2,10 +2,16 @@
   <div class="container reveal">
     <h2>Get the Free AI Readiness Checklist</h2>
     <p class="lead-sub">A practical guide to evaluate where AI fits in your business — and what to do first.</p>
-    <form action="https://formspree.io/f/{{ .Site.Params.formspreeID }}" method="POST" class="lead-form">
-      <input type="hidden" name="_subject" value="Lead Magnet: AI Readiness Checklist">
-      <input type="email" name="email" required placeholder="you@company.com">
+    <form id="lead-form" class="lead-form" data-api="{{ .Site.Params.leadsAPI }}">
+      <input type="text" name="name" required placeholder="Your name" autocomplete="given-name">
+      <input type="email" name="email" required placeholder="you@company.com" autocomplete="email">
+      <div class="lead-hp" aria-hidden="true" tabindex="-1">
+        <label for="lead-website">Website</label>
+        <input type="text" id="lead-website" name="website" autocomplete="off" tabindex="-1">
+      </div>
       <button type="submit" class="btn btn-primary">Send It to Me</button>
     </form>
+    <p class="lead-msg lead-msg--success" hidden>Check your inbox — it's on the way!</p>
+    <p class="lead-msg lead-msg--error" hidden>Something went wrong. Please try again.</p>
   </div>
 </section>
