@@ -2,7 +2,6 @@
 <article class="blog-post">
   <div class="container container-narrow">
     <header class="post-header">
-      <div class="section-label">Technical</div>
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
       <h1>{{ .Title }}</h1>
       {{ with .Params.tags }}
@@ -16,10 +15,10 @@
     <div class="post-content">
       {{ .Content }}
     </div>
-    {{ partial "lead-magnet.html" . }}
     <footer class="post-footer">
       <a href="/lab/" class="back-link">&larr; Back to Lab</a>
     </footer>
   </div>
+  {{ partial "lead-magnet.html" . }}
 </article>
 {{ end }}
