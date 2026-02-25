@@ -341,10 +341,26 @@ img {
 }
 
 .service-icon {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 0;
   color: var(--accent);
-  margin-bottom: 16px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.06;
+  pointer-events: none;
+  line-height: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-icon svg {
+  width: 200px;
+  height: 200px;
+}
+
+.service-card:hover .service-icon {
+  opacity: 0.12;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .service-card h3,
@@ -774,6 +790,9 @@ img {
   .hero .container > * {
     opacity: 1 !important;
     animation: none !important;
+  }
+  .service-icon {
+    transition: none !important;
   }
 }
 
