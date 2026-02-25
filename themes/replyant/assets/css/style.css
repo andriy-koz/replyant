@@ -246,20 +246,48 @@ img {
 }
 
 /* === Stat Bar === */
+.stat-bar-section {
+  position: relative;
+  padding: 0;
+}
+
+.stat-bar-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 280px;
+  background: radial-gradient(ellipse, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .stat-bar {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  padding: 48px 24px;
+  padding: 44px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.3s;
+}
+
+.stat-bar:hover {
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 0 40px;
+  gap: 8px;
+  flex: 1;
+  padding: 0 16px;
 }
 
 .stat-item + .stat-item {
@@ -272,24 +300,29 @@ img {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.5;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
 }
 
 .stat-number {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* === Services === */
@@ -820,18 +853,24 @@ img {
   }
 
   .stat-bar {
-    flex-direction: column;
-    gap: 20px;
+    padding: 28px 8px;
   }
 
   .stat-item {
-    padding: 0;
+    padding: 0 8px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
   }
 
   .stat-item + .stat-item::before {
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 32px;
   }
 
   .services-grid {
