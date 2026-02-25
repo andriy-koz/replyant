@@ -703,7 +703,7 @@ img {
 }
 
 .lead-form input[type="text"] {
-  width: 100%;
+  flex-basis: 100%;
 }
 
 .lead-form button {
