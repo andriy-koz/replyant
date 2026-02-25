@@ -550,9 +550,7 @@ img {
 }
 
 .post-footer {
-  margin-top: 60px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  padding: 48px 0;
 }
 
 .back-link {
@@ -562,7 +560,7 @@ img {
 
 /* Lead magnet inside blog/lab posts */
 .blog-post .lead-magnet {
-  margin-top: 48px;
+  margin-top: 60px;
 }
 
 /* === Section Divider === */
