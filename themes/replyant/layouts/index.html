@@ -113,3 +113,12 @@
 {{ partial "lead-magnet.html" . }}
 
 {{ end }}
+
+{{ define "scripts" }}
+  {{ $counter := resources.Get "js/counter.js" | minify | fingerprint }}
+  <script src="{{ $counter.RelPermalink }}" defer></script>
+  {{ $glow := resources.Get "js/glow.js" | minify | fingerprint }}
+  <script src="{{ $glow.RelPermalink }}" defer></script>
+  {{ $leads := resources.Get "js/leads.js" | minify | fingerprint }}
+  <script src="{{ $leads.RelPermalink }}" defer></script>
+{{ end }}

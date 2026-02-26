@@ -24,3 +24,8 @@
   </footer>
 </article>
 {{ end }}
+
+{{ define "scripts" }}
+  {{ $leads := resources.Get "js/leads.js" | minify | fingerprint }}
+  <script src="{{ $leads.RelPermalink }}" defer></script>
+{{ end }}
