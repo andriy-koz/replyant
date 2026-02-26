@@ -273,6 +273,7 @@ main {
 .stat-bar-section {
   position: relative;
   padding: 40px 0;
+  overflow: hidden;
 }
 
 .stat-bar-section::before {
@@ -871,7 +872,7 @@ main {
 
   .site-header.scrolled,
   .site-header.menu-open {
-    background: var(--bg);
+    background: var(--bg-elevated);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
