@@ -11,4 +11,14 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+  <div class="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      <div class="mobile-menu-divider"></div>
+      <a href="/#lead-magnet" class="mobile-menu-cta">Get Started</a>
+    </nav>
+    <p class="mobile-menu-tagline">{{ .Site.Params.tagline }}</p>
+  </div>
 </header>
