@@ -97,15 +97,6 @@ img {
   color: var(--accent);
 }
 
-/* === Main — stacking context boundary ===
-   Prevents composited layers inside <main> (hero animations, reveal
-   transforms, z-indexed containers) from escaping into the root
-   stacking context and rendering above the fixed header on mobile. */
-main {
-  position: relative;
-  z-index: 0;
-}
-
 /* === Header === */
 .site-header {
   position: fixed;
@@ -887,7 +878,6 @@ main {
     top: 64px;
     left: 0;
     right: 0;
-    z-index: 200;
     background: rgba(10, 10, 11, 0.98);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
