@@ -852,18 +852,21 @@ img {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  /* Always-visible header on mobile — prevents the transparent header from
-     disappearing behind the hero's animated/composited layers on the homepage.
-     Disables backdrop-filter to avoid a mobile rendering bug where blur over
-     GPU-composited content (heroEntrance animation) hides child elements. */
+  /* Transparent header by default on mobile; solid background on scroll.
+     Uses solid color instead of backdrop-filter to avoid a mobile rendering bug
+     where blur over GPU-composited content (heroEntrance animation) hides
+     child elements. */
   .site-header {
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .site-header.scrolled,
   .site-header.menu-open {
-    background: var(--bg-elevated);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
