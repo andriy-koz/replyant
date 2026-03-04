@@ -95,7 +95,7 @@ This is what we do at Replyant, and it's what makes sense when the other two opt
 
 **Who this works for:** Businesses where the AI agent is handling a core operational workflow — customer support, lead qualification, order management, appointment scheduling — and the outcome directly impacts revenue or cost. If getting this right means a 30-40% reduction in support costs or a measurable lift in conversion rates, the investment pays for itself.
 
-**Who this doesn't work for:** Businesses that haven't done the process work yet. A $50,000 custom agent built on top of an undocumented, broken workflow will fail just as spectacularly as a $50/month chatbot. This is exactly why we start with [process design and readiness](/blog/ai-readiness-checklist/) before we write a single line of code.
+**Who this doesn't work for:** Businesses that haven't done the process work yet. A $50,000 custom agent built on top of an undocumented, broken workflow will fail just as spectacularly as a $50/month chatbot — and it's the primary reason [86% of AI agent pilots never make it to production](/blog/ai-pilot-to-production/). This is exactly why we start with [process design and readiness](/blog/ai-readiness-checklist/) before we write a single line of code.
 
 **The hidden cost:** Underinvesting in the process design phase. We've seen companies spend $100,000+ on a custom build that delivers poor results because they rushed through discovery and went straight to development. The build is only as good as the blueprint — which brings us to the part most pricing guides leave out entirely.
 

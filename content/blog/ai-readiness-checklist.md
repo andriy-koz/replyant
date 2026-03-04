@@ -7,7 +7,7 @@ description: "Most AI projects fail before they start — because the business w
 
 Everyone's investing in AI. Almost nobody is ready for it.
 
-MIT's research found that 95% of generative AI pilots fail to deliver meaningful financial returns. CIO Magazine declared 2026 "the year AI ROI gets real." And yet most companies are still jumping straight to tool selection without asking a more fundamental question: *is our business actually prepared to get value from AI?*
+MIT's research found that 95% of generative AI pilots fail to deliver meaningful financial returns. Deloitte's numbers tell a similar story — [86% of AI agent pilots never make it to production](/blog/ai-pilot-to-production/). CIO Magazine declared 2026 "the year AI ROI gets real." And yet most companies are still jumping straight to tool selection without asking a more fundamental question: *is our business actually prepared to get value from AI?*
 
 The answer, for most, is no. Not because they lack budget or technical talent — but because the operational foundation isn't there.
 

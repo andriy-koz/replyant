@@ -31,7 +31,7 @@ The price tag on an AI agent is the beginning, not the end. Implementation costs
 
 ### They use annual projections on day-one performance
 
-AI agents don't perform at full capacity on launch day. There's a ramp-up period — typically 30 to 90 days — where the agent is learning, being tuned, and building the data it needs to perform well. Projecting year-one ROI based on the agent's mature performance is like projecting a new hire's annual output based on their best month.
+AI agents don't perform at full capacity on launch day. There's a ramp-up period — typically 30 to 90 days — where the agent is learning, being tuned, and building the data it needs to perform well. Projecting year-one ROI based on the agent's mature performance is like projecting a new hire's annual output based on their best month. This gap between pilot performance and production reality is exactly [why 86% of AI agent pilots stall](/blog/ai-pilot-to-production/) before delivering meaningful returns.
 
 ### They don't account for the cost of doing nothing
 

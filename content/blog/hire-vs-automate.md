@@ -161,7 +161,7 @@ Here's the pattern we see repeatedly: a company hires three people to handle a g
 
 Automating after hiring is ten times harder than automating before. Why?
 
-**Undocumented processes.** When you hire people, the process lives in their heads. They develop shortcuts, workarounds, and informal rules that never get documented. Try to automate that? You first need to reverse-engineer it. That's expensive. (And it's the number one item on our [readiness checklist](/blog/ai-readiness-checklist/) for a reason.)
+**Undocumented processes.** When you hire people, the process lives in their heads. They develop shortcuts, workarounds, and informal rules that never get documented. Try to automate that? You first need to reverse-engineer it. That's expensive. (And it's the number one item on our [readiness checklist](/blog/ai-readiness-checklist/) for a reason — the same data and process gaps are [why most AI pilots never reach production](/blog/ai-pilot-to-production/).)
 
 **Change management resistance.** People hired to do a job will naturally resist the thing designed to do their job. This isn't irrational — it's human. But it creates friction that slows implementation and reduces adoption.
 
