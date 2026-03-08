@@ -109,6 +109,7 @@ After deploying 50+ agents across different use cases, the failure patterns are 
 In upcoming posts, we'll go deeper on specific components:
 
 - **[MCP integration](/lab/anatomy-of-ai-agent-mcp/)** — how the Model Context Protocol connects agents to your business systems
+- **[Claude Code in production](/lab/claude-code-in-production/)** — how hooks, plugins, MCP servers, and skills turn a generic coding agent into a governed development workflow
 - **RAG pipelines** — how to build retrieval that actually improves agent accuracy
 - **Multi-agent orchestration** — when one agent isn't enough
 - **Evaluation and testing** — how to measure whether your agent is getting better or worse
