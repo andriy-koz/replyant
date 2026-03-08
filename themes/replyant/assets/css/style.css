@@ -509,6 +509,12 @@ body.menu-open {
   border-radius: 20px;
   background: rgba(99, 102, 241, 0.15);
   color: var(--accent);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+a.tag:hover {
+  background: rgba(99, 102, 241, 0.3);
 }
 
 .post-card h2 {
@@ -541,9 +547,25 @@ body.menu-open {
   margin-bottom: 40px;
 }
 
-.post-header time {
+.post-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.post-header-meta time {
+  color: var(--text-muted);
+}
+
+.post-author {
+  color: var(--text-muted);
+}
+
+.post-author::before {
+  content: "·";
+  margin-right: 12px;
 }
 
 .post-header h1 {

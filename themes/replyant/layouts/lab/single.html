@@ -2,12 +2,15 @@
 <article class="blog-post">
   <div class="container container-narrow">
     <header class="post-header">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <div class="post-header-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span class="post-author">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
+      </div>
       <h1>{{ .Title }}</h1>
       {{ with .Params.tags }}
       <div class="post-tags">
         {{ range . }}
-          <span class="tag">{{ . }}</span>
+          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
         {{ end }}
       </div>
       {{ end }}

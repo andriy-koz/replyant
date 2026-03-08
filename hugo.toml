@@ -8,6 +8,12 @@ theme = "replyant"
   tagline = "Build Smarter. Grow Faster."
   leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
 
+[params.author]
+  name = "Replyant"
+
+[taxonomies]
+  tag = "tags"
+
 [menu]
   [[menu.main]]
     name = "Home"

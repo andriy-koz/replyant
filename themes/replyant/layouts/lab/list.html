@@ -10,7 +10,7 @@
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
           {{ with .Params.tags }}
             {{ range first 2 . }}
-              <span class="tag">{{ . }}</span>
+              <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
             {{ end }}
           {{ end }}
         </div>
