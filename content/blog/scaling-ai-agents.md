@@ -78,7 +78,7 @@ Before deploying your second agent, invest in the shared infrastructure that eve
 - **A data access layer** that gives agents consistent, governed access to business systems — not point-to-point integrations that each team builds from scratch.
 - **A monitoring and observability stack** that tracks agent performance, cost, and behavior across all deployments from a single dashboard.
 - **A governance framework** with decision authority levels, audit trails, and escalation protocols. Production agents rely on carefully designed [system prompts](/lab/anatomy-of-an-ai-agent-system-prompt/) and [tool-calling architectures](/lab/anatomy-of-ai-agent-tool-calling/) that encode these rules — building those patterns once and reusing them is how you scale without multiplying risk.
-- **A cost model** that allocates AI spending to business outcomes, not just API bills. Your [ROI framework](/blog/ai-roi-calculator/) should work at the portfolio level, not just per agent.
+- **A cost model** that allocates AI spending to business outcomes, not just API bills. Your [ROI framework](/blog/ai-roi-calculator/) should work at the portfolio level, not just per agent — and once agents are live, shift from projecting ROI to [measuring it across all four value layers](/blog/measuring-ai-agent-roi/).
 
 This phase feels slow. It's the opposite of slow — it's what makes Phase 3 fast.
 
@@ -96,7 +96,7 @@ The output of this phase is an internal capability: your organization now knows 
 
 This is where the compounding begins. With a fleet of agents running on shared infrastructure, you can start connecting them. The customer support agent routes complex technical issues to the knowledge base agent. The sales agent triggers the onboarding agent when a deal closes. The finance agent reconciles what all the other agents are doing against the budget.
 
-Multi-agent orchestration is where the transformational value lives — not in any single agent, but in the system they form together. But it only works if Phases 1 through 3 were done right. Orchestrating agents that were built independently, with inconsistent data models and no shared governance, creates chaos that's harder to untangle than it was to build.
+Multi-agent orchestration is where the transformational value lives — not in any single agent, but in the system they form together. Our technical deep dive on [multi-agent architecture patterns](/lab/multi-agent-systems/) breaks down the orchestration approaches, cost realities, and failure modes you need to understand before connecting your agents. But orchestration only works if Phases 1 through 3 were done right. Orchestrating agents that were built independently, with inconsistent data models and no shared governance, creates chaos that's harder to untangle than it was to build.
 
 ## What This Looks Like in Practice
 

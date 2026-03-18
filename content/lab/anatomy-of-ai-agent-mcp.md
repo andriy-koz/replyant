@@ -392,6 +392,8 @@ MCP is a significant step forward, but it's not a complete solution. Being hones
 
 Despite these limitations, the trajectory is clear. MCP is becoming the standard integration layer for AI agents, the same way REST APIs became the standard integration layer for web services. OpenAI, Google, and Anthropic have all adopted it. Enterprise vendors are shipping MCP-compatible connectors. Gartner expects 40% of enterprise applications to embed AI agents by end of 2026 — and those agents will need to talk to business systems.
 
+This interoperability is especially critical as organizations move from single agents to [multi-agent systems where specialized agents coordinate through shared MCP infrastructure](/lab/multi-agent-systems/) — the architecture pattern that turns individual agents into compounding business value.
+
 For teams building agents today, the practical advice is straightforward:
 
 1. **Build new integrations as MCP servers.** Even if you're only connecting to one model today, the modular architecture pays off when you need to swap models, add capabilities, or scale.

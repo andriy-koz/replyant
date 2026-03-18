@@ -162,7 +162,7 @@ The five-number framework gives you the hard ROI — the numbers you can defend 
 
 **Team satisfaction and retention.** People don't quit jobs because of hard work. They quit because of tedious, repetitive work that feels meaningless. Automating the grind and letting your team focus on high-judgment, high-impact tasks has real retention value — and replacing an employee costs 50-200% of their salary.
 
-These multipliers are harder to quantify, but they're real. When the hard ROI is close to breakeven, these are often what makes the investment clearly worthwhile.
+These multipliers are harder to quantify, but they're real. When the hard ROI is close to breakeven, these are often what makes the investment clearly worthwhile. And once your agents are deployed, these multipliers become measurable — our [four-layer framework for measuring deployed agent ROI](/blog/measuring-ai-agent-roi/) shows how to capture the full picture, not just the easy cost savings.
 
 ---
 

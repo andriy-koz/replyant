@@ -81,7 +81,7 @@ If you're planning an AI agent initiative — or trying to rescue one that's sta
 
 2. **Are we automating the right thing?** Have we mapped the full workflow, or just the most visible task?
 
-3. **What does success actually look like?** Is it a measurable business outcome (response time, cost per resolution, revenue per agent), or just "it works"? A [clear ROI framework](/blog/ai-roi-calculator/) should be in place before you write a single line of code.
+3. **What does success actually look like?** Is it a measurable business outcome (response time, cost per resolution, revenue per agent), or just "it works"? A [clear ROI framework](/blog/ai-roi-calculator/) should be in place before you write a single line of code — and once you're past the pilot, the measurement challenge shifts to [proving deployed returns across multiple value layers](/blog/measuring-ai-agent-roi/).
 
 4. **Who owns this after launch?** Is there a named person in the business unit, with time and accountability?
 

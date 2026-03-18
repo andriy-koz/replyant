@@ -83,7 +83,7 @@ The technology becomes almost simple at this point. The intelligence is in the p
 
 ### Step 4: Measure, Monitor, Iterate
 
-Set concrete metrics before you launch. Not vanity metrics like "number of conversations handled" — business metrics like resolution time, cost per interaction, customer satisfaction, or revenue influenced. (Need help building the actual business case? Our [AI ROI framework](/blog/ai-roi-calculator/) walks through the five numbers that matter.)
+Set concrete metrics before you launch. Not vanity metrics like "number of conversations handled" — business metrics like resolution time, cost per interaction, customer satisfaction, or revenue influenced. (Need help building the actual business case? Our [AI ROI framework](/blog/ai-roi-calculator/) walks through the five numbers that matter. Once the agent is live, the challenge shifts from projecting returns to [proving them](/blog/measuring-ai-agent-roi/) — a different framework entirely.)
 
 Monitor continuously. Agents aren't set-and-forget. They need oversight, tuning, and occasional course correction, especially in the first 30 to 90 days.
 
