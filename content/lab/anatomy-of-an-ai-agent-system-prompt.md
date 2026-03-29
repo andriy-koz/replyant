@@ -1,8 +1,8 @@
 ---
-title: "Anatomy of an AI Agent System Prompt: What Claude Code's Instructions Reveal About Building Reliable Agents"
+title: "AI Agent System Prompts: What Claude Code Reveals"
 date: 2026-02-18
 tags: ["AI Agents", "Prompt Engineering", "Automation", "Process Design"]
-description: "We dissect the actual system prompt powering Claude Code — Anthropic's AI coding agent — and extract the design principles that make AI agents reliable, safe, and useful in production."
+description: "We dissect Claude Code's actual system prompt and extract the design principles that make AI agents reliable and safe in production."
 ---
 
 Most people building AI agents start with the model. Pick a provider, write a quick prompt, plug it into a workflow. Ship it.

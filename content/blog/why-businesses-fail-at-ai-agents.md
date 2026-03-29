@@ -1,5 +1,5 @@
 ---
-title: "Why Most Businesses Fail at AI Agents (And the 80/20 Rule That Actually Works)"
+title: "Why Most Businesses Fail at AI Agents (And the 80/20 Fix)"
 date: 2026-02-06
 tags: ["AI Agents", "Business Strategy", "Automation", "Process Design"]
 description: "Only 20% of companies see real ROI from AI. The difference isn't technology — it's strategy. Here's the 80/20 framework that separates winners from the rest."

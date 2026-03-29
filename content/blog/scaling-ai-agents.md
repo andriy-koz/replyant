@@ -1,5 +1,5 @@
 ---
-title: "How to Scale AI Agents Across Your Business Without Everything Breaking"
+title: "How to Scale AI Agents Without Everything Breaking"
 date: 2026-03-10
 tags: ["AI Agents", "Business Strategy", "Automation", "Process Design"]
 description: "Your first AI agent worked. Now what? Here's the scaling playbook that separates companies compounding value from those drowning in agent sprawl."

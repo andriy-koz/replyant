@@ -15,6 +15,7 @@ B2B website for Replyant — AI agent development, business automation, and stra
 | Site config | `hugo.toml` |
 | Blog posts | `content/blog/*.md` |
 | Lab posts | `content/lab/*.md` |
+| Tag pages | `content/tags/<tag-slug>/_index.md` |
 | Styles | `themes/replyant/assets/css/style.css` |
 | Layouts | `themes/replyant/layouts/` |
 | JS | `themes/replyant/static/js/` |
@@ -42,10 +43,18 @@ author: "Replyant"  # optional — defaults to site author in hugo.toml
 - No shortcodes — plain markdown + optional raw HTML (`unsafe = true`)
 - Homepage auto-features the 3 most recent posts from each section
 - Tags are linked to taxonomy pages (`/tags/tag-name/`) — reuse existing tags when possible
+- **When adding a new tag**, create a matching `content/tags/<tag-slug>/_index.md` with a unique `description` (120-150 chars) and 100-200 words of introductory content. This prevents duplicate meta descriptions and thin-content issues on tag pages.
 
 ## SEO & GEO Guidelines
 
-All posts are automatically enriched with Open Graph, Twitter Card, and JSON-LD (Article schema) via `partials/seo.html`. No manual SEO markup needed in content files — just write good front matter.
+All posts are automatically enriched with Open Graph, Twitter Card, and JSON-LD via `partials/seo.html`. No manual SEO markup needed in content files — just write good front matter.
+
+Structured data coverage:
+- **Homepage & all pages**: Organization schema (always)
+- **Blog posts**: BlogPosting schema (automatic)
+- **Lab posts**: TechArticle schema (automatic)
+- **Tag pages**: CollectionPage + ItemList schema (automatic, lists all tagged articles)
+- **Meta descriptions**: Tag pages use their `_index.md` description, with a dynamic fallback for any tag missing one
 
 ### Writing for search engines AND LLMs
 
@@ -58,8 +67,8 @@ All posts are automatically enriched with Open Graph, Twitter Card, and JSON-LD 
 
 ### Front matter best practices
 
-- `title`: Include target keyword naturally. Keep under 60 characters for full SERP display.
-- `description`: 120-160 characters. This populates meta description, OG tags, and list cards. Write it as a standalone pitch — it's what people see before clicking.
+- `title`: Include target keyword naturally. **Must be under 70 characters** — titles longer than this get truncated in SERPs, hurting click-through rates. Count characters before committing.
+- `description`: **120-160 characters, never exceed 160.** This populates meta description, OG tags, and list cards. Write it as a standalone pitch — it's what people see before clicking. Truncated descriptions in SERPs waste impressions.
 - `tags`: 3-4 tags. Reuse existing tags to build taxonomy depth (check `/tags/` for current list).
 - `author`: Optional per-post override. Defaults to `params.author.name` in `hugo.toml`.
 

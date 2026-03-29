@@ -1,5 +1,5 @@
 ---
-title: "Anatomy of an AI Agent: How MCP Connects Agents to Your Business Systems"
+title: "Anatomy of an AI Agent: How MCP Connects Your Systems"
 date: 2026-02-24
 tags: ["AI Agents", "MCP", "Architecture", "Integration"]
 description: "MCP is to AI agents what USB is to peripherals. Here's how the protocol works, how to build an MCP server, and what production deployment actually requires."

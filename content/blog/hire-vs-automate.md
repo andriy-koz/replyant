@@ -1,8 +1,8 @@
 ---
-title: "Should Your Next Hire Be an AI Agent? A Decision Framework for Growing Businesses"
+title: "Should Your Next Hire Be an AI Agent? A Decision Framework"
 date: 2026-02-24
 tags: ["AI Agents", "Business Strategy", "Automation", "Hiring"]
-description: "The 'hire vs. automate' debate assumes you're choosing between interchangeable alternatives. You're not. Here's a four-factor decision framework for getting the split right."
+description: "The hire vs. automate debate is a false binary. Here's a four-factor framework for getting the split right."
 ---
 
 You have budget for one more headcount. Do you hire a person — or deploy an AI agent?

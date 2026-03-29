@@ -1,5 +1,5 @@
 ---
-title: "Why 86% of AI Agent Pilots Never Make It to Production — And How to Fix Yours"
+title: "Why 86% of AI Agent Pilots Never Reach Production"
 date: 2026-03-04
 tags: ["AI Agents", "Business Strategy", "Automation", "Process Design"]
 description: "Most AI agent pilots stall before delivering ROI. Here are the three failure modes we see again and again — and the fixes that get you to production."

@@ -1,5 +1,5 @@
 ---
-title: "Is Your Business Actually Ready for AI? The 7-Point Readiness Checklist"
+title: "Is Your Business Ready for AI? The 7-Point Checklist"
 date: 2026-02-11
 tags: ["AI Readiness", "Process Design", "Business Strategy", "Automation"]
 description: "Most AI projects fail before they start — because the business wasn't ready. Here are the 7 prerequisites to get right before you automate anything."

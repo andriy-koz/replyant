@@ -1,8 +1,8 @@
 ---
-title: "Claude Code in Production: Hooks, MCP Servers, Plugins & Custom Skills"
+title: "Claude Code in Production: Hooks, MCP & Custom Skills"
 date: 2026-03-08
 tags: ["AI Agents", "Claude Code", "MCP", "Developer Tools"]
-description: "Claude Code ships as a general-purpose coding agent. Hooks, plugins, MCP servers, skills, and CLAUDE.md turn it into yours. Here's how each extension point works — and how they compose into a production dev workflow."
+description: "Hooks, plugins, MCP servers, skills, and CLAUDE.md turn Claude Code into your production dev workflow. Here's how each extension point works."
 ---
 
 In previous posts, we've covered [how the tool-calling loop works](/lab/anatomy-of-ai-agent-tool-calling/), [what a production-grade system prompt looks like](/lab/anatomy-of-an-ai-agent-system-prompt/), and [how MCP connects agents to business systems](/lab/anatomy-of-ai-agent-mcp/). Those posts describe the architecture of any AI agent. This one narrows the focus to a specific one: Claude Code.
