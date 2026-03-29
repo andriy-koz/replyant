@@ -2,7 +2,7 @@
 title: "How Much Does a Custom AI Chatbot Cost? 2026 Guide"
 date: 2026-02-16
 tags: ["AI Agents", "Business Strategy", "Automation", "Pricing"]
-description: "AI chatbot costs range from $0 to $200,000+. Here's an honest breakdown so you don't waste money choosing wrong."
+description: "Custom AI chatbot pricing in three tiers — from free tools to $200K+ custom builds. Real costs, hidden fees, and the questions to ask before you commit."
 ---
 
 It's the first question every business owner asks. And it's the one most vendors dodge.

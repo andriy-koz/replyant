@@ -1,5 +1,5 @@
 ---
-title: "AI Agents vs. RPA: A Decision Framework"
+title: "AI Agents vs. RPA: How to Choose the Right Automation"
 date: 2026-03-29
 tags: ["AI Agents", "Automation", "Business Strategy", "Process Design"]
 description: "RPA and AI agents aren't competitors — they solve different problems. Here's the decision framework to invest in the right automation for every workflow."
