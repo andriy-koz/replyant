@@ -49,8 +49,9 @@ author: "Replyant"  # optional — defaults to site author in hugo.toml
 
 All posts are automatically enriched with Open Graph, Twitter Card, and JSON-LD via `partials/seo.html`. No manual SEO markup needed in content files — just write good front matter.
 
-Structured data coverage:
-- **Homepage & all pages**: Organization schema (always)
+Structured data coverage (all template-driven — no manual markup needed per post):
+- **Homepage**: Organization + WebSite schemas
+- **All sub-pages**: Organization + BreadcrumbList schemas (breadcrumb trail built automatically from section/page hierarchy)
 - **Blog posts**: BlogPosting schema (automatic)
 - **Lab posts**: TechArticle schema (automatic)
 - **Tag pages**: CollectionPage + ItemList schema (automatic, lists all tagged articles)
