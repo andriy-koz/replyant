@@ -1,5 +1,50 @@
 <footer class="site-footer">
+  <div class="footer-divider"></div>
   <div class="container">
-    <p>&copy; {{ now.Year }} Replyant. All rights reserved.</p>
+    <div class="footer-grid">
+
+      <div class="footer-col footer-brand">
+        <a href="{{ "/" | relURL }}" class="footer-logo">Replyant</a>
+        <p>AI agent development, business automation, and strategic consulting. We help businesses build smarter and grow faster.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="{{ "/" | relURL }}">Home</a></li>
+          <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+          <li><a href="{{ "/lab/" | relURL }}">Lab</a></li>
+          <li><a href="{{ "/tags/" | relURL }}">All Topics</a></li>
+          <li><a href="{{ "/#lead-magnet" | relURL }}">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Topics</h4>
+        <ul class="footer-links">
+          <li><a href="{{ "/tags/ai-agents/" | relURL }}">AI Agents</a></li>
+          <li><a href="{{ "/tags/business-strategy/" | relURL }}">Business Strategy</a></li>
+          <li><a href="{{ "/tags/roi/" | relURL }}">ROI</a></li>
+          <li><a href="{{ "/tags/automation/" | relURL }}">Automation</a></li>
+          <li><a href="{{ "/tags/architecture/" | relURL }}">Architecture</a></li>
+          <li><a href="{{ "/tags/mcp/" | relURL }}">MCP</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="{{ "/blog/ai-roi-calculator/" | relURL }}">ROI Calculator</a></li>
+          <li><a href="{{ "/blog/ai-readiness-checklist/" | relURL }}">AI Readiness Checklist</a></li>
+          <li><a href="{{ "/blog/how-much-does-ai-chatbot-cost/" | relURL }}">Chatbot Cost Guide</a></li>
+          <li><a href="{{ "/blog/hire-vs-automate/" | relURL }}">Hire vs. Automate</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} Replyant. All rights reserved.</p>
+    </div>
   </div>
 </footer>
