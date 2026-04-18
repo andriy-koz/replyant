@@ -1,21 +1,26 @@
 {{ define "main" }}
 <section class="blog-list">
   <div class="container">
-    <h1>Lab</h1>
-    <p class="blog-intro">Technical deep dives into AI engineering, agent architectures, and the systems behind what we build.</p>
+    <div class="list-head">
+      <div>
+        <span class="section-index" style="display:block; margin-bottom:16px;">§ Research</span>
+        <h1>The <span class="italic">lab</span>.</h1>
+      </div>
+      <p class="blog-intro">Technical deep dives into AI engineering, agent architectures, and the systems behind what we build.</p>
+    </div>
     <div class="posts">
       {{ range .Pages }}
       <article class="post-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Summary }}</p>
         <div class="post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
           {{ with .Params.tags }}
             {{ range first 2 . }}
               <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
             {{ end }}
           {{ end }}
         </div>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary }}</p>
       </article>
       {{ end }}
     </div>

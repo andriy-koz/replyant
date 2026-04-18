@@ -1,8 +1,10 @@
 {{ define "main" }}
-<article class="page-single">
+<article class="blog-post">
   <div class="container container-narrow">
-    <h1>{{ .Title }}</h1>
-    <div class="page-content">
+    <header class="post-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="post-content">
       {{ .Content }}
     </div>
   </div>

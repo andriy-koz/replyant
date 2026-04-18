@@ -3,7 +3,9 @@
   <div class="container container-narrow">
     <header class="post-header">
       <div class="post-header-meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span class="section-index">§ Journal</span>
+        <span>·</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <span class="post-author">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
       </div>
       <h1>{{ .Title }}</h1>
@@ -22,7 +24,7 @@
   {{ partial "lead-magnet.html" . }}
   <footer class="post-footer">
     <div class="container container-narrow">
-      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+      <a href="/blog/" class="back-link"><span aria-hidden="true">←</span> Back to all posts</a>
     </div>
   </footer>
 </article>

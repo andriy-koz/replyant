@@ -3,16 +3,55 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <h1>AI-Powered Growth<br>for Your Business</h1>
-    <p class="hero-sub">We build custom automation, streamline workflows, and craft strategies that help your business scale — intelligently.</p>
-    <div class="hero-cta">
-      <a href="#lead-magnet" class="btn btn-primary">Get Started</a>
-      <a href="/blog/" class="btn btn-outline">Read the Blog</a>
+    <div class="hero-top">
+      <span>Replyant — Est. <time datetime="2025">MMXXV</time></span>
+      <span>Volume I · Issue IV · For Operators Building With AI</span>
+      <span>{{ now.Format "2 January 2006" }}</span>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-main">
+        <h1>
+          AI, <span class="italic">genuinely</span><br>
+          useful <span class="amp">&amp;</span><br>
+          accountable.
+        </h1>
+      </div>
+      <aside class="hero-side">
+        <p class="hero-sub">We build custom agents, automate the grind, and ship strategies that move real numbers — no science-fair demos, no magic promises.</p>
+        <div class="hero-cta">
+          <a href="#lead-magnet" class="btn btn-primary">Start a Project</a>
+          <a href="/blog/" class="btn btn-outline">Read the Journal</a>
+        </div>
+        <div class="hero-meta">Trusted by teams across 12 industries</div>
+      </aside>
+    </div>
+
+    <div class="hero-stamp" aria-hidden="true">
+      <span>Built with<br>care · {{ now.Year }}</span>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Agent Development</span>
+      <span>Workflow Automation</span>
+      <span>Strategy &amp; Roadmaps</span>
+      <span>Evaluation &amp; Ops</span>
+      <span>Data Pipelines</span>
+      <span>MCP Integrations</span>
+      <span>Agent Development</span>
+      <span>Workflow Automation</span>
+      <span>Strategy &amp; Roadmaps</span>
+      <span>Evaluation &amp; Ops</span>
+      <span>Data Pipelines</span>
+      <span>MCP Integrations</span>
     </div>
   </div>
 </section>
 
-<!-- Metrics -->
+<!-- Stats -->
 <section class="stat-bar-section">
   <div class="container">
     <div class="stat-bar reveal">
@@ -35,28 +74,37 @@
 <!-- Services -->
 <section class="services" id="services">
   <div class="container">
-    <h2 class="reveal">What We Do</h2>
+    <div class="services-head reveal">
+      <h2>What we <span class="italic">actually</span> do.</h2>
+      <p class="services-kicker">Three disciplines, one discipline. We keep the work focused so your operators can trust what we build — and so we can defend every line of it.</p>
+    </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M8 6a4 4 0 0 1 8 0"/><path d="M17 12.5c1.77.77 3 2.53 3 4.5a5 5 0 0 1-10 0"/><path d="M4.5 17a5 5 0 0 1 6.5-4.5"/></svg>
-        </div>
+        <div class="service-number">§ 01 — Engineering</div>
         <h3>AI Agent Development</h3>
-        <p>Custom AI agents tailored to your business processes. From customer support to data analysis, we build agents that work around the clock.</p>
+        <p>Custom agents shaped to your business — not a template. Support, research, analysis, internal tools. We own the loop: prompts, tools, memory, evals.</p>
+        <div class="service-tags">
+          <span>LLM Ops</span><span>RAG</span><span>MCP</span><span>Evals</span>
+        </div>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M6.5 15.5 11 12"/><path d="M17.5 15.5 13 12"/><rect x="10" y="12" width="4" height="4"/></svg>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m9 10 3 3 3-3"/><path d="M12 13V7"/><path d="M6 17h12"/></svg>
-        </div>
+        <div class="service-number">§ 02 — Operations</div>
         <h3>Business Automation</h3>
-        <p>Streamline repetitive tasks and connect your tools. We design automation pipelines that save time and reduce human error.</p>
+        <p>We find the repetition, map the handoffs, and ship pipelines that quietly save hours. Integrations across your stack without breaking what works.</p>
+        <div class="service-tags">
+          <span>Workflows</span><span>APIs</span><span>ETL</span><span>Observability</span>
+        </div>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 10h20"/><path d="M7 14h4"/><path d="M7 17h8"/></svg>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h5"/><path d="M17 12h5"/><path d="m7 7 10 10"/><path d="m17 7-10 10"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
+        <div class="service-number">§ 03 — Strategy</div>
         <h3>Strategic Consulting</h3>
-        <p>AI adoption strategy and growth consulting. We help you identify where AI fits in your business and build a roadmap to get there.</p>
+        <p>Where does AI earn its keep in your business, and where does it just burn cash? A clear roadmap, with numbers, that survives the next hype cycle.</p>
+        <div class="service-tags">
+          <span>Roadmaps</span><span>ROI</span><span>Governance</span><span>Risk</span>
+        </div>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 4 4 5-5"/><circle cx="11" cy="11" r="1.2"/><circle cx="15" cy="15" r="1.2"/></svg>
       </div>
     </div>
   </div>
@@ -68,8 +116,9 @@
 <section class="featured-posts">
   <div class="container">
     <div class="section-header reveal">
-      <h2>Latest Insights</h2>
-      <a href="/blog/">View all &rarr;</a>
+      <span class="section-index">§ 04 — Journal</span>
+      <h2>Latest <span class="italic">insights</span></h2>
+      <a href="/blog/">View all <span aria-hidden="true">→</span></a>
     </div>
     <div class="featured-grid">
       {{ range $posts }}
@@ -92,8 +141,9 @@
 <section class="featured-posts">
   <div class="container">
     <div class="section-header reveal">
-      <h2>From the Lab</h2>
-      <a href="/lab/">View all &rarr;</a>
+      <span class="section-index">§ 05 — Lab</span>
+      <h2>From the <span class="italic">lab</span></h2>
+      <a href="/lab/">View all <span aria-hidden="true">→</span></a>
     </div>
     <div class="featured-grid">
       {{ range $labPosts }}
