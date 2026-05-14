@@ -14,11 +14,16 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
 
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-latin.woff2" | relURL }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-latin-italic.woff2" | relURL }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/instrument-sans-latin.woff2" | relURL }}" crossorigin>
 
+  {{ $critical := resources.Get "css/critical.css" | minify | fingerprint }}
+  <style>{{ $critical.Content | safeCSS }}</style>
+
   {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
-  <style>{{ $css.Content | safeCSS }}</style>
+  <link rel="preload" as="style" href="{{ $css.RelPermalink }}" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
   </noscript>
 </head>
