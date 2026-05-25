@@ -12,6 +12,8 @@ Gartner forecasts that the average global Fortune 500 enterprise will have over 
 
 The companies that install an agent management plane in 2026 will avoid a cleanup project that costs more than the agents themselves. The companies that wait will rediscover, with new vocabulary, every governance failure of the SaaS sprawl era. This post is the practical version: what agent sprawl actually is, why it compounds faster than prior IT debt categories, and the six-step framework that converts a coming mess into a managed asset class.
 
+{{< cta heading="Inventory the agents you can't see yet." pitch="Replyant runs discovery across Copilot, Agentforce, and shadow runtimes — before sprawl compounds." button="Start the discovery" >}}
+
 ## Why Agent Sprawl Outpaces Every Prior IT Debt Category
 
 Agent sprawl is the uncontrolled multiplication of AI agents across an enterprise without a unified inventory, identity model, or oversight layer. It is structurally worse than SaaS sprawl, shadow IT, or microservice proliferation because agents are creatable by non-developers, act with delegated authority, and chain with each other. A single workflow can spawn dozens of sub-agents in hours. Gartner's 15-to-150,000 trajectory is not a curve. It is a step function.
@@ -80,6 +82,8 @@ The EU AI Act's transparency and risk-management obligations apply to AI systems
 The same is true for sector-specific regulators. Financial services firms operating under SEC Rule 17a-4 communications retention requirements are already obligated to preserve the substantive content of agent interactions where those agents act in business communications. Healthcare organizations under HIPAA must document data flows; an undocumented agent flow is a documented audit finding. The [EU AI Act compliance work coming due](/blog/eu-ai-act-compliance/) intersects directly with the agent inventory: the regulation assumes you have one.
 
 The enforcement timing favors enterprises that started in 2026. Agent populations doubling every quarter mean the cost of inventory grows superlinearly with delay. An organization that runs its first inventory at 50 agents catalogs 50 agents. The same organization waiting until Q1 2027 catalogs 500. By Q3 2027, 5,000. The math is not friendly to procrastination.
+
+{{< cta heading="Install the management plane in a quarter." pitch="Six steps, one engagement, before the 150,000-agent forecast catches you." >}}
 
 ## The Bottom Line
 

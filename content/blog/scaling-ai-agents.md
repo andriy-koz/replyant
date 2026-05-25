@@ -15,6 +15,8 @@ But here's the number that should give you pause: Gartner also projects that by 
 
 The gap between "one agent working" and "agents transforming the business" is where the real challenge lives. And it's a fundamentally different problem than getting that first agent to production.
 
+{{< cta heading="Scaling agents without sprawl." pitch="We design the management plane so agent #50 ships like agent #1." button="Plan the scale-out" >}}
+
 ## Why Scaling Is Not Just "Doing the First Thing Again"
 
 If you've read our breakdown of [why 86% of AI agent pilots never reach production](/blog/ai-pilot-to-production/), you know that getting a single agent into production requires solving for data readiness, workflow selection, and governance. Those challenges don't disappear when you scale. They compound.
@@ -129,6 +131,8 @@ Before you deploy your next agent, answer these six questions honestly:
 6. **Do you know what the next agent should be — and why?** Not the most exciting option. The one with the highest ROI, the cleanest data, and the strongest operational readiness. The [hire-vs-automate framework](/blog/hire-vs-automate/) and [cost analysis](/blog/how-much-does-ai-chatbot-cost/) can help you make that call with real numbers instead of gut instinct.
 
 If you can't answer all six with confidence, you're not ready to scale yet. That's not a failure — it's a signal to invest in the foundation before building higher.
+
+{{< cta heading="Build the platform before the fleet." pitch="Replyant installs the shared infrastructure that makes every next agent cheaper." >}}
 
 ## The Bottom Line
 

@@ -1,5 +1,5 @@
 ---
-title: "CaMeL: The Dual-LLM Pattern That Makes Prompt Injection Provable"
+title: "CaMeL: The Dual-LLM Pattern That Proves Prompt Injection"
 date: 2026-04-23
 tags: ["AI Agents", "Architecture", "LLMs", "Prompt Engineering"]
 description: "CaMeL splits the LLM in two and wraps every value in a capability. 77% of AgentDojo tasks complete with provable prompt-injection defense."
@@ -240,7 +240,7 @@ The 2026 state of the art is still mid-transition. NeuralTrust's ["Ten Months Af
 
 The productive direction is defense in depth, not CaMeL-or-nothing. The emerging pattern composes three layers: **structural isolation** in CaMeL's style at the architecture level, **model-layer robustness** in the SecAlign/StruQ style inside each LLM, and **runtime middleware** in the ClawGuard style to handle the dynamic-discovery gap. Each layer fails differently. The composition is stronger than any single layer---and notably, none of the three cap out in the 95% range that filter-only systems do.
 
-For teams shipping agents today, the cheapest meaningful move is smaller than adopting CaMeL wholesale. Wire the AgentDojo suite into a [CI eval gate](/lab/agent-evals-cicd/) alongside your behavioral evals. Import the default-deny policy engine from the [reference implementation](https://github.com/google-research/camel-prompt-injection) and run it in shadow mode---logging what it would have blocked without actually blocking---against your production trajectories. You will discover, in about a week, how many of your agent's tool calls would fail a capability-based check. That number is the size of your prompt-injection attack surface today, expressed in a unit that is harder to argue with than a classifier's precision score.
+For teams shipping agents today, the cheapest meaningful move is smaller than adopting CaMeL wholesale. Wire the AgentDojo suite into a [CI eval gate](/lab/agent-evals-cicd/) alongside your behavioral evals. Import the default-deny policy engine from the [reference implementation](https://github.com/google-research/camel-prompt-injection) and run it in shadow mode---logging what it would have blocked without actually blocking---against your production trajectories. You will discover, in about a week, how many of your agent's tool calls would fail a capability-based check. That number is the size of your prompt-injection attack surface today, expressed in a unit that is harder to argue with than a classifier's precision score---and it maps directly to the [agent governance controls](/blog/ai-agent-governance/) every regulated enterprise will need to demonstrate.
 
 Beyond that, the next-read is the [anatomy of the agent system prompt](/lab/anatomy-of-an-ai-agent-system-prompt/)---the instruction-hierarchy patterns that complement capability tracking at the trust-boundary layer---and the upstream discipline of [context engineering](/lab/context-engineering/), which decides which untrusted tokens reach the model in the first place. CaMeL is not a solved problem. It is a provably correct subset of the problem, which is a different kind of progress, and the kind most production systems need next.
 

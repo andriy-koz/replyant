@@ -1,8 +1,19 @@
 ---
-title: "How to Calculate ROI on AI Agents: A Practical Framework for 2026"
+title: "How to Calculate ROI on AI Agents: 2026 Framework"
 date: 2026-02-16
 tags: ["AI Agents", "Business Strategy", "Automation", "ROI"]
 description: "Most AI ROI calculations miss the full picture. Here's a five-number framework that gives you an honest answer — before you spend a dollar."
+faq:
+  - q: "How do you calculate ROI on an AI agent?"
+    a: "Use the five-number framework: Current Workflow Cost (CWC) fully loaded, Error and Delay Cost (EDC) of the status quo, Total Implementation Cost (TIC) end to end, Expected Automation Rate (EAR — realistically 50-70% in year one, not the vendor's 80-90%), and Time to Value (TTV — typically 3 to 6 months for custom agents). Annual benefit equals the cost reductions weighted by EAR; subtract TIC for year-one net return."
+  - q: "What is a realistic ROI for an AI chatbot or agent?"
+    a: "A well-scoped deployment typically delivers 30-50% Year 1 ROI and 150-200% cumulative ROI by Year 2, once the upfront build cost is behind you. Anything promising '10x ROI in 90 days' is a vendor pitch, not a forecast. The realistic ceiling depends on workflow volume, current error cost, and how much human time gets genuinely redeployed rather than just measured as 'saved hours' on a slide."
+  - q: "What costs do most AI ROI calculations miss?"
+    a: "Four categories get systematically undercounted: process mapping and redesign before the build, data cleanup and integration work, change management and training, and the productivity dip during transition (typically 2 to 4 weeks of reduced output). Vendors quote the build cost. The [full cost picture](/blog/how-much-does-ai-chatbot-cost/) includes everything around it — and those surrounding costs can equal or exceed the technology itself."
+  - q: "How long does it take to see ROI from an AI agent?"
+    a: "Time to Value ranges from 2-4 weeks for off-the-shelf tools, 3-6 months for custom agents, and 6-12 months for complex enterprise deployments. ROI does not start accruing until after the build and the 30-90 day ramp-up period. A Year 1 ROI projection that assumes mature performance from day one is structurally wrong — bake the ramp into the math."
+  - q: "Should I build a custom AI agent or use an off-the-shelf tool?"
+    a: "Run the five-number framework against both options. Off-the-shelf tools have lower TIC but typically lower EAR — they handle 30-50% of a workflow at best. Custom agents have higher TIC ($35K-$150K typical) but reach 60-80% EAR because they are designed around your redesigned process, not a generic one. If the workflow is high-volume and core to revenue, custom usually wins on Year 2 economics."
 ---
 
 Businesses will spend over $200 billion on AI this year. Most of them can't tell you what they're getting back.
@@ -12,6 +23,8 @@ That's not because AI doesn't deliver returns — it does, often dramatically. T
 If you're evaluating an AI agent investment — whether it's a $5,000 chatbot or a $150,000 custom automation system — you need a framework that gives you an honest number. Not a vendor's best-case scenario. Not a back-of-napkin guess. An actual, defensible calculation you can take to your CFO.
 
 Here's one that works.
+
+{{< cta heading="Stop guessing your AI ROI." pitch="Replyant builds the measurement layer before your CFO asks." button="Run the numbers" >}}
 
 ---
 
@@ -163,6 +176,8 @@ The five-number framework gives you the hard ROI — the numbers you can defend 
 **Team satisfaction and retention.** People don't quit jobs because of hard work. They quit because of tedious, repetitive work that feels meaningless. Automating the grind and letting your team focus on high-judgment, high-impact tasks has real retention value — and replacing an employee costs 50-200% of their salary.
 
 These multipliers are harder to quantify, but they're real. When the hard ROI is close to breakeven, these are often what makes the investment clearly worthwhile. And once your agents are deployed, these multipliers become measurable — our [four-layer framework for measuring deployed agent ROI](/blog/measuring-ai-agent-roi/) shows how to capture the full picture, not just the easy cost savings.
+
+{{< cta heading="Make the most informed bet." pitch="We build defensible business cases the finance team will actually sign." >}}
 
 ---
 

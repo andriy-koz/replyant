@@ -1,5 +1,5 @@
 ---
-title: "AI Insurance: The Silent CGL Exclusion Reshaping 2026 Renewals"
+title: "AI Insurance: The Silent CGL Exclusion in 2026 Renewals"
 date: 2026-04-29
 tags: ["Compliance", "Business Strategy", "AI Readiness"]
 description: "ISO endorsements CG 40 47 and CG 40 48 strip AI losses from your CGL on Jan 1, 2026. Most companies will not notice until a claim is denied."

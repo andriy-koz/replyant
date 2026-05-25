@@ -1,5 +1,5 @@
 ---
-title: "The Agent Privilege Crisis: Your AI Has More Access Than Your Team"
+title: "The Agent Privilege Crisis: AI Has More Access Than You"
 date: 2026-04-23
 tags: ["AI Agents", "Compliance", "Business Strategy", "Automation"]
 description: "88% of enterprises had an AI agent security incident last year. 78% of those agents were over-privileged. The five-control stack that closes the gap."
@@ -11,6 +11,8 @@ Your AI agents have more access than your engineers, and the breach data is fina
 Gravitee's State of AI Agent Security 2026 found that 88% of enterprises experienced at least one AI agent security incident in the preceding twelve months, rising to 92.7% in healthcare. The Cloud Security Alliance's April 2026 survey put 82% of those agents in the "shadow" category — deployed without security's knowledge. The Confidence Paradox runs through the same data: 82% of executives believe their existing policies protect them, while only 14.4% of agents ship with full security approval. IBM's Cost of a Data Breach 2025 added the financial anchor — 97% of AI-breached organizations lacked proper access controls, and the resulting breaches cost $4.44 million globally and $10.22 million in the United States.
 
 This post lays out why agents ended up with more privilege than the humans who deploy them, what the three dominant failure modes look like in production, why the regulatory collision is landing in months rather than years, and the five-control stack that actually closes the gap.
+
+{{< cta heading="Audit your agents before BreachForums does." pitch="We scope, identity-bind, and harden agent permissions in one engagement." button="Book the audit" >}}
 
 ## Your Agents Have More Access Than Your Engineers
 
@@ -73,6 +75,8 @@ Autonomy is not binary. A working model is four tiers: Assistive (agent drafts, 
 ### 5. Observability and audit
 
 Every agent action generates a structured trace with session ID, agent identity, model version, prompt hash, tool arguments and returns, and the guardrail decisions that let the call through. Traces go to append-only storage with a retention floor — 90 days minimum for routine operations, five years for EU AI Act high-risk systems. This is the layer that makes every prior control auditable, that satisfies the disclosure regimes above, and that converts an incident investigation from a forensic archaeology project into a database query.
+
+{{< cta heading="Install the five-control stack." pitch="Identity, scoping, allowlists, oversight, audit — engineered, not aspirational." >}}
 
 ## The Cost of Waiting
 

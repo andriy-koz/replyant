@@ -11,6 +11,8 @@ This is not a theoretical risk. The regulation is final, the deadlines are fixed
 
 That gap creates both risk and opportunity. The companies that act now will be positioned to operate confidently when enforcement begins. The ones waiting for perfect clarity will be scrambling in August.
 
+{{< cta heading="Compliant agents by August 2." pitch="Replyant builds the documentation, oversight, and audit trail the EU AI Act requires." button="Get compliance-ready" >}}
+
 ## What the EU AI Act actually requires
 
 The EU AI Act introduces a risk-based classification system for AI systems. Every AI system falls into one of four categories, and your obligations depend entirely on where your system lands.
@@ -112,6 +114,8 @@ Here's the reframe most businesses miss: EU AI Act compliance isn't just a cost 
 **First-mover advantage in adjacent regulations.** The EU AI Act is the first comprehensive AI regulation, but it won't be the last. Canada's AIDA, Brazil's AI framework, and various US state-level proposals all follow similar risk-based approaches. Building compliance infrastructure now positions you for every regulation that follows.
 
 The companies choosing between RPA and AI agents are already thinking about [which automation architecture fits their workflows](/blog/ai-agents-vs-rpa/). Adding compliance readiness to that evaluation ensures the architecture you build today doesn't need a costly overhaul in four months.
+
+{{< cta heading="Four months. Plenty of runway, if you start now." pitch="We audit existing agents against the Act and close the gaps before enforcement." >}}
 
 ## What this means for your AI strategy
 

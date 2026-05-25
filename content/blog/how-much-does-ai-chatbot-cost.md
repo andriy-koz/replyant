@@ -3,6 +3,17 @@ title: "How Much Does a Custom AI Chatbot Cost? 2026 Guide"
 date: 2026-02-16
 tags: ["AI Agents", "Business Strategy", "Automation", "Pricing"]
 description: "Custom AI chatbot pricing in three tiers — from free tools to $200K+ custom builds. Real costs, hidden fees, and the questions to ask before you commit."
+faq:
+  - q: "How much does a custom AI chatbot cost in 2026?"
+    a: "Pricing falls into three tiers. Off-the-shelf platforms run $0 to $500 per month with limited customization. Mid-market solutions with light integration cost $5,000 to $25,000 upfront plus $500-$2,000 monthly. Custom-built agents designed around your specific workflows and systems run $35,000 to $200,000+ depending on complexity. The right tier depends on workflow volume, integration depth, and how much of the work the bot needs to actually own."
+  - q: "What hidden costs come with AI chatbot deployment?"
+    a: "Five categories get undercounted: process mapping and redesign before build, data cleanup and integration work, training and change management, ongoing hosting and maintenance (typically 15-25% of build cost annually), and the productivity dip during transition. Vendors quote the build number. The surrounding costs often equal or exceed it. Budget for the full picture — see our [five-number ROI framework](/blog/ai-roi-calculator/) for the complete breakdown."
+  - q: "Are custom AI chatbots worth the investment?"
+    a: "For high-volume, revenue-adjacent workflows, yes — custom agents typically reach 60-80% automation rates and deliver 150-200% cumulative ROI by Year 2. For low-volume or generic Q&A use cases, off-the-shelf tools usually win on economics. The decision turns on whether the workflow is core enough to justify designing the agent around your redesigned process, rather than retrofitting your process to a generic bot."
+  - q: "How long does it take to build a custom AI chatbot?"
+    a: "Custom builds typically take 6 to 16 weeks: 2-4 weeks for process mapping and design, 4-8 weeks for development and integration, 2-4 weeks for testing and ramp-up. Off-the-shelf deployments can launch in 1-2 weeks but require more workflow compromise. Plan for an additional 30-90 day stabilization period after launch — the agent's performance on launch day is not its performance at month three."
+  - q: "What questions should I ask before buying an AI chatbot?"
+    a: "Five questions separate informed buyers from frustrated ones. What is the full implementation cost including integration, training, and maintenance? What automation rate is realistic for my actual workflow (not the demo)? Who owns the agent after launch? What happens when it encounters edge cases? How will we measure success in dollars, not vanity metrics? If a vendor avoids any of these, the price quoted is the floor, not the ceiling."
 ---
 
 It's the first question every business owner asks. And it's the one most vendors dodge.

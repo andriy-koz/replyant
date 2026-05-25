@@ -1,5 +1,5 @@
 ---
-title: "A2A Protocol v1.0: Production Patterns for Agent-to-Agent Work"
+title: "A2A Protocol v1.0: Production Patterns for Agents"
 date: 2026-05-06
 tags: ["AI Agents", "Multi-Agent Systems", "Architecture", "Integration"]
 description: "A2A v1.0 ships in April 2026 under the AAIF. Agent Cards, a five-state task lifecycle, and the orchestrator code that ties them together."

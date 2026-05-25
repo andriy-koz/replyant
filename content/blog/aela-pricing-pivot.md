@@ -2,7 +2,7 @@
 title: "The AELA Pivot: How 2026 Repriced Enterprise AI Licensing"
 date: 2026-05-06
 tags: ["Pricing", "Business Strategy", "AI Readiness", "ROI"]
-description: "Anthropic moved enterprises to per-token. Salesforce countered with AELA. Licensing fees now vary 10x and integration overruns hit 30-50%. Here's the playbook."
+description: "Anthropic moved enterprises to per-token. Salesforce countered with AELA. Licensing now varies 10x and integrations overrun 30-50%. The playbook."
 author: "Replyant"
 ---
 
@@ -28,7 +28,7 @@ The first is the agentic loop. A traditional SaaS user generates predictable loa
 
 The second is margin compression at the model layer. Frontier model providers run thinner gross margins than the application-layer companies reselling them. When Anthropic moved to per-token, every downstream platform arbitraging a flat enterprise model contract against variable end-user usage lost the arbitrage overnight. They had two choices: raise prices, or transfer consumption risk to the buyer. Most chose both.
 
-The third is the failure rate. [Gartner's April 2026 I&O survey](https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns) of 782 leaders found that only 28% of AI use cases fully succeed and meet ROI expectations, and 20% fail outright. Of leaders who reported failures, [57% said the initiatives "expected too much, too fast"](https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns). Vendors looking at the same data see customers who will not renew if their first-year usage was capped under a flat fee that priced for an aspirational workload they never reached. Per-token and AELA-style contracts let vendors capture upside on the customers who succeed and stop subsidizing the ones who do not.
+The third is the failure rate. [Gartner's April 2026 I&O survey](https://web.archive.org/web/2026*/https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns) of 782 leaders found that only 28% of AI use cases fully succeed and meet ROI expectations, and 20% fail outright. Of leaders who reported failures, [57% said the initiatives "expected too much, too fast"](https://web.archive.org/web/2026*/https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns). Vendors looking at the same data see customers who will not renew if their first-year usage was capped under a flat fee that priced for an aspirational workload they never reached. Per-token and AELA-style contracts let vendors capture upside on the customers who succeed and stop subsidizing the ones who do not.
 
 ## What AELA Actually Trades
 
@@ -52,7 +52,7 @@ The integration miss compounds the variance. The 30-50% overrun is not a vendor 
 
 The 14-month recovery delta is the most actionable number in the dataset. Companies that build a TCO model tied to specific business KPIs — tickets resolved, leads qualified, invoices processed, code reviews completed — make better procurement decisions, scope integration realistically, and know when to walk away from a contract that does not pencil. The discipline is the same one we lay out in [the dollar-accounting approach to measuring agent ROI](/blog/measuring-ai-agent-roi/) and the [AI ROI calculator framework](/blog/ai-roi-calculator/) that converts vendor pricing pages into apples-to-apples annual figures.
 
-[Gartner's June 2025 prediction](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) that more than 40% of agentic AI projects will be canceled by the end of 2027 due to escalating costs, unclear business value, and inadequate risk controls is the same dynamic projected forward. The 40% cancellation figure is not a forecast about the technology. It is a forecast about procurement discipline, and the AELA Pivot is the moment that discipline becomes determinative.
+[Gartner's June 2025 prediction](https://web.archive.org/web/2025*/https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) that more than 40% of agentic AI projects will be canceled by the end of 2027 due to escalating costs, unclear business value, and inadequate risk controls is the same dynamic projected forward. The 40% cancellation figure is not a forecast about the technology. It is a forecast about procurement discipline, and the AELA Pivot is the moment that discipline becomes determinative.
 
 ## Why Are Integration Costs So Hard to Estimate?
 
@@ -88,7 +88,7 @@ Tie commercial terms to specific business KPIs and define exit clauses that refl
 
 ## What the AELA Pivot Means for Buyers Right Now
 
-The AELA Pivot is not a moment to wait out. By mid-2026, [54% of enterprises have integrated AI agents into core operations](https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns), the cancellation rate is climbing toward Gartner's 40% projection, and contract structures signed in this cycle will define cost basis through 2028. The flat-fee era's protection against runaway usage is gone. The per-token era's predictability deficit is real. The AELA-style answer trades one for the other and adds lock-in on top.
+The AELA Pivot is not a moment to wait out. By mid-2026, [54% of enterprises have integrated AI agents into core operations](https://web.archive.org/web/2026*/https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns), the cancellation rate is climbing toward Gartner's 40% projection, and contract structures signed in this cycle will define cost basis through 2028. The flat-fee era's protection against runaway usage is gone. The per-token era's predictability deficit is real. The AELA-style answer trades one for the other and adds lock-in on top.
 
 Buyers who get this cycle right will run the workload model, normalize the proposals, scope the integration stack independently, stress-test the contract structure, and tie commercial terms to outcome KPIs. Buyers who do not will sign the lowest sticker price, discover the integration cost in quarter three, hit the consumption ceiling in quarter four, and renew under worse terms in year two. The 10x fee variance and the 30-50% overrun are the signature of a buyer base that has not yet built the procurement muscle for the new pricing regime, and the vendors are pricing accordingly.
 

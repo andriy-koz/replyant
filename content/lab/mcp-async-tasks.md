@@ -1,5 +1,5 @@
 ---
-title: "MCP Tasks: Async, Resumable Tool Calls Before the July 28 Spec"
+title: "MCP Tasks: Async, Resumable Tool Calls Before July 28"
 date: 2026-05-24
 tags: ["MCP", "Architecture", "Developer Tools", "Tool Calling"]
 description: "MCP's 2026-07-28 release candidate locked on May 21. Tasks graduated to a first-class extension. Here is what every server author has 10 weeks to refactor."

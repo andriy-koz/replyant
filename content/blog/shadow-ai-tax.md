@@ -2,7 +2,7 @@
 title: "The Shadow AI Tax: What Unsanctioned Tools Really Cost"
 date: 2026-04-18
 tags: ["AI Readiness", "Business Strategy", "Compliance", "Automation"]
-description: "IBM: shadow AI adds $670K to every breach. 49% of workers use unsanctioned AI tools. The five-step audit framework that kills the tax without blocking progress."
+description: "IBM: shadow AI adds $670K to every breach. 49% of workers use unsanctioned AI tools. The five-step audit that kills the tax without blocking work."
 author: "Replyant"
 ---
 

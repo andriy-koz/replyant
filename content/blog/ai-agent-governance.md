@@ -16,6 +16,8 @@ Gartner recorded a 1,445% surge in enterprise inquiries about multi-agent system
 
 The companies that solve governance first deploy agents faster, scale them wider, and face fewer regulatory crises. This post breaks down the problem and gives you the framework to fix it.
 
+{{< cta heading="Stand up your Agent Governance Stack." pitch="Replyant installs registry, permissions, audit, and kill switches in one engagement." button="Close the governance gap" >}}
+
 ## The Three Faces of Agent Sprawl
 
 Agent sprawl isn't just about having too many agents. It creates three distinct categories of risk that compound when left unchecked.
@@ -100,7 +102,7 @@ Permission boundaries define:
 - **Financial limits:** Maximum transaction value, daily spending caps, approval thresholds.
 - **Temporal limits:** Operating hours, rate limits, cooldown periods between actions.
 
-Modern agent frameworks support these boundaries natively through [tool-calling architectures](/lab/anatomy-of-ai-agent-tool-calling/) that restrict which tools an agent can invoke. The governance layer defines the policy; the architecture enforces it.
+Modern agent frameworks support these boundaries natively through [tool-calling architectures](/lab/anatomy-of-ai-agent-tool-calling/) that restrict which tools an agent can invoke. The governance layer defines the policy; the architecture enforces it. The most rigorous implementations go further, using [capability-based defenses like CaMeL's dual-LLM pattern](/lab/camel-dual-llm-defense/) to prove — not just monitor — that prompt-injected inputs cannot trigger state-changing tool calls.
 
 ### Layer 3: Audit Logging
 
@@ -175,6 +177,8 @@ If you're deploying AI agents today --- or already have agents in production ---
 7. **Test escalation paths.** Send a simulated edge case through each agent. Does it escalate correctly? Does the right person receive it? Do they respond in time?
 
 8. **Review quarterly.** Governance isn't a one-time project. Agent capabilities change, business requirements shift, regulations evolve. Schedule quarterly reviews of your governance stack.
+
+{{< cta heading="Governance is a speed feature." pitch="Deploy 40% faster than peers — with the audit trail to back it up." >}}
 
 ## The Bottom Line
 

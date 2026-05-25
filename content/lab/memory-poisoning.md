@@ -2,7 +2,7 @@
 title: "Memory Poisoning: The Attack That Waits"
 date: 2026-04-12
 tags: ["AI Agents", "Architecture", "LLMs"]
-description: "Memory-augmented agents face attacks with 95% injection success that persist 365 days across sessions. Here's the threat map and a layered defense architecture."
+description: "Memory-augmented agents face 95% injection-success attacks that persist 365 days across sessions. The threat map and a layered defense stack."
 author: "Replyant"
 ---
 

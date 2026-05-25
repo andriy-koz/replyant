@@ -2,7 +2,7 @@
 title: "Anatomy of an AI Agent: How MCP Connects Your Systems"
 date: 2026-02-24
 tags: ["AI Agents", "MCP", "Architecture", "Integration"]
-description: "MCP is to AI agents what USB is to peripherals. Here's how the protocol works, how to build an MCP server, and what production deployment actually requires."
+description: "MCP is to AI agents what USB is to peripherals. How the protocol works, how to build an MCP server, and what production deployment requires."
 ---
 
 In our previous posts, we broke down [how system prompts govern agent behavior](/lab/anatomy-of-an-ai-agent-system-prompt/) and [how the tool-calling loop actually works](/lab/anatomy-of-ai-agent-tool-calling/). Both of those pieces assumed something that, in practice, is the hardest part of building a production AI agent: the agent can actually talk to your business systems.
@@ -333,7 +333,7 @@ This matters because it means the AI agent operates within the same permission b
 
 Here's a concern that CIOs are waking up to: MCP servers are easy to create. *Too* easy. Any developer with access to a system can spin up an MCP server that gives an AI agent access to production data — without going through security review, without access controls, without audit logging.
 
-This is "shadow AI" — the same problem as shadow IT, but with higher stakes because the agent can *act* on the data, not just read it. An ungoverned MCP server connected to your financial system is an attack surface you didn't know you had.
+This is "shadow AI" — the same problem as shadow IT, but with higher stakes because the agent can *act* on the data, not just read it. An ungoverned MCP server connected to your financial system is an attack surface you didn't know you had — and it sits at the heart of the [agent privilege crisis driving 88% of enterprise AI breaches](/blog/agent-privilege-crisis/).
 
 The mitigation pattern: centralized MCP server registry. Every MCP server in your organization goes through a review process before deployment. Servers are version-controlled, their tool definitions are audited, and access is granted through your identity provider — not through hardcoded API keys.
 

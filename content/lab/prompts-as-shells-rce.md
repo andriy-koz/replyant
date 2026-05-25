@@ -1,5 +1,5 @@
 ---
-title: "Prompts as Shells: How Prompt Injection Became RCE in Semantic Kernel"
+title: "Prompts as Shells: Semantic Kernel's Prompt Injection RCE"
 date: 2026-05-14
 tags: ["AI Agents", "Tool Calling", "Architecture", "Prompt Engineering"]
 description: "Microsoft's CVE-2026-26030 and CVE-2026-25592 turn one injected prompt into calc.exe. The tool registry is now the attack surface — here's the chain."

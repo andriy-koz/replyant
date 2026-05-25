@@ -2,7 +2,18 @@
 title: "Why Most Businesses Fail at AI Agents (And the 80/20 Fix)"
 date: 2026-02-06
 tags: ["AI Agents", "Business Strategy", "Automation", "Process Design"]
-description: "Only 20% of companies see real ROI from AI. The difference isn't technology — it's strategy. Here's the 80/20 framework that separates winners from the rest."
+description: "Only 20% of companies see real ROI from AI. The difference isn't tech — it's strategy. The 80/20 framework separating winners from the rest."
+faq:
+  - q: "Why do most businesses fail at AI agents?"
+    a: "Only 26% of companies grow revenue from AI initiatives, per Deloitte's State of AI report. The failure is almost never the technology — it is approach. Companies start with the tool instead of the problem, treat AI as an IT project instead of business transformation, deploy across too many workflows at once, and skip governance. The 80/20 framework reverses each of these mistakes."
+  - q: "What is the 80/20 rule for AI implementation?"
+    a: "Spend 80% of effort on process design and 20% on the technology. PwC's 2026 AI predictions found that technology delivers only about 20% of an initiative's value — the other 80% comes from redesigning the work itself. Companies that bolt AI onto a broken process just automate the waste faster. The winners redesign first, then build the agent to execute the optimized workflow."
+  - q: "What workflows should I automate first with AI agents?"
+    a: "Look for the intersection of three things: high volume (happens many times daily), high cost (eats significant time or money), and high repeatability (steps are largely predictable). Common winners include customer inquiry triage, lead qualification, invoice processing, and appointment scheduling. Pick one. The one that hurts most. Our [hire-vs-automate framework](/blog/hire-vs-automate/) walks through the evaluation."
+  - q: "Do AI agents replace human workers?"
+    a: "The high-ROI pattern is augmentation, not replacement. Agents handle high-volume, low-judgment work so the team focuses on decisions that require expertise, empathy, or judgment. In a typical support deployment, the agent resolves 60-70% of routine tickets autonomously while humans handle complex escalations. Companies that frame AI as headcount replacement frequently hit the [AI Layoff Trap](/blog/ai-layoff-trap/) and rehire within 12 months."
+  - q: "How important is AI governance for a small business?"
+    a: "Critical, regardless of company size. Only 20% of organizations have a mature governance model — and half of deployed agents operate in disconnected silos producing inconsistent results. Governance is not bureaucracy: it is the registry, permission boundaries, audit logs, and kill switches that let you scale with confidence. Without it, the second agent you deploy is the one that creates an incident."
 ---
 
 Everyone's talking about AI agents. Fewer are getting results.

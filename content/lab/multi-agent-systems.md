@@ -2,7 +2,7 @@
 title: "Multi-Agent Systems: Patterns That Work Beyond the Demo"
 date: 2026-03-17
 tags: ["AI Agents", "Architecture", "Multi-Agent Systems", "MCP"]
-description: "Single agents hit ceilings. Here's how multi-agent architectures work in practice — orchestration patterns, failure modes, cost realities, and working code."
+description: "Single agents hit ceilings. How multi-agent architectures work in practice — orchestration patterns, failure modes, cost realities, working code."
 ---
 
 In our previous posts, we broke down the individual components of production AI agents: [how the tool-calling loop works](/lab/anatomy-of-ai-agent-tool-calling/), [how system prompts govern behavior](/lab/anatomy-of-an-ai-agent-system-prompt/), [how MCP connects agents to business systems](/lab/anatomy-of-ai-agent-mcp/), and [how to configure extension points in practice](/lab/claude-code-in-production/). Each of those posts examined a single agent doing a single job.

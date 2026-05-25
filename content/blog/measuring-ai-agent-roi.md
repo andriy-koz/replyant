@@ -1,8 +1,8 @@
 ---
-title: "How to Measure ROI on Your AI Agents (Before Your CFO Asks)"
+title: "How to Measure AI Agent ROI (Before Your CFO Asks)"
 date: 2026-03-17
 tags: ["AI Agents", "ROI", "Business Strategy", "Automation"]
-description: "61% of CEOs face rising pressure to prove AI returns. Here's a four-layer framework for measuring what your agents are actually delivering — with real numbers."
+description: "61% of CEOs face pressure to prove AI returns. A four-layer framework for measuring what your agents actually deliver — with real numbers."
 ---
 
 The honeymoon is over.

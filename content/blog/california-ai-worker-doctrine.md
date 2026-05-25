@@ -2,7 +2,7 @@
 title: "The Newsom Doctrine: California Just Rewrote AI Severance"
 date: 2026-05-24
 tags: ["Compliance", "Business Strategy", "Hiring", "AI Readiness"]
-description: "Newsom's May 21 executive order turns AI-attributed layoffs into auditable state events. Here's what HR and finance leaders must do before agencies report back."
+description: "Newsom's May 21 executive order turns AI layoffs into auditable state events. What HR and finance leaders must do before agencies report back."
 author: "Replyant"
 ---
 

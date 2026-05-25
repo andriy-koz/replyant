@@ -3,6 +3,19 @@ title: "Is Your Business Ready for AI? The 7-Point Checklist"
 date: 2026-02-11
 tags: ["AI Readiness", "Process Design", "Business Strategy", "Automation"]
 description: "Most AI projects fail before they start — because the business wasn't ready. Here are the 7 prerequisites to get right before you automate anything."
+faq:
+  - q: "How do I know if my business is ready for AI?"
+    a: "AI readiness comes down to seven prerequisites: documented processes, identified bottlenecks, clean enough data, defined success metrics, one prioritized workflow, named ownership, and team buy-in. If you cannot answer all seven clearly, you are not ready — and MIT's 95% pilot failure rate is the cost of skipping them. The good news: every gap is fixable in weeks, not quarters."
+  - q: "What is the biggest reason AI projects fail?"
+    a: "The single biggest predictor is operational readiness, not technology. MIT found 95% of generative AI pilots fail to deliver financial returns. Deloitte found 86% of agent pilots never reach production. In nearly every case the model was capable — the underlying processes were undocumented, the data was scattered, or no one owned the outcome. Fix the business first; the AI follows."
+  - q: "How much data do I need before deploying an AI agent?"
+    a: "You do not need perfect data — you need reliable data. The test is whether an agent can act on it without making consistent mistakes. A CRM with 30% duplicate contacts will produce wrong answers 30% of the time. Audit accuracy, accessibility, and gaps before you build. Cleaning a database is cheaper than debugging an agent fed bad inputs."
+  - q: "Should I automate multiple workflows at once?"
+    a: "No. The companies seeing real ROI start with one workflow — the one with the highest volume, highest cost, and highest repeatability. Prove value there, build internal confidence, then expand methodically. Trying to automate five workflows simultaneously is the most reliable way to deliver zero results on all five. Our [80/20 framework](/blog/why-businesses-fail-at-ai-agents/) makes the picking decision concrete."
+  - q: "Who should own an AI initiative inside the business?"
+    a: "One named person — not a team, not a committee. They are accountable for the outcome, monitor the agent day-to-day, decide when it needs adjustment, and escalate when something breaks. In a small business this might be a single operator wearing multiple hats. Without named ownership, even the best-built agent becomes shelfware within 90 days. This is the failure mode behind most stalled deployments."
+  - q: "How long does it take to get an AI agent ready for production?"
+    a: "Operational readiness work — process documentation, data cleanup, success metrics, ownership — typically takes 4 to 8 weeks for a single workflow. The agent build that follows is faster, usually 6 to 12 weeks. Companies that skip the readiness phase save time upfront and pay it back many times over in debugging, rework, and stalled rollouts."
 ---
 
 Everyone's investing in AI. Almost nobody is ready for it.
@@ -16,6 +29,8 @@ We've seen it repeatedly. A company invests five or six figures in an AI agent, 
 Readiness isn't a technology problem. It's an operations problem. And it's fixable — if you know what to look for.
 
 Here are the seven things to get right before you automate anything.
+
+{{< cta heading="Skip the 95% failure rate." pitch="Replyant runs the readiness audit before you commit a single AI dollar." button="Run the readiness check" >}}
 
 ---
 
@@ -113,6 +128,8 @@ Consider a 30-person logistics company. They want to automate order tracking and
 - The support team helped design the escalation rules and is genuinely excited to stop answering the same question fifty times a day
 
 The difference isn't budget. It isn't technical sophistication. It's operational readiness.
+
+{{< cta heading="Get the foundation right, then automate." pitch="We close the seven gaps so your first agent ships into a business that's ready." >}}
 
 ---
 

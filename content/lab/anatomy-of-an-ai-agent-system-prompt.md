@@ -15,6 +15,8 @@ We got our hands on the full system prompt that powers [Claude Code](https://doc
 
 Here's what's inside — and what every team building AI agents can learn from it.
 
+{{< cta heading="System prompts that survive production." pitch="Replyant writes agent instructions with the rigor Anthropic uses on Claude Code." button="Engineer the prompt" >}}
+
 ---
 
 ## The Full System Prompt
@@ -219,7 +221,7 @@ This reads like a senior engineer's code review feedback distilled into policy. 
 - **Defensive over-coding:** The agent wraps everything in try/catch blocks and null checks for impossible states.
 - **Gold plating:** The agent refactors adjacent code while fixing a bug.
 
-These aren't hypothetical problems. Anyone who's used an AI coding agent has experienced all of them. The prompt addresses each one explicitly because **general instructions like "keep it simple" don't work** — the model needs specific examples of what "simple" means in practice.
+These aren't hypothetical problems. Anyone who's used an AI coding agent has experienced all of them. The prompt addresses each one explicitly because **general instructions like "keep it simple" don't work** — the model needs specific examples of what "simple" means in practice. Vague system prompts are one of the most common reasons [businesses fail at AI agents](/blog/why-businesses-fail-at-ai-agents/) — the model defaults to its training-time priors when the prompt doesn't override them.
 
 **The principle:** Don't tell your agent to "be helpful" or "write clean code." Tell it exactly which failure modes to avoid, with concrete examples. Anti-patterns are more instructive than platitudes. If your agent keeps doing something wrong, add a specific rule about that exact behavior.
 
@@ -339,6 +341,8 @@ Whether you're building a customer support agent, a data pipeline orchestrator, 
 6. **Invest in anti-patterns over best practices.** Your agent already wants to be helpful. What it needs is guardrails on the specific ways that helpfulness goes wrong in your domain.
 
 7. **Build in memory and learning — with governance.** Let your agent accumulate expertise across sessions, but explicitly define what's worth remembering and what's noise.
+
+{{< cta heading="Your agent isn't broken — your prompt is." pitch="We turn a week of weird behavior into a 4,000-word architecture document." >}}
 
 ---
 

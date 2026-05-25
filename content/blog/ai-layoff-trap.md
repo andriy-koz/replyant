@@ -1,8 +1,8 @@
 ---
-title: "The AI Layoff Trap: Cuts That Boomerang Back"
+title: "AI Layoff Trap: Why 50% of AI Cuts Get Rehired in 2026"
 date: 2026-04-12
 tags: ["Hiring", "Business Strategy", "Automation", "ROI"]
-description: "Half of AI-attributed layoffs get quietly rehired at higher cost. Q1 2026 data shows why the strategy is backfiring — and the framework to avoid it."
+description: "50% of AI-attributed layoffs get quietly rehired at higher cost. Why the strategy backfires in 2026 — and the framework to avoid the trap."
 author: "Replyant"
 ---
 
@@ -13,6 +13,8 @@ Across Q1 2026, roughly 80,000 tech workers were cut --- nearly half attributed 
 This is the AI Layoff Trap: companies announce headcount reductions under the AI banner, fail to capture the productivity gains that justified them, then absorb the full cost of rebuilding capacity at a premium. The Duke CFO Survey (March 2026), covering 750 CFOs, projects ~502,000 AI-attributed job cuts in 2026 --- a ~9x increase over the ~55,000 cuts in 2025. The scale of the trap is accelerating faster than most operations leaders realize.
 
 The [hire-vs-automate decision framework](/blog/hire-vs-automate/) helps companies make the right call before headcount is touched. This post is the postmortem on what happens when they skip it and cut first.
+
+{{< cta heading="Validate AI capacity before you cut headcount." pitch="Replyant runs shadow-mode evaluations that prove the function before the layoff." button="Pressure-test the case" >}}
 
 ## The Three Faces of the AI Layoff Trap
 
@@ -127,6 +129,8 @@ Before announcing AI-attributed reductions --- or evaluating whether cuts alread
 7. **What is the rebuild cost if this doesn't work?** Model the boomerang scenario explicitly. If you need to rebuild this capacity in 12 months, what does that cost? Severance plus agency fees plus training time plus the productivity gap. That number belongs in the business case.
 
 8. **Is this augmentation or substitution?** The [scaling AI agents without breaking things](/blog/scaling-ai-agents/) discipline applies here: successful AI deployment expands what the function can do, rather than just reducing what the function costs. If your only metric is headcount reduction, you're measuring substitution. Augmentation requires additional metrics: output quality, capacity expansion, exception handling effectiveness.
+
+{{< cta heading="Avoid the boomerang hire." pitch="We model total round-trip cost so the board sees one number, not five." >}}
 
 ## The Bottom Line
 
