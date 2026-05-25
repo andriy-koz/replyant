@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="services-page">
+  <div class="container">
+    <div class="list-head">
+      <div>
+        <span class="section-index" style="display:block; margin-bottom:16px;">§ Services</span>
+        <h1>{{ .Title }}</h1>
+      </div>
+      {{ with .Description }}
+        <p class="blog-intro">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ with .Content }}
+      <div class="post-content">{{ . }}</div>
+    {{ end }}
+  </div>
+</section>
+{{ partial "lead-magnet.html" . }}
+{{ end }}

@@ -110,6 +110,76 @@
   </div>
 </section>
 
+<!-- How We Engage -->
+<section class="process" id="how-we-engage">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-index">§ A — Engagement</span>
+      <h2>How we <span class="italic">engage</span>.</h2>
+      <a href="/services/">See services <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="process-lede reveal">A four-step rhythm that runs from first hypothesis to fifty thousand production calls. Each phase has its own deliverable, its own exit criteria, and its own honest go/no-go. We will tell you to stop before we tell you to scale.</p>
+    <div class="process-grid">
+      <div class="process-card reveal">
+        <div class="service-number">§ 01 — Discover</div>
+        <h3>Discover</h3>
+        <p>We map the workflow, the data, and the politics. One week, sometimes two.</p>
+        <p>You leave with a shortlist of agent-shaped problems, the cost of inaction for each, and a refusal to chase the ones that fail the sniff test. No slideware.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="service-number">§ 02 — Design</div>
+        <h3>Design</h3>
+        <p>We pick the smallest agent that proves the thesis and sketch its evals first.</p>
+        <p>Tool surface, memory model, escalation paths, failure modes — all decided on paper before a single token is spent. The plan is what your CFO and your CISO can both sign.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="service-number">§ 03 — Ship</div>
+        <h3>Ship</h3>
+        <p>Six to twelve weeks. Real users, real data, evals running in CI from day one.</p>
+        <p>We ship behind a feature flag, in shadow mode, or to a single team — whichever lets us learn without lighting a brand on fire. Production is a verb here.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="service-number">§ 04 — Operate</div>
+        <h3>Operate</h3>
+        <p>Agents that survive the next release cycle, not just the demo.</p>
+        <p>We keep the eval suite green, the cost curves honest, and the on-call playbook current — or we transfer the keys to your team with the documentation to defend it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Work With -->
+<section class="audience" id="who-we-work-with">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-index">§ B — Fit</span>
+      <h2>Who we <span class="italic">work with</span>.</h2>
+      <a href="/case-studies/">See case studies <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="audience-lede reveal">Operator-led companies, past the pilot, allergic to demoware. If the agent in your roadmap has to clear legal, please finance, and survive a Tuesday outage — we are the right call. If you need a hype video, we are the wrong one.</p>
+    <div class="audience-grid">
+      <div class="audience-card reveal">
+        <div class="service-number">§ 01 — Ops Leaders</div>
+        <h3>Ops Leaders</h3>
+        <p>You run the function that the agent will touch — support, finance, RevOps, supply chain. You have measured the work, the headcount math is unforgiving, and a stalled pilot is now political.</p>
+        <p>We close the gap between "the model can do it" and "the team trusts it on a Friday at 5pm."</p>
+      </div>
+      <div class="audience-card reveal">
+        <div class="service-number">§ 02 — Founders / CEOs</div>
+        <h3>Founders &amp; CEOs</h3>
+        <p>You have an AI line item on the board deck and a quarter to make it real. The product roadmap depends on agents you have not built yet, and the team is shipping features around the gap.</p>
+        <p>We turn the slide into a system before the next board meeting compounds the debt.</p>
+      </div>
+      <div class="audience-card reveal">
+        <div class="service-number">§ 03 — CIOs / CTOs</div>
+        <h3>CIOs &amp; CTOs</h3>
+        <p>You own the platform under the agents — identity, data, observability, risk. The business keeps approving pilots; you keep absorbing the sprawl, the shadow runtimes, and the audit questions.</p>
+        <p>We install the governance and the management plane that lets you say yes without inheriting the chaos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Featured Blog Posts -->
 {{ $posts := first 3 (where (where .Site.RegularPages "Section" "blog") ".File.LogicalName" "!=" "ai-readiness-checklist.md") }}
 {{ if $posts }}
@@ -159,6 +229,55 @@
   </div>
 </section>
 {{ end }}
+
+<!-- Our Principles -->
+<section class="principles" id="principles">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-index">§ C — Principles</span>
+      <h2>What makes us <span class="italic">different</span>.</h2>
+      <a href="/about/">About Replyant <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="principles-lede reveal">Five rules we hold even when the engagement is on fire. They are how we keep agents in production after the launch post stops trending, and how we keep our work defensible when the auditor walks in.</p>
+    <ol class="principles-list">
+      <li class="principle reveal">
+        <div class="principle-mark">01</div>
+        <div class="principle-body">
+          <h3>Anti-hype.</h3>
+          <p>We will say no to the agent that does not pay for itself. The deck does not move the metric; the system does. Every recommendation we make is one we would defend in your QBR.</p>
+        </div>
+      </li>
+      <li class="principle reveal">
+        <div class="principle-mark">02</div>
+        <div class="principle-body">
+          <h3>Evals before ship.</h3>
+          <p>If we cannot measure the behavior, we will not deploy the behavior. Eval suites are written before the prompt is, and they run in CI for the life of the agent — not just the launch.</p>
+        </div>
+      </li>
+      <li class="principle reveal">
+        <div class="principle-mark">03</div>
+        <div class="principle-body">
+          <h3>Agents that survive the next release cycle.</h3>
+          <p>Model providers ship breaking changes; vendors get acquired; APIs deprecate. We build for the second year, not the launch week, with versioned prompts, pinned tools, and a tested rollback path.</p>
+        </div>
+      </li>
+      <li class="principle reveal">
+        <div class="principle-mark">04</div>
+        <div class="principle-body">
+          <h3>Numbers your CFO can defend.</h3>
+          <p>Every engagement comes with a measurement layer your finance team can sign. We track unit economics — cost per resolution, per draft, per decision — not vanity tokens-per-second.</p>
+        </div>
+      </li>
+      <li class="principle reveal">
+        <div class="principle-mark">05</div>
+        <div class="principle-body">
+          <h3>Own the loop end-to-end.</h3>
+          <p>Prompts, tools, memory, evals, observability, and on-call runbook — one team, one accountable owner. We do not hand you a half-built system and a Slack channel; we hand you an operating manual.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
 
 {{ partial "lead-magnet.html" . }}
 

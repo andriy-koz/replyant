@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article class="blog-post">
+  <div class="container container-narrow">
+    <header class="post-header">
+      <div class="post-header-meta">
+        <span class="section-index">§ Services</span>
+      </div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="blog-intro" style="margin-top: 16px;">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.tags }}
+      <div class="post-tags">
+        {{ range . }}
+          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </header>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+  </div>
+  {{ if .Params.faq }}{{ partial "faq-block.html" . }}{{ end }}
+  {{ partial "lead-magnet.html" . }}
+  <footer class="post-footer">
+    <div class="container container-narrow">
+      <a href="/services/" class="back-link"><span aria-hidden="true">←</span> All services</a>
+    </div>
+  </footer>
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ $leads := resources.Get "js/leads.js" | minify | fingerprint }}
+  <script src="{{ $leads.RelPermalink }}" defer></script>
+{{ end }}
