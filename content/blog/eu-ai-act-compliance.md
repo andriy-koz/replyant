@@ -3,6 +3,17 @@ title: "The EU AI Act Hits in August: Is Your AI Compliant?"
 date: 2026-04-06
 tags: ["AI Agents", "Business Strategy", "Automation", "Compliance"]
 description: "The EU AI Act takes effect August 2, 2026 — penalties up to 35M euros. Here's what businesses deploying AI agents must do to comply in time."
+faq:
+  - q: "When does the EU AI Act take effect and what are the penalties?"
+    a: "Enforcement begins August 2, 2026. Penalties reach up to 35 million euros or 7% of global annual turnover for prohibited practices, and up to 15 million euros or 3% for violating operational requirements — both higher than GDPR's 4% cap. The deadline is fixed even though only 8 of 27 EU member states have designated national enforcement authorities as of April 2026."
+  - q: "Who is affected by the EU AI Act?"
+    a: "Any business deploying AI agents in the EU or serving EU customers, regardless of where the business is headquartered. The Act's reach is extraterritorial, similar to GDPR. Most business AI agents fall into the limited-risk category (transparency obligations) or high-risk category. The EU represents 450 million consumers — non-compliance means losing market access, not just facing fines."
+  - q: "What counts as a high-risk AI system under the EU AI Act?"
+    a: "AI used in employment and worker management, creditworthiness assessment, insurance pricing, educational assessment, critical infrastructure, and law enforcement support. PwC estimates compliance cost for a high-risk system at 200,000-400,000 euros before ongoing monitoring. A multi-purpose AI agent inherits the classification of its highest-risk function — a single agent handling refunds and analytics may be high-risk overall."
+  - q: "What does the EU AI Act require for high-risk AI systems?"
+    a: "Mandatory risk management systems, data governance protocols, comprehensive technical documentation, meaningful human oversight mechanisms, accuracy and robustness testing, and registration in the EU's public database before deployment. Each high-risk system requires a conformity assessment — for most business applications, a rigorous documented self-assessment, not a third-party audit."
+  - q: "How do I prepare for the EU AI Act in four months?"
+    a: "Six steps: classify every AI system conservatively, document everything (retrofit is painful), implement human oversight (architecture change, not config), establish data governance (overlaps with GDPR), build a conformity assessment process, and register high-risk systems. Organizations with mature operational discipline — process docs, monitoring, oversight — already meet most requirements. Those who [skipped fundamentals](/blog/ai-readiness-checklist/) face the steepest climb."
 ---
 
 The EU AI Act becomes enforceable on August 2, 2026. If your business deploys AI agents in the European Union — or serves EU customers — you have four months to comply. Penalties reach up to 35 million euros or 7% of global annual turnover, whichever is higher. That makes the GDPR's 4% cap look lenient.
@@ -11,7 +22,7 @@ This is not a theoretical risk. The regulation is final, the deadlines are fixed
 
 That gap creates both risk and opportunity. The companies that act now will be positioned to operate confidently when enforcement begins. The ones waiting for perfect clarity will be scrambling in August.
 
-{{< cta heading="Compliant agents by August 2." pitch="Replyant builds the documentation, oversight, and audit trail the EU AI Act requires." button="Get compliance-ready" >}}
+{{< cta heading="Compliant agents by August 2." pitch="Replyant builds the documentation, oversight, and audit trail the EU AI Act requires." button="Get compliance-ready" href="/services/strategic-consulting/" >}}
 
 ## What the EU AI Act actually requires
 

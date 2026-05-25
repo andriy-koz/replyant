@@ -5,6 +5,11 @@ tags: ["AI Agents", "Architecture", "Multi-Agent Systems", "MCP"]
 description: "Single agents hit ceilings. How multi-agent architectures work in practice — orchestration patterns, failure modes, cost realities, working code."
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>Multi-agent systems use roughly 15x more tokens than single-agent setups (vs. 4x for a single agent over chat) and add coordination complexity that scales combinatorially — 10 agents have 45 interaction paths. Five orchestration patterns cover most production work: orchestrator-worker, sequential pipeline, parallel fan-out, router, generator-critic. The reliability paradox: five agents at 95% individual reliability compound to 77% system reliability. Start with one agent, add tools before agents.</p>
+</aside>
+
 In our previous posts, we broke down the individual components of production AI agents: [how the tool-calling loop works](/lab/anatomy-of-ai-agent-tool-calling/), [how system prompts govern behavior](/lab/anatomy-of-an-ai-agent-system-prompt/), [how MCP connects agents to business systems](/lab/anatomy-of-ai-agent-mcp/), and [how to configure extension points in practice](/lab/claude-code-in-production/). Each of those posts examined a single agent doing a single job.
 
 This post is about what happens when one agent isn't enough.

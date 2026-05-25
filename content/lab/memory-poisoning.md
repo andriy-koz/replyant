@@ -6,6 +6,11 @@ description: "Memory-augmented agents face 95% injection-success attacks that pe
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>Memory poisoning is the persistent prompt-injection attack on agents with long-term memory. MINJA shows 95%+ injection success with query-only privileges; Unit 42's Bedrock exploit persists up to 365 days via forged XML in session summarization. Defense is a five-layer trust-weighted memory stack: source provenance tags, composite trust scoring, temporal decay, pre-write sanitization, and retrieval-time audit logs. Input filters alone do not work.</p>
+</aside>
+
 The industry's mental model of prompt injection is session-scoped: attacker crafts a malicious input, it executes in the current context, the session ends, and the attack ends with it. Defenses are designed around this model---input filtering, system prompt hardening, output validation. Every major framework has a story for it.
 
 Memory-augmented agents break that model entirely.

@@ -12,7 +12,7 @@ Gartner forecasts that the average global Fortune 500 enterprise will have over 
 
 The companies that install an agent management plane in 2026 will avoid a cleanup project that costs more than the agents themselves. The companies that wait will rediscover, with new vocabulary, every governance failure of the SaaS sprawl era. This post is the practical version: what agent sprawl actually is, why it compounds faster than prior IT debt categories, and the six-step framework that converts a coming mess into a managed asset class.
 
-{{< cta heading="Inventory the agents you can't see yet." pitch="Replyant runs discovery across Copilot, Agentforce, and shadow runtimes — before sprawl compounds." button="Start the discovery" >}}
+{{< cta heading="Inventory the agents you can't see yet." pitch="Replyant runs discovery across Copilot, Agentforce, and shadow runtimes — before sprawl compounds." button="Start the discovery" href="/services/business-automation/" >}}
 
 ## Why Agent Sprawl Outpaces Every Prior IT Debt Category
 

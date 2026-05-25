@@ -3,6 +3,17 @@ title: "Should Your Next Hire Be an AI Agent? A Decision Framework"
 date: 2026-02-24
 tags: ["AI Agents", "Business Strategy", "Automation", "Hiring"]
 description: "The hire vs. automate debate is a false binary. Here's a four-factor framework for getting the split right."
+faq:
+  - q: "Should I hire a person or deploy an AI agent for my next role?"
+    a: "Neither, until you've evaluated the work on four dimensions: repeatability, judgment complexity, data dependency, and relationship stakes. Tasks scoring high on the first two and low on the last two are automation candidates. 73% of SMBs deploying AI agents in 2025 saw productivity gains within 90 days, versus 3-6 months for a new hire to reach full productivity."
+  - q: "When is AI the wrong choice for a role?"
+    a: "When the work scores low on repeatability and high on judgment complexity, relationship stakes, or tacit knowledge. Strategic account management, sensitive HR conversations, executive sales, and crisis management require human judgment that can't be reduced to a decision tree. Forcing AI into these roles produces the [boomerang hire pattern](/blog/ai-layoff-trap/) — 55% of AI-driven layoffs are regretted within months."
+  - q: "When is hiring a human the wrong choice?"
+    a: "When the 'role' is actually a bundle of repetitive tasks masquerading as a job — lead qualification against fixed criteria, status inquiries, scheduling, invoice processing. An AI agent handles these at roughly one-third the annual cost of a $55,000 hire, runs 24/7, and applies identical criteria every time. The budget saved funds senior hires for genuinely human work."
+  - q: "What's the right sequence — hire first or automate first?"
+    a: "Automate first when the work is above 60% repeatable. Hire first when it's below 30% repeatable. Automating after hiring is roughly 10x harder because processes live in employees' heads as undocumented shortcuts, change-management resistance builds, and sunk-cost psychology blocks the conversation. Map the process, automate what's automatable, then hire for what remains."
+  - q: "How do I avoid the most common sequencing mistake?"
+    a: "Don't bolt AI onto a broken process. The number-one waste pattern is automating without a plan for the freed-up capacity — if 20 hours per week get redirected to 'nothing specific,' the ROI evaporates. Define what the saved hours will do *before* you build, and ensure your [data is clean enough](/blog/ai-readiness-checklist/) for an agent to make accurate decisions at scale."
 ---
 
 You have budget for one more headcount. Do you hire a person — or deploy an AI agent?

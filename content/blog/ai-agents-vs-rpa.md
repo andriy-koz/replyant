@@ -3,6 +3,17 @@ title: "AI Agents vs. RPA: How to Choose the Right Automation"
 date: 2026-03-29
 tags: ["AI Agents", "Automation", "Business Strategy", "Process Design"]
 description: "RPA and AI agents aren't competitors — they solve different problems. Here's the decision framework to invest in the right automation for every workflow."
+faq:
+  - q: "What's the actual difference between AI agents and RPA?"
+    a: "RPA executes predefined steps deterministically — it follows scripts. AI agents pursue goals using reasoning — they select tools dynamically and adapt when things don't go as expected. RPA is 5-10x faster than humans on rule-based tasks at $5,000-$15,000 per bot per year, but breaks the moment input formats change. AI agents handle unstructured input and exception logic but cost more per transaction."
+  - q: "When does RPA win and when does an AI agent win?"
+    a: "RPA wins on high-volume, rule-based, stable workflows with structured data — invoice transfers, format validation, 10,000+ identical transactions per month. AI agents win on unstructured input (emails, PDFs), multi-step reasoning, exception handling, and adaptive workflows. The four-question decision framework: is input structured, is judgment required, how often does the process change, and what's the volume?"
+  - q: "Should I replace my existing RPA with AI agents?"
+    a: "Usually no. Keep RPA for high-volume, stable, rules-based work delivering current ROI — especially legacy system bridges without APIs. Replace only when maintenance costs exceed 40% of the bot's annual value, when underlying processes change faster than monthly, or when exception handling costs more than the bot saves. The 'replace everything with AI' narrative is a vendor pitch, not a strategy."
+  - q: "What does a hybrid RPA + AI agent architecture look like?"
+    a: "Three patterns: AI agent as triage with RPA as execution (agent classifies inbound, RPA handles standard downstream work), RPA as data collector with AI agent as analyst (bots aggregate nightly, agent reconciles), and AI agent as exception handler (RPA processes 65% standard claims, agent handles the 35% requiring judgment). Hybrid usually wins on total cost of ownership."
+  - q: "How do I audit my automation portfolio for the right mix?"
+    a: "Five steps: map every automated and manual workflow, score each on the four-question framework, calculate total cost of ownership (not just tool costs — include maintenance and exception handling), identify hybrid opportunities (high-exception-rate RPA bots, too-variable manual workflows), and prioritize by business impact. The [five-number ROI framework](/blog/ai-roi-calculator/) plugs in at step three."
 ---
 
 The automation market is having an identity crisis.

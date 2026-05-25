@@ -26,7 +26,7 @@ You're not alone. According to Deloitte's 2025 Emerging Technology report, while
 
 This isn't a technology problem. The models are good. The tools are mature. The problem is almost always one of three things — and all three are fixable.
 
-{{< cta heading="Move your pilot into the 14%." pitch="Replyant ships the data, governance, and ownership layer pilots usually skip." button="Get to production" >}}
+{{< cta heading="Move your pilot into the 14%." pitch="Replyant ships the data, governance, and ownership layer pilots usually skip." button="Get to production" href="/services/ai-agent-development/" >}}
 
 ## The Pilot Trap: Why It Happens
 

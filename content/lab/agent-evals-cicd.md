@@ -6,6 +6,11 @@ description: "Most teams shipping agents rely on manual testing. Here's how to b
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>Agent quality is a property of the system — prompts, tools, context, and the eval infrastructure proving they work together. Build a three-layer pipeline: offline experimentation against a 50-200 case golden dataset, a CI gate running 20-50 regression cases on every PR with a pass-rate threshold 2-3 points below current baseline, and production sampling at 5-10% of live traffic with z-score drift detection. Tool selection accuracy below 85% is a context problem, not a model problem.</p>
+</aside>
+
 The majority of teams running AI agents in production have no automated quality gates. They deploy, manually check a few outputs, and hope nothing regressed. LangChain's 2026 State of Agent Engineering report found that 57% of organizations now have agents in production — but quality remains the top barrier, cited by 32% of respondents. Google released a codelab this year explicitly titled "from vibe checks to data-driven agent evaluation." The industry is collectively admitting that the testing story for agents is broken.
 
 Agent evaluation needs the same rigor as software testing: automated, repeatable, and gating deployments. This post covers the architecture for making that happen — from offline experimentation to CI gates to production monitoring — with working code you can adapt for your own pipelines.

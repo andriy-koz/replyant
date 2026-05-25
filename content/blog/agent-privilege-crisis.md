@@ -12,7 +12,7 @@ Gravitee's State of AI Agent Security 2026 found that 88% of enterprises experie
 
 This post lays out why agents ended up with more privilege than the humans who deploy them, what the three dominant failure modes look like in production, why the regulatory collision is landing in months rather than years, and the five-control stack that actually closes the gap.
 
-{{< cta heading="Audit your agents before BreachForums does." pitch="We scope, identity-bind, and harden agent permissions in one engagement." button="Book the audit" >}}
+{{< cta heading="Audit your agents before BreachForums does." pitch="We scope, identity-bind, and harden agent permissions in one engagement." button="Book the audit" href="/services/strategic-consulting/" >}}
 
 ## Your Agents Have More Access Than Your Engineers
 

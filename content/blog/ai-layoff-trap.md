@@ -4,6 +4,17 @@ date: 2026-04-12
 tags: ["Hiring", "Business Strategy", "Automation", "ROI"]
 description: "50% of AI-attributed layoffs get quietly rehired at higher cost. Why the strategy backfires in 2026 — and the framework to avoid the trap."
 author: "Replyant"
+faq:
+  - q: "Why do 50% of AI-driven layoffs get quietly rehired?"
+    a: "Because the AI was deployed before validation proved it could carry the function. Forrester projects half of AI-attributed layoffs in 2026 will be rehired — offshore, through agencies, or at higher salaries — once gaps in exception handling, edge cases, and institutional knowledge become undeniable. The Duke CFO Survey projects ~502,000 AI-attributed cuts in 2026, a 9x increase over 2025."
+  - q: "What is the AI Layoff Trap?"
+    a: "A three-stage failure pattern: announce headcount cuts under the AI banner, fail to capture the productivity gains that justified them, then absorb the full cost of rebuilding capacity at a premium. Severance + 15-20% agency recruitment fees + offshore management overhead + productivity gap are never consolidated into one number the board sees. The original 'AI savings' stays on the slide deck; the reversal costs diffuse across budget lines."
+  - q: "What should companies do instead of AI-attributed layoffs?"
+    a: "Follow the Augmentation-First Decision Model: 60-90 days in Shadow Mode (AI runs alongside humans, no action), 60-90 days in Supervised Autonomy (AI acts, humans review every decision), then Delegated Autonomy with capacity redirected (not eliminated). Exit criterion for Stage 1: exception rate below 15-20%. Skip these stages and you produce the boomerang hire — guaranteed."
+  - q: "What questions should executives ask before announcing AI layoffs?"
+    a: "Eight: has shadow-mode validation been completed for 60+ days, what is the measured exception rate, what happens to the exception queue, what does total-cost accounting show, what's the customer satisfaction impact, what institutional knowledge leaves with the team, what's the rebuild cost if this doesn't work, and is this augmentation or substitution? If you can't answer all eight, the cuts are financial theater."
+  - q: "Why aren't AI productivity gains showing up in revenue?"
+    a: "Goldman Sachs senior economist Ronnie Walker found 'no meaningful relationship between productivity and AI adoption at the economy-wide level.' Duke CFO Survey director John Graham confirmed AI productivity gains are 'not really showing up yet in revenue.' Individual efficiency gains from well-deployed AI are real. The macro signal isn't there. Cutting aggressively against a productivity wave that hasn't arrived absorbs all the cost without the revenue offset."
 ---
 
 The most expensive hire you'll make in 2026 is the person you laid off last year.
@@ -14,7 +25,7 @@ This is the AI Layoff Trap: companies announce headcount reductions under the AI
 
 The [hire-vs-automate decision framework](/blog/hire-vs-automate/) helps companies make the right call before headcount is touched. This post is the postmortem on what happens when they skip it and cut first.
 
-{{< cta heading="Validate AI capacity before you cut headcount." pitch="Replyant runs shadow-mode evaluations that prove the function before the layoff." button="Pressure-test the case" >}}
+{{< cta heading="Validate AI capacity before you cut headcount." pitch="Replyant runs shadow-mode evaluations that prove the function before the layoff." button="Pressure-test the case" href="/services/strategic-consulting/" >}}
 
 ## The Three Faces of the AI Layoff Trap
 

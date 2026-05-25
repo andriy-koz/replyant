@@ -6,6 +6,11 @@ description: "PASTE-style speculative tool execution cuts agent task time 48.5%.
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>Speculative tool execution fires the predicted next tool call while the LLM is still streaming tokens, then promotes on commit or discards on mismatch. PASTE (Microsoft Research, March 2026) reports 48.5% task-completion-time reduction at a 27.8% top-1 hit rate. The two design decisions that matter: a predictor and an eligibility policy. 602 of 20,000+ speculative actions in PASTE's data were mutating — never speculate on non-idempotent tools.</p>
+</aside>
+
 Past a 10-step trajectory with read-heavy tools, your agent is bottlenecked on tool latency, not LLM throughput. Speculative tool execution fires the predicted next call while the model is still emitting tokens, then promotes or discards on commit. [PASTE](https://arxiv.org/abs/2603.18897) (arxiv 2603.18897, Microsoft Research, March 2026) reports a 48.5% task-completion-time reduction. The companion UMD/LLNL paper ([arxiv 2512.15834](https://arxiv.org/abs/2512.15834)) layers client-side and engine-side speculation for an additional 6 to 21%. The technique reduces to two design decisions: a predictor and an eligibility policy. Get either wrong and you ship a billing incident or a data-safety incident.
 
 ## Why agents are tool-bound, not token-bound

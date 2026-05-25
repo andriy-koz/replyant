@@ -6,6 +6,11 @@ description: "A2A v1.0 ships in April 2026 under the AAIF. Agent Cards, a five-s
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>A2A v1.0 shipped April 23 2026 under the Linux Foundation's Agentic AI Foundation, with a fixed Agent Card discovery URI at <code>/.well-known/agent-card.json</code> and a normative five-state task lifecycle: <code>submitted → working → (input-required ↔ working)* → completed / failed / canceled / rejected</code>. Use A2A for agent-to-agent peer coordination; use MCP for agent-to-tool. Treating <code>rejected</code> as retryable like <code>failed</code> breaks production.</p>
+</aside>
+
 MCP gives your agent hands. A2A gives your agents colleagues. That distinction is now load-bearing: on April 23 2026 the Linux Foundation cut [Agent2Agent Protocol v1.0](https://a2aprotocol.ai/) under the newly-formed Agentic AI Foundation (AAIF), the same governance body that took over MCP earlier this spring. The AAIF launch, [announced jointly by OpenAI, Anthropic, Google, Microsoft, AWS, and Block](https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/) with roughly 150 member orgs, settles the political question that has haunted multi-agent infrastructure since 2025: there is now one protocol stack, with one steward, that everyone has staked their roadmap on.
 
 For engineering teams, v1.0 is the first version of A2A you can adopt without flinching. The breaking changes are done. The Agent Card discovery URI is fixed. The five-state task lifecycle is normative. IBM's Agent Communication Protocol (ACP) was [merged into the A2A working group in August 2025](https://auth0.com/blog/mcp-vs-a2a/), so the rivals-aren-protocols era is over. What replaces it is something more useful and more boring: a stable spec, a well-known URL, a typed state machine, and the obligation to actually build for it.

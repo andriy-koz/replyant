@@ -16,7 +16,7 @@ Gartner recorded a 1,445% surge in enterprise inquiries about multi-agent system
 
 The companies that solve governance first deploy agents faster, scale them wider, and face fewer regulatory crises. This post breaks down the problem and gives you the framework to fix it.
 
-{{< cta heading="Stand up your Agent Governance Stack." pitch="Replyant installs registry, permissions, audit, and kill switches in one engagement." button="Close the governance gap" >}}
+{{< cta heading="Stand up your Agent Governance Stack." pitch="Replyant installs registry, permissions, audit, and kill switches in one engagement." button="Close the governance gap" href="/services/strategic-consulting/" >}}
 
 ## The Three Faces of Agent Sprawl
 

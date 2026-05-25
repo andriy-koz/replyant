@@ -6,6 +6,11 @@ description: "Microsoft's CVE-2026-26030 and CVE-2026-25592 turn one injected pr
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>CVE-2026-26030 and CVE-2026-25592 in Microsoft Semantic Kernel turn a single injected prompt into remote code execution — once via <code>eval()</code> on an interpolated lambda (bypassed by Python's <code>tuple().__class__.__mro__</code> traversal), once via an accidentally-decorated <code>[KernelFunction] DownloadFileAsync</code> writing to Windows Startup. The bug isn't in the model. It's in the tool registry. Audit yours this week — fix is Semantic Kernel Python ≥1.39.4 and .NET ≥1.71.0.</p>
+</aside>
+
 On May 7, 2026, Microsoft disclosed [CVE-2026-26030 and CVE-2026-25592](https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/) in Semantic Kernel, the 27k-star agent framework that ships in production .NET and Python deployments at Fortune 500 scale. Both bugs do the same thing: a single injected prompt in untrusted content compiles to native code execution on the host. The published proof of concept launches `calc.exe`. The same chain writes a payload into `Windows\Start Menu\Programs\Startup` and waits one reboot for full host compromise. There is no model jailbreak, no policy bypass at the LLM layer, no clever encoding trick at the inference boundary. The model behaves *exactly as designed*: it translates user intent into structured tool calls. The tool implementations turn those structured calls into shell access. Prompt injection is no longer a data-exfil problem. In any framework that does dynamic code generation or exposes an unbounded tool surface, prompt injection is now a remote code execution primitive.
 
 This post walks both vulnerabilities at the source-code level---the `eval()` on an interpolated lambda string, the AST blocklist bypass via Python's class-hierarchy traversal, the unguarded `[KernelFunction]` `DownloadFileAsync` that wrote into Windows Startup---then generalizes the lesson and gives you a checklist you can run against your own agent framework today. The thesis: the bugs aren't in the model. They're in the tool registry. Every agent framework has a tool registry. Most have not been audited as if it were an attack surface. It is.

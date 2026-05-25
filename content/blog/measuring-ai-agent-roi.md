@@ -3,6 +3,17 @@ title: "How to Measure AI Agent ROI (Before Your CFO Asks)"
 date: 2026-03-17
 tags: ["AI Agents", "ROI", "Business Strategy", "Automation"]
 description: "61% of CEOs face pressure to prove AI returns. A four-layer framework for measuring what your agents actually deliver — with real numbers."
+faq:
+  - q: "How do I measure AI agent ROI in a way my CFO will accept?"
+    a: "Use a four-layer framework: cost avoidance (hours reclaimed times fully loaded hourly rate), revenue impact (counterfactual against pre-deployment baseline), operational leverage (revenue per employee, cost-to-serve), and strategic value (data assets, optionality). Lead with the hard numbers, then acknowledge Layer 4 as strategic positioning. CFOs already use the same logic for R&D and platform investments."
+  - q: "What's a realistic payback period for an AI agent?"
+    a: "Net-positive within 6-9 months for a well-scoped deployment. In the worked example in this post, a logistics company reached break-even in month 8 — $63,000 in annual cost avoidance against $42,000 in agent cost. Add the revenue impact from redeployed staff and total measurable value reaches $243,000/year. Anything claiming sub-90-day ROI usually omits inference costs."
+  - q: "Why can only 29% of executives measure AI agent productivity gains?"
+    a: "Because three structural problems make measurement harder than calculation: the attribution problem (who gets credit in shared human-AI workflows), the baseline problem (most teams skip pre-deployment measurement), and the cost iceberg (inference, monitoring, and human oversight run 40-60% higher than the visible technology cost). Solve all three before claiming ROI."
+  - q: "What are the most common AI ROI measurement mistakes?"
+    a: "Three patterns destroy credibility: measuring activity instead of impact (50,000 conversations is not a value metric), cherry-picking the comparison (against your worst month or weakest employee), and ignoring full cost (inference alone is 85% of enterprise AI budget in 2026). An agent that saves $100,000 but costs $90,000 has 11% ROI, not 'massive' ROI — present the honest number."
+  - q: "What metrics belong on an AI agent ROI dashboard?"
+    a: "Nine metrics across four layers, updated at different cadences: resolution rate and human time redirected (weekly), full agent cost including inference (monthly), response time improvement and conversion changes (weekly to monthly), revenue per employee and cost-to-serve (quarterly), and data assets created (quarterly). One dashboard, one source of truth — don't rebuild the deck every quarter."
 ---
 
 The honeymoon is over.

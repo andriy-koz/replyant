@@ -30,7 +30,7 @@ Readiness isn't a technology problem. It's an operations problem. And it's fixab
 
 Here are the seven things to get right before you automate anything.
 
-{{< cta heading="Skip the 95% failure rate." pitch="Replyant runs the readiness audit before you commit a single AI dollar." button="Run the readiness check" >}}
+{{< cta heading="Skip the 95% failure rate." pitch="Replyant runs the readiness audit before you commit a single AI dollar." button="Run the readiness check" href="/services/strategic-consulting/" >}}
 
 ---
 

@@ -24,7 +24,7 @@ If you're evaluating an AI agent investment — whether it's a $5,000 chatbot or
 
 Here's one that works.
 
-{{< cta heading="Stop guessing your AI ROI." pitch="Replyant builds the measurement layer before your CFO asks." button="Run the numbers" >}}
+{{< cta heading="Stop guessing your AI ROI." pitch="Replyant builds the measurement layer before your CFO asks." button="Run the numbers" href="/services/strategic-consulting/" >}}
 
 ---
 

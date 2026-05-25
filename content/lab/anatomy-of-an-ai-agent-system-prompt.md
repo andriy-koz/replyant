@@ -5,6 +5,11 @@ tags: ["AI Agents", "Prompt Engineering", "Automation", "Process Design"]
 description: "We dissect Claude Code's actual system prompt and extract the design principles that make AI agents reliable and safe in production."
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>Claude Code's ~4,000-word system prompt is agent architecture, not instructions. The pattern: identity in one breath, hard safety constraints first with absolute language ("NEVER", "IMPORTANT"), then a reversibility × blast-radius framework that lets the agent reason about novel risk. Specificity beats generality — anti-patterns ("don't refactor adjacent to a bug fix") produce better behavior than platitudes ("write clean code"). The gap between demo and production is prompt engineering at this level of rigor.</p>
+</aside>
+
 Most people building AI agents start with the model. Pick a provider, write a quick prompt, plug it into a workflow. Ship it.
 
 Then things go sideways. The agent overwrites files it shouldn't touch. It over-engineers a simple fix. It hallucinates a URL. It runs a destructive command without asking. It adds "helpful" features nobody wanted.
@@ -15,7 +20,7 @@ We got our hands on the full system prompt that powers [Claude Code](https://doc
 
 Here's what's inside — and what every team building AI agents can learn from it.
 
-{{< cta heading="System prompts that survive production." pitch="Replyant writes agent instructions with the rigor Anthropic uses on Claude Code." button="Engineer the prompt" >}}
+{{< cta heading="System prompts that survive production." pitch="Replyant writes agent instructions with the rigor Anthropic uses on Claude Code." button="Engineer the prompt" href="/services/ai-agent-development/" >}}
 
 ---
 

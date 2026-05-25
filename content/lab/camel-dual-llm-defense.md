@@ -6,6 +6,11 @@ description: "CaMeL splits the LLM in two and wraps every value in a capability.
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>CaMeL splits the LLM in two — a Privileged model that plans but never reads untrusted data, and a Quarantined model that reads data but cannot call tools — with every value carrying capability metadata across the boundary. AgentDojo utility falls from 84% to 77%, and prompt injection becomes provably blocked at the tool call rather than probabilistically filtered. Filters cap at 95% detection; CaMeL converts the residual 5% into a typed guarantee.</p>
+</aside>
+
 Conventional prompt-injection defenses---input classifiers, spotlighting, fine-tuned refusal heads---plateau somewhere around 95% detection. In application security, 95% is a failing grade: the remaining 5% is a repeatable exploit. CaMeL (Capabilities for Machine Learning), introduced by Debenedetti et al. at DeepMind in [arXiv:2503.18813](https://arxiv.org/abs/2503.18813), does not try to push that number higher. It changes the shape of the problem. Split the model in two---a Privileged LLM that never reads untrusted data, and a Quarantined LLM that reads data but cannot call tools---and enforce an information-flow policy on every value that crosses the boundary. What you lose is seven points of utility on AgentDojo (84% undefended to 77% defended). What you gain is a security property you can *prove*, not just measure.
 
 This is the argument for treating prompt injection as a control-flow problem rather than a content-filtering problem. Filters produce probabilistic verdicts. Capabilities produce typed guarantees. The rest of this post walks the architecture, reproduces the load-bearing code from the released reference implementation, traces a canonical email-exfiltration attack through the system, tabulates the seven-point utility tax and the operational overhead, and closes with the honest limitations and the 2026 state of the art.

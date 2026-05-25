@@ -6,6 +6,11 @@ description: "MCP's 2026-07-28 release candidate locked on May 21. Tasks graduat
 author: "Replyant"
 ---
 
+<aside class="quick-answer">
+  <span class="eyebrow">§ Quick Answer</span>
+  <p>MCP's 2026-07-28 release candidate makes the core stateless (no more <code>initialize</code> handshake or <code>Mcp-Session-Id</code>) and graduates Tasks to a first-class extension at <code>io.modelcontextprotocol/tasks</code> with three normative methods: <code>tasks/get</code>, <code>tasks/update</code>, <code>tasks/cancel</code>. Synchronous-only servers exposing tools longer than 30 seconds will silently break against any production host with a request budget. Migrate in the 10-week window or accept timeouts in August.</p>
+</aside>
+
 On May 21 2026 the MCP working group [locked the 2026-07-28 release candidate](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/) — the largest revision of the protocol since launch. Two things in that RC matter to every server author shipping into production today. First, the `initialize` / `initialized` handshake and the `Mcp-Session-Id` header are gone — the core is stateless, and any request can land on any server instance. Second, async work has graduated from the `2025-11-25` experimental Tasks API into a first-class extension at `io.modelcontextprotocol/tasks`, with `tasks/get`, `tasks/update`, and `tasks/cancel` as normative methods. You have until July 28 to validate against real workloads.
 
 If you ignore the RC and ship a synchronous-only MCP server in August, your long-running tools will time out behind any modern host that imposes a request budget. If you keep using the experimental Tasks API as built against `2025-11-25`, your server will silently break against `2026-07-28` clients because the lifecycle changed. If your deployment depends on session affinity, your horizontal-scaling story stops working the day a host adopts the stateless core. None of these are theoretical — they are what happens when the RC becomes the spec on July 28.
