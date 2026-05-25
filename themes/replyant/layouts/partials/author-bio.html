@@ -1,0 +1,37 @@
+{{- $authorName := with .Params.author }}{{ . }}{{ else }}{{ $.Site.Params.author.name }}{{ end }}
+{{- $isDefault := eq $authorName .Site.Params.author.name -}}
+{{- $authorURL := .Site.BaseURL -}}
+{{- $bio := "Replyant builds AI agents and ships automation that survives the next release cycle — strategy, engineering, and consulting for businesses ready to grow faster." -}}
+{{- if not $isDefault -}}
+  {{- $bio = printf "%s writes for Replyant on AI agents, automation, and what it takes to ship work that lasts." $authorName -}}
+{{- end -}}
+
+<aside class="author-bio" aria-labelledby="author-bio-heading">
+  <div class="container container-narrow">
+    <div class="author-bio-card">
+      <div class="author-bio-mark" aria-hidden="true">R<span>.</span></div>
+      <div class="author-bio-body">
+        <span class="eyebrow">§ Written by</span>
+        <h3 id="author-bio-heading" class="author-bio-name">{{ $authorName }}</h3>
+        <p class="author-bio-text">{{ $bio }}</p>
+        <a href="{{ "/" | relURL }}" class="author-bio-link">More from {{ $authorName }} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- JSON-LD: Person (author E-E-A-T) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ $authorName | jsonify }},
+  "url": {{ $authorURL | jsonify }},
+  "description": {{ $bio | jsonify }},
+  "worksFor": {
+    "@type": "Organization",
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  }
+}
+</script>

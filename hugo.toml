@@ -4,7 +4,7 @@ title = "Replyant"
 theme = "replyant"
 
 [params]
-  description = "AI Agent Development, Business Automation & Strategic Consulting"
+  description = "AI Agent Development, Automation & Strategy"
   tagline = "Build Smarter. Grow Faster."
   leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
 

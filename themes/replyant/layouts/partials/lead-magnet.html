@@ -8,7 +8,8 @@
       </div>
       <form id="lead-form" class="lead-form" data-api="{{ .Site.Params.leadsAPI }}">
         <input type="text" name="name" required placeholder="Your name" autocomplete="given-name">
-        <input type="email" name="email" required placeholder="you@company.com" autocomplete="email">
+        {{/* Placeholder avoids email-like strings (e.g. "you@company.com") that Cloudflare's Email Address Obfuscation auto-wraps in /cdn-cgi/l/email-protection links, causing 404 inlinks. */}}
+        <input type="email" name="email" required placeholder="Work email" autocomplete="email">
         <div class="lead-hp" aria-hidden="true" tabindex="-1">
           <label for="lead-website">Website</label>
           <input type="text" id="lead-website" name="website" autocomplete="off" tabindex="-1">

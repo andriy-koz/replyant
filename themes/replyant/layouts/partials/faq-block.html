@@ -1,0 +1,23 @@
+{{- with .Params.faq -}}
+{{- if gt (len .) 0 -}}
+<section class="post-faq" aria-labelledby="post-faq-heading">
+  <div class="container container-narrow">
+    <span class="section-index">§ FAQ</span>
+    <h2 id="post-faq-heading">Frequently asked <span class="italic">questions</span>.</h2>
+    <div class="faq-list">
+      {{ range . }}
+      <details class="faq-item">
+        <summary>
+          <h3>{{ .q }}</h3>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>{{ .a | markdownify }}</p>
+        </div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{- end -}}
+{{- end -}}

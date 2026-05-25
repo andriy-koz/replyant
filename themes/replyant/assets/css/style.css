@@ -1119,6 +1119,164 @@ a.tag:hover {
 .blog-post .lead-magnet { margin-top: 60px; }
 
 /* ==========================================================================
+   FAQ block (post)
+   ========================================================================== */
+
+.post-faq {
+  padding: 56px 0 24px;
+  border-top: 1px solid var(--rule);
+  margin-top: 60px;
+}
+.post-faq h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144, 'SOFT' 40;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 14px 0 32px;
+}
+.post-faq h2 .italic {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+}
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  transition: color .2s ease;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+.faq-item:hover > summary h3 { color: var(--accent); }
+.faq-toggle {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--accent);
+  transition: transform .25s ease;
+  flex-shrink: 0;
+}
+.faq-item[open] .faq-toggle { transform: rotate(45deg); }
+.faq-answer {
+  padding: 0 0 24px;
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 60ch;
+}
+.faq-answer p { margin: 0; }
+.faq-answer a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   Author bio
+   ========================================================================== */
+
+.author-bio { padding: 48px 0 24px; }
+.author-bio-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.author-bio-mark {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-size: 4.2rem;
+  line-height: 0.85;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+}
+.author-bio-mark span { color: var(--accent); }
+.author-bio-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  margin: 6px 0 8px;
+}
+.author-bio-text {
+  color: var(--ink-2);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 14px;
+  max-width: 56ch;
+}
+.author-bio-link {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+  display: inline-flex;
+  gap: 8px;
+  transition: color .2s, border-color .2s, gap .2s;
+}
+.author-bio-link:hover { color: var(--accent); border-color: var(--accent); gap: 12px; }
+
+/* ==========================================================================
+   Inline CTA shortcode
+   ========================================================================== */
+
+.cta-inline {
+  margin: 44px 0;
+  border: 1px solid var(--ink);
+  background: var(--paper-2);
+  position: relative;
+}
+.cta-inline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--accent);
+}
+.cta-inline-inner { padding: 28px 30px 32px; }
+.cta-inline-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 12px 0 10px;
+  color: var(--ink);
+}
+.cta-inline-pitch { color: var(--ink-2); margin: 0 0 20px; font-size: 1rem; line-height: 1.55; max-width: 52ch; }
+.cta-inline-btn { font-family: var(--font-body); }
+
+/* ==========================================================================
    Lead magnet CTA
    ========================================================================== */
 
@@ -1617,4 +1775,9 @@ a.tag:hover {
   .ticker-track > span { font-size: 1.2rem; gap: 32px; }
   .ticker-track > span::after { font-size: 0.85rem; }
   .post-content > *:first-child::first-letter { font-size: 3.4em; }
+  .author-bio-card { grid-template-columns: 1fr; gap: 14px; }
+  .author-bio-mark { font-size: 3rem; }
+  .cta-inline-inner { padding: 22px 22px 26px; }
+  .post-faq { padding: 40px 0 16px; margin-top: 44px; }
+  .faq-item > summary h3 { font-size: 1.05rem; }
 }

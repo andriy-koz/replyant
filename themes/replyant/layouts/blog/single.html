@@ -21,6 +21,8 @@
       {{ .Content }}
     </div>
   </div>
+  {{ if .Params.faq }}{{ partial "faq-block.html" . }}{{ end }}
+  {{ partial "author-bio.html" . }}
   {{ partial "lead-magnet.html" . }}
   <footer class="post-footer">
     <div class="container container-narrow">
