@@ -1,4 +1,4 @@
-{{- $authorName := with .Params.author }}{{ . }}{{ else }}{{ $.Site.Params.author.name }}{{ end }}
+{{- $authorName := .Params.author | default .Site.Params.author.name -}}
 {{- $isDefault := eq $authorName .Site.Params.author.name -}}
 {{- $authorURL := .Site.BaseURL -}}
 {{- $bio := "Replyant builds AI agents and ships automation that survives the next release cycle — strategy, engineering, and consulting for businesses ready to grow faster." -}}
