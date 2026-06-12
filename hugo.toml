@@ -7,6 +7,7 @@ theme = "replyant"
   description = "AI Agent Development, Automation & Strategy"
   tagline = "Build Smarter. Grow Faster."
   leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
+  ogImage = "/android-chrome-512x512.png"
 
 [params.author]
   name = "Replyant"
@@ -46,7 +47,7 @@ theme = "replyant"
       unsafe = true
 
 [outputs]
-  home = ["HTML", "sitemap"]
+  home = ["HTML", "RSS", "sitemap"]
 
 [pagination]
   pagerSize = 10

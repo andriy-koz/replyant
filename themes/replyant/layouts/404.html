@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="blog-list">
+  <div class="container">
+    <div class="list-head">
+      <div>
+        <span class="section-index" style="display:block; margin-bottom:16px;">§ 404</span>
+        <h1>Page not found</h1>
+      </div>
+      <p class="blog-intro">The page you were looking for doesn't exist or has moved. Let's get you back on track.</p>
+    </div>
+    <p style="margin: 0 0 40px;">
+      <a href="{{ "/" | absURL }}" class="btn">Back to home</a>
+    </p>
+    <div class="posts">
+      <article class="post-card">
+        <h2><a href="{{ "/blog/" | absURL }}">Blog</a></h2>
+        <p>AI strategy, ROI, and automation insights for business leaders.</p>
+      </article>
+      <article class="post-card">
+        <h2><a href="{{ "/lab/" | absURL }}">Lab</a></h2>
+        <p>Technical deep-dives on agents, tool calling, and multi-agent systems.</p>
+      </article>
+      <article class="post-card">
+        <h2><a href="{{ "/services/" | absURL }}">Services</a></h2>
+        <p>AI agent development, business automation, and strategic consulting.</p>
+      </article>
+    </div>
+  </div>
+</section>
+{{ end }}

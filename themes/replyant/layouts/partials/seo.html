@@ -1,8 +1,10 @@
+{{- $ogImage := (.Params.ogImage | default .Site.Params.ogImage) | absURL -}}
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content="{{ $ogImage }}">
 {{ if .IsPage -}}
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -16,15 +18,16 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
 
 <!-- JSON-LD: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "{{ .Site.Title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "description": "{{ .Site.Params.description }}"
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }}
 }
 </script>
 
@@ -34,12 +37,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "{{ .Site.Title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "description": "{{ .Site.Params.description }}",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
   "publisher": {
     "@type": "Organization",
-    "name": "{{ .Site.Title }}"
+    "name": {{ .Site.Title | jsonify }}
   }
 }
 </script>
@@ -56,19 +59,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "{{ .Site.BaseURL }}"
+      "item": {{ .Site.BaseURL | jsonify }}
     }{{ if .Section }},
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ .Section | humanize | title }}",
-      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+      "name": {{ .Section | humanize | title | jsonify }},
+      "item": {{ printf "%s%s/" .Site.BaseURL .Section | jsonify }}
     }{{ end }}{{ if and .IsPage .Section }},
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "{{ .Title }}",
-      "item": "{{ .Permalink }}"
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
     }{{ end }}
   ]
 }
@@ -81,26 +84,26 @@
 {
   "@context": "https://schema.org",
   "@type": "{{ if eq .Section "blog" }}BlogPosting{{ else }}TechArticle{{ end }}",
-  "headline": "{{ .Title }}",
-  "description": "{{ .Description }}",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-  "url": "{{ .Permalink }}",
+  "url": {{ .Permalink | jsonify }},
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
+    "@id": {{ .Permalink | jsonify }}
   },
   "author": {
     "@type": "Person",
-    "name": "{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}"
+    "name": {{ with .Params.author }}{{ . | jsonify }}{{ else }}{{ $.Site.Params.author.name | jsonify }}{{ end }}
   },
   "publisher": {
     "@type": "Organization",
-    "name": "{{ .Site.Title }}",
-    "url": "{{ .Site.BaseURL }}"
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
   }
   {{- with .Params.tags }},
-  "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}"{{ $t }}"{{ end }}]
+  "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t | jsonify }}{{ end }}]
   {{- end }}
 }
 </script>
@@ -116,17 +119,17 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "{{ .Title }}",
-  "description": "{{ with .Description }}{{ . }}{{ else }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ end }}",
-  "url": "{{ .Permalink }}",
+  "name": {{ .Title | jsonify }},
+  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ printf "Explore articles and insights about %s — practical guidance from strategy to implementation." .Title | jsonify }}{{ end }},
+  "url": {{ .Permalink | jsonify }},
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [{{ range $i, $p := .Pages }}{{ if $i }},{{ end }}
       {
         "@type": "ListItem",
         "position": {{ add $i 1 }},
-        "url": "{{ $p.Permalink }}",
-        "name": "{{ $p.Title }}"
+        "url": {{ $p.Permalink | jsonify }},
+        "name": {{ $p.Title | jsonify }}
       }{{ end }}
     ]
   }
