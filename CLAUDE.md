@@ -81,10 +81,19 @@ Follow the existing pattern from git log:
 - `fix: <description>` — bug fixes
 - `refactor: <description>` — code restructuring
 
-## Design Quick Reference
+## Design Quick Reference — "The Schematic"
 
-- Dark theme: `#0a0a0b` background, `#6366f1` indigo accent
-- Font: Inter (self-hosted)
-- Container: `1100px` default, `740px` narrow (post content)
-- Mobile breakpoint: `768px`
-- CSS variables defined at top of `style.css`
+Dark engineering-schematic aesthetic: the work is drawn as a signal-flow diagram. Boldness lives in the line-work; colour stays disciplined.
+
+- **Surface:** `--base #0c1014` (cool slate, never pure black), `--base-2`, `--panel`, `--panel-2`
+- **Line-work (the identity):** `--line #232e3a`, `--line-2`, `--line-3` — graphite rules/connectors
+- **Type:** `--ink #e8edf3` (bone, never `#fff`), `--ink-2`, `--ink-3`
+- **Signal (live trace) — used sparingly:** `--signal #4ecdb6` (teal) for links, active path, key CTAs only
+- **Annotation:** `--amber #e6a544` (callouts/markup only); status: `--ok`, `--alert`
+- **Fonts (self-hosted):** Space Grotesk (display), Inter (body), JetBrains Mono (labels/data). No serif.
+- **Signature motif:** the rotated-square "junction" marker (diamond) + mono `net-label` eyebrows ("X // Y", never "§"); footer is a drawing **title block**.
+- **Container:** `1240px` default, `760px` narrow (post content); **mobile breakpoint:** `768px`
+- **CSS:** tokens + `@font-face` + above-the-fold in `critical.css` (inlined); full component library in `style.css`
+- **Zero border-radius** throughout; depth comes from `--panel` fills + 1px lines, not shadows.
+
+Shared component classes: `.net-label`, `.section-head`, `.node`/`.node-head`/`.node-grid`, `.readout`, `.btn`/`.btn-primary`/`.btn-outline`, `.tag`. Reuse these — don't invent parallel components.

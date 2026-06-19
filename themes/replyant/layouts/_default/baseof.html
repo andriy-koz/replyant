@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#efe7d9">
+  <meta name="theme-color" content="#0c1014">
   <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   <link rel="canonical" href="{{ .Permalink }}">
@@ -13,9 +13,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
 
-  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-latin.woff2" | relURL }}" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-latin-italic.woff2" | relURL }}" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/instrument-sans-latin.woff2" | relURL }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/space-grotesk-700-latin.woff2" | relURL }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-400-latin.woff2" | relURL }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/jetbrains-mono-500-latin.woff2" | relURL }}" crossorigin>
 
   {{ $critical := resources.Get "css/critical.css" | minify | fingerprint }}
   <style>{{ $critical.Content | safeCSS }}</style>

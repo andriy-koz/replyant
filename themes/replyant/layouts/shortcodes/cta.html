@@ -2,11 +2,8 @@
 {{- $pitch   := .Get "pitch"   | default "Replyant designs and ships AI agents and automation that move real business metrics — usually in 6-12 weeks." -}}
 {{- $href    := .Get "href"    | default "/#lead-magnet" -}}
 {{- $button  := .Get "button"  | default "Start a project" -}}
-<aside class="cta-inline" role="complementary">
-  <div class="cta-inline-inner">
-    <span class="eyebrow">§ Next step</span>
-    <h3 class="cta-inline-heading">{{ $heading }}</h3>
-    <p class="cta-inline-pitch">{{ $pitch }}</p>
-    <a href="{{ $href | relURL }}" class="btn btn-primary cta-inline-btn">{{ $button }}</a>
-  </div>
-</aside>
+<div class="cta-inline">
+  <h3>{{ $heading }}</h3>
+  <p>{{ $pitch }}</p>
+  <a class="btn btn-primary" href="{{ $href | relURL }}">{{ $button }}</a>
+</div>

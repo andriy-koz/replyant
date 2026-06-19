@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>Claude Fable 5 (GA June 9, 2026) ships two production primitives that reshape agent-loop engineering: <code>output_config.effort</code> (low→max, controls reasoning depth and total token spend per response) and <code>output_config.task_budget</code> (beta, an advisory token countdown across a full multi-turn loop). Run cheap sub-agents at <code>low</code>, the orchestrator at <code>xhigh</code>, cap the loop with <code>task_budget</code>, and keep <code>max_tokens</code> as the hard ceiling. Refusals return HTTP 200 — handle them or the loop breaks silently.</p>
 </aside>
 

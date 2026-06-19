@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>A2A v1.0 shipped April 23 2026 under the Linux Foundation's Agentic AI Foundation, with a fixed Agent Card discovery URI at <code>/.well-known/agent-card.json</code> and a normative five-state task lifecycle: <code>submitted → working → (input-required ↔ working)* → completed / failed / canceled / rejected</code>. Use A2A for agent-to-agent peer coordination; use MCP for agent-to-tool. Treating <code>rejected</code> as retryable like <code>failed</code> breaks production.</p>
 </aside>
 

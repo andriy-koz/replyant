@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>Speculative tool execution fires the predicted next tool call while the LLM is still streaming tokens, then promotes on commit or discards on mismatch. PASTE (Microsoft Research, March 2026) reports 48.5% task-completion-time reduction at a 27.8% top-1 hit rate. The two design decisions that matter: a predictor and an eligibility policy. 602 of 20,000+ speculative actions in PASTE's data were mutating — never speculate on non-idempotent tools.</p>
 </aside>
 

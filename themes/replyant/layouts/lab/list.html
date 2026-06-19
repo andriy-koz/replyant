@@ -1,30 +1,33 @@
 {{ define "main" }}
-<section class="blog-list">
+<div class="list-page">
   <div class="container">
     <div class="list-head">
       <div>
-        <span class="section-index" style="display:block; margin-bottom:16px;">§ Research</span>
-        <h1>The <span class="italic">lab</span>.</h1>
+        <p class="net-label">Lab // Technical notes</p>
+        <h1>{{ .Title }}</h1>
       </div>
-      <p class="blog-intro">Technical deep dives into AI engineering, agent architectures, and the systems behind what we build.</p>
+      <p class="list-intro">{{ .Description | default "Technical deep dives into AI engineering, agent architectures, and the systems behind what we build." }}</p>
     </div>
     <div class="posts">
-      {{ range .Pages }}
+      {{ range .Paginator.Pages }}
       <article class="post-card">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary }}</p>
-        <div class="post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-          {{ with .Params.tags }}
-            {{ range first 2 . }}
-              <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
-            {{ end }}
-          {{ end }}
+        <div class="pc-main">
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <p class="pc-desc">{{ .Description | default (.Summary | plainify | truncate 140) }}</p>
+          <div class="pc-tags">{{ range first 3 .Params.tags }}<a class="tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>{{ end }}</div>
         </div>
+        <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></div>
       </article>
       {{ end }}
     </div>
-    {{ template "_internal/pagination.html" . }}
+    {{ $pg := .Paginator }}
+    {{ if gt $pg.TotalPages 1 }}
+    <nav class="pagination" aria-label="Pagination">
+      {{ if $pg.HasPrev }}<span class="page-item"><a href="{{ $pg.Prev.URL }}" aria-label="Previous">←</a></span>{{ else }}<span class="page-item disabled"><span>←</span></span>{{ end }}
+      {{ range $pg.Pagers }}{{ if eq . $pg }}<span class="page-item active"><span>{{ .PageNumber }}</span></span>{{ else }}<span class="page-item"><a href="{{ .URL }}">{{ .PageNumber }}</a></span>{{ end }}{{ end }}
+      {{ if $pg.HasNext }}<span class="page-item"><a href="{{ $pg.Next.URL }}" aria-label="Next">→</a></span>{{ else }}<span class="page-item disabled"><span>→</span></span>{{ end }}
+    </nav>
+    {{ end }}
   </div>
-</section>
+</div>
 {{ end }}
