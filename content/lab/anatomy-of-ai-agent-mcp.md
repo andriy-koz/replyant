@@ -6,7 +6,6 @@ description: "MCP is to AI agents what USB is to peripherals. How the protocol w
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>MCP (Model Context Protocol) is an open JSON-RPC 2.0 standard that collapses agent-to-system integration from N×M custom connectors into one server per business system. Over 5,500 MCP servers exist on public registries as of 2026. The three components are Hosts (the agent), Servers (per-system capabilities), and the Protocol layer itself. The hard parts in production are OAuth2 user-level auth, prompt injection via tool results, and the shadow-AI risk of ungoverned server registries.</p>
 </aside>
 

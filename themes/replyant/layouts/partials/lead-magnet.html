@@ -2,22 +2,33 @@
   <div class="container">
     <div class="lead-magnet-grid reveal">
       <div class="lead-magnet-copy">
-        <span class="eyebrow" style="color: var(--highlight);">§ Free Resource</span>
-        <h2>The AI Readiness <span class="italic">Checklist</span>.</h2>
-        <p class="lead-sub">A practical, opinionated guide to evaluate where AI fits in your business — and what to do first. Thirty-two checkpoints, zero fluff.</p>
+        <p class="net-label net-label--amber">Free resource // Spec sheet</p>
+        <h2>The AI Readiness <span class="sig">Checklist</span>.</h2>
+        <p class="lm-sub">A practical, opinionated guide to evaluate where AI fits in your business — and what to do first. Thirty-two checkpoints, zero fluff.</p>
+        <ul class="lm-list">
+          <li>Score a workflow before you automate it</li>
+          <li>Spot the failure modes that kill pilots</li>
+          <li>Build the measurement layer your CFO will sign</li>
+        </ul>
       </div>
-      <form id="lead-form" class="lead-form" data-api="{{ .Site.Params.leadsAPI }}">
-        <input type="text" name="name" required placeholder="Your name" autocomplete="given-name">
-        {{/* Placeholder avoids email-like strings (e.g. "you@company.com") that Cloudflare's Email Address Obfuscation auto-wraps in /cdn-cgi/l/email-protection links, causing 404 inlinks. */}}
-        <input type="email" name="email" required placeholder="Work email" autocomplete="email">
-        <div class="lead-hp" aria-hidden="true" tabindex="-1">
-          <label for="lead-website">Website</label>
-          <input type="text" id="lead-website" name="website" autocomplete="off" tabindex="-1">
-        </div>
-        <button type="submit" class="btn">Send it to me</button>
-        <p class="lead-msg lead-msg--success" hidden>Check your inbox — it's on the way.</p>
-        <p class="lead-msg lead-msg--error" hidden>Something went wrong. Please try again.</p>
-      </form>
+      <div class="lead-form-wrap">
+        <div class="lfw-head">Request // checklist.pdf</div>
+        <form id="lead-form" class="lead-form" data-api="{{ .Site.Params.leadsAPI }}">
+          <label for="lead-name">Your name</label>
+          <input id="lead-name" type="text" name="name" required placeholder="Jordan Rivera" autocomplete="given-name">
+          {{/* Placeholder avoids email-like strings that Cloudflare's Email Address Obfuscation auto-wraps in /cdn-cgi/l/email-protection links, causing 404 inlinks. */}}
+          <label for="lead-email">Work email</label>
+          <input id="lead-email" type="email" name="email" required placeholder="jordan at company" autocomplete="email">
+          <div class="hp" aria-hidden="true" tabindex="-1">
+            <label for="lead-website">Website</label>
+            <input type="text" id="lead-website" name="website" autocomplete="off" tabindex="-1">
+          </div>
+          <button type="submit" class="btn btn-primary">Send it to me</button>
+          <p class="lead-msg lead-msg--success" hidden>Check your inbox — it's on the way.</p>
+          <p class="lead-msg lead-msg--error" hidden>Something went wrong. Please try again.</p>
+        </form>
+        <p class="lead-fineprint">No spam. One email, the checklist, done.</p>
+      </div>
     </div>
   </div>
 </section>

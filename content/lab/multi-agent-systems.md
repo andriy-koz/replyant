@@ -6,7 +6,6 @@ description: "Single agents hit ceilings. How multi-agent architectures work in 
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>Multi-agent systems use roughly 15x more tokens than single-agent setups (vs. 4x for a single agent over chat) and add coordination complexity that scales combinatorially — 10 agents have 45 interaction paths. Five orchestration patterns cover most production work: orchestrator-worker, sequential pipeline, parallel fan-out, router, generator-critic. The reliability paradox: five agents at 95% individual reliability compound to 77% system reliability. Start with one agent, add tools before agents.</p>
 </aside>
 

@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>Agent quality is a property of the system — prompts, tools, context, and the eval infrastructure proving they work together. Build a three-layer pipeline: offline experimentation against a 50-200 case golden dataset, a CI gate running 20-50 regression cases on every PR with a pass-rate threshold 2-3 points below current baseline, and production sampling at 5-10% of live traffic with z-score drift detection. Tool selection accuracy below 85% is a context problem, not a model problem.</p>
 </aside>
 

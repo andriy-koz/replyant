@@ -6,7 +6,6 @@ description: "We dissect Claude Code's actual system prompt and extract the desi
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>Claude Code's ~4,000-word system prompt is agent architecture, not instructions. The pattern: identity in one breath, hard safety constraints first with absolute language ("NEVER", "IMPORTANT"), then a reversibility × blast-radius framework that lets the agent reason about novel risk. Specificity beats generality — anti-patterns ("don't refactor adjacent to a bug fix") produce better behavior than platitudes ("write clean code"). The gap between demo and production is prompt engineering at this level of rigor.</p>
 </aside>
 

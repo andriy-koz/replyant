@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>CVE-2026-26030 and CVE-2026-25592 in Microsoft Semantic Kernel turn a single injected prompt into remote code execution — once via <code>eval()</code> on an interpolated lambda (bypassed by Python's <code>tuple().__class__.__mro__</code> traversal), once via an accidentally-decorated <code>[KernelFunction] DownloadFileAsync</code> writing to Windows Startup. The bug isn't in the model. It's in the tool registry. Audit yours this week — fix is Semantic Kernel Python ≥1.39.4 and .NET ≥1.71.0.</p>
 </aside>
 

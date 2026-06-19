@@ -1,27 +1,27 @@
 <footer class="site-footer">
-
   <div class="container">
-    <div class="footer-masthead">
-      <h3>Replyant<span class="italic">.</span></h3>
+
+    <div class="footer-cta reveal">
+      <p class="net-label">END OF SHEET // START A SYSTEM</p>
+      <h2>Have a workflow that has to <span class="sig">survive a Tuesday</span>?</h2>
+      <a href="/contact/" class="btn btn-primary">Start a project</a>
     </div>
-  </div>
 
-  <div class="container">
     <div class="footer-grid">
 
       <div class="footer-col footer-brand">
         <a href="{{ "/" | relURL }}" class="footer-logo">Replyant</a>
-        <p>AI agent development, business automation, and strategic consulting. We help businesses build smarter and grow faster — with work that survives the next release cycle.</p>
+        <p>AI agents, business automation, and strategic consulting — built to survive the next release cycle, with numbers your CFO can defend.</p>
       </div>
 
       <div class="footer-col">
         <h4 class="footer-heading">Navigate</h4>
         <ul class="footer-links">
-          <li><a href="{{ "/" | relURL }}">Home</a></li>
+          <li><a href="{{ "/services/" | relURL }}">Services</a></li>
           <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
           <li><a href="{{ "/lab/" | relURL }}">Lab</a></li>
-          <li><a href="{{ "/tags/" | relURL }}">All Topics</a></li>
-          <li><a href="{{ "/#lead-magnet" | relURL }}">Get Started</a></li>
+          <li><a href="{{ "/about/" | relURL }}">About</a></li>
+          <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
         </ul>
       </div>
 
@@ -32,7 +32,6 @@
           <li><a href="{{ "/tags/business-strategy/" | relURL }}">Business Strategy</a></li>
           <li><a href="{{ "/tags/roi/" | relURL }}">ROI</a></li>
           <li><a href="{{ "/tags/automation/" | relURL }}">Automation</a></li>
-          <li><a href="{{ "/tags/architecture/" | relURL }}">Architecture</a></li>
           <li><a href="{{ "/tags/mcp/" | relURL }}">MCP</a></li>
         </ul>
       </div>
@@ -41,7 +40,7 @@
         <h4 class="footer-heading">Resources</h4>
         <ul class="footer-links">
           <li><a href="{{ "/blog/ai-roi-calculator/" | relURL }}">ROI Calculator</a></li>
-          <li><a href="{{ "/blog/ai-readiness-checklist/" | relURL }}">AI Readiness Checklist</a></li>
+          <li><a href="{{ "/blog/ai-readiness-checklist/" | relURL }}">Readiness Checklist</a></li>
           <li><a href="{{ "/blog/how-much-does-ai-chatbot-cost/" | relURL }}">Chatbot Cost Guide</a></li>
           <li><a href="{{ "/blog/hire-vs-automate/" | relURL }}">Hire vs. Automate</a></li>
         </ul>
@@ -49,9 +48,14 @@
 
     </div>
 
-    <div class="footer-bottom">
-      <p>© {{ now.Year }} Replyant · All rights reserved</p>
-      <p>Built Smarter · Grown Faster</p>
+    <!-- Title block — the closing line of the drawing -->
+    <div class="footer-titleblock">
+      <div class="tb-cell"><span class="tb-key">Project</span><span class="tb-val">Replyant</span></div>
+      <div class="tb-cell"><span class="tb-key">Scope</span><span class="tb-val">Agents · Automation · Strategy</span></div>
+      <div class="tb-cell"><span class="tb-key">Rev</span><span class="tb-val">{{ now.Year }}.0</span></div>
+      <div class="tb-cell"><span class="tb-key">Status</span><span class="tb-val tb-val--ok">In production</span></div>
+      <div class="tb-cell tb-cell--note"><span class="tb-key">© {{ now.Year }} Replyant</span><span class="tb-val">All rights reserved</span></div>
     </div>
+
   </div>
 </footer>

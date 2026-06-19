@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>CaMeL splits the LLM in two — a Privileged model that plans but never reads untrusted data, and a Quarantined model that reads data but cannot call tools — with every value carrying capability metadata across the boundary. AgentDojo utility falls from 84% to 77%, and prompt injection becomes provably blocked at the tool call rather than probabilistically filtered. Filters cap at 95% detection; CaMeL converts the residual 5% into a typed guarantee.</p>
 </aside>
 

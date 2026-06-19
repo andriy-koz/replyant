@@ -1,34 +1,29 @@
 {{ define "main" }}
-<article class="blog-post">
-  <div class="container container-narrow">
-    <header class="post-header">
-      <div class="post-header-meta">
-        <span class="section-index">§ Journal</span>
-        <span>·</span>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        <span class="post-author">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
-      </div>
+<article class="article">
+  <div class="container-narrow">
+    <header class="article-head">
+      <p class="net-label">Journal // Blog</p>
       <h1>{{ .Title }}</h1>
-      {{ with .Params.tags }}
-      <div class="post-tags">
-        {{ range . }}
-          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
-        {{ end }}
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{ with .ReadingTime }}<span>{{ . }} min read</span>{{ end }}
+        <span>{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
+        {{ range .Params.tags }}<a class="tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>{{ end }}
       </div>
-      {{ end }}
+      {{ with .Description }}<p class="article-desc">{{ . }}</p>{{ end }}
     </header>
     <div class="post-content">
       {{ .Content }}
     </div>
-  </div>
-  {{ if .Params.faq }}{{ partial "faq-block.html" . }}{{ end }}
-  {{ partial "author-bio.html" . }}
-  {{ partial "lead-magnet.html" . }}
-  <footer class="post-footer">
-    <div class="container container-narrow">
-      <a href="/blog/" class="back-link"><span aria-hidden="true">←</span> Back to all posts</a>
+    {{ with .Params.tags }}
+    <div class="article-tags">
+      {{ range . }}<a class="tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>{{ end }}
     </div>
-  </footer>
+    {{ end }}
+    {{ if .Params.faq }}{{ partial "faq-block.html" . }}{{ end }}
+    {{ partial "author-bio.html" . }}
+  </div>
+  {{ partial "lead-magnet.html" . }}
 </article>
 {{ end }}
 

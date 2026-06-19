@@ -7,7 +7,6 @@ author: "Replyant"
 ---
 
 <aside class="quick-answer">
-  <span class="eyebrow">§ Quick Answer</span>
   <p>MCP's 2026-07-28 release candidate makes the core stateless (no more <code>initialize</code> handshake or <code>Mcp-Session-Id</code>) and graduates Tasks to a first-class extension at <code>io.modelcontextprotocol/tasks</code> with three normative methods: <code>tasks/get</code>, <code>tasks/update</code>, <code>tasks/cancel</code>. Synchronous-only servers exposing tools longer than 30 seconds will silently break against any production host with a request budget. Migrate in the 10-week window or accept timeouts in August.</p>
 </aside>
 

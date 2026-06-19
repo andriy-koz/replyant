@@ -1,201 +1,212 @@
 {{ define "main" }}
 
-<!-- Hero -->
+<!-- ── Hero: the signal-flow spine ──────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <div class="hero-top">
-      <span>Replyant — Est. <time datetime="2025">MMXXV</time></span>
-      <span>Volume I · Issue IV · For Operators Building With AI</span>
-      <span>{{ now.Format "2 January 2006" }}</span>
+
+    <div class="readout">
+      <span class="readout-item readout-status">IN PRODUCTION</span>
+      <span class="readout-item"><b>50+</b> agents shipped</span>
+      <span class="readout-item">evals <b>green</b> in CI</span>
+      <span class="readout-item">cost/resolution <b>measured</b></span>
+      <span class="readout-spacer"></span>
+      <span class="readout-item">SINCE 2025</span>
     </div>
 
     <div class="hero-grid">
-      <div class="hero-main">
-        <h1>
-          AI, <span class="italic">genuinely</span><br>
-          useful <span class="amp">&amp;</span><br>
-          accountable.
-        </h1>
-      </div>
-      <aside class="hero-side">
-        <p class="hero-sub">Replyant designs, ships, and operates AI agents that survive the next release cycle. From strategy through deployment, every system we build pays its keep — with numbers your CFO can defend.</p>
+      <div class="hero-lede">
+        <p class="net-label">Replyant // AI Systems Engineering</p>
+        <h1>Build agents that <span class="sig">survive</span> the next release cycle.</h1>
+        <p class="hero-sub">We design, ship, and operate AI agents and automation that pay their keep — measured end to end, with numbers your CFO can defend. No demoware.</p>
         <div class="hero-cta">
-          <a href="#lead-magnet" class="btn btn-primary">Start a Project</a>
-          <a href="/blog/" class="btn btn-outline">Read the Journal</a>
+          <a href="/contact/" class="btn btn-primary">Start a project</a>
+          <a href="/lab/" class="btn btn-outline">Read the Lab</a>
         </div>
-        <div class="hero-meta">Trusted by teams across 12 industries</div>
+      </div>
+
+      <aside class="hero-spine" aria-label="How an engagement flows: Discover, Build, Ship, Operate">
+        <div class="spine-cap">
+          <span>Engagement // signal flow</span>
+          <span class="sc-rev">REV {{ now.Year }}.0</span>
+        </div>
+        <div class="spine-rail">
+          <div class="spine-step">
+            <span class="ss-k">01 · DISCOVER</span>
+            <span class="ss-n">Map the work</span>
+            <span class="ss-d">Workflow, data, and politics — a shortlist of agent-shaped problems with the cost of inaction. <em>no slideware</em></span>
+          </div>
+          <div class="spine-step">
+            <span class="ss-k">02 · BUILD</span>
+            <span class="ss-n">Smallest agent that proves it</span>
+            <span class="ss-d">Tool surface and failure modes decided on paper first. <em>evals → CI</em></span>
+          </div>
+          <div class="spine-step">
+            <span class="ss-k">03 · SHIP</span>
+            <span class="ss-n">Production is a verb</span>
+            <span class="ss-d">Behind a feature flag, in shadow mode, measured against a baseline. <em>staged rollout</em></span>
+          </div>
+          <div class="spine-step">
+            <span class="ss-k">04 · OPERATE</span>
+            <span class="ss-n">Keep it alive</span>
+            <span class="ss-d">Eval suite green, cost curves honest, the runbook current. <em>on-call</em></span>
+          </div>
+        </div>
       </aside>
-    </div>
-
-    <div class="hero-stamp" aria-hidden="true">
-      <span>Built with<br>care · {{ now.Year }}</span>
-    </div>
-  </div>
-
-  <!-- Ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Agent Development</span>
-      <span>Workflow Automation</span>
-      <span>Strategy &amp; Roadmaps</span>
-      <span>Evaluation &amp; Ops</span>
-      <span>Data Pipelines</span>
-      <span>MCP Integrations</span>
-      <span>Agent Development</span>
-      <span>Workflow Automation</span>
-      <span>Strategy &amp; Roadmaps</span>
-      <span>Evaluation &amp; Ops</span>
-      <span>Data Pipelines</span>
-      <span>MCP Integrations</span>
     </div>
   </div>
 </section>
 
-<!-- Stats -->
+<!-- ── Stats ────────────────────────────────────────────────────────────── -->
 <section class="stat-bar-section">
   <div class="container">
     <div class="stat-bar reveal">
       <div class="stat-item">
         <span class="stat-number" data-count="50" data-suffix="+">50+</span>
-        <span class="stat-label">Agents Deployed</span>
+        <span class="stat-label">Agents deployed</span>
       </div>
       <div class="stat-item">
         <span class="stat-number" data-count="12" data-suffix="+">12+</span>
-        <span class="stat-label">Industries Served</span>
+        <span class="stat-label">Industries served</span>
       </div>
       <div class="stat-item">
         <span class="stat-number" data-count="10" data-suffix="K+">10K+</span>
-        <span class="stat-label">Tasks Automated</span>
+        <span class="stat-label">Tasks automated / mo</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section class="services" id="services">
+<!-- ── Services ─────────────────────────────────────────────────────────── -->
+<section class="services section-pad" id="services">
   <div class="container">
-    <div class="services-head reveal">
-      <h2>What we <span class="italic">actually</span> do.</h2>
-      <p class="services-kicker">Three disciplines, one discipline. We keep the work focused so your operators can trust what we build — and so we can defend every line of it.</p>
+    <div class="section-head reveal">
+      <p class="net-label">Modules // What we run</p>
+      <h2>Three disciplines, <span class="sig">one</span> discipline.</h2>
+      <a href="/services/" class="head-link">All services <span aria-hidden="true">→</span></a>
     </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">§ 01 — Engineering</div>
-        <h3>AI Agent Development</h3>
-        <p>Custom agents shaped to your business — not a template. Support, research, analysis, internal tools. We own the loop: prompts, tools, memory, evals.</p>
-        <div class="service-tags">
-          <span>LLM Ops</span><span>RAG</span><span>MCP</span><span>Evals</span>
+    <p class="section-lede reveal">We keep the work focused so your operators can trust what we build — and so we can defend every line of it.</p>
+
+    <div class="node-grid">
+      <article class="node service-card reveal">
+        <div class="node-head">MOD.01 / Engineering<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>AI Agent Development</h3>
+          <p>Custom agents shaped to your business — not a template. Support, research, analysis, internal tools. We own the loop: prompts, tools, memory, evals.</p>
+          <div class="node-tags"><span>LLM Ops</span><span>RAG</span><span>MCP</span><span>Evals</span></div>
         </div>
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M6.5 15.5 11 12"/><path d="M17.5 15.5 13 12"/><rect x="10" y="12" width="4" height="4"/></svg>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">§ 02 — Operations</div>
-        <h3>Business Automation</h3>
-        <p>We find the repetition, map the handoffs, and ship pipelines that quietly save hours. Integrations across your stack without breaking what works.</p>
-        <div class="service-tags">
-          <span>Workflows</span><span>APIs</span><span>ETL</span><span>Observability</span>
+      </article>
+      <article class="node service-card reveal">
+        <div class="node-head">MOD.02 / Operations<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>Business Automation</h3>
+          <p>We find the repetition, map the handoffs, and ship pipelines that quietly save hours — integrations across your stack without breaking what works.</p>
+          <div class="node-tags"><span>Workflows</span><span>APIs</span><span>ETL</span><span>Observability</span></div>
         </div>
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 10h20"/><path d="M7 14h4"/><path d="M7 17h8"/></svg>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">§ 03 — Strategy</div>
-        <h3>Strategic Consulting</h3>
-        <p>Where does AI earn its keep in your business, and where does it just burn cash? A clear roadmap, with numbers, that survives the next hype cycle.</p>
-        <div class="service-tags">
-          <span>Roadmaps</span><span>ROI</span><span>Governance</span><span>Risk</span>
+      </article>
+      <article class="node service-card reveal">
+        <div class="node-head">MOD.03 / Strategy<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>Strategic Consulting</h3>
+          <p>Where does AI earn its keep, and where does it just burn cash? A clear roadmap, with numbers, that survives the next hype cycle.</p>
+          <div class="node-tags"><span>Roadmaps</span><span>ROI</span><span>Governance</span><span>Risk</span></div>
         </div>
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 4 4 5-5"/><circle cx="11" cy="11" r="1.2"/><circle cx="15" cy="15" r="1.2"/></svg>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- How We Engage -->
-<section class="process" id="how-we-engage">
+<!-- ── How we engage (phase spine) ──────────────────────────────────────── -->
+<section class="process section-pad" id="how-we-engage">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-index">§ A — Engagement</span>
-      <h2>How we <span class="italic">engage</span>.</h2>
-      <a href="/services/">See services <span aria-hidden="true">→</span></a>
+    <div class="section-head reveal">
+      <p class="net-label">Process // Engagement loop</p>
+      <h2>A four-step <span class="sig">rhythm</span>.</h2>
+      <a href="/services/" class="head-link">See services <span aria-hidden="true">→</span></a>
     </div>
-    <p class="process-lede reveal">A four-step rhythm that runs from first hypothesis to fifty thousand production calls. Each phase has its own deliverable, its own exit criteria, and its own honest go/no-go. We will tell you to stop before we tell you to scale.</p>
-    <div class="process-grid">
-      <div class="process-card reveal">
-        <div class="service-number">§ 01 — Discover</div>
+    <p class="section-lede reveal">From first hypothesis to fifty thousand production calls. Each phase has its own deliverable, its own exit criteria, and its own honest go/no-go. We will tell you to stop before we tell you to scale.</p>
+
+    <div class="phase-grid reveal">
+      <div class="phase">
+        <div class="phase-ref">Phase 01</div>
         <h3>Discover</h3>
         <p>We map the workflow, the data, and the politics. One week, sometimes two.</p>
-        <p>You leave with a shortlist of agent-shaped problems, the cost of inaction for each, and a refusal to chase the ones that fail the sniff test. No slideware.</p>
+        <p>You leave with a shortlist of agent-shaped problems and a refusal to chase the ones that fail the sniff test.</p>
       </div>
-      <div class="process-card reveal">
-        <div class="service-number">§ 02 — Design</div>
+      <div class="phase">
+        <div class="phase-ref">Phase 02</div>
         <h3>Design</h3>
         <p>We pick the smallest agent that proves the thesis and sketch its evals first.</p>
-        <p>Tool surface, memory model, escalation paths, failure modes — all decided on paper before a single token is spent. The plan is what your CFO and your CISO can both sign.</p>
+        <p>Tool surface, memory, escalation, failure modes — decided on paper before a token is spent.</p>
       </div>
-      <div class="process-card reveal">
-        <div class="service-number">§ 03 — Ship</div>
+      <div class="phase">
+        <div class="phase-ref">Phase 03</div>
         <h3>Ship</h3>
         <p>Six to twelve weeks. Real users, real data, evals running in CI from day one.</p>
-        <p>We ship behind a feature flag, in shadow mode, or to a single team — whichever lets us learn without lighting a brand on fire. Production is a verb here.</p>
+        <p>Behind a feature flag, in shadow mode, or to a single team. Production is a verb here.</p>
       </div>
-      <div class="process-card reveal">
-        <div class="service-number">§ 04 — Operate</div>
+      <div class="phase">
+        <div class="phase-ref">Phase 04</div>
         <h3>Operate</h3>
         <p>Agents that survive the next release cycle, not just the demo.</p>
-        <p>We keep the eval suite green, the cost curves honest, and the on-call playbook current — or we transfer the keys to your team with the documentation to defend it.</p>
+        <p>We keep the eval suite green and the cost curves honest — or hand your team the keys and the docs.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Who We Work With -->
-<section class="audience" id="who-we-work-with">
+<!-- ── Who we work with ─────────────────────────────────────────────────── -->
+<section class="audience section-pad" id="who-we-work-with">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-index">§ B — Fit</span>
-      <h2>Who we <span class="italic">work with</span>.</h2>
-      <a href="/case-studies/">See case studies <span aria-hidden="true">→</span></a>
+    <div class="section-head reveal">
+      <p class="net-label">Inputs // Who we work with</p>
+      <h2>Operator-led, past the <span class="sig">pilot</span>.</h2>
+      <a href="/case-studies/" class="head-link">Case studies <span aria-hidden="true">→</span></a>
     </div>
-    <p class="audience-lede reveal">Operator-led companies, past the pilot, allergic to demoware. If the agent in your roadmap has to clear legal, please finance, and survive a Tuesday outage — we are the right call. If you need a hype video, we are the wrong one.</p>
-    <div class="audience-grid">
-      <div class="audience-card reveal">
-        <div class="service-number">§ 01 — Ops Leaders</div>
-        <h3>Ops Leaders</h3>
-        <p>You run the function that the agent will touch — support, finance, RevOps, supply chain. You have measured the work, the headcount math is unforgiving, and a stalled pilot is now political.</p>
-        <p>We close the gap between "the model can do it" and "the team trusts it on a Friday at 5pm."</p>
-      </div>
-      <div class="audience-card reveal">
-        <div class="service-number">§ 02 — Founders / CEOs</div>
-        <h3>Founders &amp; CEOs</h3>
-        <p>You have an AI line item on the board deck and a quarter to make it real. The product roadmap depends on agents you have not built yet, and the team is shipping features around the gap.</p>
-        <p>We turn the slide into a system before the next board meeting compounds the debt.</p>
-      </div>
-      <div class="audience-card reveal">
-        <div class="service-number">§ 03 — CIOs / CTOs</div>
-        <h3>CIOs &amp; CTOs</h3>
-        <p>You own the platform under the agents — identity, data, observability, risk. The business keeps approving pilots; you keep absorbing the sprawl, the shadow runtimes, and the audit questions.</p>
-        <p>We install the governance and the management plane that lets you say yes without inheriting the chaos.</p>
-      </div>
+    <p class="section-lede reveal">Allergic to demoware. If the agent in your roadmap has to clear legal, please finance, and survive a Tuesday outage — we are the right call. If you need a hype video, we are the wrong one.</p>
+
+    <div class="node-grid">
+      <article class="node reveal">
+        <div class="node-head">SRC.01 / Operations<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>Ops Leaders</h3>
+          <p>You run the function the agent will touch — support, finance, RevOps, supply chain. The headcount math is unforgiving and a stalled pilot is now political.</p>
+          <p>We close the gap between "the model can do it" and "the team trusts it at 5pm on a Friday."</p>
+        </div>
+      </article>
+      <article class="node reveal">
+        <div class="node-head">SRC.02 / Leadership<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>Founders &amp; CEOs</h3>
+          <p>You have an AI line item on the board deck and a quarter to make it real. The roadmap depends on agents you have not built yet.</p>
+          <p>We turn the slide into a system before the next board meeting compounds the debt.</p>
+        </div>
+      </article>
+      <article class="node reveal">
+        <div class="node-head">SRC.03 / Platform<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>CIOs &amp; CTOs</h3>
+          <p>You own the platform under the agents — identity, data, observability, risk. The business keeps approving pilots; you keep absorbing the sprawl.</p>
+          <p>We install the governance that lets you say yes without inheriting the chaos.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Featured Blog Posts -->
+<!-- ── Featured Blog ────────────────────────────────────────────────────── -->
 {{ $posts := first 3 (where (where .Site.RegularPages "Section" "blog") ".File.LogicalName" "!=" "ai-readiness-checklist.md") }}
 {{ if $posts }}
-<section class="featured-posts">
+<section class="featured-posts section-pad">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-index">§ 04 — Journal</span>
-      <h2>Latest <span class="italic">insights</span></h2>
-      <a href="/blog/">View all <span aria-hidden="true">→</span></a>
+    <div class="section-head reveal">
+      <p class="net-label">Log // The Journal</p>
+      <h2>Latest <span class="sig">insights</span></h2>
+      <a href="/blog/" class="head-link">View all <span aria-hidden="true">→</span></a>
     </div>
     <div class="featured-grid">
       {{ range $posts }}
       <article class="post-card reveal">
-        <div class="post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        </div>
+        <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
       </article>
@@ -205,22 +216,20 @@
 </section>
 {{ end }}
 
-<!-- Featured Lab Posts -->
+<!-- ── Featured Lab ─────────────────────────────────────────────────────── -->
 {{ $labPosts := first 3 (where .Site.RegularPages "Section" "lab") }}
 {{ if $labPosts }}
-<section class="featured-posts">
+<section class="featured-posts section-pad">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-index">§ 05 — Lab</span>
-      <h2>From the <span class="italic">lab</span></h2>
-      <a href="/lab/">View all <span aria-hidden="true">→</span></a>
+    <div class="section-head reveal">
+      <p class="net-label">Log // From the Lab</p>
+      <h2>Under the <span class="sig">hood</span></h2>
+      <a href="/lab/" class="head-link">View all <span aria-hidden="true">→</span></a>
     </div>
     <div class="featured-grid">
       {{ range $labPosts }}
       <article class="post-card reveal">
-        <div class="post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        </div>
+        <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
       </article>
@@ -230,21 +239,21 @@
 </section>
 {{ end }}
 
-<!-- Our Principles -->
-<section class="principles" id="principles">
+<!-- ── Principles ───────────────────────────────────────────────────────── -->
+<section class="principles section-pad" id="principles">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-index">§ C — Principles</span>
-      <h2>What makes us <span class="italic">different</span>.</h2>
-      <a href="/about/">About Replyant <span aria-hidden="true">→</span></a>
+    <div class="section-head reveal">
+      <p class="net-label">Spec // Operating rules</p>
+      <h2>What makes us <span class="sig">different</span>.</h2>
+      <a href="/about/" class="head-link">About Replyant <span aria-hidden="true">→</span></a>
     </div>
-    <p class="principles-lede reveal">Five rules we hold even when the engagement is on fire. They are how we keep agents in production after the launch post stops trending, and how we keep our work defensible when the auditor walks in.</p>
+    <p class="section-lede reveal">Five rules we hold even when the engagement is on fire — how we keep agents in production after the launch post stops trending, and defensible when the auditor walks in.</p>
     <ol class="principles-list">
       <li class="principle reveal">
         <div class="principle-mark">01</div>
         <div class="principle-body">
           <h3>Anti-hype.</h3>
-          <p>We will say no to the agent that does not pay for itself. The deck does not move the metric; the system does. Every recommendation we make is one we would defend in your QBR.</p>
+          <p>We will say no to the agent that does not pay for itself. The deck does not move the metric; the system does. Every recommendation is one we would defend in your QBR.</p>
         </div>
       </li>
       <li class="principle reveal">
@@ -258,7 +267,7 @@
         <div class="principle-mark">03</div>
         <div class="principle-body">
           <h3>Agents that survive the next release cycle.</h3>
-          <p>Model providers ship breaking changes; vendors get acquired; APIs deprecate. We build for the second year, not the launch week, with versioned prompts, pinned tools, and a tested rollback path.</p>
+          <p>Model providers ship breaking changes; vendors get acquired; APIs deprecate. We build for the second year — versioned prompts, pinned tools, and a tested rollback path.</p>
         </div>
       </li>
       <li class="principle reveal">
@@ -272,7 +281,7 @@
         <div class="principle-mark">05</div>
         <div class="principle-body">
           <h3>Own the loop end-to-end.</h3>
-          <p>Prompts, tools, memory, evals, observability, and on-call runbook — one team, one accountable owner. We do not hand you a half-built system and a Slack channel; we hand you an operating manual.</p>
+          <p>Prompts, tools, memory, evals, observability, and on-call runbook — one team, one accountable owner. We hand you an operating manual, not a half-built system and a Slack channel.</p>
         </div>
       </li>
     </ol>

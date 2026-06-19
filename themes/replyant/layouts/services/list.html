@@ -1,18 +1,28 @@
 {{ define "main" }}
-<section class="services-page">
+<section class="service-hero">
   <div class="container">
-    <div class="list-head">
-      <div>
-        <span class="section-index" style="display:block; margin-bottom:16px;">§ Services</span>
-        <h1>{{ .Title }}</h1>
-      </div>
-      {{ with .Description }}
-        <p class="blog-intro">{{ . }}</p>
+    <p class="net-label">Services // What we run</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="service-section">
+  <div class="container">
+    <div class="node-grid">
+      {{ range $i, $p := .Pages }}
+      <a class="node service-card" href="{{ $p.Permalink }}">
+        <div class="node-head">MOD.{{ printf "%02d" (add $i 1) }}<span class="nh-tail"></span></div>
+        <div class="node-body">
+          <h3>{{ $p.Title }}</h3>
+          <p>{{ $p.Description }}</p>
+          {{ with $p.Params.tags }}
+          <div class="node-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>
+          {{ end }}
+        </div>
+      </a>
       {{ end }}
     </div>
-    {{ with .Content }}
-      <div class="post-content">{{ . }}</div>
-    {{ end }}
+    {{ with .Content }}<div class="post-content" style="margin-top:56px">{{ . }}</div>{{ end }}
   </div>
 </section>
 {{ partial "lead-magnet.html" . }}
