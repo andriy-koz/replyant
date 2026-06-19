@@ -555,8 +555,11 @@ section { position: relative; }
   margin-top: 1.6em;
 }
 .post-content p { color: var(--ink); }
-.post-content a { color: var(--signal); text-decoration: underline; text-decoration-color: var(--signal-dim); text-underline-offset: 3px; }
-.post-content a:hover { text-decoration-color: var(--signal); }
+/* :not(.btn) — prose-link styling must not hit .btn CTAs (e.g. the {{< cta >}}
+   shortcode). Otherwise it overrides .btn-primary's dark label with teal +
+   underline, rendering teal-on-teal (invisible) text. */
+.post-content a:not(.btn) { color: var(--signal); text-decoration: underline; text-decoration-color: var(--signal-dim); text-underline-offset: 3px; }
+.post-content a:not(.btn):hover { text-decoration-color: var(--signal); }
 .post-content strong { color: var(--ink); font-weight: 600; }
 .post-content ul, .post-content ol { padding-left: 1.4em; color: var(--ink); }
 .post-content li { margin-top: 0.5em; }
