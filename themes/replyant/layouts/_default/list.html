@@ -17,7 +17,7 @@
           <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p class="pc-desc">{{ .Description | default (.Summary | plainify | truncate 140) }}</p>
         </div>
-        <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></div>
+        <div class="post-meta">{{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}</div>
       </article>
       {{ end }}
     </div>

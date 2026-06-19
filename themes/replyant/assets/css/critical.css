@@ -263,6 +263,9 @@ img { height: auto; }
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  /* Keep the brand visible above the open mobile menu overlay (z-index:99). */
+  position: relative;
+  z-index: 101;
 }
 .logo::before {
   content: '';
@@ -292,6 +295,9 @@ img { height: auto; }
   position: relative;
   padding: 4px 0;
 }
+/* The nav CTA is a .btn — the .nav-links a rule above out-specifies .btn-sm and
+   collapses its padding. Restore .btn-sm padding via a two-class selector. */
+.nav-links .btn { padding: 10px 16px; }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a::after {
   content: '';
@@ -315,6 +321,10 @@ img { height: auto; }
 
 .mobile-toggle {
   display: none;
+  /* Stay above the .mobile-menu overlay (position:fixed; z-index:99) so the
+     close X is always visible and tappable while the menu is open. */
+  position: relative;
+  z-index: 101;
   background: none;
   border: 1px solid var(--line-2);
   cursor: pointer;
@@ -468,6 +478,17 @@ body.menu-open { overflow: hidden; }
     -webkit-backdrop-filter: none; backdrop-filter: none;
   }
   .hero { padding: 108px 0 44px; }
-  .readout { margin-bottom: 36px; }
+  /* Keep the readout a single telemetry row; scroll it rather than wrapping —
+     wrapping drops cell dividers on row 2 and orphans dead space at the spacer.
+     -ms-overflow-style/scrollbar-width hide the bar; the strip stays on-brand. */
+  .readout {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 36px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .readout::-webkit-scrollbar { display: none; }
+  .readout-item { flex: none; }
   .readout-spacer { display: none; }
 }

@@ -17,7 +17,7 @@
 
 /* ── Section rhythm + shared heads ─────────────────────────────────────── */
 section { position: relative; }
-.section-pad { padding: clamp(72px, 10vw, 132px) 0; }
+.section-pad { padding: clamp(56px, 8vw, 100px) 0; }
 
 .section-head {
   display: grid;
@@ -259,9 +259,12 @@ section { position: relative; }
   font-weight: 700;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.015em;
   color: var(--ink);
-  font-variant-numeric: tabular-nums;
+  /* Proportional figures: Space Grotesk's "1" has a wide base-serif that
+     overhangs its tabular slot and collides with the next digit (12+, 10K+).
+     Proportional spacing gives each numeral its true side-bearings. */
+  font-variant-numeric: normal;
   display: block;
   margin-bottom: 14px;
 }
@@ -274,12 +277,13 @@ section { position: relative; }
   color: var(--ink-2);
   font-weight: 500;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 9px;
 }
 .stat-label::before {
   content: '';
   width: 6px; height: 6px; flex: none;
+  margin-top: 3px;
   background: var(--signal);
   transform: rotate(45deg);
 }
@@ -587,6 +591,10 @@ section { position: relative; }
 .post-content table { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
 .post-content th, .post-content td { text-align: left; padding: 11px 14px; border: 1px solid var(--line); }
 .post-content th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); background: var(--panel); }
+/* Wide tables scroll within their own block on phones instead of dragging the page */
+@media (max-width: 768px) {
+  .post-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
 
 /* Answer capsule */
 .quick-answer {
@@ -787,7 +795,7 @@ section { position: relative; }
 }
 .page-item a:hover { border-color: var(--signal); color: var(--signal); }
 .page-item.active span { background: var(--signal); color: var(--base); border-color: var(--signal); }
-.page-item.disabled span { opacity: 0.4; }
+.page-item.disabled span { opacity: 0.4; border-color: transparent; cursor: default; }
 
 /* ── Footer ────────────────────────────────────────────────────────────── */
 .site-footer { border-top: 1px solid var(--line); margin-top: 40px; padding: clamp(64px, 9vw, 104px) 0 36px; background: var(--base-2); }
@@ -803,7 +811,9 @@ section { position: relative; }
   max-width: 20ch;
   margin-bottom: 28px;
 }
-.footer-cta h2 .sig { color: var(--signal); }
+/* Teal discipline: the footer-CTA's primary button carries the emphasis, so the
+   heading accent reverts to ink — avoids stacking teal phrase + teal button. */
+.footer-cta h2 .sig { color: var(--ink); }
 
 .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
 .footer-brand .footer-logo {
@@ -859,8 +869,22 @@ section { position: relative; }
   border-bottom: 1px solid var(--line);
 }
 .mobile-menu-nav a:hover { color: var(--signal); }
-.mobile-menu-divider { height: 0; }
-.mobile-menu-cta { color: var(--signal) !important; }
+.mobile-menu-divider { height: 1px; background: var(--line); margin: 22px 0; }
+.mobile-menu-cta {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 14px 22px;
+  border: 1px solid var(--signal);
+  border-bottom: 1px solid var(--signal);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--signal) !important;
+  transition: background .2s ease, color .2s ease;
+}
+.mobile-menu-cta:hover { background: var(--signal); color: var(--base) !important; }
 .mobile-menu-tagline { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
 
 /* ── 404 ───────────────────────────────────────────────────────────────── */
@@ -871,19 +895,20 @@ section { position: relative; }
 
 /* ── Responsive ────────────────────────────────────────────────────────── */
 @media (max-width: 980px) {
-  .node-grid, .featured-grid { grid-template-columns: 1fr 1fr; }
   .phase-grid { grid-template-columns: 1fr 1fr; }
   .phase:nth-child(2) { border-left: 1px solid var(--line); }
   .phase:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .phase:nth-child(4) { border-top: 1px solid var(--line); }
   .list-head { grid-template-columns: 1fr; gap: 22px; }
   .lead-magnet-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .footer-brand { grid-column: 1 / -1; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 48px; }
   .service-meta-grid, .related-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  /* 3-up card grids go straight 3→1 col — no 2-col stage that strands a 3rd card */
   .node-grid, .featured-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
   .phase-grid { grid-template-columns: 1fr; }
   .phase + .phase { border-left: 0; border-top: 1px solid var(--line); }
   .phase:nth-child(3) { border-left: 0; }
@@ -900,6 +925,7 @@ section { position: relative; }
   .footer-titleblock { grid-template-columns: 1fr 1fr; }
   .tb-cell:nth-child(2n) { border-right: 0; }
   .tb-cell { border-bottom: 1px solid var(--line); }
+  .tb-cell--note { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .mobile-menu-nav a { font-size: 1.6rem; }
 }

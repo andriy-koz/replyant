@@ -5,7 +5,7 @@ theme = "replyant"
 
 [params]
   description = "AI Agent Development, Automation & Strategy"
-  tagline = "Build Smarter. Grow Faster."
+  tagline = "Agents that survive production."
   leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
   ogImage = "/android-chrome-512x512.png"
 
@@ -45,6 +45,10 @@ theme = "replyant"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    style = "github-dark"
+    noClasses = true
+    tabWidth = 2
 
 [outputs]
   home = ["HTML", "RSS", "sitemap"]

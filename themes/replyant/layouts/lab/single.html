@@ -8,7 +8,6 @@
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         {{ with .ReadingTime }}<span>{{ . }} min read</span>{{ end }}
         <span>{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
-        {{ range .Params.tags }}<a class="tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>{{ end }}
       </div>
       {{ with .Description }}<p class="article-desc">{{ . }}</p>{{ end }}
     </header>

@@ -8,14 +8,14 @@ Tell us about your AI initiative. We reply within one business day, and the firs
 Useful detail to share: the workflow you want to change, the metric you want to move, and the constraints you are working inside. The more concrete the picture, the more useful the first call.
 
 <div class="contact-grid">
-  <form id="contact-form" class="contact-form" data-api="{{< param "leadsAPI" >}}">
+  <form id="contact-form" class="contact-form" data-api="https://vps-4849885-x.dattaweb.com/replyant/api/leads">
     <input type="hidden" name="source" value="contact">
 
     <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
     <input type="text" id="contact-name" name="name" required placeholder="Full name" autocomplete="name">
 
     <label for="contact-email">Work email <span aria-hidden="true">*</span></label>
-    {{/* Placeholder avoids email-like strings that Cloudflare's Email Address Obfuscation auto-wraps. */}}
+    <!-- Placeholder avoids email-like strings that Cloudflare's Email Address Obfuscation auto-wraps. -->
     <input type="email" id="contact-email" name="email" required placeholder="Work email address" autocomplete="email">
 
     <label for="contact-company">Company</label>
