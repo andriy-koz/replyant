@@ -20,6 +20,7 @@
     </div>
     {{ end }}
     {{ if .Params.faq }}{{ partial "faq-block.html" . }}{{ end }}
+    {{ partial "related-posts.html" . }}
     {{ partial "author-bio.html" . }}
   </div>
   {{ partial "lead-magnet.html" . }}

@@ -51,7 +51,26 @@ theme = "replyant"
     tabWidth = 2
 
 [outputs]
-  home = ["HTML", "RSS", "sitemap"]
+  home = ["HTML", "RSS", "sitemap", "llms"]
+
+[outputFormats]
+  [outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    rel = "alternate"
+
+# Related-posts engine: match on shared tags (primary), recency as tiebreaker.
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 [pagination]
   pagerSize = 10

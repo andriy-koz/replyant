@@ -1,0 +1,30 @@
+{{- /* llms.txt — auto-generated from content on every build. Spec: https://llmstxt.org */ -}}
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }} — {{ .Site.Params.tagline }}
+
+Replyant helps businesses build custom AI agents, automate workflows, and develop strategies that deliver measurable ROI. We follow a process-first approach — spending 80% of effort on workflow design and 20% on technology — so AI initiatives actually move the needle.
+
+## Services
+{{ range (where .Site.RegularPages "Section" "services") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+
+## Blog — Business & Strategy
+{{ range (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+
+## Lab — Technical Notes
+{{ range (where .Site.RegularPages "Section" "lab").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+
+## Key Pages
+- [About Replyant]({{ "about/" | absURL }}): Who we are and how we work.
+- [Case Studies]({{ "case-studies/" | absURL }}): Selected AI agent and automation work.
+- [Contact]({{ "contact/" | absURL }}): Start a conversation about your workflow.
+- [Free AI Readiness Checklist]({{ "#lead-magnet" | absURL }}): A 7-point self-assessment for AI adoption.
+
+## Get Started
+Want to evaluate where AI fits in your business? Get the free AI Readiness Checklist at [replyant.com/#lead-magnet]({{ "#lead-magnet" | absURL }}), or [contact us]({{ "contact/" | absURL }}) directly.

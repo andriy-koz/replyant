@@ -656,6 +656,14 @@ section { position: relative; }
 .author-bio-content .author-bio-name { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; color: var(--ink); margin-bottom: 6px; }
 .author-bio-content p { color: var(--ink-2); font-size: 0.96rem; line-height: 1.6; }
 
+/* ── Related posts ─────────────────────────────────────────────────────── */
+.related { margin-top: 56px; }
+.related .net-label { margin-bottom: 18px; }
+.related .featured-grid { gap: 14px; }
+.related .post-card { gap: 12px; }
+.related .post-card h2 { font-size: 1.12rem; line-height: 1.2; }
+.related .post-card p { font-size: 0.9rem; }
+
 /* ── FAQ ───────────────────────────────────────────────────────────────── */
 .faq { margin-top: 52px; }
 .faq-item { border-bottom: 1px solid var(--line); }
