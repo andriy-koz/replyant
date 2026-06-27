@@ -3,6 +3,15 @@ title: "Agent Sprawl Is the New Tech Debt"
 date: 2026-05-14
 tags: ["AI Agents", "AI Readiness", "Architecture", "Business Strategy"]
 description: "Gartner: Fortune 500 firms will run 150,000 agents by 2028, up from 15 in 2025. The six-step management plane that prevents the next decade of tech debt."
+faq:
+  - q: "How many AI agents will enterprises run by 2028?"
+    a: "Gartner forecasts the average global Fortune 500 enterprise will run over 150,000 AI agents in production by 2028, up from fewer than 15 in 2025. That trajectory is a step function, not a curve. The companies that install an agent management plane in 2026 avoid a cleanup project that costs more than the agents themselves, while those that wait rediscover every governance failure of the SaaS sprawl era."
+  - q: "What does an agent management plane actually do?"
+    a: "An agent management plane is the centralized control layer that gives an enterprise a single source of truth for every agent in operation, regardless of which platform created it. It does five things at minimum: discovery, identity, policy, observability, and lifecycle. Without all five, agents accumulate as opaque liabilities. With all five, they accumulate as a governable digital workforce on the same footing as identities, endpoints, and data."
+  - q: "What are the six steps to manage agent sprawl?"
+    a: "Gartner's six-step framework runs in order: establish agent governance and policies, build a centralized agent inventory, define agent identity, permissions, and lifecycle, develop AI information governance, monitor and remediate agent behavior, and foster a culture of responsible AI usage. Steps one through three are the structural foundation, four and five the daily operational layer, and step six the cultural reinforcement that keeps the rest from degrading into shelfware."
+  - q: "What does agent sprawl cost a business?"
+    a: "Agent sprawl compounds across four cost categories — duplicate licensing, security incident exposure, integration debt, and remediation labor — and lands on the operating budget within twelve to eighteen months of unmanaged growth. Remediation labor alone historically runs two to four times the original deployment cost. It is a finance problem disguised as an IT problem, and the same accounting discipline that surfaces [AI ROI in dollar terms](/blog/measuring-ai-agent-roi/) is what gets it funded."
 author: "Replyant"
 ---
 

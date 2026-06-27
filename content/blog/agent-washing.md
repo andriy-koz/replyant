@@ -3,6 +3,15 @@ title: "Agent Washing: A Buyer's Field Guide to Fake AI Agents"
 date: 2026-06-22
 tags: ["AI Agents", "AI Strategy", "Business Strategy", "Automation"]
 description: "Vendors call everything 'agentic.' Gartner says ~130 of thousands actually are. A buyer's rubric to spot agent washing before you sign."
+faq:
+  - q: "What is agent washing?"
+    a: "Agent washing is the practice of rebranding existing technology — chatbots, robotic process automation, rules engines, or AI-assisted tools — as 'AI agents' to ride the agentic wave. The product hasn't changed; the marketing has. Gartner found that among thousands of self-described agentic vendors, only roughly 130 are genuinely agentic. Because the term has no enforced definition, the burden of proving the claim falls on you, the buyer."
+  - q: "How can you tell a real AI agent from a fake one?"
+    a: "A genuine AI agent pursues a goal, reasons about how to achieve it, selects and uses tools dynamically, and adapts when reality doesn't match the plan. A chatbot only responds within a fixed script. The difference is autonomy over a multi-step task, not how natural the conversation sounds — the same line we draw in [AI agents versus RPA](/blog/ai-agents-vs-rpa/), where RPA executes predefined steps deterministically and an agent decides the steps itself."
+  - q: "Why does Gartner expect over 40% of agentic AI projects to fail?"
+    a: "Gartner predicts over 40% of agentic AI projects will be canceled by the end of 2027, citing escalating costs, unclear business value, and inadequate risk controls. The root cause is that current models cannot autonomously achieve complex goals over extended time, and many vendors overstate what their systems do. When the technology can't sustain the promised autonomy, costs climb, value stays vague, and the buyer absorbs the loss."
+  - q: "How should you evaluate an AI agent vendor without getting spun?"
+    a: "Run a structured pilot with a pre-defined success metric set before the vendor touches your data. Define one outcome number that means the project worked, pick one real workflow with messy inputs, run a time-boxed pilot against the metric, audit the off-script behavior, and model the all-in cost at your volume. Walk every vendor through the nine rubric questions, because a demo is exactly the artifact a washed product produces best."
 author: "Replyant"
 ---
 

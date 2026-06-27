@@ -3,6 +3,15 @@ title: "The Agent Privilege Crisis: AI Has More Access Than You"
 date: 2026-04-23
 tags: ["AI Agents", "Compliance", "Business Strategy", "Automation"]
 description: "88% of enterprises had an AI agent security incident last year. 78% of those agents were over-privileged. The five-control stack that closes the gap."
+faq:
+  - q: "How many enterprises experienced an AI agent security incident?"
+    a: "88% of enterprises experienced at least one AI agent security incident in the preceding twelve months, rising to 92.7% in healthcare, according to Gravitee's State of AI Agent Security 2026. The Cloud Security Alliance put 82% of those agents in the 'shadow' category — deployed without security's knowledge — while only 14.4% ship with full security approval. The breach data has caught up with the privilege gap."
+  - q: "Why do AI agents have more access than your employees?"
+    a: "AI agents hold roughly 10x the privileges their actual workload requires, and 78% of breached agents were over-privileged at compromise. Enterprise identity systems were built for humans, not agents — the non-human-to-human identity ratio runs 25-50x, reaching 144:1 in agent-heavy firms. Engineers get SSO, short-lived credentials, and quarterly audits; agents get a static key in a .env file that nobody reviewed. Over-privileged AI carries a 4.5x higher incident rate."
+  - q: "What is the five-control stack for securing AI agents?"
+    a: "The five-control stack is agent identity, scoped credentials, tool allowlists, human-in-the-loop tiers, and observability. Each agent gets its own short-lived SPIFFE/SPIRE identity; credentials bind tool, scope, resource, TTL, and call-count cap; a policy-as-code allowlist enforces least-agency; four autonomy tiers gate irreversible actions; and every action generates an append-only audit trace. It applies the discipline behind the [agent governance framework most enterprises are missing](/blog/ai-agent-governance/) to identity specifically."
+  - q: "How much does an AI agent breach cost?"
+    a: "An AI agent breach costs $4.44 million globally and $10.22 million in the United States, per IBM's Cost of a Data Breach 2025. Shadow AI adds $670,000 to the average breach and is now implicated in 20% of reported incidents. 97% of AI-breached organizations lacked proper access controls. Organizations with extensive AI-assisted defenses save $1.9 million per breach and close incidents 80 days faster than peers."
 author: "Replyant"
 ---
 

@@ -3,6 +3,15 @@ title: "AI Agent Governance: The Framework Your Team Is Missing"
 date: 2026-04-07
 tags: ["AI Agents", "Business Strategy", "Automation", "Compliance"]
 description: "71% of enterprises deploying AI agents lack formal governance. Here's the five-layer Agent Governance Stack that turns compliance risk into speed."
+faq:
+  - q: "What is the Agent Governance Stack for AI agents?"
+    a: "The Agent Governance Stack is a five-layer framework that separates governed AI agent deployments from ungoverned ones: an Agent Registry (a single source of truth for every agent), Permission Boundaries (hard, architecture-enforced limits), Audit Logging (immutable, queryable records), Escalation Protocols (defined triggers for deferring to a human), and Kill Switches (the ability to halt any agent instantly). Every layer is necessary; skip one and the others cannot compensate."
+  - q: "How much faster do companies with AI agent governance deploy?"
+    a: "Organizations with governance frameworks deploy AI agents to production 40% faster than those without, according to BCG's 2026 AI Adoption study. The reason is that governance removes organizational resistance: the playbook is defined, risk classification is standardized, and the data access review follows a checklist. What took six weeks of ad hoc negotiation with legal, compliance, and security takes six days of structured process. Governance is a speed feature, not friction."
+  - q: "What is the difference between human-in-the-loop and human-on-the-loop?"
+    a: "Human-in-the-loop (HITL) means a human approves every critical decision before the agent acts — appropriate for high-stakes, low-volume decisions like financial approvals or account terminations. Human-on-the-loop (HOTL) means the agent acts autonomously while a human monitors aggregate metrics and intervenes on drift — appropriate for routine, high-volume work. Deloitte found 78% of organizations in regulated industries use HITL for decisions carrying legal or financial liability. Most enterprises need a tiered hybrid of both."
+  - q: "Why do AI agents create compliance risk without audit logging?"
+    a: "Every decision an AI agent makes is a decision your company made, and the liability sits with you — not the model provider. The [EU AI Act, enforceable in August 2026 with penalties up to 35 million euros](/blog/eu-ai-act-compliance/), and the Colorado AI Act both require the ability to explain automated decisions. Without immutable, queryable logs of what data an agent accessed and why it decided, you cannot demonstrate compliance — or even reconstruct what happened."
 author: "Replyant"
 ---
 

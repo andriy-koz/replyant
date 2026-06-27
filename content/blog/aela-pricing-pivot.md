@@ -3,6 +3,15 @@ title: "The AELA Pivot: How 2026 Repriced Enterprise AI Licensing"
 date: 2026-05-06
 tags: ["Pricing", "Business Strategy", "AI Readiness", "ROI"]
 description: "Anthropic moved enterprises to per-token. Salesforce countered with AELA. Licensing now varies 10x and integrations overrun 30-50%. The playbook."
+faq:
+  - q: "What is the AELA (Agentic Enterprise License Agreement)?"
+    a: "The AELA is Salesforce's Agentic Enterprise License Agreement, a flat-fee shared-risk contract debuted at TrailblazerDX 2026 that bundles Agentforce capacity, Data Cloud entitlements, and a negotiated agent transaction allowance into one annual number. Salesforce absorbs the consumption variance; the buyer absorbs the lock-in. It buys CFO-grade predictability — no surprise overage invoices — but runs multi-year by default with renewal economics structurally weighted toward the vendor."
+  - q: "How much do AI agent licensing fees vary across vendors in 2026?"
+    a: "Licensing fees for equivalent agent capability vary 10x across vendors in 2026. A customer-service agent might cost $4 per resolved ticket on one platform, $40 per agent per month on another, and $400,000 annual flat-fee plus per-token overages on a third. Roughly half the variance is a bundling and translation problem that collapses once proposals are normalized on per-task economics; the other half is genuine pricing dispersion you negotiate."
+  - q: "Why do AI agent integration costs overrun estimates by 30-50%?"
+    a: "Integration costs overrun by 30-50% because pilots scope only the model and prompt, while production requires the full stack: identity scoping, retrieval pipelines, evaluation harnesses, observability, human-review queues, and rollback procedures. Each layer is a budget line the pilot never surfaced. Companies that build a total-cost-of-ownership model tied to specific business KPIs before signing recover their investment 14 months faster, as we detail in [the dollar-accounting approach to measuring agent ROI](/blog/measuring-ai-agent-roi/)."
+  - q: "Should I choose AELA flat-fee or per-token pricing?"
+    a: "Run both. The procurement question is not 'AELA or per-token' but which mix matches each agent's risk profile. High-volume, predictable workloads benefit from AELA flat-fee economics; bursty or experimental workloads benefit from per-token elasticity. Most enterprises run a portfolio of both. Stress-test every contract at 50%, 100%, and 300% of forecast, and pick the structure whose worst-case scenario is survivable."
 author: "Replyant"
 ---
 

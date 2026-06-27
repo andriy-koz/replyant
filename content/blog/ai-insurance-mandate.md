@@ -3,6 +3,15 @@ title: "AI Insurance: The Silent CGL Exclusion in 2026 Renewals"
 date: 2026-04-29
 tags: ["Compliance", "Business Strategy", "AI Readiness"]
 description: "ISO endorsements CG 40 47 and CG 40 48 strip AI losses from your CGL on Jan 1, 2026. Most companies will not notice until a claim is denied."
+faq:
+  - q: "What do ISO endorsements CG 40 47 and CG 40 48 do to my CGL policy?"
+    a: "Effective January 1, 2026, CG 40 47 strips generative AI claims from both Coverage A and Coverage B of the standard CGL form, while CG 40 48 removes them from Coverage B only. The exclusion is now the market default. Nine insurance groups have already filed to adopt the language, and carriers including WR Berkley and Cincinnati Financial are filing matching exclusions. Your commercial general liability policy no longer covers AI losses."
+  - q: "Why won't I notice the AI insurance exclusion until a claim is denied?"
+    a: "Coverage is controlled by the form code, not the marketing copy. When your renewal binder arrives, the endorsement schedule lists CG 40 47, CG 40 48, or carrier-specific AI language, but the summary cover sheet will not flag it and your broker may not either. If you do not read the form codes, you discover the exclusion only when a claim is filed and denied."
+  - q: "What is affirmative AI insurance and should I buy it?"
+    a: "Affirmative AI insurance is dedicated coverage for hallucinations, bias, intellectual property infringement, and safety failures — the exposures the CGL exclusion now removes. On April 2, 2026, Gartner instructed general counsels to procure it, citing more than 2,000 'death by AI' legal claims expected worldwide by end of 2026. Carriers including HSB, Munich Re, Coalition, and Vouch are writing real capacity. Buy it, because the coverage gap is structural. Align procurement with [AI agent governance](/blog/ai-agent-governance/) maturity, which drives both availability and premium."
+  - q: "Does undocumented shadow AI affect my AI insurance coverage?"
+    a: "Yes. An undisclosed agent is a coverage void even on an affirmative AI policy, because most affirmative forms condition coverage on a documented and governed AI inventory. Cloud Security Alliance research found 82% of enterprises discovered unknown AI agents in the past year, and 53% reported agents exceeding their intended permission scope. Discovery and inventory are now insurance prerequisites, not IT hygiene."
 author: "Replyant"
 ---
 

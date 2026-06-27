@@ -3,6 +3,15 @@ title: "Build vs. Buy AI Agents: A 2026 Decision Framework"
 date: 2026-06-27
 tags: ["AI Agents", "Business Strategy", "ROI", "Automation"]
 description: "Forrester says ~75% of self-built agent projects fail. A neutral build vs. buy vs. hybrid framework, plus the TCO crossover that flips the math."
+faq:
+  - q: "Should you build or buy AI agents in 2026?"
+    a: "Most companies should buy first and build later. Buy when the agent handles a commodity workflow at low-to-moderate volume and speed matters; build when the workflow is a genuine competitive differentiator, your volume is high, and you can staff maintenance. For nearly every company the real answer is hybrid: buy the foundation, build the edge. About 47% of enterprises already run this hybrid model."
+  - q: "What is the TCO crossover where building AI agents beats buying?"
+    a: "Total-cost-of-ownership economics tend to flip from 'buy' to 'build' around one million agent conversations per year. Below that volume, per-seat or per-outcome vendor pricing is almost always cheaper than carrying engineers, infrastructure, and a maintenance practice. Above it, amortizing a custom build pencils out. Treat ~1M conversations as a directional signal, not a law, and run your own crossover. The [five-number ROI framework for AI agents](/blog/ai-roi-calculator/) puts numbers against either path."
+  - q: "Why do 75% of self-built AI agent projects fail?"
+    a: "Forrester projects roughly 75% of companies that try to build their own agentic systems will fail to deliver the value they expected — not because building is wrong, but because they build before they understand the work, the volume, or the maintenance burden. The failures are framing errors, not technology errors: companies build a commodity workflow they should have bought, or buy a differentiating workflow they should have built."
+  - q: "What percentage of enterprises use a hybrid AI agent model?"
+    a: "About 47% of enterprises run a hybrid model: buy the foundation and build the differentiator. This isn't fence-sitting — it captures most of the speed of buying and most of the control of building. Hybrid lets you buy the 80% that's undifferentiated and build the 20% that wins. For the overwhelming majority of companies, hybrid is the dominant real-world answer."
 author: "Replyant"
 ---
 

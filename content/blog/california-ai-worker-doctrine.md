@@ -3,6 +3,15 @@ title: "The Newsom Doctrine: California Just Rewrote AI Severance"
 date: 2026-05-24
 tags: ["Compliance", "Business Strategy", "Hiring", "AI Readiness"]
 description: "Newsom's May 21 executive order turns AI layoffs into auditable state events. What HR and finance leaders must do before agencies report back."
+faq:
+  - q: "What does California Executive Order N-6-26 actually require?"
+    a: "Executive Order N-6-26 does not create new severance rules; it commissions the apparatus that makes AI-displacement obligations enforceable. It directs agencies to produce an early-warning-signals report, a public dashboard tracking AI's sector impact, and within 180 days — by mid-November 2026 — recommendations to revise California's WARN Act. It also directs agencies to explore severance standards, expanded employment insurance, worker-ownership models, and universal basic capital."
+  - q: "How should companies document AI layoffs under the Newsom Doctrine?"
+    a: "Stop framing AI ROI as 'headcount savings of $X from N reductions' and start documenting workflow redesign. Produce a contemporaneous rationale for every AI-attributed cut — workflow baseline, capability assessment, transition support, and alternatives considered — plus governance review minutes. A document describing a workforce redesign survives state inquiry; one describing a headcount reduction becomes an exhibit. The [Augmentation-First Decision Model in the AI layoff trap post](/blog/ai-layoff-trap/) produces exactly this evidence."
+  - q: "Does Executive Order N-6-26 create new severance obligations today?"
+    a: "No. Executive Order N-6-26 creates no new severance obligations or unemployment benefits today. It commissions reports, builds dashboards, and gives agencies 180 days to recommend WARN Act revisions. The danger is structural: California has declared AI-attributed displacement an auditable category, so the documents justifying a 2026 cut become discoverable evidence when statutory rules arrive 12 to 24 months later, retroactively applied to the documentation that existed at the time."
+  - q: "What should non-California employers do about AI-displacement rules?"
+    a: "Plan to California's documentation standard even if California is not your headquarters. California acts first, the most aggressive blue states follow within 12 to 18 months, and the federal regime either preempts or locks in a state-by-state patchwork that becomes the national standard. New York, Illinois, Washington, Massachusetts, and Colorado all have AI-employment momentum. Building one defensible documentation regime now costs materially less than building five state-specific ones in 2028."
 author: "Replyant"
 ---
 
