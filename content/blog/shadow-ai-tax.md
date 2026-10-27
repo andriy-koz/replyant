@@ -1,6 +1,7 @@
 ---
 title: "The Shadow AI Tax: What Unsanctioned Tools Really Cost"
 date: 2026-04-18
+lastmod: 2026-10-27
 tags: ["AI Readiness", "Business Strategy", "Compliance", "Automation"]
 description: "IBM: shadow AI adds $670K to every breach. 49% of workers use unsanctioned AI tools. The five-step audit that kills the tax without blocking work."
 faq:
@@ -18,7 +19,7 @@ Every enterprise is paying a Shadow AI Tax, and the invoice arrives as a data br
 
 IBM's Cost of a Data Breach Report 2025 found that organizations with high levels of shadow AI pay $670,000 more per breach than peers with mature governance. One in five breached organizations now trace the incident directly to an unsanctioned AI tool. BlackFog's 2026 Shadow AI Survey found 49% of employees admit to using AI tools their employer never approved, and 33% admit to pasting confidential research data into public models. The trajectory is not improving. AI-related breach incidents rose from a rounding error in 2023 to 20% of all breaches two years later.
 
-The [governance framework most enterprises are missing](/blog/ai-agent-governance/) is the structural response. The [EU AI Act compliance work coming due in August](/blog/eu-ai-act-compliance/) is the regulatory pressure accelerating it. This post is the diagnostic: what shadow AI actually is, why blocking strategies fail on contact, and the five-step audit that surfaces the tax before it compounds into a breach headline.
+The [governance framework most enterprises are missing](/blog/ai-agent-governance/) is the structural response. The [EU AI Act compliance work that began coming due on August 2, 2026](/blog/eu-ai-act-compliance/), with high-risk obligations following on December 2, 2027, is the regulatory pressure accelerating it. This post is the diagnostic: what shadow AI actually is, why blocking strategies fail on contact, and the five-step audit that surfaces the tax before it compounds into a breach headline.
 
 ## The Anatomy of Shadow AI
 
@@ -116,6 +117,6 @@ Shadow AI is not a compliance footnote. It is a $670,000-per-breach line item hi
 
 The Shadow AI Audit closes the gap by refusing the binary. Discovery surfaces what is actually happening. Classification and calculation make the exposure visible in dollars. Sanction-or-substitute converts the tax into either a sanctioned capability or a validated block. Governance prevents regrowth. The framework is not theoretical — it maps directly onto the IBM breach data, the BlackFog survey findings, and the Gartner governance-gap guidance that currently frames this space.
 
-The companies that run the audit in 2026 will have a defensible governance posture when the EU AI Act takes effect in August, when breach disclosures start naming shadow AI explicitly, and when their boards start asking for the dollar figure. The companies that continue to rely on blocklists and policy memos will keep paying the tax until a breach makes the invoice public.
+The companies that run the audit in 2026 will have a defensible governance posture when the EU AI Act's high-risk obligations take effect on December 2, 2027, when breach disclosures start naming shadow AI explicitly, and when their boards start asking for the dollar figure. The companies that continue to rely on blocklists and policy memos will keep paying the tax until a breach makes the invoice public.
 
 If you're evaluating shadow AI exposure in your organization and want to run the five-step audit against your actual environment — [that's exactly the work we do](/contact/).

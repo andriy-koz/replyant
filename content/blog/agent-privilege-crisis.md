@@ -1,6 +1,7 @@
 ---
 title: "The Agent Privilege Crisis: AI Has More Access Than You"
 date: 2026-04-23
+lastmod: 2026-10-27
 tags: ["AI Agents", "Compliance", "Business Strategy", "Automation"]
 description: "88% of enterprises had an AI agent security incident last year. 78% of those agents were over-privileged. The five-control stack that closes the gap."
 faq:
@@ -56,7 +57,7 @@ The scaling consequence is predictable. As enterprises move from a handful of pi
 
 ## The Regulatory Collision Is Landing in Months, Not Years
 
-The regulatory calendar is no longer theoretical. NIS2 is in force across the EU with a 24-hour initial incident notification window. DORA went live on January 17, 2026, pushing the same discipline into financial services. The [EU AI Act's high-risk obligations take effect on August 2, 2026](/blog/eu-ai-act-compliance/), with penalties up to €35 million or 7% of global turnover. The SEC's cyber disclosure rule treats material agent incidents as 10-K disclosure events. And the insurance layer is tightening: ISO's CG 40 47, CG 40 48, and CG 35 08 cyber exclusions took effect in January 2026, cutting coverage for breaches traced to ungoverned AI systems.
+The regulatory calendar is no longer theoretical. NIS2 is in force across the EU with a 24-hour initial incident notification window. DORA went live on January 17, 2026, pushing the same discipline into financial services. The EU AI Act's penalty regime has applied since August 2, 2026, and its [high-risk obligations take effect on December 2, 2027](/blog/eu-ai-act-compliance/) after the [Digital Omnibus postponement](https://eur-lex.europa.eu/eli/reg/2026/1744/oj), with penalties up to €15 million or 3% of global turnover for high-risk violations and €35 million or 7% for prohibited practices. The SEC's cyber disclosure rule treats material agent incidents as 10-K disclosure events. And the insurance layer is tightening: ISO's CG 40 47, CG 40 48, and CG 35 08 cyber exclusions took effect in January 2026, cutting coverage for breaches traced to ungoverned AI systems.
 
 The punchline is the collision. A single over-privileged agent breach in a multinational financial services firm triggers simultaneous reporting under NIS2, DORA, and SEC cyber disclosure, potentially engages the EU AI Act's high-risk incident regime if the agent operated in a covered domain, and may land outside the insurance policy's new AI-governance carve-outs. There is no sequential path through this. The reporting clocks start in parallel.
 

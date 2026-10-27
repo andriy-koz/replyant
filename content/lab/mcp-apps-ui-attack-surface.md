@@ -3,11 +3,14 @@ title: "MCP Apps: Sandboxed UIs and Their New Attack Surface"
 date: 2026-07-05
 tags: ["MCP", "Architecture", "Integration", "Tool Calling"]
 description: "MCP Apps renders server-supplied HTML inside your agent host — a new client-side attack surface. Three trust boundaries, real attacks, and the defenses."
+lastmod: 2026-10-27
 ---
 
-MCP Apps — the first official Model Context Protocol extension, folded into the 2026-07-28 spec — lets a server ship an interactive HTML UI that the *host* renders and executes inside the agent, not text the model reads. That single change moves untrusted server output across a boundary it never crossed before: from a string in the model's prompt to JavaScript running in the client. The threat model is no longer "the LLM was tricked by poisoned text." It is "the client executed attacker-supplied markup." Classic web risks — sandbox escape, `postMessage` origin confusion, clickjacking — become *agent* risks, and the defenses are the ones web engineers already know, applied to a surface most agent teams have never had to think about. This post teaches the mechanism, then dissects the three trust boundaries and the concrete attacks each one opens.
+*Updated October 2026: the 2026-07-28 spec [shipped on July 28, 2026](https://blog.modelcontextprotocol.io/posts/2026-07-28/), and MCP Apps now runs in production hosts. The launch timeline and host list are refreshed, the UI resource MIME type is corrected to `text/html;profile=mcp-app`, extension negotiation is described per request (2026-07-28 has no handshake), and the code examples now use the 2.x SDK packages.*
 
-MCP Apps was announced January 26, 2026, built jointly by the MCP-UI creators and maintainers from OpenAI and Anthropic, and its wire format was locked in the 2026-07-28 Release Candidate on May 21. Host support already ships in ChatGPT, Claude web and desktop, Goose, and VS Code Insiders, with beta SDKs for Python, TypeScript, Go, and C#. This is not a proposal — it is landing in production hosts three weeks from now. If you have not modeled its attack surface yet, this is the window.
+MCP Apps — the first official Model Context Protocol extension, now negotiated through the 2026-07-28 spec's extensions framework — lets a server ship an interactive HTML UI that the *host* renders and executes inside the agent, not text the model reads. That single change moves untrusted server output across a boundary it never crossed before: from a string in the model's prompt to JavaScript running in the client. The threat model is no longer "the LLM was tricked by poisoned text." It is "the client executed attacker-supplied markup." Classic web risks — sandbox escape, `postMessage` origin confusion, clickjacking — become *agent* risks, and the defenses are the ones web engineers already know, applied to a surface most agent teams have never had to think about. This post teaches the mechanism, then dissects the three trust boundaries and the concrete attacks each one opens.
+
+MCP Apps was announced January 26, 2026, built jointly by the MCP-UI creators and maintainers from OpenAI and Anthropic. Its extension spec, `io.modelcontextprotocol/ui`, has been [marked stable since 2026-01-26](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx), and the [2026-07-28 specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/), released July 28, 2026, brought it under the protocol's formal extensions framework. As of late October 2026, the community-maintained [extension support matrix](https://modelcontextprotocol.io/extensions/client-matrix) lists MCP Apps support in Claude (web and desktop), ChatGPT, VS Code GitHub Copilot, Microsoft 365 Copilot, Cursor, Goose, Postman, MCPJam, Archestra.AI, and PostHog Code, and the `@modelcontextprotocol/ext-apps` SDK [reached 2.0 on September 8, 2026](https://github.com/modelcontextprotocol/ext-apps/releases/tag/v2.0.0). This is not a proposal — it is running in production hosts today. If you have not modeled its attack surface yet, you are already exposed.
 
 If you are new to how hosts, clients, and servers exchange capabilities over JSON-RPC, start with [how MCP connects your systems](/lab/anatomy-of-ai-agent-mcp/) — the rest of this assumes that vocabulary.
 
@@ -17,27 +20,29 @@ If you are new to how hosts, clients, and servers exchange capabilities over JSO
 
 ### How does a server ship a UI to the host?
 
-A server registers a UI resource under the `ui://` URI scheme — a bundle of HTML and JavaScript restricted to `text/html`. A tool links to it through a `_meta.ui.resourceUri` field on the tool definition. When the model calls that tool, the host fetches the resource, renders it in a **sandboxed iframe**, and brokers UI↔host messaging as JSON-RPC over `postMessage`. The template is addressable ahead of time, so hosts can prefetch, cache, and security-review it before execution.
+A server registers a UI resource under the `ui://` URI scheme — a bundle of HTML and JavaScript served with the MIME type `text/html;profile=mcp-app`. A tool links to it through a `_meta.ui.resourceUri` field on the tool definition. When the model calls that tool, the host fetches the resource, renders it in a **sandboxed iframe**, and brokers UI↔host messaging as JSON-RPC over `postMessage`. The template is addressable ahead of time, so hosts can prefetch, cache, and security-review it before execution.
 
-The `ui://` indirection is deliberate. Because the UI resource has a stable URI decoupled from any single tool call, a host can pull the HTML, inspect it, apply a Content-Security-Policy, and cache it — all before the model ever triggers a render. Extensions like Apps are negotiated through a dedicated `extensions` capability field in the 2026-07-28 handshake, so a host that hasn't opted in never sees them.
+The `ui://` indirection is deliberate. Because the UI resource has a stable URI decoupled from any single tool call, a host can pull the HTML, inspect it, apply a Content-Security-Policy, and cache it — all before the model ever triggers a render. Extensions like Apps are negotiated through a dedicated `extensions` capability field — which, since 2026-07-28 removed the handshake, the client declares per request in `_meta` and the server advertises via `server/discover` — so a host that hasn't opted in never sees them.
 
 Here is a minimal server declaring a `ui://` resource and wiring a tool to it:
 
 ```typescript
-// server.ts — an MCP server exposing one UI-backed tool (TypeScript SDK, beta)
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+// server.ts — an MCP server exposing one UI-backed tool (TypeScript SDK 2.x).
+// The ext-apps package's registerAppResource/registerAppTool helpers wrap this.
+import { McpServer } from "@modelcontextprotocol/server";
 
 const server = new McpServer({ name: "orders-app", version: "0.1.0" });
 
-// 1. Register the UI resource under the ui:// scheme. Content is text/html only.
+// 1. Register the UI resource under the ui:// scheme.
+//    The MIME type MUST be text/html;profile=mcp-app.
 server.registerResource(
   "order-widget",
   "ui://orders-app/confirm",           // stable, reviewable URI
-  { mimeType: "text/html" },
+  { mimeType: "text/html;profile=mcp-app" },
   async () => ({
     contents: [{
       uri: "ui://orders-app/confirm",
-      mimeType: "text/html",
+      mimeType: "text/html;profile=mcp-app",
       // Bundled HTML/JS. The host renders THIS inside a sandboxed iframe.
       text: await loadBundle("confirm.html"),
     }],
@@ -110,7 +115,7 @@ The UI controls its own pixels. A widget can render a benign-looking "Refresh" b
 
 ## The client round-trip, guarded
 
-Here is the UI→host round-trip with the origin guard that closes boundary [B]. The security-relevant lines are annotated. Method names on `app` follow the beta SDK (`app.callServerTool`, `app.updateModelContext`); the raw `postMessage` handler is illustrative of what the host does underneath.
+Here is the UI→host round-trip with the origin guard that closes boundary [B]. The security-relevant lines are annotated. Method names on `app` follow the [`@modelcontextprotocol/ext-apps`](https://github.com/modelcontextprotocol/ext-apps) SDK (`app.callServerTool`, `app.updateModelContext`); the raw `postMessage` handler is illustrative of what the host does underneath.
 
 ```typescript
 // --- UI side (inside the sandboxed iframe) -------------------------------
@@ -137,10 +142,10 @@ window.addEventListener("message", async (event: MessageEvent) => {
     // [C] GUARD 3: UI-initiated calls are UNTRUSTED. Route them through the
     //     same consent path as a direct model tool call — show the real tool
     //     name and arguments to the human, never the widget's label.
-    const approved = await requestUserConsent(msg.params.name, msg.params.args);
+    const approved = await requestUserConsent(msg.params.name, msg.params.arguments);
     if (!approved) return replyError(event, msg.id, "user_denied");
 
-    const out = await executeTool(msg.params.name, msg.params.args);
+    const out = await executeTool(msg.params.name, msg.params.arguments);
     (event.source as Window).postMessage(
       { jsonrpc: "2.0", id: msg.id, result: out },
       ALLOWED_ORIGIN,                                      // scope the reply, too
@@ -183,10 +188,10 @@ The last two rows tie MCP Apps back to attacks you already know. A UI that calls
 
 ## Where this fits in the 2026-07-28 spec
 
-MCP Apps lands alongside two other changes in the same Release Candidate: the [stateless-core refactor](/lab/mcp-goes-stateless/) and [async Tasks](/lab/mcp-async-tasks/). They compose. Statelessness means your host's UI-message handler is a pure transform per request, so the three guards above scale horizontally with the rest of your client tier. Tasks means a long-running UI-initiated tool call can return a handle instead of blocking a render. Apps is the third leg: the surface where a human touches the agent directly. Model all three before July 28, because they ship together.
+MCP Apps shipped alongside two other changes in the 2026-07-28 release: the [stateless-core refactor](/lab/mcp-goes-stateless/) and [async Tasks](/lab/mcp-async-tasks/). They compose. Statelessness means your host's UI-message handler is a pure transform per request, so the three guards above scale horizontally with the rest of your client tier. Tasks means a long-running UI-initiated tool call can return a handle instead of blocking a render. Apps is the third leg: the surface where a human touches the agent directly. Model all three before July 28, because they ship together.
 
 The reframe to carry forward is simple. [Tool poisoning](/lab/mcp-tool-poisoning/) taught us to treat every tool description as untrusted text. MCP Apps raises the stakes: now treat every server-supplied *pixel and script* as untrusted code, and put the same audit, allowlist, and consent discipline in front of it — because this time the client, not just the model, is the thing being asked to comply.
 
 ---
 
-*We architect and build production MCP hosts and clients where every server-supplied UI is sandboxed, origin-checked, and gated before it renders or acts. If you are adopting MCP Apps before the July 28 spec ships and want the client-side attack surface hardened first, [let's talk](/contact/).*
+*We architect and build production MCP hosts and clients where every server-supplied UI is sandboxed, origin-checked, and gated before it renders or acts. If you are adopting MCP Apps on the 2026-07-28 spec and want the client-side attack surface hardened first, [let's talk](/contact/).*

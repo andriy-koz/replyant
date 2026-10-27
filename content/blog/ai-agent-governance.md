@@ -1,6 +1,7 @@
 ---
 title: "AI Agent Governance: The Framework Your Team Is Missing"
 date: 2026-04-07
+lastmod: 2026-10-27
 tags: ["AI Agents", "Business Strategy", "Automation", "Compliance"]
 description: "71% of enterprises deploying AI agents lack formal governance. Here's the five-layer Agent Governance Stack that turns compliance risk into speed."
 faq:
@@ -11,7 +12,7 @@ faq:
   - q: "What is the difference between human-in-the-loop and human-on-the-loop?"
     a: "Human-in-the-loop (HITL) means a human approves every critical decision before the agent acts — appropriate for high-stakes, low-volume decisions like financial approvals or account terminations. Human-on-the-loop (HOTL) means the agent acts autonomously while a human monitors aggregate metrics and intervenes on drift — appropriate for routine, high-volume work. Deloitte found 78% of organizations in regulated industries use HITL for decisions carrying legal or financial liability. Most enterprises need a tiered hybrid of both."
   - q: "Why do AI agents create compliance risk without audit logging?"
-    a: "Every decision an AI agent makes is a decision your company made, and the liability sits with you — not the model provider. The [EU AI Act, enforceable in August 2026 with penalties up to 35 million euros](/blog/eu-ai-act-compliance/), and the Colorado AI Act both require the ability to explain automated decisions. Without immutable, queryable logs of what data an agent accessed and why it decided, you cannot demonstrate compliance — or even reconstruct what happened."
+    a: "Every decision an AI agent makes is a decision your company made, and the liability sits with you — not the model provider. The [EU AI Act, enforceable since August 2, 2026 with penalties up to 35 million euros and high-risk obligations from December 2, 2027](/blog/eu-ai-act-compliance/), and the Colorado AI Act both require the ability to explain automated decisions. Without immutable, queryable logs of what data an agent accessed and why it decided, you cannot demonstrate compliance — or even reconstruct what happened."
 ---
 
 Shadow agents are the shadow IT of 2026.
@@ -42,7 +43,7 @@ This isn't theoretical. A 2026 IBM study found that 43% of organizations experie
 
 Every decision an AI agent makes is a decision your company made. If that decision violates a regulation, the liability sits with you --- not the model provider, not the framework vendor.
 
-The [EU AI Act becomes enforceable in August 2026](/blog/eu-ai-act-compliance/) with penalties up to 35 million euros. The Colorado AI Act requires documentation and impact assessments for high-risk automated decisions. More jurisdictions are following. Every one of them requires something ungoverned agents don't have: audit trails.
+The [EU AI Act has been enforceable since August 2, 2026](/blog/eu-ai-act-compliance/), with penalties up to 35 million euros, and its high-risk obligations — the ones that demand traceable automated decisions — apply from December 2, 2027 under the [Digital Omnibus](https://eur-lex.europa.eu/eli/reg/2026/1744/oj). The Colorado AI Act requires documentation and impact assessments for high-risk automated decisions. More jurisdictions are following. Every one of them requires something ungoverned agents don't have: audit trails.
 
 When agents operate without logging --- without a record of what data they accessed, what decisions they made, and why --- you cannot demonstrate compliance. You can't even demonstrate what happened. An auditor asking "show me how this agent decided to deny this claim" gets a blank stare instead of a log file.
 

@@ -1,11 +1,12 @@
 ---
 title: "EU AI Act 'Delay': What Still Hits Your Business on Aug 2"
 date: 2026-08-05
+lastmod: 2026-10-27
 tags: ["Compliance", "Governance", "AI Strategy", "Business Strategy"]
 description: "Brussels moved high-risk AI rules to December 2027. But transparency duties and GPAI enforcement went live August 2, 2026 — three days ago. Here's the split."
 faq:
   - q: "Was the EU AI Act delayed?"
-    a: "Partially. The Digital Omnibus — Regulation (EU) 2026/1744, in force since July 27, 2026 — pushed high-risk AI obligations under Article 6(2) and Annex III from August 2, 2026 to December 2, 2027, and to August 2, 2028 for AI embedded in products already covered by EU product-safety law. Nothing else moved. Transparency obligations and general-purpose-AI enforcement took effect on schedule, August 2, 2026."
+    a: "Partially. The Digital Omnibus — Regulation (EU) 2026/1744, in force since July 27, 2026 — pushed high-risk AI obligations under Article 6(2) and Annex III from August 2, 2026 to December 2, 2027, and to August 2, 2028 for AI embedded in products already covered by EU product-safety law. Nothing else in the core timeline moved. Transparency obligations and general-purpose-AI enforcement took effect on schedule, August 2, 2026; the only transparency relief is a grace period until December 2, 2026 for machine-readable marking by generative systems already on the market."
   - q: "What EU AI Act obligations are enforceable right now?"
     a: "Article 50 transparency duties and the Commission's general-purpose-AI enforcement powers became enforceable August 2, 2026. If you operate an EU-facing chatbot, generate synthetic media, or publish AI-generated content on matters of public interest, you must disclose the AI's involvement today. Prohibited-practice bans, in force since February 2025, also remain live. The delay applies only to the high-risk regime."
   - q: "What are the penalties for what is still enforceable?"
@@ -18,9 +19,9 @@ faq:
 
 The EU AI Act's high-risk deadline moved. Its transparency deadline did not. If you read a headline about the EU AI Act being delayed and eased off your compliance program, you are three days late on a set of obligations that carry penalties of up to 15 million euros or 3% of global turnover.
 
-Here is the precise split. The Digital Omnibus — Regulation (EU) 2026/1744, published in the Official Journal on July 24, 2026 and in force since July 27 — pushed high-risk AI obligations under Article 6(2) and Annex III from August 2, 2026 to **December 2, 2027**. For AI embedded in products already regulated by EU product-safety law — medical devices, machinery, toys — the new date is **August 2, 2028**. That is genuine relief, and it is narrow.
+Here is the precise split. The Digital Omnibus — [Regulation (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj), published in the Official Journal on July 24, 2026 and in force since July 27 — pushed high-risk AI obligations under Article 6(2) and Annex III from August 2, 2026 to **December 2, 2027**. For AI embedded in products already regulated by EU product-safety law — medical devices, machinery, toys — the new date is **August 2, 2028**. That is genuine relief, and it is narrow.
 
-What did not move: **Article 50 transparency obligations and the Commission's general-purpose-AI enforcement powers took effect on schedule, August 2, 2026.** They have been live since Sunday.
+What did not move: **Article 50 transparency obligations and the Commission's general-purpose-AI enforcement powers took effect on schedule, August 2, 2026.** They have been live since Sunday. The one carve-out is narrow: providers of generative AI systems already on the market have until December 2, 2026 to add machine-readable marking to synthetic content under Article 50(2). Chatbot disclosure has no such grace period.
 
 ## What our earlier coverage got right, and what changed
 
@@ -32,7 +33,7 @@ That is the correction. The rest of this post is about the mistake the correctio
 
 ## Why did Brussels delay the high-risk rules?
 
-The technical standards were not ready. CEN and CENELEC had not finalized the harmonized standards that translate the Act's requirements into testable criteria, and most member states had not stood up functioning enforcement authorities. Regulating against unfinished instructions produces inconsistent enforcement, so the Commission bought sixteen months. Orrick, Gibson Dunn, Freshfields, National Law Review, and Digital Applied all reached the same reading in late July: the extension is about implementation readiness, not a retreat from the Act.
+The technical standards were not ready. CEN and CENELEC had not finalized the harmonized standards that translate the Act's requirements into testable criteria, and most member states had not stood up functioning enforcement authorities. Regulating against unfinished instructions produces inconsistent enforcement, so the EU bought sixteen months — and Parliament and Council replaced the Commission's proposed standards-linked trigger with fixed dates. (The first harmonised standard, [EN 18286 on quality management systems](https://digital-strategy.ec.europa.eu/en/library/first-harmonised-standard-supporting-ai-act-published-official-journal), reached the Official Journal on October 19, 2026; more are still to come.) Orrick, Gibson Dunn, Freshfields, National Law Review, and Digital Applied all reached the same reading in late July: the extension is about implementation readiness, not a retreat from the Act.
 
 That distinction matters because it tells you what will not be delayed again. Transparency obligations need no harmonized standard — the requirement is that people know they are dealing with AI. There is nothing for a standards body to specify, so there was nothing to wait for.
 

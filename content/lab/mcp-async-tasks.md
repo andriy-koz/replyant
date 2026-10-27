@@ -1,33 +1,36 @@
 ---
-title: "MCP Tasks: Async, Resumable Tool Calls Before July 28"
+title: "MCP Tasks: Async, Resumable Tool Calls in 2026-07-28"
 date: 2026-05-24
 tags: ["MCP", "Architecture", "Developer Tools", "Tool Calling"]
-description: "MCP's 2026-07-28 release candidate locked on May 21. Tasks graduated to a first-class extension. Here is what every server author has 10 weeks to refactor."
+description: "MCP 2026-07-28 shipped July 28 with Tasks as an official extension. How to refactor long-running tools into async, resumable Tasks, with code."
+lastmod: 2026-10-27
 ---
 
+*Updated October 2026: the 2026-07-28 spec [shipped on schedule on July 28, 2026](https://blog.modelcontextprotocol.io/posts/2026-07-28/), and the Tasks extension is now marked stable. RC-era deadlines are now past tense, and three wire details are corrected to match the [published Tasks schema](https://github.com/modelcontextprotocol/ext-tasks): `CreateTaskResult` is flat (Task fields sit beside `resultType`, not under a `task` key), the push notification is `notifications/tasks`, and `tasks/get` results carry `resultType: "complete"`.*
+
 <aside class="quick-answer">
-  <p>MCP's 2026-07-28 release candidate makes the core stateless (no more <code>initialize</code> handshake or <code>Mcp-Session-Id</code>) and graduates Tasks to a first-class extension at <code>io.modelcontextprotocol/tasks</code> with three normative methods: <code>tasks/get</code>, <code>tasks/update</code>, <code>tasks/cancel</code>. Synchronous-only servers exposing tools longer than 30 seconds will silently break against any production host with a request budget. Migrate in the 10-week window or accept timeouts in August.</p>
+  <p>MCP's 2026-07-28 specification, final since July 28, 2026, makes the core stateless (no more <code>initialize</code> handshake or <code>Mcp-Session-Id</code>) and graduates Tasks to a first-class extension at <code>io.modelcontextprotocol/tasks</code> with three normative methods: <code>tasks/get</code>, <code>tasks/update</code>, <code>tasks/cancel</code>. Synchronous-only servers exposing tools longer than 30 seconds will silently break against any production host with a request budget. The RC validation window has closed; if you have not migrated, every long-running tool you expose is already a timeout waiting to happen.</p>
 </aside>
 
-On May 21 2026 the MCP working group [locked the 2026-07-28 release candidate](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/) — the largest revision of the protocol since launch. Two things in that RC matter to every server author shipping into production today. First, the `initialize` / `initialized` handshake and the `Mcp-Session-Id` header are gone — the core is stateless, and any request can land on any server instance. Second, async work has graduated from the `2025-11-25` experimental Tasks API into a first-class extension at `io.modelcontextprotocol/tasks`, with `tasks/get`, `tasks/update`, and `tasks/cancel` as normative methods. You have until July 28 to validate against real workloads.
+On May 21 2026 the MCP working group [locked the 2026-07-28 release candidate](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/) — the largest revision of the protocol since launch — and on July 28, 2026 [published the final specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/) with those changes intact. Two things in that revision matter to every server author shipping into production today. First, the `initialize` / `initialized` handshake and the `Mcp-Session-Id` header are gone — the core is stateless, and any request can land on any server instance. Second, async work has graduated from the `2025-11-25` experimental Tasks API into a first-class extension at `io.modelcontextprotocol/tasks`, with `tasks/get`, `tasks/update`, and `tasks/cancel` as normative methods. The extension is specified in its own [ext-tasks repository](https://github.com/modelcontextprotocol/ext-tasks), where the `2026-07-28` version is marked stable.
 
-If you ignore the RC and ship a synchronous-only MCP server in August, your long-running tools will time out behind any modern host that imposes a request budget. If you keep using the experimental Tasks API as built against `2025-11-25`, your server will silently break against `2026-07-28` clients because the lifecycle changed. If your deployment depends on session affinity, your horizontal-scaling story stops working the day a host adopts the stateless core. None of these are theoretical — they are what happens when the RC becomes the spec on July 28.
+If you ship a synchronous-only MCP server today, your long-running tools will time out behind any modern host that imposes a request budget. If you keep using the experimental Tasks API as built against `2025-11-25`, your server will silently break against `2026-07-28` clients because the lifecycle changed. If your deployment depends on session affinity, your horizontal-scaling story stops working the day a host adopts the stateless core. None of these are theoretical — they follow directly from the RC becoming the spec on July 28.
 
-This post is the working guide for that refactor. We will read the actual RC text, walk the Task lifecycle end to end, migrate a 30-minute ETL tool from synchronous `tools/call` to an async Task with code on both sides, and cover the production gotchas — idempotency, TTL, cancellation, partial results, observability — that bite teams in the first week after the cutover. Then we will draw the decision boundary between Tasks, plain `tools/call`, and [A2A delegation](/lab/a2a-protocol-v1-production/), which carries its own normative task lifecycle and overlaps with Tasks in non-obvious ways.
+This post is the working guide for that refactor. We will read the actual spec text, walk the Task lifecycle end to end, migrate a 30-minute ETL tool from synchronous `tools/call` to an async Task with code on both sides, and cover the production gotchas — idempotency, TTL, cancellation, partial results, observability — that bite teams in the first week after the cutover. Then we will draw the decision boundary between Tasks, plain `tools/call`, and [A2A delegation](/lab/a2a-protocol-v1-production/), which carries its own normative task lifecycle and overlaps with Tasks in non-obvious ways.
 
 If you are new to MCP, start with the foundational write-up of how hosts, clients, servers, and JSON-RPC fit together: [Anatomy of an AI Agent: How MCP Connects Your Systems](/lab/anatomy-of-ai-agent-mcp/). The rest of this post assumes that vocabulary.
 
 ---
 
-## What actually changed in the 2026-07-28 RC?
+## What actually changed in the 2026-07-28 spec?
 
-The RC reorganises the protocol along three axes: a stateless core, a formal extensions framework, and the graduation of Tasks. Each axis is independently breaking, and all three land together.
+The [2026-07-28 revision](https://modelcontextprotocol.io/specification/2026-07-28/changelog) reorganises the protocol along three axes: a stateless core, a formal extensions framework, and the graduation of Tasks. Each axis is independently breaking, and all three landed together.
 
 **Stateless core.** The `initialize` / `initialized` handshake is removed. The `Mcp-Session-Id` header is removed. Client info and per-request client capabilities now travel in a `_meta` envelope on every request. The motivation is operational: "any MCP request can land on any server instance," which eliminates sticky sessions and shared session stores. Servers no longer remember who you are between calls — every call brings its own context.
 
-**Extensions framework.** Optional features now live outside the core spec under reverse-DNS extension IDs, negotiated through an `extensions` map on client and server capabilities. The RC's deprecation policy commits to at least twelve months between deprecation and the earliest possible removal of any feature, including extensions. This is what makes it safe to depend on Tasks in production code today — even if the extension iterates, you get a year of warning before a method goes away. Tasks is not the only extension landing with this spec: MCP Apps, which lets servers ship interactive UIs that the host renders, arrives too, with [a client-side attack surface of its own](/lab/mcp-apps-ui-attack-surface/).
+**Extensions framework.** Optional features now live outside the core spec under reverse-DNS extension IDs, negotiated through an `extensions` map on client and server capabilities. The spec's [feature lifecycle and deprecation policy](https://modelcontextprotocol.io/community/feature-lifecycle) commits to at least twelve months between deprecation and the earliest possible removal of any feature, including extensions. This is what makes it safe to depend on Tasks in production code today — even if the extension iterates, you get a year of warning before a method goes away. Tasks is not the only extension shipping alongside this spec: MCP Apps, which lets servers ship interactive UIs that the host renders, is the other headline extension, with [a client-side attack surface of its own](/lab/mcp-apps-ui-attack-surface/).
 
-**Tasks graduated.** Tasks were experimental in `2025-11-25` and are an extension in `2026-07-28`. The official rationale: "production use surfaced enough redesign that the right home for it is an extension rather than the specification." Translation — the working group learned that async lifecycle decisions are best made independently of the core protocol's release train, so Tasks now version on their own and ship their own implementation guides at [modelcontextprotocol.io/extensions/tasks/overview](https://modelcontextprotocol.io/extensions/tasks/overview).
+**Tasks graduated.** Tasks were experimental in `2025-11-25` and are an extension in `2026-07-28`. The official rationale: "production use surfaced enough redesign that the right home for it is an extension rather than the specification." Translation — the working group learned that async lifecycle decisions are best made independently of the core protocol's release train, so Tasks now version on their own and ship their own implementation guides at [modelcontextprotocol.io/extensions/tasks/overview](https://modelcontextprotocol.io/extensions/tasks/overview). Concretely, the [final changelog](https://modelcontextprotocol.io/specification/2026-07-28/changelog) records the redesign under SEP-2663: the blocking `tasks/result` method is replaced by `tasks/get` polling, `tasks/update` is new, `tasks/list` is gone, and servers decide per request whether to return a task handle, with no per-call flag from the client beyond declaring the extension.
 
 Three methods are normative for clients that opt in:
 
@@ -37,15 +40,15 @@ Three methods are normative for clients that opt in:
 | `tasks/update`  | client → server | Submit responses to `inputRequests` while the task is `input_required`. |
 | `tasks/cancel`  | client → server | Request cooperative cancellation. The server acknowledges but may not stop. |
 
-A separate `notifications/tasks/status` push channel exists for servers that support it and clients that opt into `subscriptions/listen`. Polling is the default; subscription is an optimisation.
+A separate `notifications/tasks` push channel exists for servers that support it and clients that opt into `subscriptions/listen`. Polling is the default; subscription is an optimisation.
 
 The new lifecycle states are five: `working`, `input_required`, `completed`, `failed`, `cancelled`. The last three are terminal — once reached, the task's status never changes again. This is the contract a client can rely on for cleanup, retry, and idempotency logic.
 
 ---
 
-## Why does this matter in the next 10 weeks?
+## Why does this matter now that the spec is final?
 
-The 10-week window between RC lock (May 21) and final release (July 28) is a validation pass, not a draft period. The breaking changes are baked. Anyone who shipped against the `2025-11-25` experimental Tasks API needs to migrate to the new method shapes. Anyone who built their deployment on session-affine MCP servers needs to refactor for statelessness or accept that the next generation of hosts will not route to them reliably.
+The ten-week window between RC lock (May 21) and final release (July 28) was a validation pass, not a draft period, and it closed on schedule: the breaking changes are now the spec. Anyone who shipped against the `2025-11-25` experimental Tasks API needs to migrate to the new method shapes. Anyone who built their deployment on session-affine MCP servers needs to refactor for statelessness or accept that the next generation of hosts will not route to them reliably. Host adoption of Tasks itself is still early — as of late October 2026 the community-maintained [extension support matrix](https://modelcontextprotocol.io/extensions/client-matrix) lists only MCPJam with Tasks support — so the synchronous fallback for clients that do not declare the extension is not optional.
 
 The fail modes are stark:
 
@@ -86,7 +89,7 @@ Here is the wire-level shape. The client opts in to Tasks once via per-request c
 
 The server inspects the per-request capabilities and decides — per call — whether to answer with a normal result or a `CreateTaskResult`. Task creation is server-directed. Clients do not flag individual tool calls as async; they declare they can *handle* an async response, and the server chooses when to use that affordance.
 
-A `CreateTaskResult` looks like this (the canonical example from the spec):
+A `CreateTaskResult` looks like this. Per the [published schema](https://github.com/modelcontextprotocol/ext-tasks) it is flat — the Task fields sit directly beside the `resultType` discriminator:
 
 ```json
 {
@@ -94,15 +97,13 @@ A `CreateTaskResult` looks like this (the canonical example from the spec):
   "id": 1,
   "result": {
     "resultType": "task",
-    "task": {
-      "taskId": "786512e2-9e0d-44bd-8f29-789f320fe840",
-      "status": "working",
-      "statusMessage": "Loading source manifest...",
-      "createdAt": "2026-05-24T10:30:00Z",
-      "lastUpdatedAt": "2026-05-24T10:30:00Z",
-      "ttlMs": 3600000,
-      "pollIntervalMs": 5000
-    }
+    "taskId": "786512e2-9e0d-44bd-8f29-789f320fe840",
+    "status": "working",
+    "statusMessage": "Loading source manifest...",
+    "createdAt": "2026-05-24T10:30:00Z",
+    "lastUpdatedAt": "2026-05-24T10:30:00Z",
+    "ttlMs": 3600000,
+    "pollIntervalMs": 5000
   }
 }
 ```
@@ -120,6 +121,7 @@ Polling looks like:
   "jsonrpc": "2.0",
   "id": 7,
   "result": {
+    "resultType": "complete",
     "taskId": "786512e2-...",
     "status": "working",
     "statusMessage": "Transformed 412,318 / ~1.2M rows",
@@ -137,6 +139,7 @@ On completion, the Task carries the result inline:
   "jsonrpc": "2.0",
   "id": 12,
   "result": {
+    "resultType": "complete",
     "taskId": "786512e2-...",
     "status": "completed",
     "lastUpdatedAt": "2026-05-24T10:58:02Z",
@@ -207,7 +210,7 @@ The Tasks rewrite preserves the business logic but inverts the control flow. The
 
 ```python
 # server_v2_tasks.py
-# 2026-07-28 RC-compliant: returns a CreateTaskResult, drives the lifecycle
+# 2026-07-28-compliant: returns a CreateTaskResult, drives the lifecycle
 # through tasks/get and tasks/cancel, survives client disconnects.
 import asyncio
 import time
@@ -326,7 +329,7 @@ A handful of decisions deserve their justification.
 
 **`asyncio.create_task` is for clarity, not production.** A real implementation moves the body onto a durable queue (Celery, RQ, Cloud Tasks, or your platform's equivalent) so a server restart does not lose in-flight ETLs. The record store moves to Redis or Postgres for the same reason. The shape of the handlers does not change.
 
-**Cancellation is checked at batch boundaries.** This is the cooperative-cancellation pattern the RC requires — set a flag, let the worker notice at safe checkpoints, transition to `cancelled` when work actually stops. Hard-killing a coroutine mid-write to a warehouse is how you corrupt tables.
+**Cancellation is checked at batch boundaries.** This is the cooperative-cancellation pattern the spec requires — set a flag, let the worker notice at safe checkpoints, transition to `cancelled` when work actually stops. Hard-killing a coroutine mid-write to a warehouse is how you corrupt tables.
 
 **`ttlMs` is one hour because that matches the work.** Pick a TTL longer than the worst-case completion plus the longest reasonable time between client polls. If the task takes up to 30 minutes and a client might be offline for 20 minutes between polls, an hour is conservative. Too short and the client comes back to a 404; too long and you waste storage on stale results.
 
@@ -366,7 +369,7 @@ async def call_with_tasks(
     if result.get("resultType") != "task":
         return result  # Synchronous result — server chose not to use Tasks.
 
-    task = result["task"]
+    task = result  # CreateTaskResult is flat: Task fields sit beside resultType.
     task_id = task["taskId"]
     poll_ms = task.get("pollIntervalMs", 5000)
     elapsed = 0.0
@@ -401,7 +404,7 @@ The client never assumes the response shape. Every supported call is "either a n
 
 Polling is the default and the safest path. The server hands the client a `pollIntervalMs` it considers reasonable; the client respects it. If the work is bursty, the server can shrink the interval on subsequent `tasks/get` responses to give the client tighter status updates; if the work is steady, it can lengthen it. This back-pressure is built into the protocol — no out-of-band negotiation needed.
 
-Subscription via `notifications/tasks/status` is the optimisation. When a client opts in through `subscriptions/listen`, the server pushes a complete Task object on every status change. The client gets sub-second responsiveness without burning CPU on poll loops, and the server saves the round-trip cost. The tradeoff is connection longevity — push channels need a live connection, and not every transport (or every corporate firewall) tolerates long-lived ones.
+Subscription via `notifications/tasks` is the optimisation. When a client opts in through `subscriptions/listen`, the server pushes a complete Task object on every status change. The client gets sub-second responsiveness without burning CPU on poll loops, and the server saves the round-trip cost. The tradeoff is connection longevity — push channels need a live connection, and not every transport (or every corporate firewall) tolerates long-lived ones.
 
 The pragmatic posture, which matches what we have shipped in production: poll by default with the server-suggested interval, subscribe when the host explicitly wants real-time UI updates (chat windows, dashboards), and always have the polling code path live as the resume mechanism after a subscription drops.
 
@@ -433,18 +436,18 @@ Persist before you poll; clear on terminal. On boot, walk the file and resume po
 
 ## Why does statelessness change the deployment shape so much?
 
-The pre-RC MCP core required an `initialize` handshake and an `Mcp-Session-Id` header. Every subsequent request from a client carried that session ID, and a server was free to maintain per-session state in memory. This is the shape every web framework prefers — keep a connection-scoped object, look things up there, move on. It is also the shape that breaks the moment you put more than one replica behind a load balancer.
+The pre-2026-07-28 MCP core required an `initialize` handshake and an `Mcp-Session-Id` header. Every subsequent request from a client carried that session ID, and a server was free to maintain per-session state in memory. This is the shape every web framework prefers — keep a connection-scoped object, look things up there, move on. It is also the shape that breaks the moment you put more than one replica behind a load balancer.
 
 Either you make the load balancer sticky (every request from session X goes to replica A), or you share the session store (every replica reads session X's state from Redis), or you do not scale. Sticky routing is brittle — replica A dies, session X dies. Shared stores are operational complexity that grows with concurrent users. Neither is ergonomic.
 
-The 2026-07-28 RC eliminates the choice by eliminating the session. Client info and per-request capabilities ride in `_meta` on every request. Any request from any client can land on any replica, and that replica has everything it needs to serve it. Routing becomes round-robin or least-loaded; replacements become hitless; auto-scaling becomes meaningful. This is the same lesson Kubernetes learned about pods — stateless is simpler, more resilient, and cheaper to operate at scale.
+The 2026-07-28 spec eliminates the choice by eliminating the session. Client info and per-request capabilities ride in `_meta` on every request. Any request from any client can land on any replica, and that replica has everything it needs to serve it. Routing becomes round-robin or least-loaded; replacements become hitless; auto-scaling becomes meaningful. This is the same lesson Kubernetes learned about pods — stateless is simpler, more resilient, and cheaper to operate at scale.
 
 For Tasks, statelessness has a sharper consequence: the task store *must* be durable and shared across replicas. The replica that created the task is almost certainly not the replica answering the `tasks/get` poll three seconds later. This is why the worked example above puts the record in `TASKS` for clarity but pushes you toward Redis or Postgres for anything real. A task that exists only in one replica's memory is a task that disappears when that replica recycles — which, in any modern deployment, happens every few hours.
 
 The 30-second version of the deployment shift:
 
 ```
-Pre-RC (stateful, sticky):                  2026-07-28 (stateless, durable tasks):
+2025-11-25 (stateful, sticky):              2026-07-28 (stateless, durable tasks):
 
     [client]                                   [client]
        │                                          │
@@ -541,7 +544,7 @@ This gives the client enough to decide whether to retry-from-checkpoint or repor
 
 `tools/call` traces are simple — one span, one parent. Tasks are not. The natural trace shape spans three intervals: creation, the poll loop, and the body's work. The body usually runs on a queue worker that is a different process from the request handler. If you do not stitch these together, you get three orphan trace fragments and zero ability to debug `failed` tasks.
 
-The RC bakes in the propagation primitive: `_meta` carries [W3C Trace Context](https://www.w3.org/TR/trace-context/) keys (`traceparent`, `tracestate`, `baggage`) on every request. The pattern that works:
+The spec bakes in the propagation primitive: `_meta` carries [W3C Trace Context](https://www.w3.org/TR/trace-context/) keys (`traceparent`, `tracestate`, `baggage`) on every request. The pattern that works:
 
 - On `tools/call` that creates a task, read `traceparent` from `_meta`, persist it on the Task record, and continue the trace on the queue worker.
 - On every `tasks/get`, start a span with the persisted `traceparent` as parent. The poll loop becomes a sequence of short sibling spans under the original `tools/call` span.
@@ -580,7 +583,7 @@ The relationship between MCP Tasks and A2A tasks is worth naming: their state ma
 
 ## A migration checklist
 
-If you maintain an MCP server today, you have a 10-week window. Work this list in order.
+If you maintain an MCP server that has not migrated yet, work this list in order.
 
 1. **Audit your tools by P95 latency.** Anything over 5s is a Tasks candidate. Anything over 30s is a Tasks must-have.
 2. **Stand up a durable task store** — Redis or Postgres are fine. Schema: `(task_id, status, status_message, created_at, last_updated_at, ttl_ms, poll_interval_ms, result_json, error_json, idempotency_key, traceparent)`.
@@ -590,17 +593,17 @@ If you maintain an MCP server today, you have a 10-week window. Work this list i
 6. **Wire up idempotency keys** derived from caller + intent. 10-minute dedup window.
 7. **Propagate `traceparent` from `_meta`** through the task record onto the worker spans. Verify the trace renders end-to-end in your observability tool.
 8. **Remove the `initialize`/`initialized` handshake and `Mcp-Session-Id` reads** from your transport. Switch any in-memory session state to per-request reads from `_meta`.
-9. **Test against the RC** — point one of your servers at the RC client SDK in staging and run your existing tool battery. Anything that timed out before should now return a task; anything that completed in milliseconds should still return synchronously.
+9. **Test against the final spec** — point one of your servers at a 2026-07-28 client SDK in staging (the [Tier 1 TypeScript, Python, Go, and C# SDKs support the final spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/)) and run your existing tool battery. Anything that timed out before should now return a task; anything that completed in milliseconds should still return synchronously.
 10. **Document the TTL for each tool** and the expected polling interval. Surface them in your server's tool descriptions so client authors know what to plan for.
 
-If you do those ten things between now and July 28, your server is RC-ready and your tooling is in a strictly better operational position than it was in April. If you do none of them, you have a working MCP server today that becomes a broken MCP server in August.
+Do those ten things and your server is 2026-07-28-ready, with tooling in a strictly better operational position than it had under `2025-11-25`. Do none of them and your long-running tools keep timing out, and your server works with modern hosts only for as long as they keep a legacy `initialize` [fallback path](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http#backward-compatibility) alive.
 
 ---
 
 ## Where this is heading
 
-The 2026-07-28 RC is the moment MCP stops being a protocol that assumes synchronous work and starts being one that admits the reality of agent infrastructure: most useful tools take longer than a single request budget. Tasks formalize what teams were already hacking around with progress tokens, polling endpoints, and prayer.
+The 2026-07-28 spec is the moment MCP stops being a protocol that assumes synchronous work and starts being one that admits the reality of agent infrastructure: most useful tools take longer than a single request budget. Tasks formalize what teams were already hacking around with progress tokens, polling endpoints, and prayer.
 
 The 12-month trajectory is the convergence with A2A. Both protocols now have task lifecycles, both have human-in-the-loop pause states, both are governed by the AAIF. The interesting questions move up the stack — registries, capability marketplaces, cross-agent observability, and the [defense-in-depth patterns](/lab/camel-dual-llm-defense/) that production systems need when an agent's tool surface and its peer surface are both long-lived and stateful.
 
-For teams building today, the practical sequence is: refactor one long-running tool to Tasks against the RC, validate it against your highest-traffic client, then roll the pattern across the rest of your server. Treat the 10-week window as your one chance to break things in staging before they break in production. We do this work for teams shipping production agents — if you want a Tasks migration done before July 28, [let's talk](/contact/).
+For teams building today, the practical sequence is: refactor one long-running tool to Tasks against the final spec, validate it against your highest-traffic client, then roll the pattern across the rest of your server. The RC's validation window has closed, so staging is now the only place left to break things before production does. We do this work for teams shipping production agents — if you want a Tasks migration done right, [let's talk](/contact/).
