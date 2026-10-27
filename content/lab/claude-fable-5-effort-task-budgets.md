@@ -3,7 +3,6 @@ title: "Claude Fable 5 Agent Loops: effort and task-budgets"
 date: 2026-06-11
 tags: ["AI Agents", "Architecture", "LLMs", "Developer Tools"]
 description: "Claude Fable 5 ships effort and task_budget — two API primitives that govern cost, latency, and reliability in agent loops. A production wiring guide."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -307,7 +306,7 @@ class AgentLoop:
 Three things this loop gets right that most hand-rolled loops get wrong:
 
 1. **`stop_reason` is checked before `content` is read.** On Fable 5 this is not optional — a refused request is a successful HTTP 200, and `response.content[0]` may be empty. Reading content first throws an `IndexError` on exactly the requests you most need to handle. (More on refusals below.)
-2. **The assistant turn is appended verbatim** — full `response.content`, not just the extracted text. Thinking blocks must round-trip unchanged when you continue on the same model; reconstructing or stripping them breaks the turn.
+2. **The assistant turn is appended verbatim** — full `response.content`, not just the extracted text. Thinking blocks must round-trip unchanged when you continue on the same model; reconstructing or stripping them breaks the turn. Store them as sensitive data, not opaque ciphertext — researchers have shown that [encrypted reasoning traces can be decoded back to plaintext](/lab/stealing-reasoning-traces/).
 3. **Token spend is tallied client-side.** The budget countdown is invisible to you by design, so if you want a dashboard number, you build it from `usage.output_tokens` per turn. This is your only client-side window into how the budget is being consumed.
 
 The same loop in TypeScript, for teams on the Node SDK — the wire shape is identical, only the bindings differ:
@@ -678,4 +677,4 @@ The model is the same for everyone. What separates an agent loop that costs $8 a
 
 ---
 
-*We design and operate production agent loops on Claude — effort policy, budget governance, refusal handling, and the eval infrastructure that proves they hold under real traffic. If you're moving an agent onto Fable 5 and want the cost and reliability dialed in before it ships, [let's talk](/#contact).*
+*We design and operate production agent loops on Claude — effort policy, budget governance, refusal handling, and the eval infrastructure that proves they hold under real traffic. If you're moving an agent onto Fable 5 and want the cost and reliability dialed in before it ships, [let's talk](/contact/).*

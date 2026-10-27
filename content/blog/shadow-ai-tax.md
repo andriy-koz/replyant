@@ -12,7 +12,6 @@ faq:
     a: "The Shadow AI Audit runs five steps. Discover unsanctioned usage across DNS telemetry, CASB signals, browser-extension logs, and expense reports. Classify tools on a data-sensitivity-versus-vendor-risk matrix. Calculate dollar exposure using IBM's $670,000 anchor plus regulatory penalties. Sanction or Substitute each tool — block it, substitute an enterprise equivalent, or sanction with controls. Govern with DLP, prompt filtering, tiered access, and a quarterly re-audit cadence to prevent regrowth."
   - q: "How do you build an AI stack employees will actually use?"
     a: "Close the gap BlackFog's 63% identifies by building a tiered sanctioned stack: Tier 1 public LLMs for public data only, Tier 2 enterprise LLMs with zero-retention agreements and SSO for internal documents, and Tier 3 custom agents for regulated data. Make Tier 2 the path of least resistance with aggressive self-service and minimal approval gates. The [governance framework most enterprises are missing](/blog/ai-agent-governance/) is the structural backbone that keeps the stack from decaying."
-author: "Replyant"
 ---
 
 Every enterprise is paying a Shadow AI Tax, and the invoice arrives as a data breach.
@@ -119,4 +118,4 @@ The Shadow AI Audit closes the gap by refusing the binary. Discovery surfaces wh
 
 The companies that run the audit in 2026 will have a defensible governance posture when the EU AI Act takes effect in August, when breach disclosures start naming shadow AI explicitly, and when their boards start asking for the dollar figure. The companies that continue to rely on blocklists and policy memos will keep paying the tax until a breach makes the invoice public.
 
-If you're evaluating shadow AI exposure in your organization and want to run the five-step audit against your actual environment — [that's exactly the work we do](/#contact).
+If you're evaluating shadow AI exposure in your organization and want to run the five-step audit against your actual environment — [that's exactly the work we do](/contact/).

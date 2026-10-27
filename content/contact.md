@@ -34,14 +34,14 @@ Useful detail to share: the workflow you want to change, the metric you want to 
       <input type="text" id="contact-website" name="website" autocomplete="off" tabindex="-1">
     </div>
     <button type="submit" class="btn btn-primary">Send the brief</button>
-    <p class="lead-msg lead-msg--success" hidden>Got it — we will reply within one business day.</p>
-    <p class="lead-msg lead-msg--error" hidden>Something went wrong. Please try again, or email us directly.</p>
+    <p class="lead-msg lead-msg--success" role="status" aria-live="polite" hidden>Got it — we will reply within one business day.</p>
+    <p class="lead-msg lead-msg--error" role="alert" hidden>Something went wrong. Please try again, or email us directly.</p>
   </form>
   <aside class="contact-aside">
     <h2 class="contact-aside-heading">Prefer a calendar?</h2>
-    <!-- TODO: Replace with Cal.com / Calendly iframe. -->
+    <!-- TODO: Replace .calendar-placeholder with a Cal.com / Calendly booking embed. -->
     <div class="calendar-placeholder">
-      <p>Prefer to book directly? <a href="mailto:hello@replyant.com">Email us</a> and we will send a calendar link.</p>
+      <p>Prefer a call? <a href="mailto:hello@replyant.com">Email us</a> and we will send a booking link.</p>
     </div>
     <h2 class="contact-aside-heading">What to expect</h2>
     <ul class="contact-list">

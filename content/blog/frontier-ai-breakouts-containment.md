@@ -108,4 +108,4 @@ The 2026 breakouts were not about models becoming unstoppable. They were about c
 
 Your agents will not be more careful than Claude Mythos 5, and your test environments get less scrutiny than a frontier lab's evaluation infrastructure. Verify egress, block at the network, and make disclosure a contract term. Containment you have not tested is something your team believes, not something you have.
 
-*If you cannot say today how your agents' outbound access is enforced, or when it was last tested, [that is exactly the containment review we run](/#contact).*
+*If you cannot say today how your agents' outbound access is enforced, or when it was last tested, [that is exactly the containment review we run](/contact/).*

@@ -24,7 +24,7 @@ Six months later, the pilot is still a pilot. Or it's been quietly shelved. Or i
 
 You're not alone. According to Deloitte's 2025 Emerging Technology report, while 68% of organizations are actively exploring or piloting AI agents, only 14% have solutions ready for real deployment. That means roughly 86% of AI agent initiatives stall before they deliver any meaningful ROI.
 
-This isn't a technology problem. The models are good. The tools are mature. The problem is almost always one of three things — and all three are fixable.
+This isn't a technology problem. The models are good. The tools are mature. The problem is almost always one of three things — and all three are fixable. (These are pilot-stage failures. If you haven't chosen a use case yet, start with [the strategic mistakes that sink AI agent projects before they begin](/blog/why-businesses-fail-at-ai-agents/); if your agent has already cleared the pilot, the risk shifts to the cost and value reviews behind [Gartner's forecast that 40% of agentic projects will be cancelled](/blog/gartner-40-percent-cancellation-cliff/).)
 
 {{< cta heading="Move your pilot into the 14%." pitch="Replyant ships the data, governance, and ownership layer pilots usually skip." button="Get to production" href="/services/ai-agent-development/" >}}
 
@@ -112,4 +112,4 @@ But the gap between a working pilot and a production system that delivers ongoin
 
 The businesses that will win in the next two years aren't the ones who launch the most pilots. They're the ones who ask the hard questions early, build on solid foundations, and treat AI agents as a core part of how they operate — not an experiment running in the corner.
 
-If you want to understand [the real costs involved](/blog/how-much-does-ai-chatbot-cost/) before committing, start there. And if you're trying to move from pilot to production — or want to get the architecture right from the start — [get in touch](/#contact).
+If you want to understand [the real costs involved](/blog/how-much-does-ai-chatbot-cost/) before committing, start there. And if you're trying to move from pilot to production — or want to get the architecture right from the start — [get in touch](/contact/).

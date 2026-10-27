@@ -3,7 +3,6 @@ title: "MCP Tasks: Async, Resumable Tool Calls Before July 28"
 date: 2026-05-24
 tags: ["MCP", "Architecture", "Developer Tools", "Tool Calling"]
 description: "MCP's 2026-07-28 release candidate locked on May 21. Tasks graduated to a first-class extension. Here is what every server author has 10 weeks to refactor."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -26,7 +25,7 @@ The RC reorganises the protocol along three axes: a stateless core, a formal ext
 
 **Stateless core.** The `initialize` / `initialized` handshake is removed. The `Mcp-Session-Id` header is removed. Client info and per-request client capabilities now travel in a `_meta` envelope on every request. The motivation is operational: "any MCP request can land on any server instance," which eliminates sticky sessions and shared session stores. Servers no longer remember who you are between calls — every call brings its own context.
 
-**Extensions framework.** Optional features now live outside the core spec under reverse-DNS extension IDs, negotiated through an `extensions` map on client and server capabilities. The RC's deprecation policy commits to at least twelve months between deprecation and the earliest possible removal of any feature, including extensions. This is what makes it safe to depend on Tasks in production code today — even if the extension iterates, you get a year of warning before a method goes away.
+**Extensions framework.** Optional features now live outside the core spec under reverse-DNS extension IDs, negotiated through an `extensions` map on client and server capabilities. The RC's deprecation policy commits to at least twelve months between deprecation and the earliest possible removal of any feature, including extensions. This is what makes it safe to depend on Tasks in production code today — even if the extension iterates, you get a year of warning before a method goes away. Tasks is not the only extension landing with this spec: MCP Apps, which lets servers ship interactive UIs that the host renders, arrives too, with [a client-side attack surface of its own](/lab/mcp-apps-ui-attack-surface/).
 
 **Tasks graduated.** Tasks were experimental in `2025-11-25` and are an extension in `2026-07-28`. The official rationale: "production use surfaced enough redesign that the right home for it is an extension rather than the specification." Translation — the working group learned that async lifecycle decisions are best made independently of the core protocol's release train, so Tasks now version on their own and ship their own implementation guides at [modelcontextprotocol.io/extensions/tasks/overview](https://modelcontextprotocol.io/extensions/tasks/overview).
 
@@ -604,4 +603,4 @@ The 2026-07-28 RC is the moment MCP stops being a protocol that assumes synchron
 
 The 12-month trajectory is the convergence with A2A. Both protocols now have task lifecycles, both have human-in-the-loop pause states, both are governed by the AAIF. The interesting questions move up the stack — registries, capability marketplaces, cross-agent observability, and the [defense-in-depth patterns](/lab/camel-dual-llm-defense/) that production systems need when an agent's tool surface and its peer surface are both long-lived and stateful.
 
-For teams building today, the practical sequence is: refactor one long-running tool to Tasks against the RC, validate it against your highest-traffic client, then roll the pattern across the rest of your server. Treat the 10-week window as your one chance to break things in staging before they break in production. We do this work for teams shipping production agents — if you want a Tasks migration done before July 28, [let's talk](/#contact).
+For teams building today, the practical sequence is: refactor one long-running tool to Tasks against the RC, validate it against your highest-traffic client, then roll the pattern across the rest of your server. Treat the 10-week window as your one chance to break things in staging before they break in production. We do this work for teams shipping production agents — if you want a Tasks migration done before July 28, [let's talk](/contact/).

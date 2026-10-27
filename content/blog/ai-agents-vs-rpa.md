@@ -183,4 +183,4 @@ The automation landscape has matured past the point where a single technology wi
 
 RPA isn't dead. AI agents aren't a silver bullet. The winning strategy is knowing exactly which tool fits which workflow — and having the process discipline to [deploy both without creating chaos](/blog/scaling-ai-agents/).
 
-If you're evaluating where AI agents fit alongside your existing automation, or you're starting from scratch and want to get the architecture right from day one — [that's exactly the kind of strategic work we do](/#contact).
+If you're evaluating where AI agents fit alongside your existing automation, or you're starting from scratch and want to get the architecture right from day one — [that's exactly the kind of strategic work we do](/contact/).

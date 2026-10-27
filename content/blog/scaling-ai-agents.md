@@ -153,4 +153,4 @@ Scaling AI agents is a strategy problem, not a technology problem. The models ar
 
 One agent proves the concept. A platform makes it repeatable. A fleet of coordinated agents — built on shared data, governed by shared standards, measured against real business outcomes — transforms how your company operates.
 
-Start by getting the foundation right. If you're still evaluating whether your organization is ready for that first step, our [readiness checklist](/blog/ai-readiness-checklist/) is the place to begin. If you've already proven the model and want to build the scaling strategy — [let's talk](/#contact).
+Start by getting the foundation right. If you're still evaluating whether your organization is ready for that first step, our [readiness checklist](/blog/ai-readiness-checklist/) is the place to begin. If you've already proven the model and want to build the scaling strategy — [let's talk](/contact/).

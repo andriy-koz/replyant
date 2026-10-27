@@ -380,7 +380,7 @@ This isn't premature optimization. At production scale, an agent handling 500 co
 
 MCP is a significant step forward, but it's not a complete solution. Being honest about its limitations is more useful than pretending they don't exist.
 
-**Security is still immature.** The specification defines how authentication *can* work, but doesn't enforce it. Default MCP server implementations often ship with minimal security. The April 2025 security analysis by independent researchers identified prompt injection, data exfiltration via tool combinations, and tool impersonation as outstanding risks. These are solvable — but they require deliberate engineering that most tutorials skip.
+**Security is still immature.** The specification defines how authentication *can* work, but doesn't enforce it. Default MCP server implementations often ship with minimal security. The April 2025 security analysis by independent researchers identified prompt injection, data exfiltration via tool combinations, and tool impersonation as outstanding risks. These are solvable — but they require deliberate engineering that most tutorials skip. The surface has grown since, too: [MCP tool poisoning](/lab/mcp-tool-poisoning/) hides instructions in tool descriptions, and the [MCP Apps extension](/lab/mcp-apps-ui-attack-surface/) now lets servers ship HTML that executes inside the host.
 
 **No built-in observability.** MCP doesn't define a standard for logging, monitoring, or auditing tool calls. In production, you need to know which tools were called, with what parameters, what was returned, and whether the agent's eventual response was appropriate. You're building this observability layer yourself.
 

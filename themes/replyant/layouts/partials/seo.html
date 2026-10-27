@@ -1,138 +1,200 @@
-{{- $ogImage := (.Params.ogImage | default .Site.Params.ogImage) | absURL -}}
+{{- /*
+  Head SEO: <title>, meta description, robots, canonical, Open Graph, Twitter Card, JSON-LD.
+  JSON-LD is built as Go maps and serialised once with `jsonify | safeJS`: html/template treats
+  <script type="application/ld+json"> as a JS context, so un-marked jsonify output would be
+  re-quoted ("\"Replyant\""). jsonify unicode-escapes the HTML-significant characters (lt, gt, amp), so values cannot break out.
+*/ -}}
+{{- $page := . -}}
+{{- $iso := "2006-01-02T15:04:05Z07:00" -}}
+{{- $home := "/" | absURL -}}
+{{- $orgID := printf "%s#organization" $home -}}
+{{- $author := site.Params.author -}}
+{{- $personURL := $author.url | absURL -}}
+{{- $personID := printf "%s#%s" $personURL (anchorize $author.name) -}}
+{{- $is404 := eq .Kind "404" -}}
+{{- $isArticle := and .IsPage (or (eq .Section "blog") (eq .Section "lab")) -}}
+
+{{- /* Pagination: only the blog/lab section lists paginate. Calling .Paginator elsewhere would
+       generate unwanted /page/N/ outputs, so it is guarded to those list pages. */ -}}
+{{- $pageNum := 1 -}}
+{{- $canonical := .Permalink -}}
+{{- if and (eq .Kind "section") (or (eq .Section "blog") (eq .Section "lab")) -}}
+  {{- $pageNum = .Paginator.PageNumber -}}
+  {{- $canonical = .Paginator.URL | absURL -}}
+{{- end -}}
+
+{{- /* Title: append " | Replyant" only when the result fits in 70 characters. */ -}}
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s — %s" site.Title site.Params.description -}}
+{{- else -}}
+  {{- $bare := .Title -}}
+  {{- if gt $pageNum 1 }}{{ $bare = printf "%s — Page %d" $bare $pageNum }}{{ end -}}
+  {{- $full := printf "%s | %s" $bare site.Title -}}
+  {{- $title = cond (le (strings.RuneCount $full) 70) $full $bare -}}
+{{- end -}}
+
+{{- /* Description */ -}}
+{{- $desc := "" -}}
+{{- if .IsHome -}}
+  {{- $desc = site.Params.metaDescription | default site.Params.description -}}
+{{- else if .Description -}}
+  {{- $desc = .Description -}}
+{{- else if eq .Kind "term" -}}
+  {{- $desc = printf "Explore articles and insights about %s — practical guidance from strategy to implementation." .Title -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $desc = printf "Browse all topics covered on %s — from AI agents to business automation." site.Title -}}
+{{- else -}}
+  {{- $desc = site.Params.description -}}
+{{- end -}}
+{{- if gt $pageNum 1 }}{{ $desc = printf "%s — Page %d" $desc $pageNum }}{{ end -}}
+
+{{- /* Social image: per-page `image` (or legacy `ogImage`) param, else the site default card. */ -}}
+{{- $imgParam := .Params.image | default .Params.ogImage -}}
+{{- $isDefaultImg := not $imgParam -}}
+{{- $imgURL := $imgParam | default site.Params.ogImage | absURL -}}
+{{- $imgAlt := cond $isDefaultImg (printf "%s — %s" site.Title site.Params.tagline) .Title -}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+{{- if or $is404 .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{- end }}
+{{- if not $is404 }}
+<link rel="canonical" href="{{ $canonical }}">
+
 <!-- Open Graph -->
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:image" content="{{ $ogImage }}">
-{{ if .IsPage -}}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{{ $imgURL }}">
+{{- if $isDefaultImg }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{- end }}
+<meta property="og:image:alt" content="{{ $imgAlt }}">
+{{- if $isArticle }}
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-{{ with .Params.tags }}{{ range . }}<meta property="article:tag" content="{{ . }}">
-{{ end }}{{ end -}}
-{{ else -}}
+{{- if not .Date.IsZero }}
+<meta property="article:published_time" content="{{ .Date.Format $iso }}">
+{{- end }}
+{{- if not .Lastmod.IsZero }}
+<meta property="article:modified_time" content="{{ .Lastmod.Format $iso }}">
+{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- else }}
 <meta property="og:type" content="website">
-{{ end -}}
+{{- end }}
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
-<meta name="twitter:image" content="{{ $ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $imgURL }}">
+<meta name="twitter:image:alt" content="{{ $imgAlt }}">
 
-<!-- JSON-LD: Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": {{ .Site.Title | jsonify }},
-  "url": {{ .Site.BaseURL | jsonify }},
-  "description": {{ .Site.Params.description | jsonify }}
-}
-</script>
+{{- /* ── JSON-LD entity graph ─────────────────────────────────────────── */ -}}
+{{- $org := dict
+  "@type" (slice "Organization" "ProfessionalService")
+  "@id" $orgID
+  "name" site.Title
+  "url" $home
+  "logo" (dict "@type" "ImageObject" "url" ("android-chrome-512x512.png" | absURL) "width" 512 "height" 512)
+  "image" (site.Params.ogImage | absURL)
+  "description" site.Params.description
+  "founder" (dict "@id" $personID)
+-}}
+{{- $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" $author.name
+  "jobTitle" $author.jobTitle
+  "url" $personURL
+  "description" $author.bio
+  "worksFor" (dict "@id" $orgID)
+-}}
+{{- $graph := slice $org $person -}}
 
-{{ if .IsHome -}}
-<!-- JSON-LD: WebSite -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ .Site.Title | jsonify }},
-  "url": {{ .Site.BaseURL | jsonify }},
-  "description": {{ .Site.Params.description | jsonify }},
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ .Site.Title | jsonify }}
-  }
-}
-</script>
-{{ end -}}
+{{- if .IsHome -}}
+  {{- $graph = $graph | append (dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" $home)
+    "name" site.Title
+    "url" $home
+    "description" site.Params.description
+    "inLanguage" "en-US"
+    "publisher" (dict "@id" $orgID)
+  ) -}}
+{{- else -}}
+  {{- /* BreadcrumbList: Home → ancestors → this page (always last, absolute URLs). */ -}}
+  {{- $chain := slice site.Home -}}
+  {{- range .Ancestors.Reverse }}{{ if not .IsHome }}{{ $chain = $chain | append . }}{{ end }}{{ end -}}
+  {{- $chain = $chain | append $page -}}
+  {{- $crumbs := slice -}}
+  {{- range $i, $p := $chain -}}
+    {{- $name := $p.LinkTitle -}}
+    {{- if $p.IsHome -}}
+      {{- $name = "Home" -}}
+    {{- else if eq $p.Kind "section" -}}
+      {{- $name = $p.Params.linkTitle | default ($p.Section | humanize | title) -}}
+    {{- end -}}
+    {{- $url := $p.Permalink -}}
+    {{- if eq (add $i 1) (len $chain) -}}
+      {{- $url = $canonical -}}
+      {{- if gt $pageNum 1 }}{{ $name = printf "%s — Page %d" $name $pageNum }}{{ end -}}
+    {{- end -}}
+    {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add $i 1) "name" $name "item" $url) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" $canonical) "itemListElement" $crumbs) -}}
+{{- end -}}
 
-{{ if not .IsHome -}}
-<!-- JSON-LD: BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": {{ .Site.BaseURL | jsonify }}
-    }{{ if .Section }},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": {{ .Section | humanize | title | jsonify }},
-      "item": {{ printf "%s%s/" .Site.BaseURL .Section | jsonify }}
-    }{{ end }}{{ if and .IsPage .Section }},
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ .Title | jsonify }},
-      "item": {{ .Permalink | jsonify }}
-    }{{ end }}
-  ]
-}
-</script>
-{{ end -}}
+{{- if $isArticle -}}
+  {{- $authorNode := dict "@id" $personID -}}
+  {{- with .Params.author -}}
+    {{- /* A per-post override that isn't the persona or the brand becomes a plain named Person. */ -}}
+    {{- if and (ne . $author.name) (ne . site.Title) -}}
+      {{- $authorNode = dict "@type" "Person" "name" . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $image := $imgURL -}}
+  {{- if $isDefaultImg }}{{ $image = dict "@type" "ImageObject" "url" $imgURL "width" 1200 "height" 630 }}{{ end -}}
+  {{- $a := newScratch -}}
+  {{- $a.Set "@type" (cond (eq .Section "blog") "BlogPosting" "TechArticle") -}}
+  {{- $a.Set "@id" (printf "%s#article" .Permalink) -}}
+  {{- $a.Set "headline" .Title -}}
+  {{- $a.Set "description" $desc -}}
+  {{- $a.Set "url" .Permalink -}}
+  {{- $a.Set "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) -}}
+  {{- $a.Set "image" $image -}}
+  {{- $a.Set "inLanguage" "en-US" -}}
+  {{- $a.Set "author" $authorNode -}}
+  {{- $a.Set "publisher" (dict "@id" $orgID) -}}
+  {{- if not .Date.IsZero }}{{ $a.Set "datePublished" (.Date.Format $iso) }}{{ end -}}
+  {{- if not .Lastmod.IsZero }}{{ $a.Set "dateModified" (.Lastmod.Format $iso) }}{{ end -}}
+  {{- with .Params.tags }}{{ $a.Set "keywords" . }}{{ end -}}
+  {{- $graph = $graph | append $a.Values -}}
+{{- end -}}
 
-{{ if and .IsPage (or (eq .Section "blog") (eq .Section "lab")) -}}
-<!-- JSON-LD: Article -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "{{ if eq .Section "blog" }}BlogPosting{{ else }}TechArticle{{ end }}",
-  "headline": {{ .Title | jsonify }},
-  "description": {{ .Description | jsonify }},
-  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-  "url": {{ .Permalink | jsonify }},
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
-  },
-  "author": {
-    "@type": "Person",
-    "name": {{ with .Params.author }}{{ . | jsonify }}{{ else }}{{ $.Site.Params.author.name | jsonify }}{{ end }}
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ .Site.Title | jsonify }},
-    "url": {{ .Site.BaseURL | jsonify }}
-  }
-  {{- with .Params.tags }},
-  "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t | jsonify }}{{ end }}]
-  {{- end }}
-}
-</script>
-{{ end -}}
+{{- if eq .Kind "term" -}}
+  {{- $items := slice -}}
+  {{- range $i, $p := .Pages -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "url" $p.Permalink "name" $p.Title) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict
+    "@type" "CollectionPage"
+    "@id" $canonical
+    "name" .Title
+    "description" $desc
+    "url" $canonical
+    "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len .Pages) "itemListElement" $items)
+  ) -}}
+{{- end }}
 
+<!-- JSON-LD -->
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
 {{ partial "faq-schema.html" . }}
-
 {{ partial "service-schema.html" . }}
-
-{{ if eq .Kind "term" -}}
-<!-- JSON-LD: CollectionPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": {{ .Title | jsonify }},
-  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ printf "Explore articles and insights about %s — practical guidance from strategy to implementation." .Title | jsonify }}{{ end }},
-  "url": {{ .Permalink | jsonify }},
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [{{ range $i, $p := .Pages }}{{ if $i }},{{ end }}
-      {
-        "@type": "ListItem",
-        "position": {{ add $i 1 }},
-        "url": {{ $p.Permalink | jsonify }},
-        "name": {{ $p.Title | jsonify }}
-      }{{ end }}
-    ]
-  }
-}
-</script>
-{{ end -}}
+{{- end }}

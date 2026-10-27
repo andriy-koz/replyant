@@ -3,7 +3,6 @@ title: "Loopjacking: When the Action You Approved Isn't the One That Runs"
 date: 2026-10-26
 tags: ["AI Agents", "Architecture", "Governance", "Tool Calling"]
 description: "Loopjacking breaks human-in-the-loop approval: the tool call a reviewer sees isn't the one that runs. Bind each approval to a digest of the exact call."
-author: "Replyant"
 ---
 
 Human-in-the-loop approval is a security control only if the operation the human sees is, byte for byte, the operation that executes. Loopjacking is the name for every way that binding breaks, and the fix is mechanical: hash a canonical form of the exact pending tool call at approval time, store the approval against that digest, and refuse to execute anything whose digest no longer matches.

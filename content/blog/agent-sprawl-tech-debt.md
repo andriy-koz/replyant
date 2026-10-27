@@ -12,7 +12,6 @@ faq:
     a: "Gartner's six-step framework runs in order: establish agent governance and policies, build a centralized agent inventory, define agent identity, permissions, and lifecycle, develop AI information governance, monitor and remediate agent behavior, and foster a culture of responsible AI usage. Steps one through three are the structural foundation, four and five the daily operational layer, and step six the cultural reinforcement that keeps the rest from degrading into shelfware."
   - q: "What does agent sprawl cost a business?"
     a: "Agent sprawl compounds across four cost categories — duplicate licensing, security incident exposure, integration debt, and remediation labor — and lands on the operating budget within twelve to eighteen months of unmanaged growth. Remediation labor alone historically runs two to four times the original deployment cost. It is a finance problem disguised as an IT problem, and the same accounting discipline that surfaces [AI ROI in dollar terms](/blog/measuring-ai-agent-roi/) is what gets it funded."
-author: "Replyant"
 ---
 
 Agent sprawl is the tech debt enterprises will spend 2027 and 2028 paying down, and the bill is being run up right now.
@@ -90,7 +89,7 @@ The EU AI Act's transparency and risk-management obligations apply to AI systems
 
 The same is true for sector-specific regulators. Financial services firms operating under SEC Rule 17a-4 communications retention requirements are already obligated to preserve the substantive content of agent interactions where those agents act in business communications. Healthcare organizations under HIPAA must document data flows; an undocumented agent flow is a documented audit finding. The [EU AI Act compliance work coming due](/blog/eu-ai-act-compliance/) intersects directly with the agent inventory: the regulation assumes you have one.
 
-The enforcement timing favors enterprises that started in 2026. Agent populations doubling every quarter mean the cost of inventory grows superlinearly with delay. An organization that runs its first inventory at 50 agents catalogs 50 agents. The same organization waiting until Q1 2027 catalogs 500. By Q3 2027, 5,000. The math is not friendly to procrastination.
+The enforcement timing favors enterprises that started in 2026. Agent populations doubling every quarter mean the cost of inventory grows superlinearly with delay. An organization that runs its first inventory at 50 agents catalogs 50 agents. The same organization waiting until Q1 2027 catalogs 500. By Q3 2027, 5,000. The math is not friendly to procrastination. Vendors set deadlines of their own, too: [OpenAI's GPT-4o and GPT-4.1 API retirement](/blog/gpt-4o-api-retirement-migration/) starts with exactly the model-and-agent inventory most companies cannot yet produce.
 
 {{< cta heading="Install the management plane in a quarter." pitch="Six steps, one engagement, before the 150,000-agent forecast catches you." >}}
 
@@ -100,4 +99,4 @@ Agent sprawl is not a hypothetical. It is the operating reality of any enterpris
 
 The six-step framework is installable in a quarter for a mid-market enterprise and in two for a global one. It does not require a new headcount. It requires the existing IT and security teams to treat agents as a governed asset class on the same footing as identities, endpoints, and data, and to install the management plane before the population growth makes retrofitting expensive. The companies that do this in 2026 ship agents into production with a defensible governance posture. The companies that wait will spend 2027 and 2028 unwinding a tech debt category they could have prevented.
 
-If you're sizing your agent population, drafting an agent governance policy, or scoping a management plane against the six-step framework, [that's exactly the work we do](/#contact).
+If you're sizing your agent population, drafting an agent governance policy, or scoping a management plane against the six-step framework, [that's exactly the work we do](/contact/).

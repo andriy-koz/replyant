@@ -1,6 +1,9 @@
 ---
 title: "Workflows: Automating Business Process with Agents"
 description: "Automating business workflows with AI agents — process design, orchestration, and integrating multi-step automation into operations."
+noindex: true
+sitemap:
+  disable: true
 ---
 
 Workflow automation is where agents stop being a demo and start doing the work. The value is rarely a single clever model call — it is a designed process: an agent that reads an input, takes several steps across real systems, hands off to a person when it should, and produces an outcome a team can rely on.

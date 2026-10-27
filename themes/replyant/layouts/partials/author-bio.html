@@ -1,31 +1,25 @@
-{{- $authorName := .Params.author | default .Site.Params.author.name -}}
-{{- $isDefault := eq $authorName .Site.Params.author.name -}}
-{{- $authorURL := .Site.BaseURL -}}
-{{- $bio := "Replyant builds AI agents and ships automation that survives the next release cycle — strategy, engineering, and consulting for businesses ready to grow faster." -}}
-{{- if not $isDefault -}}
-  {{- $bio = printf "%s writes for Replyant on AI agents, automation, and what it takes to ship work that lasts." $authorName -}}
-{{- end -}}
-
+{{- /* Author box. The Person entity itself is emitted once in the head JSON-LD graph
+       (partials/seo.html), so no schema is declared here. */ -}}
+{{- $persona := site.Params.author -}}
+{{- $authorName := .Params.author | default $persona.name -}}
+{{- $isPersona := or (eq $authorName $persona.name) (eq $authorName site.Title) -}}
+{{- if $isPersona -}}
+<div class="author-bio-card">
+  <div class="author-bio-mark" aria-hidden="true">{{ substr $persona.name 0 1 | upper }}</div>
+  <div class="author-bio-content">
+    <div class="author-bio-name">{{ $persona.name }}</div>
+    {{- with $persona.jobTitle }}
+    <div class="net-label" style="margin-bottom:10px">{{ . }}</div>
+    {{- end }}
+    <p>{{ $persona.bio }} <a href="{{ $persona.url }}">About {{ $persona.name }} →</a></p>
+  </div>
+</div>
+{{- else -}}
 <div class="author-bio-card">
   <div class="author-bio-mark" aria-hidden="true">{{ substr $authorName 0 1 | upper }}</div>
   <div class="author-bio-content">
     <div class="author-bio-name">{{ $authorName }}</div>
-    <p>{{ $bio }}</p>
+    <p>{{ $authorName }} writes for Replyant on AI agents, automation, and what it takes to ship work that lasts.</p>
   </div>
 </div>
-
-<!-- JSON-LD: Person (author E-E-A-T) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": {{ $authorName | jsonify }},
-  "url": {{ $authorURL | jsonify }},
-  "description": {{ $bio | jsonify }},
-  "worksFor": {
-    "@type": "Organization",
-    "name": {{ .Site.Title | jsonify }},
-    "url": {{ .Site.BaseURL | jsonify }}
-  }
-}
-</script>
+{{- end -}}

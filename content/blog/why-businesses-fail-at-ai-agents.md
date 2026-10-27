@@ -26,6 +26,8 @@ That's a staggering gap between investment and return. So what separates the com
 
 After building custom AI agents and automation systems for businesses of all sizes, we've seen the pattern clearly. The problem is almost never the technology. It's how companies approach it.
 
+This post covers the strategic mistakes made before a project starts. If your pilot is already built and stuck, read [why AI agent pilots stall before production](/blog/ai-pilot-to-production/); if your agent is live but facing a budget review, [Gartner's 40% cancellation cliff](/blog/gartner-40-percent-cancellation-cliff/) covers what kills projects after the demo works.
+
 ---
 
 ## The Four Mistakes That Kill AI Agent Projects

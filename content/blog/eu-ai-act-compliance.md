@@ -22,6 +22,8 @@ This is not a theoretical risk. The regulation is final, the deadlines are fixed
 
 That gap creates both risk and opportunity. The companies that act now will be positioned to operate confidently when enforcement begins. The ones waiting for perfect clarity will be scrambling in August.
 
+This guide covers the Act's risk categories and the compliance checklist. For how the enforcement timeline has shifted since publication — and which obligations are already live — read [the EU AI Act delay trap](/blog/eu-ai-act-delay-trap/).
+
 {{< cta heading="Compliant agents by August 2." pitch="Replyant builds the documentation, oversight, and audit trail the EU AI Act requires." button="Get compliance-ready" href="/services/strategic-consulting/" >}}
 
 ## What the EU AI Act actually requires
@@ -136,4 +138,4 @@ Organizations that have followed disciplined deployment practices — clear proc
 
 Four months is enough time to prepare if you start now. It is not enough time to wait and see.
 
-If you're deploying AI agents and need architecture that's compliance-ready from day one — or you need to assess your existing systems against the EU AI Act's requirements — [that's exactly the kind of strategic and technical work we do](/#contact).
+If you're deploying AI agents and need architecture that's compliance-ready from day one — or you need to assess your existing systems against the EU AI Act's requirements — [that's exactly the kind of strategic and technical work we do](/contact/).

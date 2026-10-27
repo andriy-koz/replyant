@@ -81,4 +81,4 @@ Amazon lost its fastest lever, not its ability to control its own front door. Th
 
 Both takeaways reduce to the same instruction. The enforceable perimeter is the one you built before the traffic arrived.
 
-If you are deciding whether to admit agents to your platform, or diligencing a vendor whose architecture you have never actually seen documented, [drawing that line clearly is exactly the kind of assessment we run](/#contact).
+If you are deciding whether to admit agents to your platform, or diligencing a vendor whose architecture you have never actually seen documented, [drawing that line clearly is exactly the kind of assessment we run](/contact/).

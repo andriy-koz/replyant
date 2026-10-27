@@ -1,6 +1,9 @@
 ---
 title: "Observability: Watching AI Agents in Production"
 description: "Observing AI agents in production — tracing, logging, cost and latency monitoring, and catching drift before it reaches users."
+noindex: true
+sitemap:
+  disable: true
 ---
 
 Observability is what turns a production agent from a black box into a system you can operate. Once an agent is live, you need to see every step it takes, what each call cost, how long it took, and where it went wrong — before a user or a finance report tells you.

@@ -83,7 +83,7 @@ Closing a user interface does not stop a scheduled worker, retry queue, delegate
 
 Treat the agent's execution trace as an operational record. Preserve the request and retrieved context, model and harness versions, policy decisions, tool arguments and results, browser or API activity, memory writes, approval records, and identity events. Capture the configuration that determined permissions. Keep sensitive evidence in the restricted incident workspace; copying it into a broad chat channel only creates a second exposure.
 
-Do not ask the agent to summarize its own incident as the primary record. It may be useful for triage, but the source of truth is the system evidence. In particular, do not overwrite its state or clear queues until the snapshot is complete and the investigator has documented why an emergency action was necessary.
+Do not ask the agent to summarize its own incident as the primary record. It may be useful for triage, but the source of truth is the system evidence. Be equally careful pointing a fresh agent at raw logs: attacker-controlled strings in telemetry are an injection channel, as the [GhostJacking attack on observability pipelines](/lab/ghostjacking-observability-prompt-injection/) demonstrated. In particular, do not overwrite its state or clear queues until the snapshot is complete and the investigator has documented why an emergency action was necessary.
 
 ### Assess scope with facts and unknowns separated
 

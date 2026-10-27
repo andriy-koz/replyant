@@ -42,6 +42,8 @@ Same four phases as our other practices — discovery, build, ship, operate — 
 
 We don't take engagements where the underlying process is fundamentally broken. Automating a broken process produces a broken process running faster. Discovery surfaces this — the [scaling AI agents post](/blog/scaling-ai-agents/) covers the systemic version of the same trap.
 
+Our [automation case studies](/case-studies/) show what this looks like in practice, including multi-clinic intake and scheduling work. When you have a workflow to map, [contact us to scope the automation](/contact/).
+
 ## Related thinking
 
 Our automation work draws on the same operational discipline we publish on. Start here if you want to evaluate how we think about workflow design:

@@ -3,7 +3,6 @@ title: "GuardFall: Why Shell-Injection Guards Fail in 10 of 11 AI Agents"
 date: 2026-07-08
 tags: ["Tool Calling", "Developer Tools", "Architecture"]
 description: "GuardFall bypasses the command-safety guards in 10 of 11 open-source AI coding agents. Here's why string-matching fails — and how to build a guard that doesn't."
-author: "Replyant"
 ---
 
 **GuardFall** is a shell-injection guard bypass, disclosed June 30, 2026 by [Adversa AI](https://adversa.ai/blog/opensource-ai-coding-agents-shell-injection-vulnerability/), that defeats the command-safety filters in 10 of 11 surveyed open-source AI coding agents. The root cause is one sentence: **the filter checks what the command *looks like*; bash runs what the command *means*, and those two things are not the same.** Safety guards string-match the raw command text an agent proposes. But before bash executes anything, it rewrites that text — removing quotes, expanding variables, splitting fields, running substitutions. The guard approves a string the shell never actually runs.
@@ -204,9 +203,9 @@ This is the same discipline that separates a robust tool layer from a fragile on
 A parsing guard is necessary but not sufficient. Defense in depth means assuming the guard will eventually be bypassed and limiting the blast radius:
 
 - **Redirect `$HOME` per agent session** so `~/.aws`, `~/.ssh`, and other credential stores are not where the agent expects them.
-- **Disable auto-execute** unless the agent is genuinely unattended and sandboxed. A human approval step defeats most single-shot payloads.
+- **Disable auto-execute** unless the agent is genuinely unattended and sandboxed. A human approval step defeats most single-shot payloads — as long as the approval is bound to the exact command that executes, which is precisely where [Loopjacking attacks on human-in-the-loop approval](/lab/loopjacking-human-in-the-loop-approval/) strike.
 - **Disable agents on forked PRs in CI** — a forked PR is untrusted code proposing to run itself on your runners.
-- **Audit repo-shipped agent configs** (Makefiles, `.agent` configs, task files) before granting an agent access to a repository you did not author.
+- **Audit repo-shipped agent configs** (Makefiles, `.agent` configs, task files) before granting an agent access to a repository you did not author. A repository can execute code before any command is even proposed, as [GitSpawn's .git/config attack on coding agents](/lab/gitspawn-coding-agent-repo-execution/) shows.
 
 ## The takeaway for teams shipping agents
 

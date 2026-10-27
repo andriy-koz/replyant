@@ -90,7 +90,7 @@ This is the middle ground — tools like Voiceflow, Botpress, Stack AI, or Make.
 
 **Typical cost: $15,000 – $200,000+ (build) + $1,000 – $5,000/month (maintenance and hosting)**
 
-This is what we do at Replyant, and it's what makes sense when the other two options can't deliver the outcome you need. A custom AI agent is built specifically for your business — your workflows, your data, your systems, your edge cases.
+This is what we do at Replyant through our [custom AI agent development service](/services/ai-agent-development/), and it's what makes sense when the other two options can't deliver the outcome you need. A custom AI agent is built specifically for your business — your workflows, your data, your systems, your edge cases.
 
 **What you get:**
 - An agent designed around your actual process (not a template) — built with [the same rigor that goes into production agent design](/lab/anatomy-of-an-ai-agent-system-prompt/)
@@ -211,7 +211,7 @@ If the answer is "just our FAQ page," a platform might work. If it's "our CRM, o
 200 conversations a day is very different from 20. And if you're growing, today's volume is the wrong number to plan for. Price for where you'll be in 12 months.
 
 **5. What's the cost of *not* automating?**
-This is the number most businesses forget to calculate. Three support agents spending 60% of their time on repetitive inquiries is $81,000/year in wasted capacity. That's not a technology cost — it's an operational cost you're already paying. The [hire-vs-automate framework](/blog/hire-vs-automate/) helps you compare the real costs of both paths — including the hidden costs of hiring for work that a machine should be doing.
+This is the number most businesses forget to calculate. Three support agents spending 60% of their time on repetitive inquiries is $81,000/year in wasted capacity. That's not a technology cost — it's an operational cost you're already paying. The [hire-vs-automate framework](/blog/hire-vs-automate/) helps you compare the real costs of both paths — including the hidden costs of hiring for work that a machine should be doing. For phone-heavy service businesses, the cost of not automating shows up as unanswered calls — our [AI receptionist ROI formula](/blog/ai-receptionist-roi/) prices that missed-call leak directly.
 
 ---
 
@@ -223,5 +223,5 @@ A $50/month tool built on a solid, well-designed process will outperform a $100,
 
 The companies that get the best ROI aren't the ones that spend the most. They're the ones that spend in the right order: process first, technology second, optimization ongoing.
 
-If you're trying to figure out what the right investment looks like for your specific situation, that's a conversation worth having — before you commit to any platform, vendor, or build.
+If you're trying to figure out what the right investment looks like for your specific situation, that's a conversation worth having — before you commit to any platform, vendor, or build. When you're ready, [scope the build with one of our engineers](/contact/) — we start with the workflow, not the price tag.
 

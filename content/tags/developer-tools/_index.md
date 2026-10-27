@@ -1,6 +1,6 @@
 ---
 title: "AI Developer Tools & Engineering Workflows"
-description: "AI-powered developer tools and workflows — from coding agents to CI/CD integration and productivity engineering."
+description: "AI-powered developer tools and workflows — coding agents, CI/CD integration, agent security, and the productivity engineering that holds up."
 ---
 
 AI is reshaping the developer toolchain. Coding agents, intelligent code review, automated testing, and LLM-assisted debugging are moving from novelty to necessity for teams that want to ship faster without sacrificing quality.

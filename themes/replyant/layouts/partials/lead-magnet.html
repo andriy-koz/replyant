@@ -24,9 +24,10 @@
             <input type="text" id="lead-website" name="website" autocomplete="off" tabindex="-1">
           </div>
           <button type="submit" class="btn btn-primary">Send it to me</button>
-          <p class="lead-msg lead-msg--success" hidden>Check your inbox — it's on the way.</p>
-          <p class="lead-msg lead-msg--error" hidden>Something went wrong. Please try again.</p>
         </form>
+        {{/* Messages sit outside the form: leads.js hides the form on success, which would otherwise hide the confirmation too. */}}
+        <p class="lead-msg lead-msg--success" role="status" aria-live="polite" hidden>Check your inbox — it's on the way.</p>
+        <p class="lead-msg lead-msg--error" role="alert" hidden>Something went wrong. Please try again.</p>
         <p class="lead-fineprint">No spam. One email, the checklist, done.</p>
       </div>
     </div>

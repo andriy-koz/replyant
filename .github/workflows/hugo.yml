@@ -60,3 +60,57 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Ping IndexNow (Bing, Yandex, Seznam, Naver, ...) with posts changed in this push.
+  # Best-effort: never fails the workflow, and skips when no blog/lab post changed.
+  indexnow:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: github.event_name == 'push'
+    continue-on-error: true
+    env:
+      SITE_URL: https://replyant.com
+      SITE_HOST: replyant.com
+      INDEXNOW_KEY: e80a856bfda359052a58a7504d3ffe04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Submit changed URLs to IndexNow
+        continue-on-error: true
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          set -uo pipefail
+          # Diff the whole push; fall back to the head commit for new branches / force pushes.
+          if [[ -n "$BEFORE_SHA" && ! "$BEFORE_SHA" =~ ^0+$ ]] && git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            files=$(git diff --name-only --no-renames "$BEFORE_SHA" "$AFTER_SHA" -- content/blog content/lab)
+          else
+            files=$(git diff-tree --root --no-commit-id --name-only --no-renames -r "$AFTER_SHA" -- content/blog content/lab)
+          fi
+          urls=()
+          while IFS= read -r f; do
+            if [[ "$f" =~ ^content/(blog|lab)/([^/]+)\.md$ && "${BASH_REMATCH[2]}" != "_index" ]]; then
+              urls+=("${SITE_URL}/${BASH_REMATCH[1]}/${BASH_REMATCH[2]}/")
+            fi
+          done <<< "$files"
+          if [[ ${#urls[@]} -eq 0 ]]; then
+            echo "No blog/lab posts changed in this push; skipping IndexNow."
+            exit 0
+          fi
+          urls+=("${SITE_URL}/" "${SITE_URL}/sitemap.xml")
+          payload=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s \
+            --arg host "$SITE_HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg loc "${SITE_URL}/${INDEXNOW_KEY}.txt" \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: .}')
+          echo "$payload"
+          status=$(curl -sS -o indexnow-response.txt -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$payload")
+          echo "IndexNow HTTP status: $status"
+          cat indexnow-response.txt 2>/dev/null || true
+          [[ "$status" == "200" || "$status" == "202" ]]

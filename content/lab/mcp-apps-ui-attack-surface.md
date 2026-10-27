@@ -3,7 +3,6 @@ title: "MCP Apps: Sandboxed UIs and Their New Attack Surface"
 date: 2026-07-05
 tags: ["MCP", "Architecture", "Integration", "Tool Calling"]
 description: "MCP Apps renders server-supplied HTML inside your agent host — a new client-side attack surface. Three trust boundaries, real attacks, and the defenses."
-author: "Replyant"
 ---
 
 MCP Apps — the first official Model Context Protocol extension, folded into the 2026-07-28 spec — lets a server ship an interactive HTML UI that the *host* renders and executes inside the agent, not text the model reads. That single change moves untrusted server output across a boundary it never crossed before: from a string in the model's prompt to JavaScript running in the client. The threat model is no longer "the LLM was tricked by poisoned text." It is "the client executed attacker-supplied markup." Classic web risks — sandbox escape, `postMessage` origin confusion, clickjacking — become *agent* risks, and the defenses are the ones web engineers already know, applied to a surface most agent teams have never had to think about. This post teaches the mechanism, then dissects the three trust boundaries and the concrete attacks each one opens.

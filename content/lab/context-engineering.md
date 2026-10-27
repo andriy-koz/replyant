@@ -162,7 +162,7 @@ The opposite failure. The agent lacks information it needs, so it either halluci
 
 ### Retrieval Failures: Wrong Information
 
-The context window contains information, but it's the wrong information. A semantic search returns topically related but irrelevant documents. The agent confidently cites the retrieved content and produces a plausible-sounding wrong answer. This is worse than context starvation because the agent doesn't know it's wrong.
+The context window contains information, but it's the wrong information. A semantic search returns topically related but irrelevant documents. The agent confidently cites the retrieved content and produces a plausible-sounding wrong answer. This is worse than context starvation because the agent doesn't know it's wrong. The structural fix is to stop retrieving blindly: [agentic RAG with adaptive retrieval](/lab/agentic-rag-adaptive-retrieval/) lets the agent decide when to retrieve, route each query to the right tool, and grade results before it uses them.
 
 ### Structural Incoherence
 
@@ -210,4 +210,4 @@ Context engineering is the discipline that separates AI agents that impress in d
 
 ---
 
-*We design context engineering pipelines for production AI agents — the layer between your business systems and the model that determines whether your agent actually works. If you're seeing inconsistent agent performance or want to [quantify the ROI](/blog/ai-roi-calculator/) before investing in context infrastructure, [let's talk](/#contact).*
+*We design context engineering pipelines for production AI agents — the layer between your business systems and the model that determines whether your agent actually works. If you're seeing inconsistent agent performance or want to [quantify the ROI](/blog/ai-roi-calculator/) before investing in context infrastructure, [let's talk](/contact/).*

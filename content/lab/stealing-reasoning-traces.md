@@ -3,7 +3,6 @@ title: "Stolen Thoughts: How Encrypted Reasoning Traces Leak Secrets"
 date: 2026-08-15
 tags: ["AI Agents", "Architecture", "LLMs", "Developer Tools"]
 description: "Encrypted chain-of-thought blocks replay across models and sessions. Researchers decoded 315,320 reasoning traces and recovered 704 secrets. How to defend."
-author: "Replyant"
 ---
 
 On August 10, 2026, researchers from MATS, the ELLIS Institute Tübingen, the Max Planck Institute for Intelligent Systems, and Snyk published "Stealing Reasoning Traces from Proprietary LLM APIs" (arXiv:2608.09867, [stolen-thoughts.com](https://stolen-thoughts.com/)). In two API calls they recovered the hidden reasoning of frontier models in verbatim plaintext — a Claude Opus 4.8 trace decoded by a jailbroken Claude Haiku 4.5 — without attacking the strong model or triggering its anti-distillation safeguards. Scaling the technique across 6,708 public agent trajectories from GitHub and Hugging Face, they decoded **315,320 reasoning blocks** and recovered **704 distinct secrets**: 62 API keys, 33 passwords, 24 access tokens, 30 personal email addresses, plus names, postal addresses, and internal URLs. Critically, **64 of those secrets appeared exclusively inside the reasoning blocks** — nowhere in the visible session text.
@@ -204,4 +203,4 @@ The "Stolen Thoughts" result is not a bug report against the labs; it is a corre
 
 ---
 
-*We architect agent systems where secrets never enter context, reasoning output is treated as the sensitive data it is, and stored traces are sanitized at the boundary before they reach a log, an eval dataset, or an observability pipeline. If your agents are persisting signed reasoning blocks anywhere, [let's talk](/#contact).*
+*We architect agent systems where secrets never enter context, reasoning output is treated as the sensitive data it is, and stored traces are sanitized at the boundary before they reach a log, an eval dataset, or an observability pipeline. If your agents are persisting signed reasoning blocks anywhere, [let's talk](/contact/).*

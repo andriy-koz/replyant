@@ -1,9 +1,8 @@
 ---
 title: "Agent Evals in CI/CD: From Vibe Checks to Gates"
 date: 2026-04-07
-tags: ["AI Agents", "Architecture", "Developer Tools"]
+tags: ["AI Agents", "Architecture", "Developer Tools", "Evals"]
 description: "Most teams shipping agents rely on manual testing. Here's how to build automated eval pipelines that gate deployments with real quality thresholds."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -75,7 +74,7 @@ A production eval pipeline operates at three layers, each running at a different
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-Layer 1 is where you experiment freely — testing new models, prompt variants, and tool configurations against a comprehensive golden dataset. This runs on demand, not on every commit. Layer 2 is the automated gate that prevents regressions from reaching production. It runs a focused subset of evaluations on every PR that touches agent code. Layer 3 catches the failures that synthetic test cases miss — model provider behavior shifts, real-world input distributions that differ from your test set, and gradual quality drift over time.
+Layer 1 is where you experiment freely — testing new models, prompt variants, and tool configurations against a comprehensive golden dataset. This runs on demand, not on every commit, and it is what turns a forced provider change — such as [the GPT-4o and GPT-4.1 API retirement migration](/blog/gpt-4o-api-retirement-migration/) — into a measured cutover instead of a guess. Layer 2 is the automated gate that prevents regressions from reaching production. It runs a focused subset of evaluations on every PR that touches agent code. Layer 3 catches the failures that synthetic test cases miss — model provider behavior shifts, real-world input distributions that differ from your test set, and gradual quality drift over time.
 
 Most teams start with Layer 2 (CI gates) because it delivers the highest ROI: preventing regressions before they ship. Gartner projects that 60% of engineering teams will adopt AI eval platforms by 2028, up from 18% in 2025. The tooling is maturing fast — DeepEval, Braintrust, and AWS Strands Evals all now support CI/CD integration out of the box.
 
@@ -556,7 +555,7 @@ The failure mode without evals is not dramatic. It is silent. A prompt change th
 
 These regressions are invisible in logs. The agent still responds. It still calls tools. It just makes slightly worse decisions — choosing the wrong tool 8% more often, hallucinating answers instead of querying the database, auto-approving actions it should escalate. Without evals, the first signal is usually a customer complaint or a [failed pilot that never reaches production](/blog/ai-pilot-to-production/). The 86% pilot failure rate is not caused by bad technology — it is caused by teams that cannot measure whether their agents are actually working.
 
-When organizations struggle to [scale their AI agents](/blog/scaling-ai-agents/) from a single use case to multiple workflows, the root cause is often the absence of quality infrastructure. [Multi-agent systems](/lab/multi-agent-systems/) compound the problem — each agent boundary is an opportunity for quality degradation, and without per-agent evals, you cannot isolate which agent in the chain is causing the failure.
+When organizations struggle to [scale their AI agents](/blog/scaling-ai-agents/) from a single use case to multiple workflows, the root cause is often the absence of quality infrastructure. [Multi-agent systems](/lab/multi-agent-systems/) compound the problem — each agent boundary is an opportunity for quality degradation, and without per-agent evals, you cannot isolate which agent in the chain is causing the failure. Output-level evals have a blind spot here too: a preregistered study of [invisible orchestrators in multi-agent systems](/lab/invisible-orchestrators-multi-agent-safety/) measured significant internal-state degradation while task output stayed at 100%.
 
 ---
 
@@ -580,4 +579,4 @@ Agent quality is not a property of the model. It is a property of the system —
 
 ---
 
-*We build eval pipelines and quality infrastructure for production AI agents — the testing layer that turns "it seems to work" into a measurable, enforceable quality bar. If your agents are in production without automated quality gates, or you're planning a deployment and want to [avoid the common pilot failure modes](/blog/ai-pilot-to-production/), [let's talk](/#contact).*
+*We build eval pipelines and quality infrastructure for production AI agents — the testing layer that turns "it seems to work" into a measurable, enforceable quality bar. If your agents are in production without automated quality gates, or you're planning a deployment and want to [avoid the common pilot failure modes](/blog/ai-pilot-to-production/), [let's talk](/contact/).*

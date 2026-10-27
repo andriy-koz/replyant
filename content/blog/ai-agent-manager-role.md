@@ -40,7 +40,7 @@ The correction to the standard business case is straightforward. A rollout that 
 
 This is a repricing of domain expertise, and it lands almost exactly where our [hire-versus-automate decision framework](/blog/hire-vs-automate/) said it would. That framework sorts work by repeatability, judgment complexity, data dependency, and relationship stakes — automate the high-repeatability, low-judgment work, hire for the rest. What the framework did not spell out is that agent deployment manufactures new high-judgment work as a byproduct. Every automated task generates an approval decision, and approval decisions are the highest-judgment, lowest-repeatability work in the pipeline. You automate the doing and you create more deciding.
 
-The practical read for a hiring manager: the best candidate for this role is often already inside your company, running the process you are about to automate. They carry the exception knowledge that makes review fast. Cutting that person and then hiring an agent manager externally at $103,000 is the [AI layoff boomerang](/blog/ai-layoff-trap/) with a new job title on it.
+The practical read for a hiring manager: the best candidate for this role is often already inside your company, running the process you are about to automate. They carry the exception knowledge that makes review fast. Cutting that person and then hiring an agent manager externally at $103,000 is the [AI layoff boomerang](/blog/ai-layoff-trap/) with a new job title on it. In California, it is also exactly the kind of cut that [Executive Order N-6-26 expects you to document as workflow redesign](/blog/california-ai-worker-doctrine/).
 
 ## What breaks when nobody owns the review queue?
 
@@ -70,4 +70,4 @@ The "replace headcount with agents" narrative is not wrong so much as incomplete
 
 An emerging job title with 739 postings in a single month, a 1,294% year-over-year increase, and a six-figure salary band is the market telling you what it costs to run agents at scale. Put the number in the business case now. Discovering it in month seven is how good agent programs get cancelled.
 
-*If your agent business case does not have a supervision line item — or you cannot say what share of your agent output a human is approving today — that gap is the first thing worth mapping. [That is exactly the kind of review we run](/#contact).*
+*If your agent business case does not have a supervision line item — or you cannot say what share of your agent output a human is approving today — that gap is the first thing worth mapping. [That is exactly the kind of review we run](/contact/).*

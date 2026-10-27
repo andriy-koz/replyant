@@ -12,7 +12,6 @@ faq:
     a: "Integration costs overrun by 30-50% because pilots scope only the model and prompt, while production requires the full stack: identity scoping, retrieval pipelines, evaluation harnesses, observability, human-review queues, and rollback procedures. Each layer is a budget line the pilot never surfaced. Companies that build a total-cost-of-ownership model tied to specific business KPIs before signing recover their investment 14 months faster, as we detail in [the dollar-accounting approach to measuring agent ROI](/blog/measuring-ai-agent-roi/)."
   - q: "Should I choose AELA flat-fee or per-token pricing?"
     a: "Run both. The procurement question is not 'AELA or per-token' but which mix matches each agent's risk profile. High-volume, predictable workloads benefit from AELA flat-fee economics; bursty or experimental workloads benefit from per-token elasticity. Most enterprises run a portfolio of both. Stress-test every contract at 50%, 100%, and 300% of forecast, and pick the structure whose worst-case scenario is survivable."
-author: "Replyant"
 ---
 
 The flat-fee era is over. In Q1 2026, Anthropic shifted enterprise billing to per-token consumption and every major model provider is expected to follow within six months. Salesforce countered with the Agentic Enterprise License Agreement — the AELA — a flat-fee shared-risk contract that buys predictability at the cost of vendor lock-in. Microsoft Copilot Studio, Salesforce Agentforce, and UiPath Autopilot now bundle infrastructure, security, and model access into per-seat or per-transaction fees. Relevance and a long tail of agent platforms run flat-fee plus credit-threshold hybrids. The net effect for buyers is brutal: licensing fees vary 10x across vendors for equivalent capability, integration costs overrun estimates by 30-50%, and the protection the flat-fee era provided against runaway usage is being repriced as a vendor-side risk premium that lands directly on your contract.
@@ -93,7 +92,7 @@ Run the proposed contract through three usage scenarios: 50% of forecast, 100% o
 
 ### Step 5: Tie the contract to KPIs and exit clauses
 
-Tie commercial terms to specific business KPIs and define exit clauses that reflect the lock-in risk. If the contract assumes the agent resolves 60% of inbound tickets, the renewal terms should adjust if it resolves 30% or 90%. If the contract is multi-year AELA, the exit clause should include a data-portability provision and a transition-services SLA. The 14-month TCO-recovery advantage shows up here: companies that link contract structure to outcome KPIs reach payback faster because the contract itself enforces the discipline.
+Tie commercial terms to specific business KPIs and define exit clauses that reflect the lock-in risk. If the contract assumes the agent resolves 60% of inbound tickets, the renewal terms should adjust if it resolves 30% or 90%. If the contract is multi-year AELA, the exit clause should include a data-portability provision and a transition-services SLA. The 14-month TCO-recovery advantage shows up here: companies that link contract structure to outcome KPIs reach payback faster because the contract itself enforces the discipline. If a vendor proposes per-resolution billing instead, our [outcome-based agent pricing playbook](/blog/outcome-based-agent-pricing/) covers how to define the unit and cap re-bills.
 
 ## What the AELA Pivot Means for Buyers Right Now
 
@@ -103,4 +102,4 @@ Buyers who get this cycle right will run the workload model, normalize the propo
 
 The same dynamic shows up adjacent to procurement. The [shadow AI tax](/blog/shadow-ai-tax/) is what happens when individual employees buy agent capability the procurement team never modeled. The [chatbot cost question](/blog/how-much-does-ai-chatbot-cost/) is the consumer-facing version of the AELA Pivot — same dispersion, same translation problem, same need for a workload model before the conversation starts.
 
-If you are going into an agent renewal or net-new RFP this quarter and want to run the workload model, normalize the proposals, and pressure-test contract structure against actual usage — [that is exactly the work we do](/#contact).
+If you are going into an agent renewal or net-new RFP this quarter and want to run the workload model, normalize the proposals, and pressure-test contract structure against actual usage — [that is exactly the work we do](/contact/).

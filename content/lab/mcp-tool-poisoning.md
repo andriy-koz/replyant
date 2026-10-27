@@ -3,7 +3,6 @@ title: "MCP Tool Poisoning: A Working Exploit and How to Stop It"
 date: 2026-06-27
 tags: ["MCP", "Tool Calling", "Architecture", "Prompt Engineering"]
 description: "Tool poisoning hides malicious instructions in MCP tool descriptions models trust but users never see. A working exploit, the rug pull, and defenses in code."
-author: "Replyant"
 ---
 
 Tool poisoning is the new prompt injection for the Model Context Protocol, and it is worse than the classic kind in one specific way: the payload lives in a tool's *metadata* — its description and parameter docs — which the agent's model ingests as trusted context but the human user never sees. The injected instruction is not in a document the agent happened to read once. It is in the tool registry the server controls. It fires on every invocation, for every user, persisting across sessions, until someone diffs the metadata. This post shows a working exploit, then the "rug pull" variant where a benign tool mutates after you approve it, then implements layered defenses — description pinning and diffing, an allowlist gate, and a human consent prompt — and watches the exploit get blocked.
@@ -92,7 +91,7 @@ What the wire looks like — this is the `tools/list` result the host hands to t
 
 Three properties make this dangerous. The instruction is **invisible** — no UI surfaces a tool's full description to the user. It is **persistent** — it executes every time the model considers this tool, not once. And it is **server-controlled** — the attacker can change it any time, which is the next variant.
 
-This is the same durability profile as [memory poisoning](/lab/memory-poisoning/): the payload is dormant text waiting in a trusted store, not an exploit binary you can scan for.
+This is the same durability profile as [memory poisoning](/lab/memory-poisoning/): the payload is dormant text waiting in a trusted store, not an exploit binary you can scan for. MCP Apps pushes the same trust problem one layer further — when a server ships UI instead of text, its payload runs in the client itself, a boundary we map in [the MCP Apps UI attack surface](/lab/mcp-apps-ui-attack-surface/).
 
 ---
 
@@ -259,4 +258,4 @@ If you run a multi-server MCP fleet, the [stateless-core refactor](/lab/mcp-goes
 
 ---
 
-*We architect MCP clients where every tool description is treated as untrusted input — pinned, allowlisted, and gated before it ever reaches the model. If you ship agents against third-party MCP servers and have not put a poisoning gate between fetch and exposure, [let's talk](/#contact).*
+*We architect MCP clients where every tool description is treated as untrusted input — pinned, allowlisted, and gated before it ever reaches the model. If you ship agents against third-party MCP servers and have not put a poisoning gate between fetch and exposure, [let's talk](/contact/).*

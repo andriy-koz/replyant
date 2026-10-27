@@ -117,7 +117,7 @@ A vendor who cannot answer question 1 has not started. That is a [build-versus-b
 
 Treat the model like any other dependency with an end-of-life policy:
 
-- **An abstraction layer.** Model IDs live in one configuration place, not scattered through code and no-code tools. Changing models becomes a one-line, logged decision.
+- **An abstraction layer.** Model IDs live in one configuration place, not scattered through code and no-code tools. Changing models becomes a one-line, logged decision. If you are rebuilding on OpenAI's newer agent stack anyway, our [OpenAI Agents API architecture guide](/lab/openai-agents-api-architecture/) shows how to keep sessions, sandboxes, tools and credentials as separate, replaceable planes.
 - **A standing eval suite.** The production-derived test set you build this month is rerun at every model change. It is the asset that turns the next migration from eleven weeks into two.
 - **A model-change budget.** Assume at least one forced migration per production AI system per year. Price the engineering, testing and owner time into the [ROI model for each agent](/blog/measuring-ai-agent-roi/), not into an unplanned overtime bill.
 - **A second qualified model.** Every critical workflow should have a tested fallback, ideally from a different provider. That is your rollback target and your negotiating leverage.
@@ -128,4 +128,4 @@ This is the same operational maturity that separates [pilots that reach producti
 
 January 14 is fixed, and the work that matters is not the model swap. It is knowing every place the retiring models run, proving the replacement on real traffic, re-pricing the workload honestly and getting vendors on the record. Companies that finish customer-facing cutovers by December 19 will barely notice the deadline. Companies that start in January will be migrating during an outage.
 
-*If you do not have a complete list of where GPT-4o and GPT-4.1 run in your business today — including inside the tools you license — that inventory is the first thing worth building. [It is exactly the kind of migration review we run](/#contact).*
+*If you do not have a complete list of where GPT-4o and GPT-4.1 run in your business today — including inside the tools you license — that inventory is the first thing worth building. [It is exactly the kind of migration review we run](/contact/).*

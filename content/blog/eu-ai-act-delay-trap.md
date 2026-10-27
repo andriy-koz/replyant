@@ -68,4 +68,4 @@ The delay is real, narrow, and specific: high-risk obligations move to December 
 
 The businesses in trouble twelve months from now will not be the ones that misread the high-risk deadline. They will be the ones that heard "delayed" and stopped reading.
 
-If you are running AI agents into EU markets and want a clear-eyed read on which obligations bind you today versus which ones you have until 2027 to satisfy, [that separation is exactly the kind of audit we run](/#contact).
+If you are running AI agents into EU markets and want a clear-eyed read on which obligations bind you today versus which ones you have until 2027 to satisfy, [that separation is exactly the kind of audit we run](/contact/).

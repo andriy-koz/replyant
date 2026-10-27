@@ -3,7 +3,6 @@ title: "MCP Goes Stateless: Refactoring for the 2026-07-28 Spec"
 date: 2026-06-22
 tags: ["MCP", "Architecture", "Integration", "Developer Tools"]
 description: "The 2026-07-28 MCP RC drops the initialize handshake and Mcp-Session-Id, moves client info to _meta, and adds routing headers. What to refactor."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -190,4 +189,4 @@ Do those ten things and your server runs as an ordinary stateless HTTP service: 
 
 The 2026-07-28 RC is the moment MCP stops pretending it is a stateful, connection-oriented protocol and becomes what production infrastructure actually wants: stateless HTTP, header-routable at the edge, horizontally scalable by default. The handshake and the session header were the last things standing between an MCP server and a plain round-robin load balancer, and the RC removes both. Client identity moves to `_meta`; gateway routing moves to `Mcp-Method`/`Mcp-Name`; tracing rides W3C Trace Context end-to-end.
 
-Two honest caveats. This is a release candidate locked May 21, 2026, with GA on July 28 — the wire formats are baked, but treat field names as RC-final, not shipped-final, and validate against the SDK in staging before you commit. And statelessness pushes complexity, not away, but down: anything genuinely durable now *must* live in a shared store, because the protocol no longer lets you stash it in a connection. Pair this refactor with the [Tasks migration](/lab/mcp-async-tasks/) — the two halves of the same RC — and your server enters GA week in a strictly better operational position than it left June. We do this work for teams shipping production agents; if you want a stateless-core migration done before July 28, [let's talk](/#contact).
+Two honest caveats. This is a release candidate locked May 21, 2026, with GA on July 28 — the wire formats are baked, but treat field names as RC-final, not shipped-final, and validate against the SDK in staging before you commit. And statelessness pushes complexity, not away, but down: anything genuinely durable now *must* live in a shared store, because the protocol no longer lets you stash it in a connection. Pair this refactor with the [Tasks migration](/lab/mcp-async-tasks/) — the two halves of the same RC — and your server enters GA week in a strictly better operational position than it left June. We do this work for teams shipping production agents; if you want a stateless-core migration done before July 28, [let's talk](/contact/).

@@ -1,6 +1,6 @@
 ---
 title: "Hiring vs. Automating: When to Add AI Instead"
-description: "The hire vs. automate decision — when to add headcount, when to deploy AI agents, and how to get the balance right."
+description: "The hire vs. automate decision — when to add headcount, when to deploy AI agents, and how to get the balance between people and agents right."
 ---
 
 Every growing business faces the same question: should the next unit of capacity come from a new hire or an AI agent? The answer is rarely one or the other — it's about finding the right split between human judgment and machine execution.

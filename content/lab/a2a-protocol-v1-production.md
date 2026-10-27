@@ -3,7 +3,6 @@ title: "A2A Protocol v1.0: Production Patterns for Agents"
 date: 2026-05-06
 tags: ["AI Agents", "Multi-Agent Systems", "Architecture", "Integration"]
 description: "A2A v1.0 ships in April 2026 under the AAIF. Agent Cards, a five-state task lifecycle, and the orchestrator code that ties them together."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -500,4 +499,4 @@ The 12-month trajectory is a stack: MCP at the tool layer, A2A at the agent laye
 
 For teams building today, the practical sequence is the same one that worked for MCP: pick one inter-agent boundary that is real, model it as an A2A relationship, ship the Agent Card, run the orchestrator code from this post against it, and only then generalize. Building the protocol layer before you have a real coordination problem is how you end up with a beautifully decoupled system that solves a problem you do not have.
 
-We build production multi-agent systems for growing businesses, and we are increasingly building them on A2A. If you are at the point where two agents need to coordinate — across teams, across vendors, or across a human-in-the-loop pause — and you want to do it on the protocol that the AAIF, OpenAI, Anthropic, Google, Microsoft, AWS, and Block have all staked their roadmaps on, [let's talk](/#contact).
+We build production multi-agent systems for growing businesses, and we are increasingly building them on A2A. If you are at the point where two agents need to coordinate — across teams, across vendors, or across a human-in-the-loop pause — and you want to do it on the protocol that the AAIF, OpenAI, Anthropic, Google, Microsoft, AWS, and Block have all staked their roadmaps on, [let's talk](/contact/).

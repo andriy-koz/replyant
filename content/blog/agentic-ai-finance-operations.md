@@ -3,14 +3,13 @@ title: "Agentic AI in Finance: The Operations Playbook for 2026"
 date: 2026-06-29
 tags: ["AI Agents", "Automation", "Process Design", "Business Strategy"]
 description: "How finance teams deploy AI agents in production — month-end close, AP/AR, reconciliation, FP&A — and the governance model that makes it work."
-author: "Replyant"
 ---
 
 Finance teams that deploy AI agents in production — not as pilots, but as part of the operating model — are closing the books 35–40% faster and cutting manual processing time by 60–80%. That is not an aspiration for 2027. It is the operational reality for early adopters today, and the gap between them and everyone else is widening.
 
 KPMG estimates agentic AI will unlock roughly $3 trillion in corporate productivity and drive an average 5.4% annual EBITDA improvement across industries. The finance function sits at the center of that opportunity — not because CFOs are naturally early adopters, but because finance workflows are structured, the data is traceable, and the control requirements force the kind of disciplined deployment that makes agents reliable in production.
 
-76% of CFOs are now allocating budgets specifically for autonomous finance agents, not copilots. The question is no longer whether to deploy. It is how to deploy without losing the controls that keep an audit-ready finance function intact.
+76% of CFOs are now allocating budgets specifically for autonomous finance agents, not copilots. The question is no longer whether to deploy. It is how to deploy without losing the controls that keep an audit-ready finance function intact. This post covers that operating model; for deciding which finance AI bets to fund and when to stop, improve, or scale them, see our [CFO guide to managing finance AI as a portfolio](/blog/cfo-finance-ai-portfolio/).
 
 ---
 

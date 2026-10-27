@@ -22,7 +22,7 @@ That's not because AI doesn't deliver returns — it does, often dramatically. T
 
 If you're evaluating an AI agent investment — whether it's a $5,000 chatbot or a $150,000 custom automation system — you need a framework that gives you an honest number. Not a vendor's best-case scenario. Not a back-of-napkin guess. An actual, defensible calculation you can take to your CFO.
 
-Here's one that works.
+Here's one that works. It is built for the decision *before* you spend; if your agents are already live and you need to prove what they deliver, our [guide to measuring deployed AI agent ROI](/blog/measuring-ai-agent-roi/) covers that side of the problem.
 
 {{< cta heading="Stop guessing your AI ROI." pitch="Replyant builds the measurement layer before your CFO asks." button="Run the numbers" href="/services/strategic-consulting/" >}}
 
@@ -48,7 +48,7 @@ AI agents don't perform at full capacity on launch day. There's a ramp-up period
 
 ### They don't account for the cost of doing nothing
 
-This is the biggest blind spot. Most ROI calculations compare "invest in AI" vs. "don't invest." But "don't invest" isn't free. The inefficiency you're living with today has a real, compounding cost — and it grows as your business scales. We'll factor this into the framework.
+This is the biggest blind spot. Most ROI calculations compare "invest in AI" vs. "don't invest." But "don't invest" isn't free. The inefficiency you're living with today has a real, compounding cost — and it grows as your business scales. We'll factor this into the framework. (For phone-driven service businesses, the clearest version of this cost is unanswered calls — our [AI receptionist ROI breakdown](/blog/ai-receptionist-roi/) turns a missed-call log into an annual revenue figure.)
 
 ---
 
@@ -78,7 +78,7 @@ What will the AI solution actually cost, end to end?
 
 Not just the technology. Everything: process mapping and redesign, the build or platform fees, data cleanup and integration, training and change management, ongoing hosting and maintenance (annualized), and the productivity dip during transition (typically 2-4 weeks of reduced output).
 
-If a vendor won't help you build this complete picture, that's a red flag. The [process-first approach](/blog/why-businesses-fail-at-ai-agents/) we use exists specifically because the technology cost is only a fraction of the real investment.
+If a vendor won't help you build this complete picture, that's a red flag. Discovery in our [AI agent development engagements](/services/ai-agent-development/) ends in a fixed-price estimate for exactly this reason. The [process-first approach](/blog/why-businesses-fail-at-ai-agents/) we use exists specifically because the technology cost is only a fraction of the real investment.
 
 ### Number 4: Expected Automation Rate (EAR)
 
@@ -189,5 +189,5 @@ The five-number framework forces discipline: know what you're spending today, kn
 
 If the numbers work, invest with confidence. If they don't, either the workflow isn't the right candidate or the solution isn't the right fit — and that's a valuable answer too. Better to discover it in a spreadsheet than six months into a failed implementation.
 
-The companies seeing real returns from AI agents aren't the ones making the biggest bets. They're the ones making the most informed bets.
+The companies seeing real returns from AI agents aren't the ones making the biggest bets. They're the ones making the most informed bets. If you want a second set of eyes on your five numbers, [run them past one of our engineers](/contact/) before you commit budget.
 

@@ -3,7 +3,6 @@ title: "Mantis and Agentic Security Scanning Before Merge"
 date: 2026-09-29
 tags: ["AI Agents", "Architecture", "Developer Tools", "Evals"]
 description: "How to design pre-submit security scans with localized threat models, independent triage, isolated reproduction, and evidence-based merge gates."
-author: "Replyant"
 ---
 
 Pre-submit agentic security scanning works when each code change gets a narrow threat model, a separate reachability check, and a human-reviewed path to remediation. Google's internal pipeline shows why: Google reports preventing **hundreds of vulnerabilities per month** from entering its infrastructure codebase, with false-positive rates as low as **3% in some cases**. Its specialized triage agent reports **over 92% precision in less than a minute**. These are Google's reported results for its own system, not benchmarks for the [open-source Mantis toolkit](https://github.com/google/mantis) or a result you can expect by cloning it.

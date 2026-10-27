@@ -1,6 +1,9 @@
 ---
 title: "Retrieval-Augmented Generation (RAG) for AI Agents"
 description: "Practical RAG engineering for production agents — agentic retrieval, query routing, verify loops, and the patterns that scale past naive pipelines."
+noindex: true
+sitemap:
+  disable: true
 ---
 
 Retrieval-Augmented Generation grounds an agent's answers in real data instead of relying on what the model memorized. But the naive RAG pipeline — embed, retrieve top-k, stuff into the prompt — breaks down the moment questions get multi-hop, sources get heterogeneous, or freshness matters. Production systems need retrieval that adapts.

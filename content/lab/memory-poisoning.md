@@ -3,7 +3,6 @@ title: "Memory Poisoning: The Attack That Waits"
 date: 2026-04-12
 tags: ["AI Agents", "Architecture", "LLMs"]
 description: "Memory-augmented agents face 95% injection-success attacks that persist 365 days across sessions. The threat map and a layered defense stack."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -395,7 +394,7 @@ def sanitize_before_write(entry: MemoryEntry) -> MemoryEntry:
 
 ### Layer 5: Retrieval-Time Auditing
 
-Every retrieval is logged with the trace ID, the query, and the source provenance of each returned entry. When an attack is eventually discovered---and in practice they are discovered after the fact---this log is the only way to reconstruct what the agent saw and when.
+Every retrieval is logged with the trace ID, the query, and the source provenance of each returned entry. When an attack is eventually discovered---and in practice they are discovered after the fact---this log is the only way to reconstruct what the agent saw and when. Treat it as untrusted input if an agent ever reads it back: the [GhostJacking attack](/lab/ghostjacking-observability-prompt-injection/) turned ordinary WAF logs into a prompt-injection channel.
 
 Governance frameworks increasingly require this audit trail. The [AI Agent Governance](/blog/ai-agent-governance/) post covers audit logging and kill-switch requirements; for memory systems, the log schema should include `entry_id`, `source`, `trust_score`, `anomaly_flags`, and `retrieval_score` for every record surfaced.
 
@@ -443,4 +442,4 @@ The attack that waits is dangerous precisely because its execution is invisible-
 
 ---
 
-*We architect memory security layers and adversarial eval pipelines for production AI agents. If your agents use long-term memory and you haven't modeled the write-path attack surface, [let's talk](/#contact).*
+*We architect memory security layers and adversarial eval pipelines for production AI agents. If your agents use long-term memory and you haven't modeled the write-path attack surface, [let's talk](/contact/).*

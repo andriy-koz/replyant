@@ -3,7 +3,6 @@ title: "The $2-Per-Resolution Era: AI Agent Pricing Just Flipped"
 date: 2026-07-05
 tags: ["Pricing", "AI Agents", "Business Strategy", "ROI"]
 description: "AI agent pricing flipped from per-seat to per-outcome. That quietly moves risk to the buyer. The procurement playbook for negotiating per-resolution deals."
-author: "Replyant"
 ---
 
 AI agent pricing flipped this quarter, and the flip moves risk onto your side of the table. This week Salesforce began charging Help Agent customers $2 per resolution — billed only when the agent closes a case without a human escalation. HubSpot cut its Customer Agent to $0.50 per resolved conversation. Intercom and Zendesk price the same way. On paper, outcome-based pricing looks like the fairest deal in software history: you pay only when the machine works. In practice, the vendor writes the definition of "works," meters it on infrastructure you cannot audit, and hands you the bill. If your renewal is coming up, your cost model just changed from a headcount question to a unit-economics question — and the person who defines the unit is not you.

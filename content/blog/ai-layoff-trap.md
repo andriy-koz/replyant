@@ -3,7 +3,6 @@ title: "AI Layoff Trap: Why 50% of AI Cuts Get Rehired in 2026"
 date: 2026-04-12
 tags: ["Hiring", "Business Strategy", "Automation", "ROI"]
 description: "50% of AI-attributed layoffs get quietly rehired at higher cost. Why the strategy backfires in 2026 — and the framework to avoid the trap."
-author: "Replyant"
 faq:
   - q: "Why do 50% of AI-driven layoffs get quietly rehired?"
     a: "Because the AI was deployed before validation proved it could carry the function. Forrester projects half of AI-attributed layoffs in 2026 will be rehired — offshore, through agencies, or at higher salaries — once gaps in exception handling, edge cases, and institutional knowledge become undeniable. The Duke CFO Survey projects ~502,000 AI-attributed cuts in 2026, a 9x increase over 2025."
@@ -147,10 +146,10 @@ Before announcing AI-attributed reductions --- or evaluating whether cuts alread
 
 The AI Layoff Trap is not a story about AI being oversold. It's a story about decision-makers skipping validation steps that would tell them whether the AI is ready to carry the function --- and absorbing the full cost of that shortcut across multiple budget lines over multiple quarters, in a format that never consolidates into a single visible number.
 
-The Duke CFO data, the Challenger Gray data, the Forrester rehire projections, and the Goldman Sachs productivity findings point to the same conclusion: the macro bet underlying aggressive AI-attributed headcount reduction has not paid off. Companies making irreversible workforce decisions against a productivity assumption that hasn't materialized are carrying structural risk their earnings narratives don't reflect.
+The Duke CFO data, the Challenger Gray data, the Forrester rehire projections, and the Goldman Sachs productivity findings point to the same conclusion: the macro bet underlying aggressive AI-attributed headcount reduction has not paid off. Companies making irreversible workforce decisions against a productivity assumption that hasn't materialized are carrying structural risk their earnings narratives don't reflect. For California employers, that risk now has a regulatory dimension too — [Newsom's AI worker executive order](/blog/california-ai-worker-doctrine/) turns AI-attributed cuts into documented, auditable events.
 
 The Augmentation-First Decision Model exists because the trap is avoidable. Shadow mode, supervised autonomy, delegated autonomy --- this sequence produces performance data that justifies restructuring, rather than restructuring first and hoping performance follows.
 
 Cut the work before you cut the people. That's the discipline. Everything else is financial theater.
 
-If you're evaluating an AI-attributed workforce restructuring and want to pressure-test the business case --- or if you've already made cuts and need to assess whether your AI deployment can carry the function --- [that's exactly the work we do](/#contact).
+If you're evaluating an AI-attributed workforce restructuring and want to pressure-test the business case --- or if you've already made cuts and need to assess whether your AI deployment can carry the function --- [that's exactly the work we do](/contact/).

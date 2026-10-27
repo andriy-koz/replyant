@@ -3,7 +3,6 @@ title: "GitSpawn: How a Repo's Git Config Runs Code in Coding Agents"
 date: 2026-10-26
 tags: ["AI Agents", "Claude Code", "Developer Tools", "Tool Calling"]
 description: "Untrusted repos ship a .git/config that runs code when coding agents shell out to git for context — before any trust prompt or sandbox. Here's why."
-author: "Replyant"
 ---
 
 A coding agent runs arbitrary code from an untrusted repository before the model decides anything and before you approve anything. The repository itself is the execution surface. Every mainstream coding agent shells out to `git` in the background to gather context, git treats several config keys as "run this program," and it reads those keys from the repository's own `.git/config`. So opening a hostile repo that arrives with its `.git` directory intact and pointing an agent at it is enough. The model is never in the loop, and neither is the sandbox.

@@ -1,21 +1,16 @@
+{{- /* FAQPage JSON-LD. Built as maps and serialised once (jsonify | safeJS) so html/template
+       does not re-quote the JSON inside the ld+json script. */ -}}
 {{- with .Params.faq -}}
 {{- if gt (len .) 0 -}}
+{{- $questions := slice -}}
+{{- range . -}}
+  {{- $questions = $questions | append (dict
+    "@type" "Question"
+    "name" .q
+    "acceptedAnswer" (dict "@type" "Answer" "text" .a)
+  ) -}}
+{{- end }}
 <!-- JSON-LD: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{{ range $i, $item := . }}{{ if $i }},{{ end }}
-    {
-      "@type": "Question",
-      "name": {{ $item.q | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ $item.a | jsonify }}
-      }
-    }{{ end }}
-  ]
-}
-</script>
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $questions | jsonify | safeJS }}</script>
 {{- end -}}
 {{- end -}}

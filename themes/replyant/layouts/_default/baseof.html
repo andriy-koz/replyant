@@ -4,9 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c1014">
-  <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if eq .Kind "term" }}Explore articles and insights about {{ .Title }} — practical guidance from strategy to implementation.{{ else if eq .Kind "taxonomy" }}Browse all topics covered on {{ .Site.Title }} — from AI agents to business automation.{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
-  <link rel="canonical" href="{{ .Permalink }}">
+  {{- /* <title>, meta description, robots, canonical, OG/Twitter and JSON-LD all live in seo.html */}}
   {{ partial "seo.html" . }}
   <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
@@ -21,11 +19,8 @@
   <style>{{ $critical.Content | safeCSS }}</style>
 
   {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
-  <link rel="preload" as="style" href="{{ $css.RelPermalink }}" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
-  </noscript>
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
   {{ partial "header.html" . }}

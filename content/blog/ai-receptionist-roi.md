@@ -130,4 +130,4 @@ The $126,000 average is a headline. Your number is what matters, and you can cal
 
 For most service businesses with a job value above a few hundred dollars, the answer lands somewhere between $40,000 and $200,000 a year in revenue that rings once and leaves. Against that, an AI phone agent at $99 to $299 a month has to recover one or two calls a month to break even. Everything after that is margin.
 
-Pull your call log. Find your answer rate. Do the multiplication. If the number is uncomfortable, that discomfort has been on your P&L the whole time — you just weren't looking at the right line. [That's the kind of leak we help businesses find and close](/#contact).
+Pull your call log. Find your answer rate. Do the multiplication. If the number is uncomfortable, that discomfort has been on your P&L the whole time — you just weren't looking at the right line. [That's the kind of leak we help businesses find and close](/contact/).

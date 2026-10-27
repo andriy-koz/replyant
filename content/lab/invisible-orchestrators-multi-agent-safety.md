@@ -3,7 +3,6 @@ title: "Invisible Orchestrators: The Multi-Agent Safety Blind Spot"
 date: 2026-07-27
 tags: ["Multi-Agent Systems", "AI Agents", "Governance", "Evals"]
 description: "A preregistered 365-run study found hidden orchestrators distort agent internal states at Hedges' g = 0.975 — while output-based evals stayed at 100%."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -411,4 +410,4 @@ Treat orchestrator visibility as an architectural parameter with a measured safe
 
 ---
 
-*We design and instrument production multi-agent systems — orchestration topology, internal-state telemetry, and eval layers that measure more than the final artifact. If you are running an orchestrator-worker pipeline and want to know what your traces are not telling you, [let's talk](/#contact).*
+*We design and instrument production multi-agent systems — orchestration topology, internal-state telemetry, and eval layers that measure more than the final artifact. If you are running an orchestrator-worker pipeline and want to know what your traces are not telling you, [let's talk](/contact/).*

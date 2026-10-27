@@ -3,10 +3,9 @@ title: "A CFO's Guide to Finance AI Portfolio Decisions"
 date: 2026-09-29
 tags: ["Business Strategy", "ROI", "AI Strategy", "Automation"]
 description: "Use stage gates to balance quick finance AI gains with longer bets on insight and forecasting, then decide what to stop, improve, or scale."
-author: "Replyant"
 ---
 
-**CFOs should manage finance AI as a portfolio of investments with different paths to value.** Fund a mix of near-term workflow improvements and longer-term decision capabilities, give each a measurable outcome, and review the evidence at defined gates. A fast payback is useful; it is not the only reason to invest.
+**CFOs should manage finance AI as a portfolio of investments with different paths to value.** Fund a mix of near-term workflow improvements and longer-term decision capabilities, give each a measurable outcome, and review the evidence at defined gates. A fast payback is useful; it is not the only reason to invest. This guide covers how to allocate and gate that investment; for how finance agents run day to day — month-end close, AP/AR, reconciliation, and the human-on-the-loop controls auditors expect — see [agentic AI in finance operations](/blog/agentic-ai-finance-operations/).
 
 The timing matters. In a [Gartner survey of 160 senior finance leaders conducted from January through April 2026](https://www.gartner.com/en/newsroom/press-releases/2026-09-24-gartner-says-cfos-must-take-a-more-disciplined-approach), data extraction, accounts payable and receivable automation, and report creation generally delivered expected value in nine to 10 months. Data management, insight generation, and forecasting typically took longer. Those are survey findings across respondents, not a promised payback period for any particular project.
 

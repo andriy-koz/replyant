@@ -1,5 +1,5 @@
 /* Critical CSS — above-the-fold for every template (header, hero, spine, readout).
-   Inlined in <head>; the full stylesheet loads asynchronously after.
+   Inlined in <head>; style.css carries the full component library.
    Design system: "The Schematic" — a dark drafting surface where the work is
    drawn as a signal-flow diagram. Boldness lives in the line-work; colour stays
    disciplined (graphite rules + bone type, signal teal for the live trace,
@@ -61,6 +61,33 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Metric-matched fallbacks — local system faces scaled to the web fonts'
+   metrics so the swap (font-display: swap) causes minimal reflow / CLS. */
+@font-face {
+  font-family: 'Space Grotesk Fallback';
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  size-adjust: 109.7%;
+  ascent-override: 89.7%;
+  descent-override: 26.6%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  size-adjust: 107.1%;
+  ascent-override: 90.5%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Courier New'), local('CourierNewPSMT'), local('Courier');
+  size-adjust: 100%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
 /* ── Reset ─────────────────────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -89,9 +116,9 @@
   --ok:      #56c98b;
   --alert:   #e5635f;
 
-  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-display: 'Space Grotesk', 'Space Grotesk Fallback', 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', 'Inter Fallback', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono:    'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --container:        1240px;
   --container-narrow: 760px;
@@ -159,7 +186,7 @@ img { height: auto; }
    name on a schematic. Replaces the old "§ 01" magazine markers. */
 .net-label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -198,8 +225,9 @@ img { height: auto; }
   cursor: pointer;
   transition: background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
   white-space: nowrap;
+  min-height: 44px;   /* tap-target floor */
 }
-.btn-sm { padding: 10px 16px; font-size: 0.72rem; }
+.btn-sm { padding: 10px 16px; font-size: 0.75rem; }
 
 .btn-primary {
   background: var(--signal);
@@ -288,7 +316,7 @@ img { height: auto; }
 .nav-links a {
   font-family: var(--font-mono);
   color: var(--ink-2);
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -334,7 +362,7 @@ img { height: auto; }
   justify-content: center;
   align-items: center;
   width: 44px;
-  height: 40px;
+  height: 44px;
 }
 .mobile-toggle span {
   display: block;
@@ -353,7 +381,7 @@ body.menu-open { overflow: hidden; }
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  padding: 150px 0 72px;
+  padding: 104px 0 72px;
 }
 
 /* Readout strip — live-feeling status line; ties the page to the brand's
@@ -366,9 +394,9 @@ body.menu-open { overflow: hidden; }
   border: 1px solid var(--line);
   background: linear-gradient(180deg, var(--panel) 0%, var(--base-2) 100%);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
-  margin-bottom: 52px;
+  margin-bottom: 36px;
 }
 .readout-item {
   display: flex;
@@ -399,7 +427,7 @@ body.menu-open { overflow: hidden; }
   align-items: center;
 }
 
-.hero-lede .net-label { margin-bottom: 26px; }
+.hero-lede .net-label { margin-bottom: 20px; }
 
 .hero h1 {
   font-family: var(--font-display);
@@ -408,7 +436,7 @@ body.menu-open { overflow: hidden; }
   line-height: 0.98;
   letter-spacing: -0.035em;
   color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .hero h1 .sig {
   color: var(--signal);
@@ -429,7 +457,7 @@ body.menu-open { overflow: hidden; }
   font-size: 1.12rem;
   color: var(--ink-2);
   max-width: 46ch;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
   line-height: 1.6;
 }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }

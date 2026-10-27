@@ -41,8 +41,16 @@ We are not the right fit if you want a chatbot for a marketing site, an AI strat
 
 ## The team
 
-Replyant operates as a small, senior team of engineers and strategists who have built and shipped agents across more than a dozen industries. We deliberately stay small — every engagement runs with senior practitioners on the keyboard, not a layer of account managers in between. When you talk to us about a project, you talk to the person who will build it.
+Replyant operates as a small, senior team of engineers and strategists who have built and shipped agents across a range of industries. We deliberately stay small — every engagement runs with senior practitioners on the keyboard, not a layer of account managers in between. When you talk to us about a project, you talk to the person who will build it.
 
-<!-- TODO: Replace with named founder/team bios when ready -->
+<!-- PLACEHOLDER persona: replace with real founder bio -->
+
+### Elena Marsh
+
+**Founder & Principal AI Engineer**
+
+Elena founded Replyant to close the gap between agent demos and agents that operators can actually run. She leads the engineering on every engagement: production AI agents, the integrations and MCP servers they depend on, and the evaluation and observability layers that decide whether a system ships.
+
+She also directs the agent security research published in the [Lab](/lab/) — the prompt-injection, tool-poisoning and approval-binding work that informs how we harden client systems. Her rule for engagements is simple: scope one workflow, agree the success metric in writing, gate every release on evals, and stay on through the operate phase until the numbers hold. If you start a project with Replyant, Elena is on the first call.
 
 {{< cta heading="Want to work together?" pitch="Tell us what you are trying to build. The first conversation is always with an engineer, and it is always free." href="/contact/" button="Start the conversation" >}}

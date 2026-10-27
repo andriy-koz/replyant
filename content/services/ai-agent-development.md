@@ -1,6 +1,6 @@
 ---
 title: "AI Agent Development Services"
-description: "Custom AI agents, multi-agent systems, and MCP integrations built for production. Discovery to operate in 6-12 weeks."
+description: "Custom AI agents, multi-agent systems, and MCP integrations built for production, eval-gated and observable. Discovery to operate in 6-12 weeks."
 tags: ["AI Agents", "Architecture", "MCP", "Evals"]
 service: true
 serviceType: "AI Agent Development"
@@ -41,6 +41,8 @@ Four phases, no surprises. Six to twelve weeks end-to-end for a typical single-a
 4. **Operate (ongoing, month-to-month).** Drift monitoring, eval regression triage, model upgrades, prompt tuning, new tool additions. Most engagements include a retainer for the first 90 days; some clients keep us on indefinitely as the agent surface area grows.
 
 We don't do fixed-scope multi-quarter engagements. The work is too sensitive to model and protocol changes to commit to a static deliverable nine months out.
+
+For the kinds of systems this produces — credit memo triage, tier-one support agents, intake automation — see our [AI agent case studies](/case-studies/). If you have a workflow in mind, [tell us about your agent project](/contact/) and the first call is with an engineer.
 
 ## Related thinking
 

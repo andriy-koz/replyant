@@ -3,7 +3,6 @@ title: "No Tools Required: RCE Through Agent State Persistence"
 date: 2026-08-25
 tags: ["AI Agents", "Architecture", "Developer Tools", "Prompt Engineering"]
 description: "Check Point's Black Hat 2026 research turns prompt injection into RCE through agent checkpointers. No tool call involved — the state layer is unaudited."
-author: "Replyant"
 ---
 
 On June 11, 2026, Check Point Research published [the full LangGraph checkpointer chain](https://research.checkpoint.com/2026/from-sqli-to-rce-exploiting-langgraphs-checkpointer/) — author Yarden Porat — and it reads like a 2005 web-app pentest report. CVE-2025-67644: SQL injection in the SQLite checkpointer, because `_metadata_predicate()` interpolates a caller-supplied filter key directly into a JSON path inside a `WHERE` clause. CVE-2026-27022: the same injection class in the Redis checkpointer. CVE-2026-28277: unsafe msgpack deserialization, where the extension hook is a general-purpose `import → getattr → call` primitive. Chain them and a poisoned `filter` dictionary forges a checkpoint row, the framework's own deserializer reconstructs it on the next read, and `("os", "system", "…")` becomes a shell. Two months later, at Black Hat USA 2026 on August 5, Porat and Shahar Tal presented ["No Tools Required: Post-Injection Exploitation Across AI Agent Frameworks"](https://www.theregister.com/security/2026/08/05/prompt-injection-isnt-the-bug-ai-agent-frameworks-are/5283585) and showed the same shape in Microsoft Agent Framework and Google ADK. Not one of these exploits required the agent to call a tool.

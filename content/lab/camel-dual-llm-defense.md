@@ -3,7 +3,6 @@ title: "CaMeL: The Dual-LLM Pattern That Proves Prompt Injection"
 date: 2026-04-23
 tags: ["AI Agents", "Architecture", "LLMs", "Prompt Engineering"]
 description: "CaMeL splits the LLM in two and wraps every value in a capability. 77% of AgentDojo tasks complete with provable prompt-injection defense."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -250,4 +249,4 @@ Beyond that, the next-read is the [anatomy of the agent system prompt](/lab/anat
 
 ---
 
-*We architect dual-LLM and capability-based defenses for production AI agents. If your agents have access to private data, untrusted content, and a send button, [let's talk](/#contact).*
+*We architect dual-LLM and capability-based defenses for production AI agents. If your agents have access to private data, untrusted content, and a send button, [let's talk](/contact/).*

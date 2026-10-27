@@ -1,6 +1,6 @@
 ---
 title: "AI Agent ROI: Measurement & Optimization"
-description: "Measuring and maximizing AI agent ROI — practical frameworks, real numbers, and the metrics that matter to leadership."
+description: "Measuring and maximizing AI agent ROI — practical frameworks, real benchmark numbers, and the metrics that matter to your CFO and leadership."
 ---
 
 Proving AI returns is one of the hardest challenges facing teams deploying agents. Traditional ROI models undercount benefits like error reduction and employee capacity recovery, while overestimating savings from automation alone.

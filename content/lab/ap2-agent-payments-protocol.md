@@ -3,7 +3,6 @@ title: "AP2 Agent Payments Protocol: Mandates, SD-JWT, Verification"
 date: 2026-07-22
 tags: ["AI Agents", "Architecture", "Integration", "Tool Calling"]
 description: "Google's AP2 gives AI agents cryptographic authority to spend. A technical breakdown of Checkout and Payment Mandates, SD-JWT chains, and verification."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">

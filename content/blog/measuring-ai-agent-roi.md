@@ -123,7 +123,7 @@ This is the layer most CFOs will push back on — and the one that most accurate
 
 Strategic value includes: data assets created by agent interactions (every conversation is structured data you didn't have before), competitive advantages from speed and consistency, organizational knowledge captured instead of lost when employees leave, and the optionality of a platform that can deploy new agents in weeks instead of months.
 
-**How to handle this with your CFO:** Don't argue about it. Present Layers 1-3 as the hard ROI and acknowledge Layer 4 as strategic positioning. CFOs understand portfolio optionality — they use the same logic for R&D budgets and platform investments. Frame it that way.
+**How to handle this with your CFO:** Don't argue about it. Present Layers 1-3 as the hard ROI and acknowledge Layer 4 as strategic positioning. CFOs understand portfolio optionality — they use the same logic for R&D budgets and platform investments. Frame it that way. (Finance leaders apply the same lens to their own function — our [CFO guide to stage-gating a finance AI portfolio](/blog/cfo-finance-ai-portfolio/) shows how.)
 
 The companies that measure only Layer 1 consistently undervalue their AI investments. The companies that lead with Layer 4 get their budgets cut. The ones that present all four layers — hard numbers first, strategic context second — keep their funding and expand it.
 
@@ -159,7 +159,7 @@ Stop tracking AI agent ROI in spreadsheets. Build a living dashboard that tracks
 
 The frequency matters. Cost metrics should update fast enough to catch problems — a sudden spike in inference costs, a drop in resolution rate. Revenue and leverage metrics need longer windows to show meaningful trends. Strategic metrics are directional — review them quarterly, not weekly.
 
-One dashboard, four layers, one source of truth. When the CFO asks what AI is delivering, you shouldn't need to build a presentation. You should be able to pull up a screen.
+One dashboard, four layers, one source of truth. When the CFO asks what AI is delivering, you shouldn't need to build a presentation. You should be able to pull up a screen. The pipelines and instrumentation behind that screen are standard [business automation](/services/business-automation/) work — and the layer most agent deployments skip.
 
 ---
 
@@ -171,4 +171,4 @@ The measurement framework is four layers: cost avoidance, revenue impact, operat
 
 72% of AI investments are currently destroying value through waste — not because the technology doesn't work, but because nobody is measuring the right things. Don't be part of that statistic.
 
-If you're still in the projection phase, start with our [five-number ROI framework](/blog/ai-roi-calculator/) to build the business case. If you're already making the [hire-vs-automate decisions](/blog/hire-vs-automate/) and need to prove what's working, the four-layer framework gives you the structure. And if your CFO is already asking questions you can't answer yet — [let's talk](/#contact).
+If you're still in the projection phase, start with our [five-number ROI framework](/blog/ai-roi-calculator/) to build the business case. If you're already making the [hire-vs-automate decisions](/blog/hire-vs-automate/) and need to prove what's working, the four-layer framework gives you the structure. And if your CFO is already asking questions you can't answer yet — [let's talk](/contact/).

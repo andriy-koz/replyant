@@ -3,7 +3,6 @@ title: "Speculative Tool Execution: Cut Agent Latency 48%"
 date: 2026-04-29
 tags: ["AI Agents", "Architecture", "Tool Calling", "LLMs"]
 description: "PASTE-style speculative tool execution cuts agent task time 48.5%. A working ~300 LOC harness over the Anthropic SDK with rollback and benchmarks."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">

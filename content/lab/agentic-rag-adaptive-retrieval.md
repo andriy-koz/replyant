@@ -3,7 +3,6 @@ title: "Agentic RAG: Adaptive Retrieval Patterns That Scale"
 date: 2026-06-29
 tags: ["RAG", "AI Agents", "LLMs", "Architecture"]
 description: "How agentic RAG beats naive pipelines: agent-controlled retrieval, query routing, verify-then-retrieve loops, and guardrails that prevent infinite loops."
-author: "Replyant"
 ---
 
 Naive RAG is a fixed pipeline: embed the query, run a vector search, stuff the top-K chunks into the prompt, and ask the model to answer. It works in demos and fails in production — because it retrieves blindly regardless of whether retrieval is needed, picks one tool regardless of query type, and never checks whether the results are any good. Agentic RAG replaces the fixed pipeline with agent-controlled retrieval: the agent decides *when* to retrieve, *which* tool to use, and *whether* the results are sufficient before generating an answer. That loop is the difference between a retrieval system that scales and one that compounds errors.

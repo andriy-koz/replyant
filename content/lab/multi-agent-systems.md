@@ -65,7 +65,7 @@ A central orchestrator receives the user's request, decomposes it into subtasks,
 
 **When to use it:** Complex, multi-step workflows where you need reasoning transparency and the ability to re-plan mid-execution. This is the pattern Anthropic uses in their own multi-agent research system — a lead agent (Claude Opus) coordinates 3-5 specialized subagents (Claude Sonnet) running in parallel. Their internal evaluation showed it outperformed a single Opus agent by 90.2% on research tasks.
 
-**Tradeoff:** The orchestrator is a single point of failure and a latency bottleneck. If it makes a bad plan, every worker executes the wrong thing efficiently.
+**Tradeoff:** The orchestrator is a single point of failure and a latency bottleneck. If it makes a bad plan, every worker executes the wrong thing efficiently. Whether workers can see the orchestrator matters too — our breakdown of [invisible orchestrators and multi-agent safety](/lab/invisible-orchestrators-multi-agent-safety/) covers a preregistered study where hidden coordination degraded agents' internal states while outputs stayed perfect.
 
 ### Pattern 2: Sequential Pipeline (Assembly Line)
 
@@ -550,4 +550,4 @@ For teams building today, the practical path is:
 
 88% of early adopters of agentic AI report positive ROI on at least one use case. The key is the discipline to get one system right before scaling to many — the same [compounding strategy](/blog/scaling-ai-agents/) that works at the organizational level works at the architectural level.
 
-We build production multi-agent systems for growing businesses. If you're at the point where a single agent isn't enough and want to avoid the failure modes that take down most multi-agent projects — [let's talk](/#contact).
+We build production multi-agent systems for growing businesses. If you're at the point where a single agent isn't enough and want to avoid the failure modes that take down most multi-agent projects — [let's talk](/contact/).

@@ -1,20 +1,17 @@
+{{- /* Service JSON-LD for service pages. Provider references the site-wide Organization node
+       emitted by seo.html. Serialised once (jsonify | safeJS) to avoid html/template re-quoting. */ -}}
 {{- if and (eq .Section "services") .IsPage -}}
-{{- $serviceType := .Params.serviceType | default .Title -}}
+{{- $service := dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "@id" (printf "%s#service" .Permalink)
+  "name" .Title
+  "description" (.Description | default site.Params.description)
+  "url" .Permalink
+  "serviceType" (.Params.serviceType | default .Title)
+  "areaServed" "Global"
+  "provider" (dict "@id" (printf "%s#organization" ("/" | absURL)))
+}}
 <!-- JSON-LD: Service -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": {{ .Title | jsonify }},
-  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Site.Params.description | jsonify }}{{ end }},
-  "url": {{ .Permalink | jsonify }},
-  "serviceType": {{ $serviceType | jsonify }},
-  "areaServed": "Global",
-  "provider": {
-    "@type": "Organization",
-    "name": {{ .Site.Title | jsonify }},
-    "url": {{ .Site.BaseURL | jsonify }}
-  }
-}
-</script>
+<script type="application/ld+json">{{ $service | jsonify | safeJS }}</script>
 {{- end -}}

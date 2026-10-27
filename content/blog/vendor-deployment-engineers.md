@@ -3,7 +3,6 @@ title: "The $9B Land Grab: Vendors Now Deploy Their Own AI Engineers"
 date: 2026-07-08
 tags: ["AI Strategy", "Business Strategy", "AI Agents", "ROI"]
 description: "Microsoft, OpenAI, Anthropic, and AWS committed ~$9B to embed their own deployment engineers in customers. What this fourth buyer path means for you."
-author: "Replyant"
 ---
 
 In ten weeks, four platform vendors committed roughly $9 billion to a single idea: sending their own engineers into customer organizations to build and run AI agent deployments. OpenAI launched a [$4B "Deployment Company"](https://www.forbes.com/sites/janakirammsv/2026/05/28/ai-giants-bet-billions-on-the-most-expensive-job-in-enterprise/) on May 11. Anthropic announced a [$1.5B+ joint venture](https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/) on May 4. AWS followed with a $1B forward-deployed-engineering initiative on June 30. And on July 2, Microsoft capped the run with [Frontier, a $2.5B unit staffed by 6,000 experts](https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/). For buyers, this changes the map: the [build-vs-buy decision](/blog/build-vs-buy-ai-agents/) now has a fourth path — the vendor-embedded deployment team — and it comes with trade-offs no vendor pitch deck will spell out for you.

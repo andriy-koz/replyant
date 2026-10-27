@@ -2,7 +2,7 @@
 title: "Should Your Next Hire Be an AI Agent? A Decision Framework"
 date: 2026-02-24
 tags: ["AI Agents", "Business Strategy", "Automation", "Hiring"]
-description: "The hire vs. automate debate is a false binary. Here's a four-factor framework for getting the split right."
+description: "The hire vs. automate debate is a false binary. A four-factor framework for splitting work between new hires and AI agents, plus the sequencing that matters."
 faq:
   - q: "Should I hire a person or deploy an AI agent for my next role?"
     a: "Neither, until you've evaluated the work on four dimensions: repeatability, judgment complexity, data dependency, and relationship stakes. Tasks scoring high on the first two and low on the last two are automation candidates. 73% of SMBs deploying AI agents in 2025 saw productivity gains within 90 days, versus 3-6 months for a new hire to reach full productivity."
@@ -178,7 +178,7 @@ Automating after hiring is ten times harder than automating before. Why?
 
 **Sunk cost psychology.** "We just hired three people for this. We can't automate it now — what would they do?" The answer is higher-value work, but the emotional and organizational inertia of recent hiring decisions makes this hard to act on.
 
-The better sequence: **Map the process → Identify what's automatable → Automate first → Hire for the remaining human-essential work.** This way, the people you hire are doing work that actually requires human intelligence from day one. They're more engaged, more productive, and less likely to leave because they're not spending half their time on soul-crushing repetitive tasks.
+The better sequence: **Map the process → Identify what's automatable → Automate first → Hire for the remaining human-essential work.** This way, the people you hire are doing work that actually requires human intelligence from day one. They're more engaged, more productive, and less likely to leave because they're not spending half their time on soul-crushing repetitive tasks. Workflow mapping comes first in our [business automation engagements](/services/business-automation/) for exactly this reason.
 
 This is the [80/20 principle](/blog/why-businesses-fail-at-ai-agents/) applied to hiring: spend 80% of your effort designing the right split between human and machine work, and the 20% you spend on the technology will deliver disproportionate results.
 
@@ -220,5 +220,5 @@ That deliberate design is the difference between a team that's constantly overwh
 
 The framework is simple: evaluate repeatability, judgment complexity, data dependency, and relationship stakes. Automate what scores high on the first two and low on the last two. Hire for everything else. And get the sequencing right — automate first, hire second, not the other way around.
 
-If you're not sure whether your workflows are ready for this kind of redesign, that's the first thing to figure out — before you post a job listing or sign a vendor contract.
+If you're not sure whether your workflows are ready for this kind of redesign, that's the first thing to figure out — before you post a job listing or sign a vendor contract. [Walk through the split with one of our engineers](/contact/) and pressure-test it against your own numbers.
 

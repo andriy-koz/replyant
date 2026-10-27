@@ -11,4 +11,6 @@ Every engagement follows the same four phases, regardless of which discipline yo
 
 We don't accept engagements where the data isn't ready, where there's no named owner in the business unit, or where success can't be defined in numbers. Saying no early is part of the work — it's why our deployments don't end up in the [86% that never reach production](/blog/ai-pilot-to-production/).
 
+If you are deciding where to start, the [7-point AI readiness checklist](/blog/ai-readiness-checklist/) and our [build vs. buy framework for AI agents](/blog/build-vs-buy-ai-agents/) are the two best primers. Our [case studies](/case-studies/) show the kind of systems these engagements produce, and the [contact form](/contact/) reaches an engineer directly.
+
 {{< cta heading="Tell us what you're trying to ship." pitch="One conversation. We'll tell you which discipline applies — or whether you're not ready to start." button="Start a project" href="/contact/" >}}

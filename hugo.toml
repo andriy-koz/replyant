@@ -2,15 +2,26 @@ baseURL = "https://replyant.com/"
 languageCode = "en-us"
 title = "Replyant"
 theme = "replyant"
+enableGitInfo = true
 
 [params]
+  # Short positioning line: reused in the homepage <title>, llms.txt and the Organization schema.
   description = "AI Agent Development, Automation & Strategy"
+  # Homepage meta / og / twitter description (keep 140-155 chars).
+  metaDescription = "Replyant builds production AI agents, business automation, and AI strategy for operators: engineered, evaluated, and secured to survive real workloads."
   tagline = "Agents that survive production."
   leadsAPI = "https://vps-4849885-x.dattaweb.com/replyant/api/leads"
-  ogImage = "/android-chrome-512x512.png"
+  ogImage = "/og-default.png"
 
 [params.author]
-  name = "Replyant"
+  # PLACEHOLDER persona — replace with real founder
+  name = "Elena Marsh"
+  jobTitle = "Founder & Principal AI Engineer"
+  url = "https://replyant.com/about/"
+  bio = "Elena Marsh designs and ships production AI agents for operator-led companies. Her work focuses on agent security, evaluations, and automation that holds up after launch."
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [taxonomies]
   tag = "tags"

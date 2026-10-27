@@ -3,7 +3,6 @@ title: "GhostJacking: Prompt Injection Through Your Observability Stack"
 date: 2026-09-14
 tags: ["AI Agents", "Observability", "Developer Tools", "Tool Calling"]
 description: "Tenet Security's DEFCON 34 GhostJacking attack hit Claude Code 90% of the time by poisoning WAF logs. Why telemetry is an injection channel."
-author: "Replyant"
 ---
 
 **Any pipeline that records attacker-controlled input and later replays it into an agent's context window is an indirect prompt-injection channel — and your observability stack is the largest one you own.** On August 9, 2026, at DEFCON 34, Tenet Security disclosed a technique they call **GhostJacking**: poison a request header with a natural-language instruction dressed up as scanner telemetry, let a WAF block the request and log the payload verbatim, and wait. When an engineer later tells an agent to "investigate this alert," the agent reads the log entry as data and executes it as an instruction. Per the disclosure, the attack succeeded **90% of the time against Claude Code running on a vendor-recommended default configuration**. Coverage from SC Media and SecurityWeek named the infrastructure in the blast radius — Cloudflare, which fronts roughly 20% of web traffic; Datadog; and Sentry, used by around 4 million developers — and the technique was still appearing in AI-agent-security roundups a month later.
@@ -96,7 +95,7 @@ And the surface is far wider than WAF logs. APM span attributes carry request he
 
 Tenet's demonstration did not stop at "the agent read a bad log." The disclosed chain ran from **initial access via the poisoned log entry → privilege escalation → DNS record modification → cloud credential theft → cross-agent lateral movement.** Three things in that sequence deserve attention.
 
-DNS modification is the quiet one. An agent with permission to fix an alert usually has permission to change infrastructure, and a DNS record is durable, high-leverage, and survives the session, the token rotation, and the incident review. Cloud credential theft then converts a text-channel foothold into standing access: the session ends, the stolen key does not.
+DNS modification is the quiet one. An agent with permission to fix an alert usually has permission to change infrastructure, and a DNS record is durable, high-leverage, and survives the session, the token rotation, and the incident review. Cloud credential theft then converts a text-channel foothold into standing access: the session ends, the stolen key does not. The exposure grows when nobody is in the session at all — a [scheduled Claude Code Routine](/lab/claude-code-routines-scheduled-workflows/) that triages alerts overnight reads the same poisoned telemetry with no human watching.
 
 Cross-agent lateral movement is the finding that should change your architecture. A compromised agent writes into shared state — tickets, runbooks, memory stores, commit messages, Slack threads — that other agents consume as trusted input. One poisoned log entry becomes a poisoned ticket becomes a poisoned second agent. The identity and authorization failure mode here is the same one described in [agent identity as attack surface](/lab/agent-identity-attack-surface/): the blast radius is the union of every credential every reachable agent holds, not the permissions of the one that read the log.
 
@@ -195,4 +194,4 @@ Tenet's 90% figure is not a statement about one coding agent's defenses. It is a
 
 ---
 
-*We architect agent systems where telemetry is treated as the untrusted input it is: split by authorship, quarantined before it reaches a context window, and bounded by capability scopes that make injection unprofitable. If your agents read logs, traces, or alerts, [let's talk](/#contact).*
+*We architect agent systems where telemetry is treated as the untrusted input it is: split by authorship, quarantined before it reaches a context window, and bounded by capability scopes that make injection unprofitable. If your agents read logs, traces, or alerts, [let's talk](/contact/).*

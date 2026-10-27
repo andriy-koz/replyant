@@ -3,7 +3,6 @@ title: "Programmatic Tool Calling: Code Mode for Faster, Cheaper Agents"
 date: 2026-06-19
 tags: ["AI Agents", "Tool Calling", "Architecture", "Developer Tools"]
 description: "Code mode lets an agent orchestrate many tools in a sandbox and return only results to the model. ~80% lower inference cost and how it works in production."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">

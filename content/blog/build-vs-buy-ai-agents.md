@@ -12,7 +12,6 @@ faq:
     a: "Forrester projects roughly 75% of companies that try to build their own agentic systems will fail to deliver the value they expected — not because building is wrong, but because they build before they understand the work, the volume, or the maintenance burden. The failures are framing errors, not technology errors: companies build a commodity workflow they should have bought, or buy a differentiating workflow they should have built."
   - q: "What percentage of enterprises use a hybrid AI agent model?"
     a: "About 47% of enterprises run a hybrid model: buy the foundation and build the differentiator. This isn't fence-sitting — it captures most of the speed of buying and most of the control of building. Hybrid lets you buy the 80% that's undifferentiated and build the 20% that wins. For the overwhelming majority of companies, hybrid is the dominant real-world answer."
-author: "Replyant"
 ---
 
 Most companies should buy first and build later. Forrester projects that roughly [75% of companies that try to build their own agentic systems will fail](https://www.forrester.com/predictions/) to deliver the value they expected — not because building is wrong, but because they build before they understand the work, the volume, or the maintenance burden they're signing up for. The right default for 2026 is to buy your way to a working baseline, then build only at the edges where a vendor can't reach. That hybrid posture isn't a hedge; it's already what the market does. About 47% of enterprises now run a hybrid model: buy the foundation, build the differentiator.
@@ -34,6 +33,8 @@ There is no binary here. There are three postures, and most healthy AI strategie
 **Build.** Develop a custom agent on your own infrastructure or a framework. Full control, full customization, and the economics improve at scale. You take on the talent cost, the infrastructure, and — the line item everyone underestimates — perpetual evaluation and maintenance.
 
 **Hybrid.** Buy the foundation (the model, the orchestration layer, the commodity workflows) and build only the components that differentiate you. This is what 47% of enterprises already do, and for good reason: it captures most of the speed of buying and most of the control of building.
+
+A fourth path has opened since: platform vendors embedding their own engineers to build inside your organization. We cover the trade-offs in [what forward-deployed vendor engineers mean for buyers](/blog/vendor-deployment-engineers/).
 
 ## The money math: what each option actually costs
 
@@ -112,4 +113,4 @@ The companies that fail tend to fail in one of two predictable ways: they build 
 
 Build vs. buy isn't a single decision; it's a portfolio of decisions you make one workflow at a time. Buy commodity workflows at low-to-moderate volume. Build differentiating workflows once volume clears your TCO crossover and you can own the maintenance. For the overwhelming majority of companies, the winning posture is hybrid: buy the foundation, build the edge, and revisit the split as your volume grows.
 
-We sit on both sides of this decision — we build custom agents and we advise buyers on vendor selection — which is exactly why we have no reason to talk you into either. If you want a neutral read on which of your workflows to buy, which to build, and where your own crossover actually falls, [that's the kind of work we do](/#contact). Bring your workflow list and your volume numbers, and we'll help you draw the line.
+We sit on both sides of this decision — we build custom agents and we advise buyers on vendor selection — which is exactly why we have no reason to talk you into either. If you want a neutral read on which of your workflows to buy, which to build, and where your own crossover actually falls, [that's the kind of work we do](/contact/). Bring your workflow list and your volume numbers, and we'll help you draw the line.

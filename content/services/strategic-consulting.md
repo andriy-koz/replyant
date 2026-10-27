@@ -44,6 +44,8 @@ Strategic engagements are shorter and more decision-anchored than our build work
 
 We bill strategic work as fixed-price per engagement, not hourly. Every engagement has a written scope and a written deliverable. No scope creep, no surprise invoices.
 
+The [case studies](/case-studies/) show the kind of builds our recommendations lead to. To scope a decision you are about to make, [contact us about a strategy engagement](/contact/).
+
 ## Related thinking
 
 Our strategic practice is built on the same frameworks we publish openly. These are the foundations:

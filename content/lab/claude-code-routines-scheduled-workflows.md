@@ -252,4 +252,4 @@ Routines closes the gap between "useful when a human drives it" and "useful when
 
 ---
 
-*We wire Claude Code for production — Hooks, Skills, MCP, Plugins, and now Routines — with eval and observability to prove it holds when no one is watching. If you are promoting cron hacks to scheduled agents and want concurrency, identity, and cost handled before it runs unattended, [let's talk](/#contact).*
+*We wire Claude Code for production — Hooks, Skills, MCP, Plugins, and now Routines — with eval and observability to prove it holds when no one is watching. If you are promoting cron hacks to scheduled agents and want concurrency, identity, and cost handled before it runs unattended, [let's talk](/contact/).*

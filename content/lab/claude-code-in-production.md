@@ -497,8 +497,8 @@ None of these extension points is revolutionary on its own. A CLAUDE.md file is 
 
 The value is in the composition. CLAUDE.md gives the agent judgment about your project. Skills give it reusable workflows. MCP servers give it access to your infrastructure. Hooks give it guardrails. Together, they transform a general-purpose coding agent into one that operates within the specific constraints and conventions of your team — which is exactly the gap that prevents most [AI agent pilots from reaching production](/blog/ai-pilot-to-production/).
 
-The underlying pattern is the same one that makes any agent production-ready: capability without governance is a liability. These five extension points give you both — and the ability to tune the balance between autonomy and control as your trust in the system grows.
+The underlying pattern is the same one that makes any agent production-ready: capability without governance is a liability. These five extension points give you both — and the ability to tune the balance between autonomy and control as your trust in the system grows. A sixth has since added time and events as triggers: [Claude Code Routines](/lab/claude-code-routines-scheduled-workflows/) run the same workflows on a schedule, from an API call, or from an external event, with no one at the keyboard.
 
 ---
 
-*We build and configure AI agent workflows for teams that need them to work in production, not just in demos. If you're evaluating how AI coding agents fit into your development process — or trying to get more value from tools you're already using — [get in touch](/#contact).*
+*We build and configure AI agent workflows for teams that need them to work in production, not just in demos. If you're evaluating how AI coding agents fit into your development process — or trying to get more value from tools you're already using — [get in touch](/contact/).*

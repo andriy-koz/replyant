@@ -3,7 +3,6 @@ title: "Context Folding: 200-Step Agents in 10x Less Context"
 date: 2026-04-18
 tags: ["AI Agents", "Architecture", "LLMs", "Prompt Engineering"]
 description: "Tool accuracy collapses ~40% past 80K tokens. Context folding runs 200-step agents in 10x less context. Working harness and Anthropic compaction inside."
-author: "Replyant"
 ---
 
 The "long context" number in your model card is marketing. Past roughly 80K tokens, your agent's tool-calling accuracy falls off a cliff---and padding the window with more tokens is the most expensive way to get worse results. The engineering answer is not a bigger window. It is a structured compaction operation, borrowed from research published in late 2025 and early 2026 under names like FoldGRPO, AgentFold, and ACON, and now shipping as a first-class API primitive in Anthropic's `context-management-2026-01-12` beta. The common label for the technique is *context folding*: replace a settled segment of the trajectory with a learned summary, evict the raw tokens, and keep executing against the compressed artifact.
@@ -542,4 +541,4 @@ The 200-step agent in 32K of active context is not a feature of the next-generat
 
 ---
 
-*We design production harnesses for long-horizon AI agents. If your agents are hitting the 100-step wall and you don't know which school of compaction to pick, [let's talk](/#contact).*
+*We design production harnesses for long-horizon AI agents. If your agents are hitting the 100-step wall and you don't know which school of compaction to pick, [let's talk](/contact/).*

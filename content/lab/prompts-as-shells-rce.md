@@ -3,7 +3,6 @@ title: "Prompts as Shells: Semantic Kernel's Prompt Injection RCE"
 date: 2026-05-14
 tags: ["AI Agents", "Tool Calling", "Architecture", "Prompt Engineering"]
 description: "Microsoft's CVE-2026-26030 and CVE-2026-25592 turn one injected prompt into calc.exe. The tool registry is now the attack surface — here's the chain."
-author: "Replyant"
 ---
 
 <aside class="quick-answer">
@@ -301,7 +300,7 @@ Concretely, for filesystem write tools: canonicalize the path before validation 
 
 ### 5. Build a "what a bad day looks like" exploit catalog
 
-For each tool, write the prompt that would cause the worst possible outcome and confirm whether your agent currently executes it. Wire this into [agent evals in CI](/lab/agent-evals-cicd/) so that every change to your tool registry, system prompt, or model version re-runs the catalog. Suggested seed entries:
+For each tool, write the prompt that would cause the worst possible outcome and confirm whether your agent currently executes it. Wire this into [agent evals in CI](/lab/agent-evals-cicd/) so that every change to your tool registry, system prompt, or model version re-runs the catalog. For the code changes themselves, [pre-submit agentic security scanning](/lab/mantis-agentic-security-scanning/) applies the same gate at merge time. Suggested seed entries:
 
 - For every code-execution tool: the `tuple().__class__.__mro__` payload, parameterized for your evaluator.
 - For every external-write tool: a path-traversal payload, an allowlist-bypass payload (`..`, `~`, UNC paths on Windows, symlink-following on Unix), and a "write to startup/cron/systemd" payload appropriate to your host OS.
@@ -339,4 +338,4 @@ The deeper structural defenses---the [CaMeL dual-LLM capability tracking](/lab/c
 
 ---
 
-*We architect agent frameworks where the tool registry is a reviewed artifact, not a side-effect of decorator placement. If you ship production agents and have not audited your tool surface against the seven-step checklist above, [let's talk](/#contact).*
+*We architect agent frameworks where the tool registry is a reviewed artifact, not a side-effect of decorator placement. If you ship production agents and have not audited your tool surface against the seven-step checklist above, [let's talk](/contact/).*

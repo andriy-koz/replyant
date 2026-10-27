@@ -12,7 +12,6 @@ faq:
     a: "Human-in-the-loop (HITL) means a human approves every critical decision before the agent acts — appropriate for high-stakes, low-volume decisions like financial approvals or account terminations. Human-on-the-loop (HOTL) means the agent acts autonomously while a human monitors aggregate metrics and intervenes on drift — appropriate for routine, high-volume work. Deloitte found 78% of organizations in regulated industries use HITL for decisions carrying legal or financial liability. Most enterprises need a tiered hybrid of both."
   - q: "Why do AI agents create compliance risk without audit logging?"
     a: "Every decision an AI agent makes is a decision your company made, and the liability sits with you — not the model provider. The [EU AI Act, enforceable in August 2026 with penalties up to 35 million euros](/blog/eu-ai-act-compliance/), and the Colorado AI Act both require the ability to explain automated decisions. Without immutable, queryable logs of what data an agent accessed and why it decided, you cannot demonstrate compliance — or even reconstruct what happened."
-author: "Replyant"
 ---
 
 Shadow agents are the shadow IT of 2026.
@@ -61,7 +60,7 @@ The governance conversation always lands on oversight models. There are two, and
 
 ### Human-in-the-Loop (HITL)
 
-The human approves every critical decision before the agent acts. The agent recommends; the human executes. HITL is appropriate for high-stakes, low-volume decisions: financial approvals above a threshold, customer account terminations, legal document generation, hiring recommendations. Deloitte's research shows that 78% of organizations deploying AI in regulated industries use HITL for decisions that carry legal or financial liability.
+The human approves every critical decision before the agent acts. The agent recommends; the human executes. HITL is appropriate for high-stakes, low-volume decisions: financial approvals above a threshold, customer account terminations, legal document generation, hiring recommendations. Deloitte's research shows that 78% of organizations deploying AI in regulated industries use HITL for decisions that carry legal or financial liability. That approval only protects you if the action the reviewer sees is exactly the action that runs — the gap we dissect in [Loopjacking and binding human-in-the-loop approvals](/lab/loopjacking-human-in-the-loop-approval/).
 
 The tradeoff is speed. HITL adds latency to every decision. If the agent processes 50 cases a day and each requires human review, you've built a faster way to create a queue --- not a faster way to process work.
 
@@ -149,7 +148,7 @@ Kill switches operate at three levels:
 - **Agent group:** Stop all agents in a business function (e.g., all customer-facing agents) simultaneously. Used when an incident affects a category of agents, not just one.
 - **Fleet-wide:** Stop every agent in the organization. The nuclear option, reserved for systemic issues or regulatory demands.
 
-Kill switches must be accessible to authorized personnel without requiring engineering support. If stopping a rogue agent requires deploying code, you don't have a kill switch --- you have a feature request.
+Kill switches must be accessible to authorized personnel without requiring engineering support. If stopping a rogue agent requires deploying code, you don't have a kill switch --- you have a feature request. Pulling the switch is also only the first hour of [a 48-hour AI agent incident-response playbook](/blog/ai-agent-incident-response/) — evidence preservation and recovery come next.
 
 Every agent should also have an automatic kill switch: a set of conditions (error rate exceeding a threshold, cost exceeding a limit, repeated escalation failures) that trigger an automatic halt and notify the owner. The [hire-vs-automate framework](/blog/hire-vs-automate/) already accounts for operational risk in automation decisions --- kill switches are how you contain that risk in production.
 
@@ -195,4 +194,4 @@ The AI agent governance gap is real, it's widening, and it creates compounding r
 
 Governance isn't the enemy of speed. Ungoverned agents are the enemy of scale.
 
-If you're building your Agent Governance Stack and want architecture that's compliance-ready from day one --- or you need to assess your existing agent fleet against the frameworks in this post --- [that's exactly the kind of strategic and technical work we do](/#contact).
+If you're building your Agent Governance Stack and want architecture that's compliance-ready from day one --- or you need to assess your existing agent fleet against the frameworks in this post --- [that's exactly the kind of strategic and technical work we do](/contact/).

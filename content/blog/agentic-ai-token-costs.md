@@ -3,7 +3,6 @@ title: "The Agentic AI Token Bill: Why AI FinOps Is Now Mandatory"
 date: 2026-06-11
 tags: ["AI Agents", "ROI", "Pricing", "Business Strategy"]
 description: "Uber burned its 2026 AI budget by April. Agentic tasks cost 30x more than chatbots. The AI FinOps playbook that keeps your rollout from being canceled."
-author: "Replyant"
 faq:
   - q: "What is AI FinOps and why does it matter for agentic AI?"
     a: "AI FinOps is the discipline of governing AI token and inference spend the way cloud FinOps governs compute. It matters because agentic workflows break the cost assumptions of 2025 chatbots — a single task can trigger 8-12 inference calls and multiply context 3-5x. Per the State of FinOps 2026, 98% of practitioners now manage AI spend, up from 31% in 2024. Without budgets, routing, and observability, agentic costs scale faster than the value they produce."
@@ -101,4 +100,4 @@ The agentic AI token bill is the new cloud bill, and 2026 is the year it lands. 
 
 AI FinOps is the answer, and it is now mandatory, not optional. Set per-agent budgets. Route to the cheapest capable model. Cache the repetition. Attribute every dollar. Arm the kill-switches. Forecast against real telemetry. Do these six things and your agentic rollout has a future. Skip them and your token bill writes the cancellation memo for you.
 
-If you are deploying agents and want the cost-governance layer built before the invoice forces the conversation — or you need to [calculate ROI on AI agents](/blog/ai-roi-calculator/) with agentic economics baked in rather than chatbot guesses — [that's exactly the work we do](/#contact).
+If you are deploying agents and want the cost-governance layer built before the invoice forces the conversation — or you need to [calculate ROI on AI agents](/blog/ai-roi-calculator/) with agentic economics baked in rather than chatbot guesses — [that's exactly the work we do](/contact/).
